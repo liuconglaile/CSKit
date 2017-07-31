@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "CSTestTableController.h"
+
 
 @interface ViewController ()
 
@@ -19,6 +21,11 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)showView:(id)sender {
+    CSTestTableController* vc = [[CSTestTableController alloc] init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -1,0 +1,2735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>address</key>
+		<string>上海市 · 上海市</string>
+		<key>areaCode</key>
+		<string>310103</string>
+		<key>chargeFee</key>
+		<integer>0</integer>
+		<key>collection</key>
+		<false/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>8</integer>
+		<key>exchangeSuccess</key>
+		<integer>8</integer>
+		<key>hotelId</key>
+		<integer>119</integer>
+		<key>hotelIntroduction</key>
+		<string>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</string>
+		<key>hotelLogo</key>
+		<string>/upload/image/source/201703/f8abef2b-4361-4055-b450-82efcb17d0e5.jpg</string>
+		<key>hotelMobile</key>
+		<string>13600000001</string>
+		<key>hotelName</key>
+		<string>福兴东方精品酒店</string>
+		<key>houseId</key>
+		<integer>101</integer>
+		<key>houseName</key>
+		<string>海景别墅</string>
+		<key>imgs</key>
+		<array>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201703/4a2438ea-f0d2-4935-8da5-876317a85824.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-03-03 18:11:38</string>
+				<key>id</key>
+				<integer>912</integer>
+				<key>order</key>
+				<integer>1</integer>
+				<key>refTypeId</key>
+				<integer>101</integer>
+				<key>remark</key>
+				<string>1</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201703/4a2438ea-f0d2-4935-8da5-876317a85824.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201703/4a2438ea-f0d2-4935-8da5-876317a85824.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-03-03 18:11:38</string>
+			</dict>
+		</array>
+		<key>lat</key>
+		<real>30.59</real>
+		<key>level</key>
+		<integer>4</integer>
+		<key>lng</key>
+		<real>104.08</real>
+		<key>payEcNum</key>
+		<string>7~11EC</string>
+		<key>payPointNum</key>
+		<string>250~420畅游币</string>
+		<key>prompt</key>
+		<string></string>
+		<key>shuttle</key>
+		<true/>
+		<key>shuttleRemark</key>
+		<string>我们不收取任何费用，免费接送</string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string></string>
+		<key>traffic</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>四川省 · 成都市</string>
+		<key>areaCode</key>
+		<string>510104</string>
+		<key>chargeFee</key>
+		<real>0.01</real>
+		<key>collection</key>
+		<true/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>8</integer>
+		<key>exchangeSuccess</key>
+		<integer>8</integer>
+		<key>hotelId</key>
+		<integer>110</integer>
+		<key>hotelIntroduction</key>
+		<string>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</string>
+		<key>hotelLogo</key>
+		<string>/upload/image/source/201703/0571c009-fbc7-4627-a455-83b75e8269fd.jpg</string>
+		<key>hotelMobile</key>
+		<string>18628081640</string>
+		<key>hotelName</key>
+		<string>家园国际酒店</string>
+		<key>houseId</key>
+		<integer>88</integer>
+		<key>houseName</key>
+		<string>标准间</string>
+		<key>imgs</key>
+		<array>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/5bb8cc3a-0c53-424c-a845-8632c4a6ac15.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-06 16:24:08</string>
+				<key>id</key>
+				<integer>695</integer>
+				<key>order</key>
+				<integer>0</integer>
+				<key>refTypeId</key>
+				<integer>88</integer>
+				<key>remark</key>
+				<string>null</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/5bb8cc3a-0c53-424c-a845-8632c4a6ac15.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/5bb8cc3a-0c53-424c-a845-8632c4a6ac15.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-06 16:24:08</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/af62d9c9-1456-4fe1-9cfc-123fe0504ba9.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-06 16:24:16</string>
+				<key>id</key>
+				<integer>696</integer>
+				<key>order</key>
+				<integer>0</integer>
+				<key>refTypeId</key>
+				<integer>88</integer>
+				<key>remark</key>
+				<string>null</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/af62d9c9-1456-4fe1-9cfc-123fe0504ba9.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/af62d9c9-1456-4fe1-9cfc-123fe0504ba9.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-06 16:24:16</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/d7bea97d-588c-4f9c-9f30-18982be25f24.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-06 16:33:02</string>
+				<key>id</key>
+				<integer>698</integer>
+				<key>order</key>
+				<integer>0</integer>
+				<key>refTypeId</key>
+				<integer>88</integer>
+				<key>remark</key>
+				<string>null</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/d7bea97d-588c-4f9c-9f30-18982be25f24.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/d7bea97d-588c-4f9c-9f30-18982be25f24.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-06 16:33:02</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/f299eabb-3d3e-4d33-9700-798c93d1160d.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-06 16:33:16</string>
+				<key>id</key>
+				<integer>699</integer>
+				<key>order</key>
+				<integer>0</integer>
+				<key>refTypeId</key>
+				<integer>88</integer>
+				<key>remark</key>
+				<string>null</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/f299eabb-3d3e-4d33-9700-798c93d1160d.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/f299eabb-3d3e-4d33-9700-798c93d1160d.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-06 16:33:16</string>
+			</dict>
+		</array>
+		<key>lat</key>
+		<real>30.54</real>
+		<key>level</key>
+		<integer>2</integer>
+		<key>lng</key>
+		<real>104.12</real>
+		<key>payEcNum</key>
+		<string>7~7EC</string>
+		<key>payPointNum</key>
+		<string>150~300畅游币</string>
+		<key>prompt</key>
+		<string></string>
+		<key>shuttle</key>
+		<true/>
+		<key>shuttleRemark</key>
+		<string>请填写好您的航班号和航班时间</string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string></string>
+		<key>traffic</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>山西省 · 太原市</string>
+		<key>areaCode</key>
+		<string>140105</string>
+		<key>chargeFee</key>
+		<integer>0</integer>
+		<key>collection</key>
+		<false/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>2</integer>
+		<key>exchangeSuccess</key>
+		<integer>2</integer>
+		<key>hotelId</key>
+		<integer>115</integer>
+		<key>hotelIntroduction</key>
+		<string>&lt;span style=&quot;font-weight: bold;&quot;&gt;木棉湖被划为国家级度假海岸，整个海棠湾已经圈地完成，数十个豪华酒店在建，今天只介绍已开业的哦！&lt;br&gt;&lt;br&gt;1）首先，最南边的是海棠湾9号，也就是地图中标D的那里。&lt;img style=&quot;width: 330px;&quot; src=&quot;http://101.201.145.44:8080/image-service/upload/image/source/201703/bdf48b07-26ca-415c-ad3e-c04e87203898.jpg&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;海棠湾9号温泉酒店非常低调，酒店里有一片军事禁区，里面是官方疗养院，具体是哪些**呢，就是你天天在新闻联播上见的那些。。。&lt;br&gt;&lt;br&gt;这个酒店是实实在在有温泉，天然温泉，不是烧的锅炉哦！真正温泉，又靠海边，很少有人知道这家！你们喜闻乐见的璞缇客，赞那度都没有宣传这家，我去的时候感觉这家酒店很冷清，后来看到远处一片小别墅，又是军事禁区，好像明白了一点什么……&lt;img style=&quot;width: 400px;&quot; src=&quot;http://101.201.145.44:8080/image-service/upload/image/source/201703/819a8852-fd31-42ba-a2da-a9e2aec14613.jpg&quot;&gt;&lt;br&gt;&lt;br&gt;他家温泉是额外收费的，住客半价，好像150，非住客是300，有10多个温泉池子，喜欢泡温泉的一定住这里或者驱车来这里！海棠湾还有个很出名的南田温泉，是对外的，去看了一下就走了，什么人都有，乱七八糟的，好怕泡出妇科病**…所以就开车来了这里&lt;br&gt;个人观点，它家大堂阔气，中规中矩，挑不出毛病，下沉式水景休闲区，也适合拍电视剧电影，酒店绿化园林就很一般，没什么亮点。&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;COLOR: #e36c09&quot;&gt;&lt;strong&gt;&lt;span style=&quot;FONT-SIZE: 20px&quot;&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;</string>
+		<key>hotelLogo</key>
+		<string>/upload/image/source/201703/a967c484-5af8-4884-b95d-2df2ead28c8a.jpg</string>
+		<key>hotelMobile</key>
+		<string>1526652525</string>
+		<key>hotelName</key>
+		<string>木棉湖酒店</string>
+		<key>houseId</key>
+		<integer>94</integer>
+		<key>houseName</key>
+		<string>标准间</string>
+		<key>imgs</key>
+		<array>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/65b9523a-31bc-4333-822d-62ac0bf21701.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-17 11:32:55</string>
+				<key>id</key>
+				<integer>766</integer>
+				<key>order</key>
+				<integer>1</integer>
+				<key>refTypeId</key>
+				<integer>94</integer>
+				<key>remark</key>
+				<string>1</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/65b9523a-31bc-4333-822d-62ac0bf21701.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/65b9523a-31bc-4333-822d-62ac0bf21701.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-17 11:32:55</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/48031a36-84bf-4e3f-936f-b57df8c5cc6c.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-17 11:33:04</string>
+				<key>id</key>
+				<integer>767</integer>
+				<key>order</key>
+				<integer>2</integer>
+				<key>refTypeId</key>
+				<integer>94</integer>
+				<key>remark</key>
+				<string>2</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/48031a36-84bf-4e3f-936f-b57df8c5cc6c.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/48031a36-84bf-4e3f-936f-b57df8c5cc6c.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-17 11:33:04</string>
+			</dict>
+		</array>
+		<key>lat</key>
+		<real>30.64</real>
+		<key>level</key>
+		<integer>5</integer>
+		<key>lng</key>
+		<real>104.1</real>
+		<key>payEcNum</key>
+		<string>280~280EC</string>
+		<key>payPointNum</key>
+		<string>280~400畅游币</string>
+		<key>prompt</key>
+		<string></string>
+		<key>shuttle</key>
+		<true/>
+		<key>shuttleRemark</key>
+		<string>酒店提供免费接送机服务，不缴纳任何费用，祝您旅途愉快！</string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string>木棉湖被划为国家级度假海岸，www.baidu.com 整个海棠湾已经圈地完成，数十个豪华酒店在建，今天只介绍已开业的哦！ 1）首先，最南边的是海棠湾9号，也就是地图中标D的那里。 海棠湾9号温泉酒店非常低调，酒店里有一片军事禁区，里面是官方疗养院，具体是哪些**呢，就是你天天在新闻联播上见的那些。。。 这个酒店是实实在在有温泉，天然温泉，不是烧的锅炉哦！真正温泉，又靠海边，很少有人知道这家！你们喜闻乐见的璞缇客，赞那度都没有宣传这家，我去的时候感觉这家酒店很冷清，后来看到远处一片小别墅，又是军事禁区，好像明白了一点什么…… 他家温泉是额外收费的，住客半价，好像150，非住客是300，有10多个温泉池子，喜欢泡温泉的一定住这里或者驱车来这里！海棠湾还有个很出名的南田温泉，是对外的，去看了一下就走了，什么人都有，乱七八糟的，好怕泡出妇科病**…所以就开车来了这里 个人观点，它家大堂阔气，中规中矩，挑不出毛病，下沉式水景休闲区，也适合拍电视剧电影，酒店绿化园林就很一般，没什么亮点。</string>
+		<key>traffic</key>
+		<string>1、四条公交线路：
+
+866路：解放碑(朝天门)——五里坪(港城工业园区)
+
+817路：观音桥——望江
+
+812路：观音桥——唐家沱
+
+813路：观音桥——铁山坪
+
+2、轻轨四号线：重庆北站——虾子蝙——渝鲁大道——金山——寸滩——黑石子——唐家沱等7个站(将于2017年建成通车)
+
+3、寸滩长江大桥将在2016年6月份竣工通车。</string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>湖北省 · 武汉市</string>
+		<key>areaCode</key>
+		<string>420103</string>
+		<key>chargeFee</key>
+		<real>0.01</real>
+		<key>collection</key>
+		<true/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>0</integer>
+		<key>exchangeSuccess</key>
+		<integer>0</integer>
+		<key>hotelId</key>
+		<integer>106</integer>
+		<key>hotelIntroduction</key>
+		<string>&lt;span style=&quot;font-weight: bold;&quot;&gt;北京万豪酒店地处中央商务区，占地 1,800 平方米，是华贸中心的组成部分，华贸中心是一处庄严的综合性场所，这里有办公室、商场和住宅大楼。&lt;br&gt;&lt;br&gt;主入口&lt;br&gt;&lt;img style=&quot;width: 909.5px; height: 948.805px;&quot; src=&quot;http://101.201.145.44:8080/image-service/upload/image/source/201701/fdafb4e8-7cef-47be-9ee0-c5d044bc4793.jpg&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;/span&gt;</string>
+		<key>hotelLogo</key>
+		<string>/upload/image/source/201701/51a184e8-6b38-46e4-8cb4-0ce7cc6ed505.jpg</string>
+		<key>hotelMobile</key>
+		<string>18628081641</string>
+		<key>hotelName</key>
+		<string>梦天湖酒店</string>
+		<key>houseId</key>
+		<integer>77</integer>
+		<key>houseName</key>
+		<string>标准间</string>
+		<key>imgs</key>
+		<array>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/32c9de7b-71a8-439c-bb31-9112b9c37e34.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:02:16</string>
+				<key>id</key>
+				<integer>572</integer>
+				<key>order</key>
+				<integer>1</integer>
+				<key>refTypeId</key>
+				<integer>77</integer>
+				<key>remark</key>
+				<string>1</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/32c9de7b-71a8-439c-bb31-9112b9c37e34.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/32c9de7b-71a8-439c-bb31-9112b9c37e34.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:02:16</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/2ccf8221-0542-435f-a115-d97ec8e231f7.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:02:50</string>
+				<key>id</key>
+				<integer>573</integer>
+				<key>order</key>
+				<integer>2</integer>
+				<key>refTypeId</key>
+				<integer>77</integer>
+				<key>remark</key>
+				<string>2</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/2ccf8221-0542-435f-a115-d97ec8e231f7.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/2ccf8221-0542-435f-a115-d97ec8e231f7.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:02:50</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/b080b377-8b24-436f-86af-f2ef1f15f4ec.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:03:19</string>
+				<key>id</key>
+				<integer>574</integer>
+				<key>order</key>
+				<integer>3</integer>
+				<key>refTypeId</key>
+				<integer>77</integer>
+				<key>remark</key>
+				<string>3</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/b080b377-8b24-436f-86af-f2ef1f15f4ec.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/b080b377-8b24-436f-86af-f2ef1f15f4ec.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:03:19</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/a51a492b-c8a9-463e-8e96-3849f0725872.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:03:55</string>
+				<key>id</key>
+				<integer>575</integer>
+				<key>order</key>
+				<integer>4</integer>
+				<key>refTypeId</key>
+				<integer>77</integer>
+				<key>remark</key>
+				<string>4</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/a51a492b-c8a9-463e-8e96-3849f0725872.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/a51a492b-c8a9-463e-8e96-3849f0725872.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:03:55</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/4086836c-16a9-4de9-b0b7-93040d879eb7.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:05:33</string>
+				<key>id</key>
+				<integer>576</integer>
+				<key>order</key>
+				<integer>5</integer>
+				<key>refTypeId</key>
+				<integer>77</integer>
+				<key>remark</key>
+				<string>5</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/4086836c-16a9-4de9-b0b7-93040d879eb7.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/4086836c-16a9-4de9-b0b7-93040d879eb7.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:05:33</string>
+			</dict>
+		</array>
+		<key>lat</key>
+		<real>30.606928</real>
+		<key>level</key>
+		<integer>5</integer>
+		<key>lng</key>
+		<real>114.30312</real>
+		<key>payEcNum</key>
+		<string>12~20EC</string>
+		<key>payPointNum</key>
+		<string>500~800畅游币</string>
+		<key>prompt</key>
+		<string></string>
+		<key>shuttle</key>
+		<true/>
+		<key>shuttleRemark</key>
+		<string>接机费用680，送到天河国际机场</string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string>北京万豪酒店地处中央商务区，www.baidu.com 占地 1,800 平方米，是华贸中心的组成部分，华贸中心是一处庄严的综合性场所，这里有办公室、商场和住宅大楼。 主入口</string>
+		<key>traffic</key>
+		<string>自行车，公交车，大巴车</string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>重庆 · 重庆</string>
+		<key>areaCode</key>
+		<string>500101</string>
+		<key>chargeFee</key>
+		<integer>0</integer>
+		<key>collection</key>
+		<true/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>3</integer>
+		<key>exchangeSuccess</key>
+		<integer>3</integer>
+		<key>hotelId</key>
+		<integer>108</integer>
+		<key>hotelIntroduction</key>
+		<string>&lt;p&gt;&lt;strong&gt;繁忙一日之后，室内泳池、蒸汽室及水疗中心等均为最佳休闲之所，而 24 小时健身房则助您时刻保持无限活力。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;室内泳池&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/016.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;健身房&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/013.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;贵宾休息室&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/018.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;宴会厅会议&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/009.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;宴会厅庆祝活动&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/010.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;难忘住宿之旅就此开启。&lt;/strong&gt;&lt;/p&gt;</string>
+		<key>hotelLogo</key>
+		<string>/upload/image/source/201701/bcb21ee3-ab5f-4033-9731-c50cd97a86db.jpg</string>
+		<key>hotelMobile</key>
+		<string>18728473354</string>
+		<key>hotelName</key>
+		<string>重庆仙女山酒店</string>
+		<key>houseId</key>
+		<integer>81</integer>
+		<key>houseName</key>
+		<string>标准间</string>
+		<key>imgs</key>
+		<array>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201703/bf59ff8b-6ca3-4cc0-86d0-8d47979f89a1.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-03-01 17:03:02</string>
+				<key>id</key>
+				<integer>857</integer>
+				<key>order</key>
+				<integer>0</integer>
+				<key>refTypeId</key>
+				<integer>81</integer>
+				<key>remark</key>
+				<string>null</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201703/bf59ff8b-6ca3-4cc0-86d0-8d47979f89a1.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201703/bf59ff8b-6ca3-4cc0-86d0-8d47979f89a1.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-03-01 17:03:02</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/77dd0791-77bd-4cd5-ab8f-db221d4bab89.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:49:43</string>
+				<key>id</key>
+				<integer>594</integer>
+				<key>order</key>
+				<integer>1</integer>
+				<key>refTypeId</key>
+				<integer>81</integer>
+				<key>remark</key>
+				<string>1ss</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/77dd0791-77bd-4cd5-ab8f-db221d4bab89.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/77dd0791-77bd-4cd5-ab8f-db221d4bab89.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-21 11:10:48</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/d771a672-5b16-473b-be8d-e0b79e74f3eb.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:49:27</string>
+				<key>id</key>
+				<integer>593</integer>
+				<key>order</key>
+				<integer>2</integer>
+				<key>refTypeId</key>
+				<integer>81</integer>
+				<key>remark</key>
+				<string>2</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/d771a672-5b16-473b-be8d-e0b79e74f3eb.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/d771a672-5b16-473b-be8d-e0b79e74f3eb.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:49:27</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/65d5e245-1b0b-4cc8-9d67-090a447e52f5.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:49:59</string>
+				<key>id</key>
+				<integer>595</integer>
+				<key>order</key>
+				<integer>3</integer>
+				<key>refTypeId</key>
+				<integer>81</integer>
+				<key>remark</key>
+				<string>3</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/65d5e245-1b0b-4cc8-9d67-090a447e52f5.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/65d5e245-1b0b-4cc8-9d67-090a447e52f5.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:49:59</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/906bcdad-8e6e-4895-b3e8-7e1669753d84.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:48:45</string>
+				<key>id</key>
+				<integer>591</integer>
+				<key>order</key>
+				<integer>4</integer>
+				<key>refTypeId</key>
+				<integer>81</integer>
+				<key>remark</key>
+				<string>4</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/906bcdad-8e6e-4895-b3e8-7e1669753d84.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/906bcdad-8e6e-4895-b3e8-7e1669753d84.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:49:10</string>
+			</dict>
+		</array>
+		<key>lat</key>
+		<real>29.56</real>
+		<key>level</key>
+		<integer>5</integer>
+		<key>lng</key>
+		<real>106.58</real>
+		<key>payEcNum</key>
+		<string>7~11EC</string>
+		<key>payPointNum</key>
+		<string>250~420畅游币</string>
+		<key>prompt</key>
+		<string>安全设备是第一，服务、吃、住……</string>
+		<key>shuttle</key>
+		<true/>
+		<key>shuttleRemark</key>
+		<string>接机费用300元，从酒店到机场30分钟</string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string>繁忙一日之后，室内泳池、蒸汽室及水疗中心www.baidu.com等均为最佳休闲之所，而 24 小时健身房则助您时刻保持无限活力。 室内泳池 健身房 贵宾休息室 宴会厅会议 宴会厅庆祝活动 难忘住宿之旅就此开启。</string>
+		<key>traffic</key>
+		<string>一衣刷、一鞋拔、一人体秤、棉强品筐、两毛巾、两浴巾、一地巾、两方巾、两张床及床上用品、迷你吧及酒水、保险箱、开水煲、电视、空调、服务指南、行李架。</string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>天津市 · 天津市</string>
+		<key>areaCode</key>
+		<string>120101</string>
+		<key>chargeFee</key>
+		<integer>0</integer>
+		<key>collection</key>
+		<false/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>2</integer>
+		<key>exchangeSuccess</key>
+		<integer>2</integer>
+		<key>hotelId</key>
+		<integer>120</integer>
+		<key>hotelIntroduction</key>
+		<string>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</string>
+		<key>hotelMobile</key>
+		<string>13220000000</string>
+		<key>hotelName</key>
+		<string>三亚蜈支洲岛珊瑚酒店</string>
+		<key>houseId</key>
+		<integer>103</integer>
+		<key>houseName</key>
+		<string>标准间</string>
+		<key>imgs</key>
+		<array>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201703/730e27dd-b844-4a04-b243-e37422354852.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-03-06 16:54:58</string>
+				<key>id</key>
+				<integer>931</integer>
+				<key>order</key>
+				<integer>1</integer>
+				<key>refTypeId</key>
+				<integer>103</integer>
+				<key>remark</key>
+				<string>1</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201703/730e27dd-b844-4a04-b243-e37422354852.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201703/730e27dd-b844-4a04-b243-e37422354852.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-03-06 16:54:58</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201703/5bdbaca3-ead9-45e6-aedd-ec3f7fd7b623.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-03-06 16:55:09</string>
+				<key>id</key>
+				<integer>932</integer>
+				<key>order</key>
+				<integer>2</integer>
+				<key>refTypeId</key>
+				<integer>103</integer>
+				<key>remark</key>
+				<string>2</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201703/5bdbaca3-ead9-45e6-aedd-ec3f7fd7b623.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201703/5bdbaca3-ead9-45e6-aedd-ec3f7fd7b623.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-03-06 16:55:09</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201703/3daa0edd-8feb-4f6d-926e-029ee0c86836.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-03-06 16:55:26</string>
+				<key>id</key>
+				<integer>933</integer>
+				<key>order</key>
+				<integer>3</integer>
+				<key>refTypeId</key>
+				<integer>103</integer>
+				<key>remark</key>
+				<string>3</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201703/3daa0edd-8feb-4f6d-926e-029ee0c86836.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201703/3daa0edd-8feb-4f6d-926e-029ee0c86836.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-03-06 16:55:26</string>
+			</dict>
+		</array>
+		<key>lat</key>
+		<real>39.09</real>
+		<key>level</key>
+		<integer>5</integer>
+		<key>lng</key>
+		<real>117.21</real>
+		<key>payEcNum</key>
+		<string>14~14EC</string>
+		<key>payPointNum</key>
+		<string>480~788畅游币</string>
+		<key>prompt</key>
+		<string></string>
+		<key>shuttle</key>
+		<true/>
+		<key>shuttleRemark</key>
+		<string></string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string></string>
+		<key>traffic</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>四川省 · 凉山彝族自治州</string>
+		<key>areaCode</key>
+		<string>513422</string>
+		<key>chargeFee</key>
+		<integer>0</integer>
+		<key>collection</key>
+		<false/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>0</integer>
+		<key>exchangeSuccess</key>
+		<integer>0</integer>
+		<key>hotelId</key>
+		<integer>111</integer>
+		<key>hotelIntroduction</key>
+		<string>&lt;p&gt;&lt;span style=&quot;font-family: Lucida Sans;&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;　香格里拉酒店集团
+&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Lucida Sans;&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;
+　　总部设在香港的香格里拉酒店集团是亚洲最大的豪华酒店集团，且被视为世界最佳酒店管理公司之一。香格里拉酒店集团是香格里拉亚洲有限公司的品牌，该公司在香港市场上市。&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;span style=&quot;font-family: Lucida Sans;&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;p&gt;&lt;span style=&quot;font-family: Lucida Sans;&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;
+　　起源于马来西亚的郭氏集团是由郭鹤年先生创建的一家大型综合企业集团，拥有香格里拉亚洲有限公司的大部分股权。郭氏集团的经营涉及多个领域并延及亚洲许多国家。除酒店外，集团还经营商贸、地产、饮料、物流、报业及业。&lt;/span&gt;&lt;/span&gt;&lt;img style=&quot;width: 1000px;&quot; src=&quot;http://101.201.145.44:8080/image-service/upload/image/source/201702/45aa7c87-8de1-4ea9-8e94-38e481fb03a8.jpg&quot;&gt;&lt;/p&gt;</string>
+		<key>hotelLogo</key>
+		<string>/upload/image/source/201702/6142f714-8d34-4c31-abd4-930d28dd2fbc.jpg</string>
+		<key>hotelMobile</key>
+		<string>18628081641</string>
+		<key>hotelName</key>
+		<string>西羌家园酒店</string>
+		<key>houseId</key>
+		<integer>90</integer>
+		<key>houseName</key>
+		<string>豪华单间</string>
+		<key>imgs</key>
+		<array>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/9d183df6-0bff-4286-a2c6-9571a76f352a.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-07 17:12:34</string>
+				<key>id</key>
+				<integer>709</integer>
+				<key>order</key>
+				<integer>1</integer>
+				<key>refTypeId</key>
+				<integer>90</integer>
+				<key>remark</key>
+				<string>1</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/9d183df6-0bff-4286-a2c6-9571a76f352a.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/9d183df6-0bff-4286-a2c6-9571a76f352a.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-07 17:12:34</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/637eba30-101f-4c87-915f-1e9cdc1096c7.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-07 17:12:44</string>
+				<key>id</key>
+				<integer>710</integer>
+				<key>order</key>
+				<integer>2</integer>
+				<key>refTypeId</key>
+				<integer>90</integer>
+				<key>remark</key>
+				<string>2</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/637eba30-101f-4c87-915f-1e9cdc1096c7.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/637eba30-101f-4c87-915f-1e9cdc1096c7.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-07 17:12:44</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/2fedfe6c-f39e-4896-9368-711802d9c5a9.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-07 17:12:55</string>
+				<key>id</key>
+				<integer>711</integer>
+				<key>order</key>
+				<integer>3</integer>
+				<key>refTypeId</key>
+				<integer>90</integer>
+				<key>remark</key>
+				<string>3</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/2fedfe6c-f39e-4896-9368-711802d9c5a9.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/2fedfe6c-f39e-4896-9368-711802d9c5a9.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-07 17:12:55</string>
+			</dict>
+		</array>
+		<key>lat</key>
+		<real>30.58</real>
+		<key>level</key>
+		<integer>5</integer>
+		<key>lng</key>
+		<real>104.07</real>
+		<key>payEcNum</key>
+		<string>14~14EC</string>
+		<key>payPointNum</key>
+		<string>480~788畅游币</string>
+		<key>prompt</key>
+		<string></string>
+		<key>shuttleRemark</key>
+		<string></string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string>　香格里拉酒店集团 　　总部设在香港的香格里拉酒店集团是亚洲最大的豪华酒店集团，且被视为世界最佳酒店管理公司之一。香格里拉酒店集团是香格里拉亚洲有限公司的品牌，该公司在香港市场上市。 　　起源于马来西亚的郭氏集团是由郭鹤年先生创建的一家大型综合企业集团，拥有香格里拉亚洲有限公司的大部分股权。郭氏集团的经营涉及多个领域并延及亚洲许多国家。除酒店外，集团还经营商贸、地产、饮料、物流、报业及业。</string>
+		<key>traffic</key>
+		<string>交通：866路：解放碑(朝天门)——五里坪(港城工业园区)
+
+817路：观音桥——望江
+
+812路：观音桥——唐家沱
+
+813路：观音桥——铁山坪</string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>重庆 · 重庆</string>
+		<key>areaCode</key>
+		<string>500101</string>
+		<key>chargeFee</key>
+		<integer>0</integer>
+		<key>collection</key>
+		<false/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>3</integer>
+		<key>exchangeSuccess</key>
+		<integer>3</integer>
+		<key>hotelId</key>
+		<integer>108</integer>
+		<key>hotelIntroduction</key>
+		<string>&lt;p&gt;&lt;strong&gt;繁忙一日之后，室内泳池、蒸汽室及水疗中心等均为最佳休闲之所，而 24 小时健身房则助您时刻保持无限活力。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;室内泳池&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/016.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;健身房&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/013.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;贵宾休息室&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/018.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;宴会厅会议&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/009.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;宴会厅庆祝活动&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/010.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;难忘住宿之旅就此开启。&lt;/strong&gt;&lt;/p&gt;</string>
+		<key>hotelLogo</key>
+		<string>/upload/image/source/201701/bcb21ee3-ab5f-4033-9731-c50cd97a86db.jpg</string>
+		<key>hotelMobile</key>
+		<string>18728473354</string>
+		<key>hotelName</key>
+		<string>重庆仙女山酒店</string>
+		<key>houseId</key>
+		<integer>87</integer>
+		<key>houseName</key>
+		<string>海景别墅</string>
+		<key>imgs</key>
+		<array>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/02524526-50a3-4395-b0c5-30f5b493f74b.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-09 09:34:31</string>
+				<key>id</key>
+				<integer>714</integer>
+				<key>order</key>
+				<integer>1</integer>
+				<key>refTypeId</key>
+				<integer>87</integer>
+				<key>remark</key>
+				<string>1</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/02524526-50a3-4395-b0c5-30f5b493f74b.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/02524526-50a3-4395-b0c5-30f5b493f74b.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-09 09:34:31</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/688272c7-d1d2-4be0-8629-2b3de877b378.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-09 09:34:49</string>
+				<key>id</key>
+				<integer>715</integer>
+				<key>order</key>
+				<integer>2</integer>
+				<key>refTypeId</key>
+				<integer>87</integer>
+				<key>remark</key>
+				<string>2</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/688272c7-d1d2-4be0-8629-2b3de877b378.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/688272c7-d1d2-4be0-8629-2b3de877b378.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-09 09:34:49</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/f5dd6de7-9455-4f25-89ab-1177c22e267e.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-09 09:35:08</string>
+				<key>id</key>
+				<integer>716</integer>
+				<key>order</key>
+				<integer>3</integer>
+				<key>refTypeId</key>
+				<integer>87</integer>
+				<key>remark</key>
+				<string>3</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/f5dd6de7-9455-4f25-89ab-1177c22e267e.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/f5dd6de7-9455-4f25-89ab-1177c22e267e.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-09 09:35:08</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/0e2c37c3-6fd5-4d2c-bcfb-9e114121e5f9.jpeg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-09 09:35:29</string>
+				<key>id</key>
+				<integer>717</integer>
+				<key>order</key>
+				<integer>4</integer>
+				<key>refTypeId</key>
+				<integer>87</integer>
+				<key>remark</key>
+				<string>4</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/0e2c37c3-6fd5-4d2c-bcfb-9e114121e5f9.jpeg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/0e2c37c3-6fd5-4d2c-bcfb-9e114121e5f9.jpeg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-09 09:35:29</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/40411310-74b7-42d3-b21b-cbdbd62341b5.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-09 09:35:47</string>
+				<key>id</key>
+				<integer>718</integer>
+				<key>order</key>
+				<integer>5</integer>
+				<key>refTypeId</key>
+				<integer>87</integer>
+				<key>remark</key>
+				<string>5</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/40411310-74b7-42d3-b21b-cbdbd62341b5.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/40411310-74b7-42d3-b21b-cbdbd62341b5.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-09 09:35:47</string>
+			</dict>
+		</array>
+		<key>lat</key>
+		<real>29.56</real>
+		<key>level</key>
+		<integer>5</integer>
+		<key>lng</key>
+		<real>106.58</real>
+		<key>payEcNum</key>
+		<string>14~14EC</string>
+		<key>payPointNum</key>
+		<string>480~788畅游币</string>
+		<key>prompt</key>
+		<string>安全设备是第一，服务、吃、住……</string>
+		<key>shuttle</key>
+		<true/>
+		<key>shuttleRemark</key>
+		<string>接机费用300元，从酒店到机场30分钟</string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string>繁忙一日之后，室内泳池、蒸汽室及水疗中心等均为最佳休闲之所，而 24 小时健身房则助您时刻保持无限活力。 室内泳池 健身房 贵宾休息室 宴会厅会议 宴会厅庆祝活动 难忘住宿之旅就此开启。</string>
+		<key>traffic</key>
+		<string>一衣刷、一鞋拔、一人体秤、棉强品筐、两毛巾、两浴巾、一地巾、两方巾、两张床及床上用品、迷你吧及酒水、保险箱、开水煲、电视、空调、服务指南、行李架。</string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>山西省 · 太原市</string>
+		<key>areaCode</key>
+		<string>140106</string>
+		<key>chargeFee</key>
+		<integer>0</integer>
+		<key>collection</key>
+		<false/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>0</integer>
+		<key>exchangeSuccess</key>
+		<integer>0</integer>
+		<key>hotelId</key>
+		<integer>114</integer>
+		<key>hotelIntroduction</key>
+		<string></string>
+		<key>hotelMobile</key>
+		<string>1526652525</string>
+		<key>hotelName</key>
+		<string>思韵酒店</string>
+		<key>houseId</key>
+		<integer>93</integer>
+		<key>houseName</key>
+		<string>标准间</string>
+		<key>imgs</key>
+		<array>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/dcc6fa79-ed0d-465f-ac66-291529f2ffcb.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-23 11:48:23</string>
+				<key>id</key>
+				<integer>827</integer>
+				<key>order</key>
+				<integer>1</integer>
+				<key>refTypeId</key>
+				<integer>93</integer>
+				<key>remark</key>
+				<string>1</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/dcc6fa79-ed0d-465f-ac66-291529f2ffcb.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/dcc6fa79-ed0d-465f-ac66-291529f2ffcb.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-23 11:48:23</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/da92a09e-8988-4ffe-b78e-6bab7f4853c2.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-23 11:50:51</string>
+				<key>id</key>
+				<integer>830</integer>
+				<key>order</key>
+				<integer>1</integer>
+				<key>refTypeId</key>
+				<integer>93</integer>
+				<key>remark</key>
+				<string>1</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/da92a09e-8988-4ffe-b78e-6bab7f4853c2.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/da92a09e-8988-4ffe-b78e-6bab7f4853c2.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-23 11:50:51</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/fdcf938e-59d1-4fd4-9fa7-38706e2c981c.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-23 11:48:34</string>
+				<key>id</key>
+				<integer>828</integer>
+				<key>order</key>
+				<integer>2</integer>
+				<key>refTypeId</key>
+				<integer>93</integer>
+				<key>remark</key>
+				<string>2</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/fdcf938e-59d1-4fd4-9fa7-38706e2c981c.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/fdcf938e-59d1-4fd4-9fa7-38706e2c981c.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-23 11:48:34</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201702/335a0ce0-083a-44e4-b314-c88d93a2b97d.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-02-23 11:48:45</string>
+				<key>id</key>
+				<integer>829</integer>
+				<key>order</key>
+				<integer>3</integer>
+				<key>refTypeId</key>
+				<integer>93</integer>
+				<key>remark</key>
+				<string>3</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201702/335a0ce0-083a-44e4-b314-c88d93a2b97d.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201702/335a0ce0-083a-44e4-b314-c88d93a2b97d.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-02-23 11:48:45</string>
+			</dict>
+		</array>
+		<key>lat</key>
+		<real>37.88876</real>
+		<key>level</key>
+		<integer>4</integer>
+		<key>lng</key>
+		<real>112.5632</real>
+		<key>payEcNum</key>
+		<string>48~48EC</string>
+		<key>payPointNum</key>
+		<string>480~600畅游币</string>
+		<key>shuttleRemark</key>
+		<string></string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>四川省 · 凉山彝族自治州</string>
+		<key>areaCode</key>
+		<string>513422</string>
+		<key>chargeFee</key>
+		<integer>0</integer>
+		<key>collection</key>
+		<false/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>0</integer>
+		<key>exchangeSuccess</key>
+		<integer>0</integer>
+		<key>hotelId</key>
+		<integer>111</integer>
+		<key>hotelIntroduction</key>
+		<string>&lt;p&gt;&lt;span style=&quot;font-family: Lucida Sans;&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;　香格里拉酒店集团
+&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Lucida Sans;&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;
+　　总部设在香港的香格里拉酒店集团是亚洲最大的豪华酒店集团，且被视为世界最佳酒店管理公司之一。香格里拉酒店集团是香格里拉亚洲有限公司的品牌，该公司在香港市场上市。&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;span style=&quot;font-family: Lucida Sans;&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;p&gt;&lt;span style=&quot;font-family: Lucida Sans;&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;
+　　起源于马来西亚的郭氏集团是由郭鹤年先生创建的一家大型综合企业集团，拥有香格里拉亚洲有限公司的大部分股权。郭氏集团的经营涉及多个领域并延及亚洲许多国家。除酒店外，集团还经营商贸、地产、饮料、物流、报业及业。&lt;/span&gt;&lt;/span&gt;&lt;img style=&quot;width: 1000px;&quot; src=&quot;http://101.201.145.44:8080/image-service/upload/image/source/201702/45aa7c87-8de1-4ea9-8e94-38e481fb03a8.jpg&quot;&gt;&lt;/p&gt;</string>
+		<key>hotelLogo</key>
+		<string>/upload/image/source/201702/6142f714-8d34-4c31-abd4-930d28dd2fbc.jpg</string>
+		<key>hotelMobile</key>
+		<string>18628081641</string>
+		<key>hotelName</key>
+		<string>西羌家园酒店</string>
+		<key>houseId</key>
+		<integer>97</integer>
+		<key>houseName</key>
+		<string>一室一厅</string>
+		<key>imgs</key>
+		<array/>
+		<key>lat</key>
+		<real>30.58</real>
+		<key>level</key>
+		<integer>5</integer>
+		<key>lng</key>
+		<real>104.07</real>
+		<key>payEcNum</key>
+		<string>7~11EC</string>
+		<key>payPointNum</key>
+		<string>250~420畅游币</string>
+		<key>prompt</key>
+		<string></string>
+		<key>shuttleRemark</key>
+		<string></string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string>　香格里拉酒店集团 　　总部设在香港的香格里拉酒店集团是亚洲最大的豪华酒店集团，且被视为世界最佳酒店管理公司之一。香格里拉酒店集团是香格里拉亚洲有限公司的品牌，该公司在香港市场上市。 　　起源于马来西亚的郭氏集团是由郭鹤年先生创建的一家大型综合企业集团，拥有香格里拉亚洲有限公司的大部分股权。郭氏集团的经营涉及多个领域并延及亚洲许多国家。除酒店外，集团还经营商贸、地产、饮料、物流、报业及业。</string>
+		<key>traffic</key>
+		<string>交通：866路：解放碑(朝天门)——五里坪(港城工业园区)
+
+817路：观音桥——望江
+
+812路：观音桥——唐家沱
+
+813路：观音桥——铁山坪</string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>重庆 · 重庆</string>
+		<key>areaCode</key>
+		<string>500101</string>
+		<key>chargeFee</key>
+		<integer>0</integer>
+		<key>collection</key>
+		<false/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>3</integer>
+		<key>exchangeSuccess</key>
+		<integer>3</integer>
+		<key>hotelId</key>
+		<integer>108</integer>
+		<key>hotelIntroduction</key>
+		<string>&lt;p&gt;&lt;strong&gt;繁忙一日之后，室内泳池、蒸汽室及水疗中心等均为最佳休闲之所，而 24 小时健身房则助您时刻保持无限活力。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;室内泳池&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/016.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;健身房&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/013.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;贵宾休息室&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/018.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;宴会厅会议&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/009.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;宴会厅庆祝活动&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/010.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;难忘住宿之旅就此开启。&lt;/strong&gt;&lt;/p&gt;</string>
+		<key>hotelLogo</key>
+		<string>/upload/image/source/201701/bcb21ee3-ab5f-4033-9731-c50cd97a86db.jpg</string>
+		<key>hotelMobile</key>
+		<string>18728473354</string>
+		<key>hotelName</key>
+		<string>重庆仙女山酒店</string>
+		<key>houseId</key>
+		<integer>82</integer>
+		<key>houseName</key>
+		<string>一室一厅</string>
+		<key>imgs</key>
+		<array>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/401c35a3-4114-473e-ae2c-2148aa2cf237.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:50:28</string>
+				<key>id</key>
+				<integer>596</integer>
+				<key>order</key>
+				<integer>1</integer>
+				<key>refTypeId</key>
+				<integer>82</integer>
+				<key>remark</key>
+				<string>1</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/401c35a3-4114-473e-ae2c-2148aa2cf237.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/401c35a3-4114-473e-ae2c-2148aa2cf237.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:50:28</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/af779548-c36d-4400-9bd3-736357058307.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:50:41</string>
+				<key>id</key>
+				<integer>597</integer>
+				<key>order</key>
+				<integer>2</integer>
+				<key>refTypeId</key>
+				<integer>82</integer>
+				<key>remark</key>
+				<string>2</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/af779548-c36d-4400-9bd3-736357058307.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/af779548-c36d-4400-9bd3-736357058307.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:50:41</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/add1638d-0bfe-493b-8e21-a850677f3d7b.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:50:55</string>
+				<key>id</key>
+				<integer>598</integer>
+				<key>order</key>
+				<integer>3</integer>
+				<key>refTypeId</key>
+				<integer>82</integer>
+				<key>remark</key>
+				<string>3</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/add1638d-0bfe-493b-8e21-a850677f3d7b.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/add1638d-0bfe-493b-8e21-a850677f3d7b.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:50:55</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/1b4cf6b4-4965-4498-80d2-859a02d591c1.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:51:08</string>
+				<key>id</key>
+				<integer>599</integer>
+				<key>order</key>
+				<integer>4</integer>
+				<key>refTypeId</key>
+				<integer>82</integer>
+				<key>remark</key>
+				<string>4</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/1b4cf6b4-4965-4498-80d2-859a02d591c1.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/1b4cf6b4-4965-4498-80d2-859a02d591c1.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:51:08</string>
+			</dict>
+		</array>
+		<key>lat</key>
+		<real>29.56</real>
+		<key>level</key>
+		<integer>5</integer>
+		<key>lng</key>
+		<real>106.58</real>
+		<key>payEcNum</key>
+		<string>14~14EC</string>
+		<key>payPointNum</key>
+		<string>480~788畅游币</string>
+		<key>prompt</key>
+		<string>安全设备是第一，服务、吃、住……</string>
+		<key>shuttle</key>
+		<true/>
+		<key>shuttleRemark</key>
+		<string>接机费用300元，从酒店到机场30分钟</string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string>繁忙一日之后，室内泳池、蒸汽室及水疗中心等均为最佳休闲之所，而 24 小时健身房则助您时刻保持无限活力。 室内泳池 健身房 贵宾休息室 宴会厅会议 宴会厅庆祝活动 难忘住宿之旅就此开启。</string>
+		<key>traffic</key>
+		<string>一衣刷、一鞋拔、一人体秤、棉强品筐、两毛巾、两浴巾、一地巾、两方巾、两张床及床上用品、迷你吧及酒水、保险箱、开水煲、电视、空调、服务指南、行李架。</string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>海南省 · 海口市</string>
+		<key>areaCode</key>
+		<string>460105</string>
+		<key>chargeFee</key>
+		<integer>0</integer>
+		<key>collection</key>
+		<true/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>0</integer>
+		<key>exchangeSuccess</key>
+		<integer>0</integer>
+		<key>hotelId</key>
+		<integer>109</integer>
+		<key>hotelIntroduction</key>
+		<string>&lt;p&gt;&lt;strong&gt;繁忙一日之后，室内泳池、蒸汽室及水疗中心等均为最佳休闲之所，而 24 小时健身房则助您时刻保持无限活力。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;室内泳池&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/016.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;健身房&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/013.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;贵宾休息室&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/018.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;宴会厅会议&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/009.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;宴会厅庆祝活动&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/010.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;难忘住宿之旅就此开启。&lt;/strong&gt;&lt;/p&gt;</string>
+		<key>hotelLogo</key>
+		<string>/upload/image/source/201701/97e18c62-1650-4f00-b30d-af58e962d05c.png</string>
+		<key>hotelMobile</key>
+		<string>125658585858</string>
+		<key>hotelName</key>
+		<string>棋子湾分时度假酒店</string>
+		<key>houseId</key>
+		<integer>83</integer>
+		<key>houseName</key>
+		<string>海景别墅</string>
+		<key>imgs</key>
+		<array>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/1c0d8108-9d01-43ff-b61f-5b619cf37eb3.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 02:02:37</string>
+				<key>id</key>
+				<integer>600</integer>
+				<key>order</key>
+				<integer>1</integer>
+				<key>refTypeId</key>
+				<integer>83</integer>
+				<key>remark</key>
+				<string>1</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/1c0d8108-9d01-43ff-b61f-5b619cf37eb3.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/1c0d8108-9d01-43ff-b61f-5b619cf37eb3.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 02:02:37</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/082d7171-9dfa-4215-b34d-6c86b920428f.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 02:02:58</string>
+				<key>id</key>
+				<integer>601</integer>
+				<key>order</key>
+				<integer>2</integer>
+				<key>refTypeId</key>
+				<integer>83</integer>
+				<key>remark</key>
+				<string>2</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/082d7171-9dfa-4215-b34d-6c86b920428f.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/082d7171-9dfa-4215-b34d-6c86b920428f.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 02:02:58</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/98c3ba46-ef47-48de-a739-f95f138618ec.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 02:03:32</string>
+				<key>id</key>
+				<integer>602</integer>
+				<key>order</key>
+				<integer>3</integer>
+				<key>refTypeId</key>
+				<integer>83</integer>
+				<key>remark</key>
+				<string>3</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/98c3ba46-ef47-48de-a739-f95f138618ec.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/98c3ba46-ef47-48de-a739-f95f138618ec.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 02:03:32</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/d626147a-beab-4642-82e1-741dc5b7bad9.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 02:03:58</string>
+				<key>id</key>
+				<integer>603</integer>
+				<key>order</key>
+				<integer>4</integer>
+				<key>refTypeId</key>
+				<integer>83</integer>
+				<key>remark</key>
+				<string>4</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/d626147a-beab-4642-82e1-741dc5b7bad9.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/d626147a-beab-4642-82e1-741dc5b7bad9.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 02:03:58</string>
+			</dict>
+		</array>
+		<key>lat</key>
+		<real>20.03</real>
+		<key>level</key>
+		<integer>5</integer>
+		<key>lng</key>
+		<real>110.36</real>
+		<key>payEcNum</key>
+		<string>12~20EC</string>
+		<key>payPointNum</key>
+		<string>500~800畅游币</string>
+		<key>prompt</key>
+		<string>注意安全</string>
+		<key>shuttle</key>
+		<true/>
+		<key>shuttleRemark</key>
+		<string>价格面议</string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string>繁忙一日之后，室内泳池、蒸汽室及水疗中心等均为最佳休闲之所，而 24 小时健身房则助您时刻保持无限活力。 室内泳池 健身房 贵宾休息室 宴会厅会议 宴会厅庆祝活动 难忘住宿之旅就此开启。</string>
+		<key>traffic</key>
+		<string>各种交通工具都有，应有尽有</string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>海南省 · 海口市</string>
+		<key>areaCode</key>
+		<string>460105</string>
+		<key>chargeFee</key>
+		<integer>0</integer>
+		<key>collection</key>
+		<false/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>0</integer>
+		<key>exchangeSuccess</key>
+		<integer>0</integer>
+		<key>hotelId</key>
+		<integer>109</integer>
+		<key>hotelIntroduction</key>
+		<string>&lt;p&gt;&lt;strong&gt;繁忙一日之后，室内泳池、蒸汽室及水疗中心等均为最佳休闲之所，而 24 小时健身房则助您时刻保持无限活力。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;室内泳池&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/016.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;健身房&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/013.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;贵宾休息室&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/018.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;宴会厅会议&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/009.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;宴会厅庆祝活动&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/010.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;难忘住宿之旅就此开启。&lt;/strong&gt;&lt;/p&gt;</string>
+		<key>hotelLogo</key>
+		<string>/upload/image/source/201701/97e18c62-1650-4f00-b30d-af58e962d05c.png</string>
+		<key>hotelMobile</key>
+		<string>125658585858</string>
+		<key>hotelName</key>
+		<string>棋子湾分时度假酒店</string>
+		<key>houseId</key>
+		<integer>84</integer>
+		<key>houseName</key>
+		<string>豪华单间</string>
+		<key>imgs</key>
+		<array>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/d86f7b72-a694-4a69-8be7-b10200966a2f.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 02:06:19</string>
+				<key>id</key>
+				<integer>604</integer>
+				<key>order</key>
+				<integer>1</integer>
+				<key>refTypeId</key>
+				<integer>84</integer>
+				<key>remark</key>
+				<string>1</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/d86f7b72-a694-4a69-8be7-b10200966a2f.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/d86f7b72-a694-4a69-8be7-b10200966a2f.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 02:06:19</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/264f2ff2-7080-417b-85f7-29efeb2dabc9.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 02:06:48</string>
+				<key>id</key>
+				<integer>605</integer>
+				<key>order</key>
+				<integer>2</integer>
+				<key>refTypeId</key>
+				<integer>84</integer>
+				<key>remark</key>
+				<string>2</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/264f2ff2-7080-417b-85f7-29efeb2dabc9.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/264f2ff2-7080-417b-85f7-29efeb2dabc9.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 02:06:48</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/8d105ea7-8282-4ae6-b2c3-ffce5a181758.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 02:07:10</string>
+				<key>id</key>
+				<integer>606</integer>
+				<key>order</key>
+				<integer>3</integer>
+				<key>refTypeId</key>
+				<integer>84</integer>
+				<key>remark</key>
+				<string>3</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/8d105ea7-8282-4ae6-b2c3-ffce5a181758.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/8d105ea7-8282-4ae6-b2c3-ffce5a181758.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 02:07:10</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/3e663336-c16b-4e76-81e8-3e63985cfd39.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 02:07:40</string>
+				<key>id</key>
+				<integer>607</integer>
+				<key>order</key>
+				<integer>3</integer>
+				<key>refTypeId</key>
+				<integer>84</integer>
+				<key>remark</key>
+				<string>3</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/3e663336-c16b-4e76-81e8-3e63985cfd39.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/3e663336-c16b-4e76-81e8-3e63985cfd39.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 02:07:40</string>
+			</dict>
+		</array>
+		<key>lat</key>
+		<real>20.03</real>
+		<key>level</key>
+		<integer>5</integer>
+		<key>lng</key>
+		<real>110.36</real>
+		<key>payEcNum</key>
+		<string>7~11EC</string>
+		<key>payPointNum</key>
+		<string>250~420畅游币</string>
+		<key>prompt</key>
+		<string>注意安全</string>
+		<key>shuttle</key>
+		<true/>
+		<key>shuttleRemark</key>
+		<string>价格面议</string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string>繁忙一日之后，室内泳池、蒸汽室及水疗中心等均为最佳休闲之所，而 24 小时健身房则助您时刻保持无限活力。 室内泳池 健身房 贵宾休息室 宴会厅会议 宴会厅庆祝活动 难忘住宿之旅就此开启。</string>
+		<key>traffic</key>
+		<string>各种交通工具都有，应有尽有</string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>重庆 · 重庆</string>
+		<key>areaCode</key>
+		<string>500101</string>
+		<key>chargeFee</key>
+		<integer>0</integer>
+		<key>collection</key>
+		<false/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>3</integer>
+		<key>exchangeSuccess</key>
+		<integer>3</integer>
+		<key>hotelId</key>
+		<integer>108</integer>
+		<key>hotelIntroduction</key>
+		<string>&lt;p&gt;&lt;strong&gt;繁忙一日之后，室内泳池、蒸汽室及水疗中心等均为最佳休闲之所，而 24 小时健身房则助您时刻保持无限活力。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;室内泳池&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/016.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;健身房&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/013.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;贵宾休息室&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/018.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;宴会厅会议&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/009.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;宴会厅庆祝活动&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/010.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;难忘住宿之旅就此开启。&lt;/strong&gt;&lt;/p&gt;</string>
+		<key>hotelLogo</key>
+		<string>/upload/image/source/201701/bcb21ee3-ab5f-4033-9731-c50cd97a86db.jpg</string>
+		<key>hotelMobile</key>
+		<string>18728473354</string>
+		<key>hotelName</key>
+		<string>重庆仙女山酒店</string>
+		<key>houseId</key>
+		<integer>85</integer>
+		<key>houseName</key>
+		<string>豪华单间</string>
+		<key>imgs</key>
+		<array>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/b4a2785e-f05c-415f-ac6c-0b99207460c2.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-23 19:58:53</string>
+				<key>id</key>
+				<integer>660</integer>
+				<key>order</key>
+				<integer>1</integer>
+				<key>refTypeId</key>
+				<integer>85</integer>
+				<key>remark</key>
+				<string>1</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/b4a2785e-f05c-415f-ac6c-0b99207460c2.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/b4a2785e-f05c-415f-ac6c-0b99207460c2.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-23 19:58:53</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/952e3171-2254-4c78-901d-1c68d23c1f58.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-23 19:59:04</string>
+				<key>id</key>
+				<integer>661</integer>
+				<key>order</key>
+				<integer>2</integer>
+				<key>refTypeId</key>
+				<integer>85</integer>
+				<key>remark</key>
+				<string>2</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/952e3171-2254-4c78-901d-1c68d23c1f58.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/952e3171-2254-4c78-901d-1c68d23c1f58.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-23 19:59:04</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/b6ff2ad8-9d9a-4ad5-8a7f-726bcafe42cb.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-23 19:59:16</string>
+				<key>id</key>
+				<integer>662</integer>
+				<key>order</key>
+				<integer>3</integer>
+				<key>refTypeId</key>
+				<integer>85</integer>
+				<key>remark</key>
+				<string>3</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/b6ff2ad8-9d9a-4ad5-8a7f-726bcafe42cb.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/b6ff2ad8-9d9a-4ad5-8a7f-726bcafe42cb.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-23 19:59:16</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/5c9f7b23-77f5-42be-8737-058a1cfb61fa.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-23 19:59:29</string>
+				<key>id</key>
+				<integer>663</integer>
+				<key>order</key>
+				<integer>4</integer>
+				<key>refTypeId</key>
+				<integer>85</integer>
+				<key>remark</key>
+				<string>4</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/5c9f7b23-77f5-42be-8737-058a1cfb61fa.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/5c9f7b23-77f5-42be-8737-058a1cfb61fa.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-23 19:59:29</string>
+			</dict>
+		</array>
+		<key>lat</key>
+		<real>29.56</real>
+		<key>level</key>
+		<integer>5</integer>
+		<key>lng</key>
+		<real>106.58</real>
+		<key>payEcNum</key>
+		<string>8~12EC</string>
+		<key>payPointNum</key>
+		<string>250~430畅游币</string>
+		<key>prompt</key>
+		<string>安全设备是第一，服务、吃、住……</string>
+		<key>shuttle</key>
+		<true/>
+		<key>shuttleRemark</key>
+		<string>接机费用300元，从酒店到机场30分钟</string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string>繁忙一日之后，室内泳池、蒸汽室及水疗中心等均为最佳休闲之所，而 24 小时健身房则助您时刻保持无限活力。 室内泳池 健身房 贵宾休息室 宴会厅会议 宴会厅庆祝活动 难忘住宿之旅就此开启。</string>
+		<key>traffic</key>
+		<string>一衣刷、一鞋拔、一人体秤、棉强品筐、两毛巾、两浴巾、一地巾、两方巾、两张床及床上用品、迷你吧及酒水、保险箱、开水煲、电视、空调、服务指南、行李架。</string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>湖北省 · 武汉市</string>
+		<key>areaCode</key>
+		<string>420103</string>
+		<key>chargeFee</key>
+		<real>0.01</real>
+		<key>collection</key>
+		<false/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>0</integer>
+		<key>exchangeSuccess</key>
+		<integer>0</integer>
+		<key>hotelId</key>
+		<integer>106</integer>
+		<key>hotelIntroduction</key>
+		<string>&lt;span style=&quot;font-weight: bold;&quot;&gt;北京万豪酒店地处中央商务区，占地 1,800 平方米，是华贸中心的组成部分，华贸中心是一处庄严的综合性场所，这里有办公室、商场和住宅大楼。&lt;br&gt;&lt;br&gt;主入口&lt;br&gt;&lt;img style=&quot;width: 909.5px; height: 948.805px;&quot; src=&quot;http://101.201.145.44:8080/image-service/upload/image/source/201701/fdafb4e8-7cef-47be-9ee0-c5d044bc4793.jpg&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;/span&gt;</string>
+		<key>hotelLogo</key>
+		<string>/upload/image/source/201701/51a184e8-6b38-46e4-8cb4-0ce7cc6ed505.jpg</string>
+		<key>hotelMobile</key>
+		<string>18628081641</string>
+		<key>hotelName</key>
+		<string>梦天湖酒店</string>
+		<key>houseId</key>
+		<integer>86</integer>
+		<key>houseName</key>
+		<string>豪华单间</string>
+		<key>imgs</key>
+		<array>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/e0136227-9d88-4d7e-b1f5-cac8984dcb12.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-23 20:12:13</string>
+				<key>id</key>
+				<integer>664</integer>
+				<key>order</key>
+				<integer>1</integer>
+				<key>refTypeId</key>
+				<integer>86</integer>
+				<key>remark</key>
+				<string>1</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/e0136227-9d88-4d7e-b1f5-cac8984dcb12.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/e0136227-9d88-4d7e-b1f5-cac8984dcb12.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-23 20:12:13</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/5f1e45b7-27bd-46c9-bccd-1c982655d117.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-23 20:12:34</string>
+				<key>id</key>
+				<integer>665</integer>
+				<key>order</key>
+				<integer>2</integer>
+				<key>refTypeId</key>
+				<integer>86</integer>
+				<key>remark</key>
+				<string>2</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/5f1e45b7-27bd-46c9-bccd-1c982655d117.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/5f1e45b7-27bd-46c9-bccd-1c982655d117.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-23 20:12:34</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/bc0e8d08-8e6a-44e8-9962-e2a15267a4b9.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-23 19:51:07</string>
+				<key>id</key>
+				<integer>657</integer>
+				<key>order</key>
+				<integer>3</integer>
+				<key>refTypeId</key>
+				<integer>86</integer>
+				<key>remark</key>
+				<string>3</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/bc0e8d08-8e6a-44e8-9962-e2a15267a4b9.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/bc0e8d08-8e6a-44e8-9962-e2a15267a4b9.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-23 19:51:07</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/e6b84c45-9d0c-42bc-8203-feb745c6beaa.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-23 20:13:36</string>
+				<key>id</key>
+				<integer>666</integer>
+				<key>order</key>
+				<integer>4</integer>
+				<key>refTypeId</key>
+				<integer>86</integer>
+				<key>remark</key>
+				<string>4</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/e6b84c45-9d0c-42bc-8203-feb745c6beaa.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/e6b84c45-9d0c-42bc-8203-feb745c6beaa.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-23 20:13:36</string>
+			</dict>
+		</array>
+		<key>lat</key>
+		<real>30.606928</real>
+		<key>level</key>
+		<integer>5</integer>
+		<key>lng</key>
+		<real>114.30312</real>
+		<key>payEcNum</key>
+		<string>12~20EC</string>
+		<key>payPointNum</key>
+		<string>500~800畅游币</string>
+		<key>prompt</key>
+		<string></string>
+		<key>shuttle</key>
+		<true/>
+		<key>shuttleRemark</key>
+		<string>接机费用680，送到天河国际机场</string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string>北京万豪酒店地处中央商务区，占地 1,800 平方米，是华贸中心的组成部分，华贸中心是一处庄严的综合性场所，这里有办公室、商场和住宅大楼。 主入口</string>
+		<key>traffic</key>
+		<string>自行车，公交车，大巴车</string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>湖北省 · 武汉市</string>
+		<key>areaCode</key>
+		<string>420103</string>
+		<key>chargeFee</key>
+		<real>0.01</real>
+		<key>collection</key>
+		<false/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>0</integer>
+		<key>exchangeSuccess</key>
+		<integer>0</integer>
+		<key>hotelId</key>
+		<integer>106</integer>
+		<key>hotelIntroduction</key>
+		<string>&lt;span style=&quot;font-weight: bold;&quot;&gt;北京万豪酒店地处中央商务区，占地 1,800 平方米，是华贸中心的组成部分，华贸中心是一处庄严的综合性场所，这里有办公室、商场和住宅大楼。&lt;br&gt;&lt;br&gt;主入口&lt;br&gt;&lt;img style=&quot;width: 909.5px; height: 948.805px;&quot; src=&quot;http://101.201.145.44:8080/image-service/upload/image/source/201701/fdafb4e8-7cef-47be-9ee0-c5d044bc4793.jpg&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;/span&gt;</string>
+		<key>hotelLogo</key>
+		<string>/upload/image/source/201701/51a184e8-6b38-46e4-8cb4-0ce7cc6ed505.jpg</string>
+		<key>hotelMobile</key>
+		<string>18628081641</string>
+		<key>hotelName</key>
+		<string>梦天湖酒店</string>
+		<key>houseId</key>
+		<integer>78</integer>
+		<key>houseName</key>
+		<string>一室一厅</string>
+		<key>imgs</key>
+		<array>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/5d41eba0-6f7c-4efa-a89d-ae2f0e3316fd.JPG</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:06:35</string>
+				<key>id</key>
+				<integer>577</integer>
+				<key>order</key>
+				<integer>1</integer>
+				<key>refTypeId</key>
+				<integer>78</integer>
+				<key>remark</key>
+				<string>1</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/5d41eba0-6f7c-4efa-a89d-ae2f0e3316fd.JPG</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/5d41eba0-6f7c-4efa-a89d-ae2f0e3316fd.JPG</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:06:35</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/0025863e-17f8-4a57-874c-f8568794124f.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:06:52</string>
+				<key>id</key>
+				<integer>578</integer>
+				<key>order</key>
+				<integer>2</integer>
+				<key>refTypeId</key>
+				<integer>78</integer>
+				<key>remark</key>
+				<string>2</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/0025863e-17f8-4a57-874c-f8568794124f.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/0025863e-17f8-4a57-874c-f8568794124f.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:06:52</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/7ae557fa-eb33-479c-9312-18381d292cea.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:07:09</string>
+				<key>id</key>
+				<integer>579</integer>
+				<key>order</key>
+				<integer>3</integer>
+				<key>refTypeId</key>
+				<integer>78</integer>
+				<key>remark</key>
+				<string>3</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/7ae557fa-eb33-479c-9312-18381d292cea.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/7ae557fa-eb33-479c-9312-18381d292cea.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:07:09</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/9aba9c9a-2eab-4e39-bf26-11a007872a9a.jpg</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:07:25</string>
+				<key>id</key>
+				<integer>580</integer>
+				<key>order</key>
+				<integer>4</integer>
+				<key>refTypeId</key>
+				<integer>78</integer>
+				<key>remark</key>
+				<string>4</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/9aba9c9a-2eab-4e39-bf26-11a007872a9a.jpg</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/9aba9c9a-2eab-4e39-bf26-11a007872a9a.jpg</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:07:25</string>
+			</dict>
+		</array>
+		<key>lat</key>
+		<real>30.606928</real>
+		<key>level</key>
+		<integer>5</integer>
+		<key>lng</key>
+		<real>114.30312</real>
+		<key>payEcNum</key>
+		<string>7~11EC</string>
+		<key>payPointNum</key>
+		<string>250~420畅游币</string>
+		<key>prompt</key>
+		<string></string>
+		<key>shuttle</key>
+		<true/>
+		<key>shuttleRemark</key>
+		<string>接机费用680，送到天河国际机场</string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string>北京万豪酒店地处中央商务区，占地 1,800 平方米，是华贸中心的组成部分，华贸中心是一处庄严的综合性场所，这里有办公室、商场和住宅大楼。 主入口</string>
+		<key>traffic</key>
+		<string>自行车，公交车，大巴车</string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>湖北省 · 武汉市</string>
+		<key>areaCode</key>
+		<string>420103</string>
+		<key>chargeFee</key>
+		<integer>0</integer>
+		<key>collection</key>
+		<false/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>0</integer>
+		<key>exchangeSuccess</key>
+		<integer>0</integer>
+		<key>hotelId</key>
+		<integer>107</integer>
+		<key>hotelIntroduction</key>
+		<string>&lt;h1&gt;朗庭酒店图文介绍&lt;/h1&gt;
+            &lt;div class=&quot;meta singlemeta&quot;&gt;
+            	&lt;span&gt;2012-01-05 04:52&lt;/span&gt;
+                &lt;span&gt;作者: &lt;a href=&quot;http://www.meisujia.com/blog/author/wangqian/&quot; title=&quot;由 Cyndi 发布&quot; rel=&quot;author&quot;&gt;Cyndi&lt;/a&gt;&lt;/span&gt;
+                
+                &lt;span&gt;浏览: &lt;/span&gt;
+                &lt;span class=&quot;cmts&quot;&gt;&lt;a href=&quot;http://www.meisujia.com/blog/%E5%8C%97%E4%BA%ACjw%E4%B8%87%E8%B1%AA%E9%85%92%E5%BA%97%E5%9B%BE%E6%96%87%E4%BB%8B%E7%BB%8D/#addcomment&quot;&gt;我要评论&lt;/a&gt;&lt;/span&gt;
+                &lt;span&gt;字号: &lt;a class=&quot;mfbig&quot;&gt;大&lt;/a&gt; &lt;a class=&quot;mfmid&quot;&gt;中&lt;/a&gt; &lt;a class=&quot;mfsml mfcurrent&quot;&gt;小&lt;/a&gt; &lt;/span&gt; 
+				            &lt;/div&gt;
+            
+            &lt;div class=&quot;sharebtn&quot;&gt;
+            &lt;div id=&quot;ckepop&quot;&gt;
+                &lt;a href=&quot;http://www.jiathis.com/share/&quot; class=&quot;jiathis jiathis_txt jtico jtico_jiathis&quot; target=&quot;_blank&quot; style=&quot;&quot;&gt;分享到：&lt;/a&gt;
+                &lt;a class=&quot;jiathis_button_qzone&quot; title=&quot;分享到QQ空间&quot;&gt;&lt;span class=&quot;jiathis_txt jiathis_separator jtico jtico_qzone&quot;&gt;QQ空间&lt;/span&gt;&lt;/a&gt;
+                &lt;a class=&quot;jiathis_button_tsina&quot; title=&quot;分享到微博&quot;&gt;&lt;span class=&quot;jiathis_txt jiathis_separator jtico jtico_tsina&quot;&gt;新浪微博&lt;/span&gt;&lt;/a&gt;
+                &lt;a class=&quot;jiathis_button_tqq&quot; title=&quot;分享到腾讯微博&quot;&gt;&lt;span class=&quot;jiathis_txt jiathis_separator jtico jtico_tqq&quot;&gt;腾讯微博&lt;/span&gt;&lt;/a&gt;
+                
+                
+                &lt;a class=&quot;jiathis_button_kaixin001&quot; title=&quot;分享到开心网&quot;&gt;&lt;span class=&quot;jiathis_txt jiathis_separator jtico jtico_kaixin001&quot;&gt;开心网&lt;/span&gt;&lt;/a&gt;
+                &lt;a class=&quot;jiathis_button_renren&quot; title=&quot;分享到人人网&quot;&gt;&lt;span class=&quot;jiathis_txt jiathis_separator jtico jtico_renren&quot;&gt;人人网&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+            
+            &lt;/div&gt;
+            
+            
+            
+            
+            	                	&lt;p class=&quot;summary&quot;&gt;&lt;strong&gt;摘要&lt;/strong&gt;: &lt;/p&gt;&lt;p&gt;酒店地处中央商务区，交通便利。&lt;/p&gt;
+
+                            	
+                
+					                
+                &lt;p&gt;&lt;strong&gt;占地 1,800 平方米，是华贸中心的组成部分，华贸中心是一处庄严的综合性场所，这里有办公室、商场和住宅大楼。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;主入口&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/003.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;酒店大堂&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/008.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/004.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;酒店客房和套房提供奢华的床上用品、42 英寸纯平电视、高速上网、笔记本电脑大小的保险箱、迷你吧和热带雨林淋浴。 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;特大床客房&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/005.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;双人床/双人床客房&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/006.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;独一无二的行政套房&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/017.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;酒店有三间精致餐厅和两个酒廊非常适合家庭和同事间就餐和相聚。 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CRU 牛排餐厅&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/011.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/012.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Asia Bistro 私人餐厅&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/007.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;繁忙一日之后，室内泳池、蒸汽室及水疗中心等均为最佳休闲之所，而 24 小时健身房则助您时刻保持无限活力。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;室内泳池&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/016.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;健身房&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/013.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;贵宾休息室&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/018.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;宴会厅会议&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/009.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;宴会厅庆祝活动&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/010.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;难忘住宿之旅就此开启。&lt;/strong&gt;&lt;/p&gt;</string>
+		<key>hotelLogo</key>
+		<string>/upload/image/source/201701/80f95b03-6f97-4b2a-813d-5e278a69f1ca.jpg</string>
+		<key>hotelMobile</key>
+		<string>1592235252</string>
+		<key>hotelName</key>
+		<string>朗庭酒店</string>
+		<key>houseId</key>
+		<integer>79</integer>
+		<key>houseName</key>
+		<string>一室一厅</string>
+		<key>imgs</key>
+		<array>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/85c2586e-61f3-4d9a-a1da-ee8172ccff48.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:28:28</string>
+				<key>id</key>
+				<integer>582</integer>
+				<key>order</key>
+				<integer>1</integer>
+				<key>refTypeId</key>
+				<integer>79</integer>
+				<key>remark</key>
+				<string>1</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/85c2586e-61f3-4d9a-a1da-ee8172ccff48.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/85c2586e-61f3-4d9a-a1da-ee8172ccff48.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:28:28</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/94a81fae-6393-4b34-a2b5-77d2b3c07abe.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:28:39</string>
+				<key>id</key>
+				<integer>583</integer>
+				<key>order</key>
+				<integer>2</integer>
+				<key>refTypeId</key>
+				<integer>79</integer>
+				<key>remark</key>
+				<string>2</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/94a81fae-6393-4b34-a2b5-77d2b3c07abe.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/94a81fae-6393-4b34-a2b5-77d2b3c07abe.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:28:39</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/ed05e460-b3ef-465a-81f1-e20f0be5ca20.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:28:51</string>
+				<key>id</key>
+				<integer>584</integer>
+				<key>order</key>
+				<integer>3</integer>
+				<key>refTypeId</key>
+				<integer>79</integer>
+				<key>remark</key>
+				<string>3</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/ed05e460-b3ef-465a-81f1-e20f0be5ca20.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/ed05e460-b3ef-465a-81f1-e20f0be5ca20.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:28:51</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/82c30c59-05b9-4b9d-b2c4-6a8374f55ebe.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:29:04</string>
+				<key>id</key>
+				<integer>585</integer>
+				<key>order</key>
+				<integer>4</integer>
+				<key>refTypeId</key>
+				<integer>79</integer>
+				<key>remark</key>
+				<string>4</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/82c30c59-05b9-4b9d-b2c4-6a8374f55ebe.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/82c30c59-05b9-4b9d-b2c4-6a8374f55ebe.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:29:04</string>
+			</dict>
+		</array>
+		<key>lat</key>
+		<real>30.6</real>
+		<key>level</key>
+		<integer>5</integer>
+		<key>lng</key>
+		<real>114.31</real>
+		<key>payEcNum</key>
+		<string>12~20EC</string>
+		<key>payPointNum</key>
+		<string>500~800畅游币</string>
+		<key>prompt</key>
+		<string>贵重物品请妥善管理</string>
+		<key>shuttleRemark</key>
+		<string></string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string>朗庭酒店图文介绍 2012-01-05 04:52 作者: Cyndi 浏览: 我要评论 字号: 大 中 小 分享到： QQ空间 新浪微博 腾讯微博 开心网 人人网 摘要: 酒店地处中央商务区，交通便利。 占地 1,800 平方米，是华贸中心的组成部分，华贸中心是一处庄严的综合性场所，这里有办公室、商场和住宅大楼。 主入口 酒店大堂 酒店客房和套房提供奢华的床上用品、42 英寸纯平电视、高速上网、笔记本电脑大小的保险箱、迷你吧和热带雨林淋浴。 特大床客房 双人床/双人床客房 独一无二的行政套房 酒店有三间精致餐厅和两个酒廊非常适合家庭和同事间就餐和相聚。 CRU 牛排餐厅 Asia Bistro 私人餐厅 繁忙一日之后，室内泳池、蒸汽室及水疗中心等均为最佳休闲之所，而 24 小时健身房则助您时刻保持无限活力。 室内泳池 健身房 贵宾休息室 宴会厅会议 宴会厅庆祝活动 难忘住宿之旅就此开启。</string>
+		<key>traffic</key>
+		<string>自行车，公家车</string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>湖北省 · 武汉市</string>
+		<key>areaCode</key>
+		<string>420103</string>
+		<key>chargeFee</key>
+		<integer>0</integer>
+		<key>collection</key>
+		<false/>
+		<key>consultingMobile</key>
+		<string>028-81712656 </string>
+		<key>exchangeCount</key>
+		<integer>0</integer>
+		<key>exchangeSuccess</key>
+		<integer>0</integer>
+		<key>hotelId</key>
+		<integer>107</integer>
+		<key>hotelIntroduction</key>
+		<string>&lt;h1&gt;朗庭酒店图文介绍&lt;/h1&gt;
+            &lt;div class=&quot;meta singlemeta&quot;&gt;
+            	&lt;span&gt;2012-01-05 04:52&lt;/span&gt;
+                &lt;span&gt;作者: &lt;a href=&quot;http://www.meisujia.com/blog/author/wangqian/&quot; title=&quot;由 Cyndi 发布&quot; rel=&quot;author&quot;&gt;Cyndi&lt;/a&gt;&lt;/span&gt;
+                
+                &lt;span&gt;浏览: &lt;/span&gt;
+                &lt;span class=&quot;cmts&quot;&gt;&lt;a href=&quot;http://www.meisujia.com/blog/%E5%8C%97%E4%BA%ACjw%E4%B8%87%E8%B1%AA%E9%85%92%E5%BA%97%E5%9B%BE%E6%96%87%E4%BB%8B%E7%BB%8D/#addcomment&quot;&gt;我要评论&lt;/a&gt;&lt;/span&gt;
+                &lt;span&gt;字号: &lt;a class=&quot;mfbig&quot;&gt;大&lt;/a&gt; &lt;a class=&quot;mfmid&quot;&gt;中&lt;/a&gt; &lt;a class=&quot;mfsml mfcurrent&quot;&gt;小&lt;/a&gt; &lt;/span&gt; 
+				            &lt;/div&gt;
+            
+            &lt;div class=&quot;sharebtn&quot;&gt;
+            &lt;div id=&quot;ckepop&quot;&gt;
+                &lt;a href=&quot;http://www.jiathis.com/share/&quot; class=&quot;jiathis jiathis_txt jtico jtico_jiathis&quot; target=&quot;_blank&quot; style=&quot;&quot;&gt;分享到：&lt;/a&gt;
+                &lt;a class=&quot;jiathis_button_qzone&quot; title=&quot;分享到QQ空间&quot;&gt;&lt;span class=&quot;jiathis_txt jiathis_separator jtico jtico_qzone&quot;&gt;QQ空间&lt;/span&gt;&lt;/a&gt;
+                &lt;a class=&quot;jiathis_button_tsina&quot; title=&quot;分享到微博&quot;&gt;&lt;span class=&quot;jiathis_txt jiathis_separator jtico jtico_tsina&quot;&gt;新浪微博&lt;/span&gt;&lt;/a&gt;
+                &lt;a class=&quot;jiathis_button_tqq&quot; title=&quot;分享到腾讯微博&quot;&gt;&lt;span class=&quot;jiathis_txt jiathis_separator jtico jtico_tqq&quot;&gt;腾讯微博&lt;/span&gt;&lt;/a&gt;
+                
+                
+                &lt;a class=&quot;jiathis_button_kaixin001&quot; title=&quot;分享到开心网&quot;&gt;&lt;span class=&quot;jiathis_txt jiathis_separator jtico jtico_kaixin001&quot;&gt;开心网&lt;/span&gt;&lt;/a&gt;
+                &lt;a class=&quot;jiathis_button_renren&quot; title=&quot;分享到人人网&quot;&gt;&lt;span class=&quot;jiathis_txt jiathis_separator jtico jtico_renren&quot;&gt;人人网&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+            
+            &lt;/div&gt;
+            
+            
+            
+            
+            	                	&lt;p class=&quot;summary&quot;&gt;&lt;strong&gt;摘要&lt;/strong&gt;: &lt;/p&gt;&lt;p&gt;酒店地处中央商务区，交通便利。&lt;/p&gt;
+
+                            	
+                
+					                
+                &lt;p&gt;&lt;strong&gt;占地 1,800 平方米，是华贸中心的组成部分，华贸中心是一处庄严的综合性场所，这里有办公室、商场和住宅大楼。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;主入口&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/003.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;酒店大堂&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/008.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/004.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;酒店客房和套房提供奢华的床上用品、42 英寸纯平电视、高速上网、笔记本电脑大小的保险箱、迷你吧和热带雨林淋浴。 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;特大床客房&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/005.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;双人床/双人床客房&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/006.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;独一无二的行政套房&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/017.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;酒店有三间精致餐厅和两个酒廊非常适合家庭和同事间就餐和相聚。 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CRU 牛排餐厅&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/011.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/012.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Asia Bistro 私人餐厅&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/007.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;繁忙一日之后，室内泳池、蒸汽室及水疗中心等均为最佳休闲之所，而 24 小时健身房则助您时刻保持无限活力。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;室内泳池&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/016.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;健身房&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/013.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;贵宾休息室&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/018.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;宴会厅会议&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/009.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;宴会厅庆祝活动&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&quot;http://www.meisujia.com/Introductions/JW_Marriott_Beijing/010.jpg&quot; alt=&quot;&quot; border=&quot;0&quot;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;难忘住宿之旅就此开启。&lt;/strong&gt;&lt;/p&gt;</string>
+		<key>hotelLogo</key>
+		<string>/upload/image/source/201701/80f95b03-6f97-4b2a-813d-5e278a69f1ca.jpg</string>
+		<key>hotelMobile</key>
+		<string>1592235252</string>
+		<key>hotelName</key>
+		<string>朗庭酒店</string>
+		<key>houseId</key>
+		<integer>80</integer>
+		<key>houseName</key>
+		<string>标准间</string>
+		<key>imgs</key>
+		<array>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/db49ad3c-bf8c-4bb1-9d8d-842429340645.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:30:57</string>
+				<key>id</key>
+				<integer>586</integer>
+				<key>order</key>
+				<integer>1</integer>
+				<key>refTypeId</key>
+				<integer>80</integer>
+				<key>remark</key>
+				<string>1</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/db49ad3c-bf8c-4bb1-9d8d-842429340645.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/db49ad3c-bf8c-4bb1-9d8d-842429340645.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:30:57</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/22e7ab23-07b8-41b1-9dce-f38d35709951.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:31:09</string>
+				<key>id</key>
+				<integer>587</integer>
+				<key>order</key>
+				<integer>2</integer>
+				<key>refTypeId</key>
+				<integer>80</integer>
+				<key>remark</key>
+				<string>2</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/22e7ab23-07b8-41b1-9dce-f38d35709951.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/22e7ab23-07b8-41b1-9dce-f38d35709951.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:31:09</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/89b71d39-e568-44ac-a2b1-2e92e6571ed3.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:31:20</string>
+				<key>id</key>
+				<integer>588</integer>
+				<key>order</key>
+				<integer>3</integer>
+				<key>refTypeId</key>
+				<integer>80</integer>
+				<key>remark</key>
+				<string>3</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/89b71d39-e568-44ac-a2b1-2e92e6571ed3.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/89b71d39-e568-44ac-a2b1-2e92e6571ed3.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:31:20</string>
+			</dict>
+			<dict>
+				<key>bigPath</key>
+				<string>/upload/image/big/201701/60a7fe7e-7ab4-4459-9053-f652c3406652.png</string>
+				<key>category</key>
+				<integer>1</integer>
+				<key>createTime</key>
+				<string>2017-01-20 01:31:31</string>
+				<key>id</key>
+				<integer>589</integer>
+				<key>order</key>
+				<integer>4</integer>
+				<key>refTypeId</key>
+				<integer>80</integer>
+				<key>remark</key>
+				<string>4</string>
+				<key>smallPath</key>
+				<string>/upload/image/small/201701/60a7fe7e-7ab4-4459-9053-f652c3406652.png</string>
+				<key>sourcePath</key>
+				<string>/upload/image/source/201701/60a7fe7e-7ab4-4459-9053-f652c3406652.png</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>updateTime</key>
+				<string>2017-01-20 01:31:31</string>
+			</dict>
+		</array>
+		<key>lat</key>
+		<real>30.6</real>
+		<key>level</key>
+		<integer>5</integer>
+		<key>lng</key>
+		<real>114.31</real>
+		<key>payEcNum</key>
+		<string>12~20EC</string>
+		<key>payPointNum</key>
+		<string>500~800畅游币</string>
+		<key>prompt</key>
+		<string>贵重物品请妥善管理</string>
+		<key>shuttleRemark</key>
+		<string></string>
+		<key>successRate</key>
+		<string>100.0</string>
+		<key>text</key>
+		<string>朗庭酒店图文介绍 2012-01-05 04:52 作者: Cyndi 浏览: 我要评论 字号: 大 中 小 分享到： QQ空间 新浪微博 腾讯微博 开心网 人人网 摘要: 酒店地处中央商务区，交通便利。 占地 1,800 平方米，是华贸中心的组成部分，华贸中心是一处庄严的综合性场所，这里有办公室、商场和住宅大楼。 主入口 酒店大堂 酒店客房和套房提供奢华的床上用品、42 英寸纯平电视、高速上网、笔记本电脑大小的保险箱、迷你吧和热带雨林淋浴。 特大床客房 双人床/双人床客房 独一无二的行政套房 酒店有三间精致餐厅和两个酒廊非常适合家庭和同事间就餐和相聚。 CRU 牛排餐厅 Asia Bistro 私人餐厅 繁忙一日之后，室内泳池、蒸汽室及水疗中心等均为最佳休闲之所，而 24 小时健身房则助您时刻保持无限活力。 室内泳池 健身房 贵宾休息室 宴会厅会议 宴会厅庆祝活动 难忘住宿之旅就此开启。</string>
+		<key>traffic</key>
+		<string>自行车，公家车</string>
+	</dict>
+</array>
+</plist>
