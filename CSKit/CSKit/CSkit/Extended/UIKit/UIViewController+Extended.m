@@ -11,7 +11,7 @@
 #import <StoreKit/StoreKit.h>
 #import <MobileCoreServices/UTCoreTypes.h>
 
-static const void *CSBackButtonHandlerKey = &CSBackButtonHandlerKey;
+//static const void *CSBackButtonHandlerKey = &CSBackButtonHandlerKey;
 static const void *UIViewControllerDictionaryBlockKey = &UIViewControllerDictionaryBlockKey;
 NSString* const affiliateTokenKey = @"at";
 NSString* const campaignTokenKey = @"ct";
@@ -31,13 +31,13 @@ static void * const kMessageAssociatedStorageKey = (void*)&kMessageAssociatedSto
 ///MARK: =========================================
 ///MARK: 返回按钮相关
 ///MARK: =========================================
-- (void)backButtonTouched:(CSBackButtonHandler)backButtonHandler{
-    objc_setAssociatedObject(self, CSBackButtonHandlerKey, backButtonHandler, OBJC_ASSOCIATION_COPY);
-}
-- (CSBackButtonHandler)backButtonTouched
-{
-    return objc_getAssociatedObject(self, CSBackButtonHandlerKey);
-}
+//- (void)backButtonTouched:(CSBackButtonHandler)backButtonHandler{
+//    objc_setAssociatedObject(self, CSBackButtonHandlerKey, backButtonHandler, OBJC_ASSOCIATION_COPY);
+//}
+//- (CSBackButtonHandler)backButtonTouched
+//{
+//    return objc_getAssociatedObject(self, CSBackButtonHandlerKey);
+//}
 ///MARK: =========================================
 ///MARK: 返回按钮相关
 ///MARK: =========================================
@@ -850,61 +850,61 @@ void CSBlockSegue(void) {
 
 @implementation UINavigationController (NavigationItemBackBtnTile)
 
-- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPushItem:(UINavigationItem *)item {
-    
-    UIViewController * viewController = self.viewControllers.count > 1 ? \
-    [self.viewControllers objectAtIndex:self.viewControllers.count - 2] : nil;
-    
-    if (!viewController) {
-        return YES;
-    }
-    
-    NSString *backButtonTitle = nil;
-    if ([viewController respondsToSelector:@selector(navigationItemBackBarButtonTitle)]) {
-        backButtonTitle = [viewController navigationItemBackBarButtonTitle];
-    }
-    
-    if (!backButtonTitle) {
-        backButtonTitle = viewController.title;
-    }
-    
-    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:backButtonTitle
-                                                                       style:UIBarButtonItemStylePlain
-                                                                      target:nil action:nil];
-    viewController.navigationItem.backBarButtonItem = backButtonItem;
-    
-    return YES;
-}
+//- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPushItem:(UINavigationItem *)item {
+//    
+//    UIViewController * viewController = self.viewControllers.count > 1 ? \
+//    [self.viewControllers objectAtIndex:self.viewControllers.count - 2] : nil;
+//    
+//    if (!viewController) {
+//        return YES;
+//    }
+//    
+//    NSString *backButtonTitle = nil;
+//    if ([viewController respondsToSelector:@selector(navigationItemBackBarButtonTitle)]) {
+//        backButtonTitle = [viewController navigationItemBackBarButtonTitle];
+//    }
+//    
+//    if (!backButtonTitle) {
+//        backButtonTitle = viewController.title;
+//    }
+//    
+//    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:backButtonTitle
+//                                                                       style:UIBarButtonItemStylePlain
+//                                                                      target:nil action:nil];
+//    viewController.navigationItem.backBarButtonItem = backButtonItem;
+//    
+//    return YES;
+//}
 
-- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item {
-    
-    if([self.viewControllers count] < [navigationBar.items count]) {
-        return YES;
-    }
-    
-   	UIViewController* vc = [self topViewController];
-    CSBackButtonHandler handler = [vc backButtonTouched];
-    if (handler) {
-        // Workaround for iOS7.1. Thanks to @boliva - http://stackoverflow.com/posts/comments/34452906
-        
-        for(UIView *subview in [navigationBar subviews]) {
-            if(subview.alpha < 1.) {
-                [UIView animateWithDuration:.25 animations:^{
-                    subview.alpha = 1.;
-                }];
-            }
-        }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            handler(self);
-        });
-    }else{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self popViewControllerAnimated:YES];
-        });
-    }
-    
-    return NO;
-}
+//- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item {
+//    
+//    if([self.viewControllers count] < [navigationBar.items count]) {
+//        return YES;
+//    }
+//    
+//   	UIViewController* vc = [self topViewController];
+//    CSBackButtonHandler handler = [vc backButtonTouched];
+//    if (handler) {
+//        // Workaround for iOS7.1. Thanks to @boliva - http://stackoverflow.com/posts/comments/34452906
+//        
+//        for(UIView *subview in [navigationBar subviews]) {
+//            if(subview.alpha < 1.) {
+//                [UIView animateWithDuration:.25 animations:^{
+//                    subview.alpha = 1.;
+//                }];
+//            }
+//        }
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            handler(self);
+//        });
+//    }else{
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [self popViewControllerAnimated:YES];
+//        });
+//    }
+//    
+//    return NO;
+//}
 
 
 

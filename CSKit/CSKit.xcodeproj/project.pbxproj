@@ -141,6 +141,25 @@
 		200E94071F2B82E3004A3800 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 200E94061F2B82E3004A3800 /* libz.tbd */; };
 		200E94091F2B82EE004A3800 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 200E94081F2B82EE004A3800 /* libsqlite3.tbd */; };
 		200E940B1F2B82F9004A3800 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 200E940A1F2B82F9004A3800 /* CoreText.framework */; };
+		20612C411F2F893E006E1715 /* UIImage+CSImageBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C301F2F893E006E1715 /* UIImage+CSImageBrowser.m */; };
+		20612C421F2F893E006E1715 /* CSImageBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C321F2F893E006E1715 /* CSImageBrowser.m */; };
+		20612C431F2F893E006E1715 /* CSImageBrowserFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C351F2F893E006E1715 /* CSImageBrowserFlowLayout.m */; };
+		20612C441F2F893E006E1715 /* CSImageBrowserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C371F2F893E006E1715 /* CSImageBrowserModel.m */; };
+		20612C451F2F893E006E1715 /* CSImageBrowserButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C3A1F2F893E006E1715 /* CSImageBrowserButton.m */; };
+		20612C461F2F893E006E1715 /* CSImageBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C3C1F2F893E006E1715 /* CSImageBrowserCell.m */; };
+		20612C471F2F893E006E1715 /* CSImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C3E1F2F893E006E1715 /* CSImageItem.m */; };
+		20612C481F2F893E006E1715 /* CSProgeressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C401F2F893E006E1715 /* CSProgeressHUD.m */; };
+		20612C5C1F2F8B66006E1715 /* CSIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C4B1F2F8B66006E1715 /* CSIndicator.m */; };
+		20612C5D1F2F8B66006E1715 /* CSNotificationIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C4E1F2F8B66006E1715 /* CSNotificationIndicator.m */; };
+		20612C5E1F2F8B66006E1715 /* CSNotificationIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C501F2F8B66006E1715 /* CSNotificationIndicatorView.m */; };
+		20612C5F1F2F8B66006E1715 /* CSProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C531F2F8B66006E1715 /* CSProgressIndicator.m */; };
+		20612C601F2F8B66006E1715 /* CSProgressIndicatorImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 20612C541F2F8B66006E1715 /* CSProgressIndicatorImage.bundle */; };
+		20612C611F2F8B66006E1715 /* CSProgressIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C561F2F8B66006E1715 /* CSProgressIndicatorView.m */; };
+		20612C621F2F8B66006E1715 /* CSToastIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C591F2F8B66006E1715 /* CSToastIndicator.m */; };
+		20612C631F2F8B66006E1715 /* CSToastIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C5B1F2F8B66006E1715 /* CSToastIndicatorView.m */; };
+		20612C6D1F2FA44E006E1715 /* CSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C681F2FA44E006E1715 /* CSAlertView.m */; };
+		20612C6E1F2FA44E006E1715 /* CSIconLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C6A1F2FA44E006E1715 /* CSIconLabel.m */; };
+		20612C6F1F2FA44E006E1715 /* CSPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C6C1F2FA44E006E1715 /* CSPopupController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -426,6 +445,43 @@
 		200E94061F2B82E3004A3800 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		200E94081F2B82EE004A3800 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		200E940A1F2B82F9004A3800 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		20612C2F1F2F893E006E1715 /* UIImage+CSImageBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CSImageBrowser.h"; sourceTree = "<group>"; };
+		20612C301F2F893E006E1715 /* UIImage+CSImageBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CSImageBrowser.m"; sourceTree = "<group>"; };
+		20612C311F2F893E006E1715 /* CSImageBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSImageBrowser.h; sourceTree = "<group>"; };
+		20612C321F2F893E006E1715 /* CSImageBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSImageBrowser.m; sourceTree = "<group>"; };
+		20612C341F2F893E006E1715 /* CSImageBrowserFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSImageBrowserFlowLayout.h; sourceTree = "<group>"; };
+		20612C351F2F893E006E1715 /* CSImageBrowserFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSImageBrowserFlowLayout.m; sourceTree = "<group>"; };
+		20612C361F2F893E006E1715 /* CSImageBrowserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSImageBrowserModel.h; sourceTree = "<group>"; };
+		20612C371F2F893E006E1715 /* CSImageBrowserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSImageBrowserModel.m; sourceTree = "<group>"; };
+		20612C391F2F893E006E1715 /* CSImageBrowserButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSImageBrowserButton.h; sourceTree = "<group>"; };
+		20612C3A1F2F893E006E1715 /* CSImageBrowserButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSImageBrowserButton.m; sourceTree = "<group>"; };
+		20612C3B1F2F893E006E1715 /* CSImageBrowserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSImageBrowserCell.h; sourceTree = "<group>"; };
+		20612C3C1F2F893E006E1715 /* CSImageBrowserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSImageBrowserCell.m; sourceTree = "<group>"; };
+		20612C3D1F2F893E006E1715 /* CSImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSImageItem.h; sourceTree = "<group>"; };
+		20612C3E1F2F893E006E1715 /* CSImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSImageItem.m; sourceTree = "<group>"; };
+		20612C3F1F2F893E006E1715 /* CSProgeressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSProgeressHUD.h; sourceTree = "<group>"; };
+		20612C401F2F893E006E1715 /* CSProgeressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSProgeressHUD.m; sourceTree = "<group>"; };
+		20612C4A1F2F8B66006E1715 /* CSIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSIndicator.h; sourceTree = "<group>"; };
+		20612C4B1F2F8B66006E1715 /* CSIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSIndicator.m; sourceTree = "<group>"; };
+		20612C4D1F2F8B66006E1715 /* CSNotificationIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNotificationIndicator.h; sourceTree = "<group>"; };
+		20612C4E1F2F8B66006E1715 /* CSNotificationIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNotificationIndicator.m; sourceTree = "<group>"; };
+		20612C4F1F2F8B66006E1715 /* CSNotificationIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNotificationIndicatorView.h; sourceTree = "<group>"; };
+		20612C501F2F8B66006E1715 /* CSNotificationIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNotificationIndicatorView.m; sourceTree = "<group>"; };
+		20612C521F2F8B66006E1715 /* CSProgressIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSProgressIndicator.h; sourceTree = "<group>"; };
+		20612C531F2F8B66006E1715 /* CSProgressIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSProgressIndicator.m; sourceTree = "<group>"; };
+		20612C541F2F8B66006E1715 /* CSProgressIndicatorImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CSProgressIndicatorImage.bundle; sourceTree = "<group>"; };
+		20612C551F2F8B66006E1715 /* CSProgressIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSProgressIndicatorView.h; sourceTree = "<group>"; };
+		20612C561F2F8B66006E1715 /* CSProgressIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSProgressIndicatorView.m; sourceTree = "<group>"; };
+		20612C581F2F8B66006E1715 /* CSToastIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSToastIndicator.h; sourceTree = "<group>"; };
+		20612C591F2F8B66006E1715 /* CSToastIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSToastIndicator.m; sourceTree = "<group>"; };
+		20612C5A1F2F8B66006E1715 /* CSToastIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSToastIndicatorView.h; sourceTree = "<group>"; };
+		20612C5B1F2F8B66006E1715 /* CSToastIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSToastIndicatorView.m; sourceTree = "<group>"; };
+		20612C671F2FA44E006E1715 /* CSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAlertView.h; sourceTree = "<group>"; };
+		20612C681F2FA44E006E1715 /* CSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAlertView.m; sourceTree = "<group>"; };
+		20612C691F2FA44E006E1715 /* CSIconLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSIconLabel.h; sourceTree = "<group>"; };
+		20612C6A1F2FA44E006E1715 /* CSIconLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSIconLabel.m; sourceTree = "<group>"; };
+		20612C6B1F2FA44E006E1715 /* CSPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPopupController.h; sourceTree = "<group>"; };
+		20612C6C1F2FA44E006E1715 /* CSPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPopupController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -556,13 +612,16 @@
 		200E928D1F2B819D004A3800 /* CustomClass */ = {
 			isa = PBXGroup;
 			children = (
-				200E928E1F2B819D004A3800 /* CSPhotoGroupView */,
+				20612C641F2FA44E006E1715 /* CSPopupController(各种弹出) */,
+				20612C491F2F8B66006E1715 /* CSIndicator(指示器) */,
+				20612C2D1F2F893E006E1715 /* CSImageBrowser(图片浏览器) */,
+				200E928E1F2B819D004A3800 /* CSPhotoGroupView(图片浏览器) */,
 				200E92931F2B819D004A3800 /* UITableViewProtocol */,
 			);
 			path = CustomClass;
 			sourceTree = "<group>";
 		};
-		200E928E1F2B819D004A3800 /* CSPhotoGroupView */ = {
+		200E928E1F2B819D004A3800 /* CSPhotoGroupView(图片浏览器) */ = {
 			isa = PBXGroup;
 			children = (
 				200E928F1F2B819D004A3800 /* CSPhotoGroupItem.h */,
@@ -570,6 +629,7 @@
 				200E92911F2B819D004A3800 /* CSPhotoGroupView.h */,
 				200E92921F2B819D004A3800 /* CSPhotoGroupView.m */,
 			);
+			name = "CSPhotoGroupView(图片浏览器)";
 			path = CSPhotoGroupView;
 			sourceTree = "<group>";
 		};
@@ -927,6 +987,131 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		20612C2D1F2F893E006E1715 /* CSImageBrowser(图片浏览器) */ = {
+			isa = PBXGroup;
+			children = (
+				20612C2E1F2F893E006E1715 /* Category */,
+				20612C311F2F893E006E1715 /* CSImageBrowser.h */,
+				20612C321F2F893E006E1715 /* CSImageBrowser.m */,
+				20612C331F2F893E006E1715 /* Model */,
+				20612C381F2F893E006E1715 /* View */,
+			);
+			name = "CSImageBrowser(图片浏览器)";
+			path = CSImageBrowser;
+			sourceTree = "<group>";
+		};
+		20612C2E1F2F893E006E1715 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				20612C2F1F2F893E006E1715 /* UIImage+CSImageBrowser.h */,
+				20612C301F2F893E006E1715 /* UIImage+CSImageBrowser.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		20612C331F2F893E006E1715 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20612C341F2F893E006E1715 /* CSImageBrowserFlowLayout.h */,
+				20612C351F2F893E006E1715 /* CSImageBrowserFlowLayout.m */,
+				20612C361F2F893E006E1715 /* CSImageBrowserModel.h */,
+				20612C371F2F893E006E1715 /* CSImageBrowserModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		20612C381F2F893E006E1715 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				20612C391F2F893E006E1715 /* CSImageBrowserButton.h */,
+				20612C3A1F2F893E006E1715 /* CSImageBrowserButton.m */,
+				20612C3B1F2F893E006E1715 /* CSImageBrowserCell.h */,
+				20612C3C1F2F893E006E1715 /* CSImageBrowserCell.m */,
+				20612C3D1F2F893E006E1715 /* CSImageItem.h */,
+				20612C3E1F2F893E006E1715 /* CSImageItem.m */,
+				20612C3F1F2F893E006E1715 /* CSProgeressHUD.h */,
+				20612C401F2F893E006E1715 /* CSProgeressHUD.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		20612C491F2F8B66006E1715 /* CSIndicator(指示器) */ = {
+			isa = PBXGroup;
+			children = (
+				20612C4A1F2F8B66006E1715 /* CSIndicator.h */,
+				20612C4B1F2F8B66006E1715 /* CSIndicator.m */,
+				20612C4C1F2F8B66006E1715 /* CSNotificationIndicator */,
+				20612C511F2F8B66006E1715 /* CSProgressIndicator */,
+				20612C571F2F8B66006E1715 /* CSToastIndicator */,
+			);
+			name = "CSIndicator(指示器)";
+			path = CSIndicator;
+			sourceTree = "<group>";
+		};
+		20612C4C1F2F8B66006E1715 /* CSNotificationIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				20612C4D1F2F8B66006E1715 /* CSNotificationIndicator.h */,
+				20612C4E1F2F8B66006E1715 /* CSNotificationIndicator.m */,
+				20612C4F1F2F8B66006E1715 /* CSNotificationIndicatorView.h */,
+				20612C501F2F8B66006E1715 /* CSNotificationIndicatorView.m */,
+			);
+			path = CSNotificationIndicator;
+			sourceTree = "<group>";
+		};
+		20612C511F2F8B66006E1715 /* CSProgressIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				20612C521F2F8B66006E1715 /* CSProgressIndicator.h */,
+				20612C531F2F8B66006E1715 /* CSProgressIndicator.m */,
+				20612C541F2F8B66006E1715 /* CSProgressIndicatorImage.bundle */,
+				20612C551F2F8B66006E1715 /* CSProgressIndicatorView.h */,
+				20612C561F2F8B66006E1715 /* CSProgressIndicatorView.m */,
+			);
+			path = CSProgressIndicator;
+			sourceTree = "<group>";
+		};
+		20612C571F2F8B66006E1715 /* CSToastIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				20612C581F2F8B66006E1715 /* CSToastIndicator.h */,
+				20612C591F2F8B66006E1715 /* CSToastIndicator.m */,
+				20612C5A1F2F8B66006E1715 /* CSToastIndicatorView.h */,
+				20612C5B1F2F8B66006E1715 /* CSToastIndicatorView.m */,
+			);
+			path = CSToastIndicator;
+			sourceTree = "<group>";
+		};
+		20612C641F2FA44E006E1715 /* CSPopupController(各种弹出) */ = {
+			isa = PBXGroup;
+			children = (
+				20612C651F2FA44E006E1715 /* Classes */,
+				20612C6B1F2FA44E006E1715 /* CSPopupController.h */,
+				20612C6C1F2FA44E006E1715 /* CSPopupController.m */,
+			);
+			name = "CSPopupController(各种弹出)";
+			path = CSPopupController;
+			sourceTree = "<group>";
+		};
+		20612C651F2FA44E006E1715 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				20612C661F2FA44E006E1715 /* CustomView */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		20612C661F2FA44E006E1715 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				20612C671F2FA44E006E1715 /* CSAlertView.h */,
+				20612C681F2FA44E006E1715 /* CSAlertView.m */,
+				20612C691F2FA44E006E1715 /* CSIconLabel.h */,
+				20612C6A1F2FA44E006E1715 /* CSIconLabel.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1036,6 +1221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20612C601F2F8B66006E1715 /* CSProgressIndicatorImage.bundle in Resources */,
 				200E925E1F2B7F5D004A3800 /* LaunchScreen.storyboard in Resources */,
 				200E93D51F2B819D004A3800 /* ModelNetworking.zip in Resources */,
 				200E925B1F2B7F5D004A3800 /* Assets.xcassets in Resources */,
@@ -1074,10 +1260,12 @@
 				200E93D81F2B819D004A3800 /* CSTextEffectWindow.m in Sources */,
 				200E93971F2B819D004A3800 /* NSNotificationCenter+Extended.m in Sources */,
 				200E93B71F2B819D004A3800 /* UIScreen+Extended.m in Sources */,
+				20612C6E1F2FA44E006E1715 /* CSIconLabel.m in Sources */,
 				200E938E1F2B819D004A3800 /* NSAttributedString+Height.m in Sources */,
 				200E93C01F2B819D004A3800 /* UIView+Layout.m in Sources */,
 				200E93B41F2B819D004A3800 /* UINavigationController+Extended.m in Sources */,
 				200E93F21F2B819D004A3800 /* CSThreadSafeDictionary.m in Sources */,
+				20612C621F2F8B66006E1715 /* CSToastIndicator.m in Sources */,
 				200E93A51F2B819D004A3800 /* NSObject+CGUtilities.m in Sources */,
 				200E93891F2B819D004A3800 /* CSBaseLayoutModel.m in Sources */,
 				200E93C31F2B819D004A3800 /* UIWindow+Extended.m in Sources */,
@@ -1085,6 +1273,7 @@
 				200E93E81F2B819D004A3800 /* CSLabel.m in Sources */,
 				200E93871F2B819D004A3800 /* CSBaseCell.m in Sources */,
 				200E93E21F2B819D004A3800 /* CSTextRubyAnnotation.m in Sources */,
+				20612C421F2F893E006E1715 /* CSImageBrowser.m in Sources */,
 				200E93D21F2B819D004A3800 /* CSModel.m in Sources */,
 				200E93A61F2B819D004A3800 /* UIApplication+Extended.m in Sources */,
 				200E93C51F2B819D004A3800 /* CALayer+CSWebImage.m in Sources */,
@@ -1093,6 +1282,7 @@
 				200E93851F2B819D004A3800 /* CSPhotoGroupItem.m in Sources */,
 				200E93A41F2B819D004A3800 /* CALayer+Extended.m in Sources */,
 				200E93B61F2B819D004A3800 /* UIResponder+Extended.m in Sources */,
+				20612C411F2F893E006E1715 /* UIImage+CSImageBrowser.m in Sources */,
 				200E94021F2B81AB004A3800 /* CSTestTableLayout.m in Sources */,
 				200E93D41F2B819D004A3800 /* NSObject+CSModel.m in Sources */,
 				200E93BD1F2B819D004A3800 /* UITextField+Extended.m in Sources */,
@@ -1103,16 +1293,20 @@
 				200E92531F2B7F5D004A3800 /* AppDelegate.m in Sources */,
 				200E93C11F2B819D004A3800 /* UIViewController+Extended.m in Sources */,
 				200E93AE1F2B819D004A3800 /* UIGestureRecognizer+Extended.m in Sources */,
+				20612C6D1F2FA44E006E1715 /* CSAlertView.m in Sources */,
+				20612C5D1F2F8B66006E1715 /* CSNotificationIndicator.m in Sources */,
 				200E93BE1F2B819D004A3800 /* UITextView+Extended.m in Sources */,
 				200E93CB1F2B819D004A3800 /* CSImage.m in Sources */,
 				200E93B11F2B819D004A3800 /* UIImageView+Extended.m in Sources */,
 				200E93DF1F2B819D004A3800 /* CSTextArchiver.m in Sources */,
+				20612C5C1F2F8B66006E1715 /* CSIndicator.m in Sources */,
 				200E93AA1F2B819D004A3800 /* UIColor+Extended.m in Sources */,
 				200E93BA1F2B819D004A3800 /* UITabBarController+Extended.m in Sources */,
 				200E93DA1F2B819D004A3800 /* CSTextKeyboardManager.m in Sources */,
 				200E93D31F2B819D004A3800 /* NSDictionary+ShowProperty.m in Sources */,
 				200E93D61F2B819D004A3800 /* CSTextContainerView.m in Sources */,
 				200E93821F2B819D004A3800 /* CSKVStorage.m in Sources */,
+				20612C461F2F893E006E1715 /* CSImageBrowserCell.m in Sources */,
 				200E93A91F2B819D004A3800 /* UIButton+Extended.m in Sources */,
 				200E939E1F2B819D004A3800 /* NSString+Extended.m in Sources */,
 				200E93C41F2B819D004A3800 /* _CSWebImageSetter.m in Sources */,
@@ -1128,9 +1322,13 @@
 				200E939D1F2B819D004A3800 /* NSSet+Utilities.m in Sources */,
 				200E93991F2B819D004A3800 /* NSObject+ARCExtended.m in Sources */,
 				200E93A71F2B819D004A3800 /* UIBarButtonItem+Extended.m in Sources */,
+				20612C5E1F2F8B66006E1715 /* CSNotificationIndicatorView.m in Sources */,
+				20612C631F2F8B66006E1715 /* CSToastIndicatorView.m in Sources */,
 				200E93CA1F2B819D004A3800 /* CSFrameImage.m in Sources */,
 				200E93DD1F2B819D004A3800 /* CSTextMagnifier.m in Sources */,
 				200E93C81F2B819D004A3800 /* UIImageView+CSWebImage.m in Sources */,
+				20612C611F2F8B66006E1715 /* CSProgressIndicatorView.m in Sources */,
+				20612C431F2F893E006E1715 /* CSImageBrowserFlowLayout.m in Sources */,
 				200E93A01F2B819D004A3800 /* NSThread+Extended.m in Sources */,
 				200E93EE1F2B819D004A3800 /* CSKeychain.m in Sources */,
 				200E94011F2B81AB004A3800 /* CSTestTableController.m in Sources */,
@@ -1143,7 +1341,10 @@
 				200E93D01F2B819D004A3800 /* CSWebImageOperation.m in Sources */,
 				200E93B01F2B819D004A3800 /* UIImage+Extended.m in Sources */,
 				200E938F1F2B819D004A3800 /* NSBundle+Extended.m in Sources */,
+				20612C471F2F893E006E1715 /* CSImageItem.m in Sources */,
 				200E93E01F2B819D004A3800 /* CSTextAttribute.m in Sources */,
+				20612C6F1F2FA44E006E1715 /* CSPopupController.m in Sources */,
+				20612C481F2F893E006E1715 /* CSProgeressHUD.m in Sources */,
 				200E93F41F2B819D004A3800 /* CSTransaction_Utility.m in Sources */,
 				200E93C21F2B819D004A3800 /* UIWebView+Extended.m in Sources */,
 				200E93C71F2B819D004A3800 /* UIButton+CSWebImage.m in Sources */,
@@ -1159,6 +1360,7 @@
 				200E93811F2B819D004A3800 /* CSDiskCache.m in Sources */,
 				200E93C61F2B819D004A3800 /* MKAnnotationView+CSWebImage.m in Sources */,
 				200E93E51F2B819D004A3800 /* NSAttributedString+CSText.m in Sources */,
+				20612C451F2F893E006E1715 /* CSImageBrowserButton.m in Sources */,
 				200E93881F2B819D004A3800 /* CSBaseClickView.m in Sources */,
 				200E93F01F2B819D004A3800 /* CSSentinel.m in Sources */,
 				200E93DE1F2B819D004A3800 /* CSTextSelectionView.m in Sources */,
@@ -1183,11 +1385,13 @@
 				200E93861F2B819D004A3800 /* CSPhotoGroupView.m in Sources */,
 				200E938C1F2B819D004A3800 /* UITableView+Protocol.m in Sources */,
 				200E93F31F2B819D004A3800 /* CSTimer.m in Sources */,
+				20612C5F1F2F8B66006E1715 /* CSProgressIndicator.m in Sources */,
 				200E93901F2B819D004A3800 /* NSData+Extended.m in Sources */,
 				200E93D11F2B819D004A3800 /* CSClassInfo.m in Sources */,
 				200E93EA1F2B819D004A3800 /* CSAsyncLayer.m in Sources */,
 				200E93ED1F2B819D004A3800 /* CSGestureRecognizer.m in Sources */,
 				200E93DC1F2B819D004A3800 /* CSTextLine.m in Sources */,
+				20612C441F2F893E006E1715 /* CSImageBrowserModel.m in Sources */,
 				200E93E61F2B819D004A3800 /* NSParagraphStyle+CSText.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1428,6 +1632,7 @@
 				200E927A1F2B7F5D004A3800 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		200E927B1F2B7F5D004A3800 /* Build configuration list for PBXNativeTarget "CSKitTests" */ = {
 			isa = XCConfigurationList;
@@ -1436,6 +1641,7 @@
 				200E927D1F2B7F5D004A3800 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		200E927E1F2B7F5D004A3800 /* Build configuration list for PBXNativeTarget "CSKitUITests" */ = {
 			isa = XCConfigurationList;
@@ -1444,6 +1650,7 @@
 				200E92801F2B7F5D004A3800 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,16 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import "UINavigationBar+Extended.h"
 
 @interface AppDelegate ()
 
 @end
+
+UIColor *MainNavBarColor = nil;
+UIColor *MainViewColor = nil;
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self setNavBarAppearence];
     return YES;
 }
 
@@ -45,6 +50,23 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)setNavBarAppearence
+{
+    MainNavBarColor = [UIColor whiteColor];
+    MainViewColor   = [UIColor whiteColor];
+    
+    // 设置导航栏默认的背景颜色
+    [UIColor runtimeSetDefaultNavBarTintColor:MainNavBarColor];
+    // 设置导航栏所有按钮的默认颜色
+    [UIColor runtimeSetDefaultNavBarTintColor:[UIColor orangeColor]];
+    // 设置导航栏标题默认颜色
+    [UIColor runtimeSetDefaultNavBarTitleColor:[UIColor orangeColor]];
+    // 统一设置状态栏样式
+    [UIColor runtimeSetDefaultStatusBarStyle:UIStatusBarStyleLightContent];
+    // 如果需要设置导航栏底部分割线隐藏，可以在这里统一设置
+    // [UIColor wr_setDefaultNavBarShadowImageHidden:YES];
 }
 
 

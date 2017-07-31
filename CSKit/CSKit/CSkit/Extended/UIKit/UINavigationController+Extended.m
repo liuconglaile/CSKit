@@ -57,13 +57,13 @@ static char tlNavigationControllerDroppedMenu;
  *
  *  @return RootViewController
  */
-- (UIViewController *)rootViewController
-{
-    if (self.viewControllers && [self.viewControllers count] >0) {
-        return [self.viewControllers firstObject];
-    }
-    return nil;
-}
+//- (UIViewController *)rootViewController
+//{
+//    if (self.viewControllers && [self.viewControllers count] >0) {
+//        return [self.viewControllers firstObject];
+//    }
+//    return nil;
+//}
 /**
  *  @brief  返回指定的viewcontroler
  *
@@ -76,48 +76,52 @@ static char tlNavigationControllerDroppedMenu;
 {
     return [self popToViewController:[self findViewController:className] animated:YES];
 }
-/**
- *  @brief  pop n层
- *
- *  @param level  n层
- *  @param animated  是否动画
- *
- *  @return pop之后的viewcontrolers
- */
-- (NSArray *)popToViewControllerWithLevel:(NSInteger)level animated:(BOOL)animated
-{
-    NSInteger viewControllersCount = self.viewControllers.count;
-    if (viewControllersCount > level) {
-        NSInteger idx = viewControllersCount - level - 1;
-        UIViewController *viewController = self.viewControllers[idx];
-        return [self popToViewController:viewController animated:animated];
-    } else {
-        return [self popToRootViewControllerAnimated:animated];
-    }
-}
+///**
+// *  @brief  pop n层
+// *
+// *  @param level  n层
+// *  @param animated  是否动画
+// *
+// *  @return pop之后的viewcontrolers
+// */
+//- (NSArray *)popToViewControllerWithLevel:(NSInteger)level animated:(BOOL)animated
+//{
+//    NSInteger viewControllersCount = self.viewControllers.count;
+//    if (viewControllersCount > level) {
+//        NSInteger idx = viewControllersCount - level - 1;
+//        UIViewController *viewController = self.viewControllers[idx];
+//        return [self popToViewController:viewController animated:animated];
+//    } else {
+//        return [self popToRootViewControllerAnimated:animated];
+//    }
+//}
 
-- (void)pushViewController:(UIViewController *)controller withTransition:(UIViewAnimationTransition)transition {
-    [UIView beginAnimations:nil context:NULL];
-    [self pushViewController:controller animated:NO];
-    [UIView setAnimationDuration:0.5];
-    [UIView setAnimationBeginsFromCurrentState:YES];
-    [UIView setAnimationTransition:transition forView:self.view cache:YES];
-    [UIView commitAnimations];
-}
+//- (void)pushViewController:(UIViewController *)controller withTransition:(UIViewAnimationTransition)transition {
+////    [UIView beginAnimations:nil context:NULL];
+////    [self pushViewController:controller animated:NO];
+////    [UIView setAnimationDuration:0.5];
+////    [UIView setAnimationBeginsFromCurrentState:YES];
+////    [UIView setAnimationTransition:transition forView:self.view cache:YES];
+////    [UIView commitAnimations];
+//}
 
-- (UIViewController *)popViewControllerWithTransition:(UIViewAnimationTransition)transition {
-    [UIView beginAnimations:nil context:NULL];
-    UIViewController *controller = [self popViewControllerAnimated:NO];
-    [UIView setAnimationDuration:0.5];
-    [UIView setAnimationBeginsFromCurrentState:YES];
-    [UIView setAnimationTransition:transition forView:self.view cache:YES];
-    [UIView commitAnimations];
-    return controller;
-}
+//- (UIViewController *)popViewControllerWithTransition:(UIViewAnimationTransition)transition {
+////    if (transition == UIViewAnimationTransitionFlipFromRight) {
+//        return [self popViewControllerAnimated:NO];
+////    }else{
+////        [UIView beginAnimations:nil context:NULL];
+////        UIViewController *controller = [self popViewControllerAnimated:NO];
+////        [UIView setAnimationDuration:0.5];
+////        [UIView setAnimationBeginsFromCurrentState:YES];
+////        [UIView setAnimationTransition:transition forView:self.view cache:YES];
+////        [UIView commitAnimations];
+////        return controller;
+////    }
+//}
 
 
-- ( void )showDropMenu:(UIView *)menu
-              animated:(BOOL)animated
+- (void)showDropMenu:(UIView *)menu
+            animated:(BOOL)animated
 {
     [self hideDroppedMenuAnimated:NO];
     
@@ -225,7 +229,7 @@ static char tlNavigationControllerDroppedMenu;
     
     return YES;
 }
--(void) tapGestureHandler:(UITapGestureRecognizer *)sender
+-(void)tapGestureHandler:(UITapGestureRecognizer *)sender
 {
     CGPoint point = [sender locationInView:sender.view];
     UIView *viewTouched = [sender.view hitTest:point withEvent:nil];

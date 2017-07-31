@@ -45,7 +45,7 @@
     _containerView.selectColor = UIColorHex(f0f0f0);
     _containerView.defaultColor= UIColorHex(fafafa);
     _containerView.showClickEffect=YES;
-    self.line=[_containerView addPixLineToBottom];
+    self.line = [_containerView addPixLineToBottom];
     
     [self.contentView addSubview:_containerView];
     

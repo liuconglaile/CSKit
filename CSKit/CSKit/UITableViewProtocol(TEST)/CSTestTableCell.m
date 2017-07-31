@@ -13,6 +13,7 @@
 #import "CSTestTableModel.h"
 
 #import "CSPhotoGroupView.h"
+#import "CSImageBrowser.h"
 
 
 #define ImageSevice(str) [NSString stringWithFormat:@"http://101.201.145.44:8080/image-service/%@",str]
@@ -45,8 +46,8 @@
     userNameLabel.displaysAsynchronously = YES;
     userNameLabel.ignoreCommonProperties = YES;
     userNameLabel.layer.masksToBounds = YES;
-    userNameLabel.layer.backgroundColor = [UIColor whiteColor].CGColor;
-    userNameLabel.backgroundColor = [UIColor whiteColor];
+    //userNameLabel.layer.backgroundColor = [UIColor whiteColor].CGColor;
+    //userNameLabel.backgroundColor = [UIColor whiteColor];
     [self.containerView addSubview:userNameLabel];
     
     cotentLabel = [CSLabel new];
@@ -82,6 +83,8 @@
         [self.containerView addSubview:imageView];
         [imgViewArray addObject:imageView];
     }
+    
+    self.lineColor = [UIColor backColor2];
 }
 -(void)getlayout:(CSTestTableLayout *)layout{
     
@@ -124,20 +127,22 @@
         
         @weakify(self);
         [imgViewArray enumerateObjectsUsingBlock:^(CSPictureView *view, NSUInteger idx, BOOL * _Nonnull stop) {
-            if (feed.imageArr.count-1>=idx) {
+            if (feed.imageArr.count-1 >= idx) {
                 
                 CGRect rect = CGRectFromString(layout.imageSizeArr[idx]);
+                NSURL* imageURL = [NSURL URLWithString:ImageSevice(feed.imageArr[idx][@"bigPath"])];
                 
                 view.frame = rect;
+                view.largeImageURL = imageURL;
                 
                 @weakify(view);
-                
-                [view.layer setImageWithURL:[NSURL URLWithString:ImageSevice(feed.imageArr[idx][@"bigPath"])]
+                [view.layer setImageWithURL:imageURL
                                 placeholder:nil
                                     options:CSWebImageOptionAvoidSetImage //图像提取完成后,请勿将图像设置为视图.您可以手动设置图像
                                  completion:^(UIImage *image, NSURL *url, CSWebImageFromType from, CSWebImageStage stage, NSError *error) {
                                      @strongify(view);
                                      @strongify(self);
+                                     
                                      if (!view) return;
                                      if (image && stage == CSWebImageStageFinished) {
                                          
@@ -154,11 +159,19 @@
                                              [view.layer addAnimation:transition forKey:@"contents"];
                                          }
                                          
-                                         ///配置图片点击事件
-                                         [self imageClick:view AndImages:imgViewArray];
                                          
+                                         ///配置图片点击事件
+                                         NSMutableArray<CSPictureView *>* tempClickImages = @[].mutableCopy;
+                                         for (CSPictureView *object in imgViewArray) {
+                                             if (!CGRectEqualToRect(object.frame, CGRectZero)) {
+                                                 [tempClickImages addObject:object];
+                                             }
+                                         }
+                                         [self imageClick:view AndImages:tempClickImages];
                                      }
                                  }];
+                
+                
                 
             }else{
                 view.frame = CGRectZero;
@@ -170,11 +183,12 @@
         [imgViewArray enumerateObjectsUsingBlock:^(CSPictureView *view, NSUInteger idx, BOOL * _Nonnull stop) {
             
             
-            view.frame=CGRectZero;
+            view.frame = CGRectZero;
             
             
         }];
     }
+    
 }
 
 
@@ -187,12 +201,12 @@
         
         if (state == CSBaseClickStateEnded) {
             
-            NSMutableArray<CSPhotoGroupItem *> * tempItems = [NSMutableArray arrayWithCapacity:imgViewArray.count];
+            NSMutableArray<CSPhotoGroupItem *> * tempItems = [NSMutableArray arrayWithCapacity:images.count];
             
-            for (CSPictureView *object in imgViewArray) {
+            for (CSPictureView *object in images) {
                 CSPhotoGroupItem *item = [CSPhotoGroupItem new];
                 item.thumbView = object;
-                
+                item.largeImageURL = object.largeImageURL;
                 [tempItems addObject:item];
             }
             

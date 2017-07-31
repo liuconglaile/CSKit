@@ -53,6 +53,11 @@ static  NSString *CellName=@"CSTestTableCell";
         
         
     }];
+    
+    
+    [self.tableView addCellClickAction:^(UITableView *tableView, id data, NSIndexPath *indexPath, id action) {
+        NSLog(@"点击了哦........");
+    }];
 }
 
 - (void)initData{

@@ -29,4 +29,8 @@
     return _image;
 }
 
+- (void)setLargeImageURL:(NSURL *)largeImageURL{
+    _largeImageURL = largeImageURL;
+}
+
 @end

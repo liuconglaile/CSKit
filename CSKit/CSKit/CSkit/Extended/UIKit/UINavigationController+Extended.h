@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UINavigationController (Extended)
-
 <UIGestureRecognizerDelegate>
 
 /**
@@ -31,7 +30,7 @@
  *
  *  @return RootViewController
  */
-- (UIViewController *)rootViewController;
+//- (UIViewController *)rootViewController;
 /**
  *  @brief  返回指定的viewcontroler
  *
@@ -40,7 +39,7 @@
  *
  *  @return pop之后的viewcontrolers
  */
-- (NSArray *)popToViewControllerWithClassName:(NSString*)className animated:(BOOL)animated;
+//- (NSArray *)popToViewControllerWithClassName:(NSString*)className animated:(BOOL)animated;
 /**
  *  @brief  pop n层
  *
@@ -49,13 +48,13 @@
  *
  *  @return pop之后的viewcontrolers
  */
-- (NSArray *)popToViewControllerWithLevel:(NSInteger)level animated:(BOOL)animated;
+//- (NSArray *)popToViewControllerWithLevel:(NSInteger)level animated:(BOOL)animated;
 
 
 // 带模态的 push
-- (void)pushViewController:(UIViewController *)controller withTransition:(UIViewAnimationTransition)transition;
+//- (void)pushViewController:(UIViewController *)controller withTransition:(UIViewAnimationTransition)transition;
 // 带模态的 pop
-- (UIViewController *)popViewControllerWithTransition:(UIViewAnimationTransition)transition;
+//- (UIViewController *)popViewControllerWithTransition:(UIViewAnimationTransition)transition;
 
 -(void)showDropMenu:(UIView *)menu animated:(BOOL)animated;
 
