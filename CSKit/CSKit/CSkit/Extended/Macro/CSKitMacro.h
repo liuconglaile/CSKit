@@ -35,12 +35,12 @@ CS_EXTERN_C_BEGIN
 #define AleLog(fmt, ...)  { UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__] message:[NSString stringWithFormat:fmt, ##__VA_ARGS__]  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil]; [alert show]; }
 
 /* 重写NSLog,Debug模式下打印日志和当前行数 */
-#define LCNSLog(FORMAT, ...) fprintf(stderr,"\n\n\n🍎🍎🍎方法名:%s \n🍊🍊🍊行号:%d \n🍌🍌🍌内容:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#define CSNSLog(FORMAT, ...) fprintf(stderr,"\n\n\n🍎🍎🍎方法名:%s \n🍊🍊🍊行号:%d \n🍌🍌🍌内容:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 
 
 #else // 开发模式
 #define AleLog(...)
-#define LCNSLog(FORMAT, ...) nil
+#define CSNSLog(FORMAT, ...) nil
 
 #endif
 

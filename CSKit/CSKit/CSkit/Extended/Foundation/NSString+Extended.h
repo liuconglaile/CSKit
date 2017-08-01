@@ -266,7 +266,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSString *)filterString:(NSString *)string target:(NSString *)target;
 
 /** 过滤非法字符 关键字 []{}（#%-*+=_）\\|~(＜＞$%^&*)_+ */
--(NSString *)filter:(NSString *)target;
+- (NSString *)filter:(NSString *)target;
 
 
 - (CGFloat)scoreAgainst:(NSString *)otherString;

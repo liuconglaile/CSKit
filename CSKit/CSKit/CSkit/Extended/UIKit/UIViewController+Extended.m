@@ -11,7 +11,7 @@
 #import <StoreKit/StoreKit.h>
 #import <MobileCoreServices/UTCoreTypes.h>
 
-//static const void *CSBackButtonHandlerKey = &CSBackButtonHandlerKey;
+static const void *CSBackButtonHandlerKey = &CSBackButtonHandlerKey;
 static const void *UIViewControllerDictionaryBlockKey = &UIViewControllerDictionaryBlockKey;
 NSString* const affiliateTokenKey = @"at";
 NSString* const campaignTokenKey = @"ct";
@@ -31,13 +31,13 @@ static void * const kMessageAssociatedStorageKey = (void*)&kMessageAssociatedSto
 ///MARK: =========================================
 ///MARK: 返回按钮相关
 ///MARK: =========================================
-//- (void)backButtonTouched:(CSBackButtonHandler)backButtonHandler{
-//    objc_setAssociatedObject(self, CSBackButtonHandlerKey, backButtonHandler, OBJC_ASSOCIATION_COPY);
-//}
-//- (CSBackButtonHandler)backButtonTouched
-//{
-//    return objc_getAssociatedObject(self, CSBackButtonHandlerKey);
-//}
+- (void)backButtonTouched:(CSBackButtonHandler)backButtonHandler{
+    objc_setAssociatedObject(self, CSBackButtonHandlerKey, backButtonHandler, OBJC_ASSOCIATION_COPY);
+}
+- (CSBackButtonHandler)backButtonTouched
+{
+    return objc_getAssociatedObject(self, CSBackButtonHandlerKey);
+}
 ///MARK: =========================================
 ///MARK: 返回按钮相关
 ///MARK: =========================================
@@ -500,16 +500,16 @@ void CSBlockSegue(void) {
 {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:title preferredStyle:UIAlertControllerStyleActionSheet];
     
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Camera" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    [alertController addAction:[UIAlertAction actionWithTitle:@"相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         completionHandler(UIImagePickerControllerSourceTypeCamera);
     }]];
     
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Photo Library" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    [alertController addAction:[UIAlertAction actionWithTitle:@"照片库" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         completionHandler(UIImagePickerControllerSourceTypePhotoLibrary);
     }]];
     
     
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
     
     alertController.popoverPresentationController.sourceView = sender;
     alertController.popoverPresentationController.sourceRect = sender.bounds;
@@ -523,12 +523,12 @@ void CSBlockSegue(void) {
 {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:title preferredStyle:UIAlertControllerStyleActionSheet];
     
-    [alert addAction:[UIAlertAction actionWithTitle:@"Done" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"完成" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         completionHandler();
     }]];
     
     
-    [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
     
     
     [alert.view addSubview:pickerView];
@@ -560,8 +560,8 @@ void CSBlockSegue(void) {
         {
             if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
             {
-                UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alert!"
-                                                                  message:@"Sorry! Your selected option is not supported by this device."
+                UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"警告!"
+                                                                  message:@"抱歉!此设备不支持您选择的选项"
                                                                  delegate:self
                                                         cancelButtonTitle:@"OK"
                                                         otherButtonTitles:nil];
@@ -594,8 +594,8 @@ void CSBlockSegue(void) {
         case UIImagePickerControllerSourceTypeCamera:
             if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
             {
-                UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alert!"
-                                                                  message:@"Sorry! Your selected option is not supported by this device."
+                UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"警告!"
+                                                                  message:@"抱歉!此设备不支持您选择的选项"
                                                                  delegate:self
                                                         cancelButtonTitle:@"OK"
                                                         otherButtonTitles:nil];
@@ -627,22 +627,17 @@ void CSBlockSegue(void) {
 - (void)pickMediaWithType:(CSViewControllerType)CSViewControllerType sender:(UIView*)sender withCompletion:(MediaSelectionHandler)block{
     [self setHandler:block];
     
-    UIActionSheet* actionSheet = nil;
     switch (CSViewControllerType) {
         case CSViewControllerTypeImagePicker:
         {
             if ([[[UIDevice currentDevice] systemVersion] isEqualToString:@"8.0"]) {
                 
-                [self showActionSheetForImageInputWithTitle:@"Choose the media for your picture" sender:sender withCompletionHandler:^(UIImagePickerControllerSourceType selectedOption) {
+                [self showActionSheetForImageInputWithTitle:@"选择您的照片媒体" sender:sender withCompletionHandler:^(UIImagePickerControllerSourceType selectedOption) {
                     
                     [self showImagePickerWithType:selectedOption sender:sender  withCompletionBlock:self.handler];
                 }];
             }
-            else{
-                
-                actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Take Live Photo", @"Pick Photo From Library", nil];
-                [actionSheet setTag:1];
-            }
+            
             
         }
             break;
@@ -651,22 +646,16 @@ void CSBlockSegue(void) {
         {
             if ([[[UIDevice currentDevice] systemVersion] isEqualToString:@"8.0"]) {
                 
-                [self showActionSheetForImageInputWithTitle:@"Choose the media for your video" sender:sender withCompletionHandler:^(UIImagePickerControllerSourceType selectedOption) {
+                [self showActionSheetForImageInputWithTitle:@"选择您的视频媒体" sender:sender withCompletionHandler:^(UIImagePickerControllerSourceType selectedOption) {
                     
                     [self showVideoPickerWithType:selectedOption sender:sender withCompletionBlock:self.handler];
                 }];
             }
-            else{
-                actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Take Live Video", @"Pick Video From Library", nil];
-                [actionSheet setTag:2];
-            }
-        }
-            break;
+        }break;
             
         default:
             break;
     }
-    [actionSheet showInView:self.view];
 }
 
 - (void)sendEmailTo:(NSArray *)to forSubject:(NSString *)subject body:(NSString *)body ccRecipients:(NSArray *)cc bccRecipients:(NSArray *)bcc{
@@ -730,23 +719,23 @@ void CSBlockSegue(void) {
     NSString *string = @"";
     switch (result) {
         case MFMailComposeResultSent:
-            string = @"Email sent successfully.";
+            string = @"电子邮件发送成功y.";
             break;
         case MFMailComposeResultSaved:
-            string = @"Email saved successfully.";
+            string = @"电子邮件成功保存.";
             break;
         case MFMailComposeResultCancelled:
             break;
         case MFMailComposeResultFailed:
-            string = @"Mail failed:  An error occurred when trying to compose this email.";
+            string = @"邮件失败: 尝试撰写此电子邮件时发生错误.";
             break;
         default:
-            string = @"An error occurred when trying to compose this email.";
+            string = @"尝试撰写此电子邮件时发生错误.";
             break;
     }
     
     if (string.length > 0) {
-        UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Failed to send SMS!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"错误" message:@"无法发送短信!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [warningAlert show];
     }
     [self dismissViewControllerAnimated:YES completion:NULL];
@@ -763,12 +752,12 @@ void CSBlockSegue(void) {
             
         case MessageComposeResultFailed:
         {
-            string = @"Failed to send SMS!";
+            string = @"无法发送短信!";
             break;
         }
             
         case MessageComposeResultSent:
-            string = @"Message sent successfully";
+            string = @"消息已成功发送";
             break;
             
         default:
@@ -785,36 +774,22 @@ void CSBlockSegue(void) {
 
 #pragma mark - UIActionSheetDelegate -
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
-    //    if (actionSheet.tag == 1) {
-    //        if (buttonIndex != actionSheet.cancelButtonIndex) {
-    //            NSString* title = [actionSheet buttonTitleAtIndex:buttonIndex];
-    //
-    //            if ([title isEqualToString:@"Take Live Photo"]) {
-    //
-    //
-    //                [self showImagePickerWithType:UIImagePickerControllerSourceTypeCamera withCompletionBlock:self.handler];
-    //            }
-    //            else if ([title isEqualToString:@"Pick Photo From Library"]) {
-    //                [self showImagePickerWithType:UIImagePickerControllerSourceTypePhotoLibrary withCompletionBlock:self.handler];
-    //                ;
-    //            }
-    //        }
-    //    }
-    //    else if (actionSheet.tag == 2) {
-    //        if (buttonIndex != actionSheet.cancelButtonIndex) {
-    //            NSString* title = [actionSheet buttonTitleAtIndex:buttonIndex];
-    //
-    //            if ([title isEqualToString:@"Take Live Video"]) {
-    //                [self showVideoPickerWithType:UIImagePickerControllerSourceTypeCamera withCompletionBlock:self.handler];
-    //            }
-    //            else if ([title isEqualToString:@"Pick Video From Library"]) {
-    //                [self showVideoPickerWithType:UIImagePickerControllerSourceTypePhotoLibrary withCompletionBlock:self.handler];
-    //                ;
-    //            }
-    //        }
-    //    }
-}
+//- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+
+//    //    else if (actionSheet.tag == 2) {
+//    //        if (buttonIndex != actionSheet.cancelButtonIndex) {
+//    //            NSString* title = [actionSheet buttonTitleAtIndex:buttonIndex];
+//    //
+//    //            if ([title isEqualToString:@"Take Live Video"]) {
+//    //                [self showVideoPickerWithType:UIImagePickerControllerSourceTypeCamera withCompletionBlock:self.handler];
+//    //            }
+//    //            else if ([title isEqualToString:@"Pick Video From Library"]) {
+//    //                [self showVideoPickerWithType:UIImagePickerControllerSourceTypePhotoLibrary withCompletionBlock:self.handler];
+//    //                ;
+//    //            }
+//    //        }
+//    //    }
+//}
 
 - (void)showAlertLocationDisabled
 {
@@ -851,42 +826,42 @@ void CSBlockSegue(void) {
 @implementation UINavigationController (NavigationItemBackBtnTile)
 
 //- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPushItem:(UINavigationItem *)item {
-//    
+//
 //    UIViewController * viewController = self.viewControllers.count > 1 ? \
 //    [self.viewControllers objectAtIndex:self.viewControllers.count - 2] : nil;
-//    
+//
 //    if (!viewController) {
 //        return YES;
 //    }
-//    
+//
 //    NSString *backButtonTitle = nil;
 //    if ([viewController respondsToSelector:@selector(navigationItemBackBarButtonTitle)]) {
 //        backButtonTitle = [viewController navigationItemBackBarButtonTitle];
 //    }
-//    
+//
 //    if (!backButtonTitle) {
 //        backButtonTitle = viewController.title;
 //    }
-//    
+//
 //    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:backButtonTitle
 //                                                                       style:UIBarButtonItemStylePlain
 //                                                                      target:nil action:nil];
 //    viewController.navigationItem.backBarButtonItem = backButtonItem;
-//    
+//
 //    return YES;
 //}
 
 //- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item {
-//    
+//
 //    if([self.viewControllers count] < [navigationBar.items count]) {
 //        return YES;
 //    }
-//    
+//
 //   	UIViewController* vc = [self topViewController];
 //    CSBackButtonHandler handler = [vc backButtonTouched];
 //    if (handler) {
 //        // Workaround for iOS7.1. Thanks to @boliva - http://stackoverflow.com/posts/comments/34452906
-//        
+//
 //        for(UIView *subview in [navigationBar subviews]) {
 //            if(subview.alpha < 1.) {
 //                [UIView animateWithDuration:.25 animations:^{
@@ -902,7 +877,7 @@ void CSBlockSegue(void) {
 //            [self popViewControllerAnimated:YES];
 //        });
 //    }
-//    
+//
 //    return NO;
 //}
 
