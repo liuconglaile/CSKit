@@ -30,7 +30,7 @@ CSSYNTH_DUMMY_CLASS(NSAttributedString_CSText)
         data = [CSTextArchiver archivedDataWithRootObject:self];
     }
     @catch (NSException *exception) {
-        NSLog(@"%@",exception);
+        CSNSLog(@"%@",exception);
     }
     return data;
 }
@@ -41,7 +41,7 @@ CSSYNTH_DUMMY_CLASS(NSAttributedString_CSText)
         one = [CSTextUnarchiver unarchiveObjectWithData:data];
     }
     @catch (NSException *exception) {
-        NSLog(@"%@",exception);
+        CSNSLog(@"%@",exception);
     }
     return one;
 }

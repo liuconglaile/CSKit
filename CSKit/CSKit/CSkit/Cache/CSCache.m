@@ -9,11 +9,12 @@
 #import "CSCache.h"
 #import "CSMemoryCache.h"
 #import "CSDiskCache.h"
+#import "CSKitMacro.h"
 
 @implementation CSCache
 
 - (instancetype) init {
-    NSLog(@"Use \"initWithName\" or \"initWithPath\" to create YYCache instance.");
+    CSNSLog(@"Use \"initWithName\" or \"initWithPath\" to create CSCache instance.");
     return [self initWithPath:@""];
 }
 

@@ -291,7 +291,7 @@ CSSYNTH_DUMMY_CLASS(NSString_Extended)
     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:[self dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&errorJson];
     if (errorJson != nil) {
 #ifdef DEBUG
-        NSLog(@"fail to get dictioanry from JSON: %@, error: %@", self, errorJson);
+        CSNSLog(@"fail to get dictioanry from JSON: %@, error: %@", self, errorJson);
 #endif
     }
     return jsonDict;
@@ -440,7 +440,7 @@ CSSYNTH_DUMMY_CLASS(NSString_Extended)
     
     NSInteger maxLine = floor(r.size.height/lineHeight);
     NSInteger totalLines = 0;
-    NSLog(@"Max Line Per Page: %zd (%.2f/%.2f)", maxLine, r.size.height, lineHeight);
+    CSNSLog(@"Max Line Per Page: %zd (%.2f/%.2f)", maxLine, r.size.height, lineHeight);
     NSString *lastParaLeft = nil;
     NSRange range = NSMakeRange(0, 0);
     //把字符串按段落分开, 提高解析效率

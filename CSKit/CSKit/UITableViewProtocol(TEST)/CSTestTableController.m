@@ -38,44 +38,51 @@ static  NSString *CellName=@"CSTestTableCell";
     
     
     
-    NSString* url = @"https://api.cs.juworker.com/home/index/get/";
-    CSNetworkModel* model = [[CSNetworkModel alloc] init];
-    model.requestUrl = url;
-    model.parameters = @{};
-    model.requestType = CSNetworkMethodPOST;
-    model.requestCachePolicy = CSNetworkStoreCachePolicy;
-    model.attemptRequestWhenFail = YES;
-    model.forbidTipErrorInfo = YES;
-    
-    [CSNetworkTool sendExtensionRequest:model success:^(id returnValue) {
-        CSNSLog(@"我是返回:%@",returnValue);
-    } failure:^(NSError *error) {
-        CSNSLog(@"我是错误返回:%@",error);
-    }];
+//    NSString* url = @"https://api.cs.juworker.com/home/index/get/";
+//    CSNetworkModel* model = [[CSNetworkModel alloc] init];
+//    model.requestUrl = url;
+//    model.parameters = @{};
+//    model.requestType = CSNetworkMethodPOST;
+//    model.requestCachePolicy = CSNetworkStoreCachePolicy;
+//    model.attemptRequestWhenFail = YES;
+//    model.forbidTipErrorInfo = YES;
+//    
+//    [CSNetworkTool sendExtensionRequest:model success:^(id returnValue) {
+//        //CSNSLog(@"我是返回:%@",returnValue);
+//    } failure:^(NSError *error) {
+//        //CSNSLog(@"我是错误返回:%@",error);
+//    }];
+}
+
+- (void)dealloc{
+    CSNSLog(@"执行了....");
+    [self.tableView removeAllSubviews];
+    [self.tableView removeFromSuperview];
+    self.tableView = nil;
 }
 
 - (void)initTableView{
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
+    self.tableView.tag = 9222;
     
     [self.view addSubview:self.tableView];
     
     [self.tableView registerClass:CellName identifier:CellName];
     
     
-    [self.tableView addSelectRowAction:^(UITableView *tableView, id data, NSIndexPath *indexPath, id action) {
-        
-        
-        
-        
-        
-    }];
+//    [self.tableView addSelectRowAction:^(UITableView *tableView, id data, NSIndexPath *indexPath, id action) {
+//        
+//        
+//        
+//        
+//        
+//    }];
     
     
     [self.tableView addCellClickAction:^(UITableView *tableView, id data, NSIndexPath *indexPath, id action) {
-        NSLog(@"点击了哦........");
+        CSNSLog(@"点击了哦........");
     }];
 }
 
@@ -104,7 +111,7 @@ static  NSString *CellName=@"CSTestTableCell";
         [self.dataSource addObject:layout];
         
     }
-    
+    [self.tableView setData:nil];
     [self.tableView setData:self.dataSource];
     [self.tableView reloadData];
     

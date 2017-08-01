@@ -12,6 +12,8 @@
 #import "CSTextArchiver.h"
 #import "UIFont+Extended.h"
 
+#import "CSKitMacro.h"
+
 NSString *const CSTextBackedStringAttributeName = @"CSTextBackedString";
 NSString *const CSTextBindingAttributeName = @"CSTextBinding";
 NSString *const CSTextShadowAttributeName = @"CSTextShadow";
@@ -715,7 +717,7 @@ NSString *const kCSTextHighlightType            = @"type";
         data = [CSTextArchiver archivedDataWithRootObject:self.attributes];
     }
     @catch (NSException *exception) {
-        NSLog(@"%@",exception);
+        CSNSLog(@"%@",exception);
     }
     [aCoder encodeObject:data forKey:@"attributes"];
 }
@@ -737,7 +739,7 @@ NSString *const kCSTextHighlightType            = @"type";
             _attributes = [CSTextUnarchiver unarchiveObjectWithData:data];
         }
         @catch (NSException *exception) {
-            NSLog(@"%@",exception);
+            CSNSLog(@"%@",exception);
         }
     }
     return self;

@@ -7,6 +7,7 @@
 //
 
 #import "CSBaseClickView.h"
+#import "NSTimer+Extended.h"
 
 @implementation CSBaseClickView
 
@@ -91,9 +92,13 @@
     [self endTimer];
 }
 - (void)startTimer {
-    [_timer invalidate];
-    _timer = [NSTimer timerWithTimeInterval:0.5 target:self selector:@selector(timerFire) userInfo:nil repeats:NO];
-    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    
+    _timer = [NSTimer pltScheduledTimerWithTimeInterval:0.5 target:self selector:@selector(timerFire) userInfo:@"userInfo"];
+    
+    
+//    [_timer invalidate];
+//    _timer = [NSTimer timerWithTimeInterval:0.5 target:self selector:@selector(timerFire) userInfo:nil repeats:NO];
+//    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 }
 
 - (void)endTimer {
@@ -108,6 +113,7 @@
     [self endTimer];
 }
 - (void)dealloc {
+    
     [self endTimer];
 }
 

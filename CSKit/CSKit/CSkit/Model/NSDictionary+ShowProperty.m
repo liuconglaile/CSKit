@@ -7,6 +7,7 @@
 //
 
 #import "NSDictionary+ShowProperty.h"
+#import "CSKitMacro.h"
 
 @implementation NSDictionary (ShowProperty)
 
@@ -105,7 +106,7 @@
     ///拼接 @end
     [codes appendFormat:@"\n@end\n"];
     
-    NSLog(@"打印:\n%@",codes);
+    CSNSLog(@"打印:\n%@",codes);
     
     [self enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull value, BOOL * _Nonnull stop) {
         

@@ -139,7 +139,7 @@ static char const * const kSoundsKey = "kSoundsKey";
     [sounds setObject:tapSound forKey:controlEventKey];
     [tapSound prepareToPlay];
     if (!tapSound) {
-        NSLog(@"Couldn't add sound - error: %@", error);
+        CSNSLog(@"Couldn't add sound - error: %@", error);
         return;
     }
     

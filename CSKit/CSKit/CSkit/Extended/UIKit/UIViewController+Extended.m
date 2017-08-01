@@ -11,6 +11,8 @@
 #import <StoreKit/StoreKit.h>
 #import <MobileCoreServices/UTCoreTypes.h>
 
+#import "CSKitMacro.h"
+
 static const void *CSBackButtonHandlerKey = &CSBackButtonHandlerKey;
 static const void *UIViewControllerDictionaryBlockKey = &UIViewControllerDictionaryBlockKey;
 NSString* const affiliateTokenKey = @"at";
@@ -73,7 +75,7 @@ void CSBlockSegue(void) {
     }
     
     if (!self.jmg_dictionaryBlock || !self.jmg_dictionaryBlock[segue.identifier]) {
-        NSLog(@"Segue identifier '%@' doesn't exist", segue.identifier);
+        CSNSLog(@"Segue identifier '%@' doesn't exist", segue.identifier);
         return;
     }
     

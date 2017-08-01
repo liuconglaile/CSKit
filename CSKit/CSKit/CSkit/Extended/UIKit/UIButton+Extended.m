@@ -10,6 +10,8 @@
 #import <objc/runtime.h>
 
 
+#import "CSKitMacro.h"
+
 static const void *UIButtonBlockKey = &UIButtonBlockKey;
 static NSString *const IndicatorViewKey = @"indicatorView";
 static NSString *const ButtonTextObjectKey = @"buttonTextObject";
@@ -185,7 +187,7 @@ static NSString *const ButtonTextObjectKey = @"buttonTextObject";
             NSString *strTime = [NSString stringWithFormat:@"%.2d", seconds];
             dispatch_async(dispatch_get_main_queue(), ^{
                 //设置界面的按钮显示 根据自己需求设置
-                NSLog(@"____%@",strTime);
+                CSNSLog(@"____%@",strTime);
                 [self setTitle:[NSString stringWithFormat:@"%@%@",strTime,waitTittle] forState:UIControlStateNormal];
                 self.userInteractionEnabled = NO;
                 

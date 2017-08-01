@@ -11,6 +11,8 @@
 #import <netinet/in.h>
 #import <arpa/inet.h>
 
+#import "CSKitMacro.h"
+
 @implementation NSObject (Socket)
 
 # pragma mark - 网络请求
@@ -86,7 +88,7 @@
         NSData * data = [NSData dataWithBytes:buffer length:recvCount];
         NSString * recvMsg = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         close(clientSocket);
-        NSLog(@"%@",recvMsg);
+        CSNSLog(@"%@",recvMsg);
         return recvMsg;
     }
     

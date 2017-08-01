@@ -12,6 +12,7 @@
 #import <objc/runtime.h>
 
 #import "NSString+Extended.h"
+#import "CSKitMacro.h"
 
 static void (^__loadedBlock)(UIWebView *webView);
 static void (^__failureBlock)(UIWebView *webView, NSError *error);
@@ -477,7 +478,7 @@ static NSHashTable* g_webViews = nil;
     NSError*   error = nil;
     id array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
     
-    if(array==nil) NSLog(@"An error occured in meta parser.");
+    if(array==nil) CSNSLog(@"An error occured in meta parser.");
     return array;
 }
 
@@ -626,7 +627,7 @@ static NSHashTable* g_webViews = nil;
     for (int i = 0; i < [self nodeCountOfTag:@"a"]; i++) {
         NSString *jsString = [NSString stringWithFormat:@"document.getElementsByTagName('a')[%d].getAttribute('onclick')", i];
         NSString *clickString = [self stringByEvaluatingJavaScriptFromString:jsString];
-        NSLog(@"%@", clickString);
+        CSNSLog(@"%@", clickString);
         [arrOnClicks addObject:clickString];
     }
     return arrOnClicks;

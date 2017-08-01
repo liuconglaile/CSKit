@@ -8,7 +8,7 @@
 
 #import "CSPopupController.h"
 #import <objc/runtime.h>
-
+#import "CSKitMacro.h"
 
 /**
  随机值
@@ -198,10 +198,10 @@ static void *PopupControllerParametersKey = &PopupControllerParametersKey;
 - (void)message { // cue words
     if (_layoutType != CSPopupLayoutTypeCenter) {
         if (_transitStyle != CSPopupTransitStyleDefault) {
-            NSLog(@"\n ◎ Set 'transitStyle' is invalid. when 'layoutType' is not 'CSPopupLayoutTypeCenter'.");
+            CSNSLog(@"\n ◎ Set 'transitStyle' is invalid. when 'layoutType' is not 'CSPopupLayoutTypeCenter'.");
         }
         if (_dismissOppositeDirection) {
-            NSLog(@"\n ◎ Set 'isDismissOppositeDirection' is invalid. when 'layoutType' is not 'CSPopupLayoutTypeCenter'.");
+            CSNSLog(@"\n ◎ Set 'isDismissOppositeDirection' is invalid. when 'layoutType' is not 'CSPopupLayoutTypeCenter'.");
         }
     }
 }

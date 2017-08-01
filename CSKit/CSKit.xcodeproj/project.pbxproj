@@ -143,7 +143,6 @@
 		200E93D21F2B819D004A3800 /* CSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 200E93351F2B819D004A3800 /* CSModel.m */; };
 		200E93D31F2B819D004A3800 /* NSDictionary+ShowProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 200E93371F2B819D004A3800 /* NSDictionary+ShowProperty.m */; };
 		200E93D41F2B819D004A3800 /* NSObject+CSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 200E93391F2B819D004A3800 /* NSObject+CSModel.m */; };
-		200E93D51F2B819D004A3800 /* ModelNetworking.zip in Resources */ = {isa = PBXBuildFile; fileRef = 200E933A1F2B819D004A3800 /* ModelNetworking.zip */; };
 		200E93D61F2B819D004A3800 /* CSTextContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 200E933E1F2B819D004A3800 /* CSTextContainerView.m */; };
 		200E93D71F2B819D004A3800 /* CSTextDebugOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 200E93401F2B819D004A3800 /* CSTextDebugOption.m */; };
 		200E93D81F2B819D004A3800 /* CSTextEffectWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 200E93421F2B819D004A3800 /* CSTextEffectWindow.m */; };
@@ -203,6 +202,12 @@
 		20612C6D1F2FA44E006E1715 /* CSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C681F2FA44E006E1715 /* CSAlertView.m */; };
 		20612C6E1F2FA44E006E1715 /* CSIconLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C6A1F2FA44E006E1715 /* CSIconLabel.m */; };
 		20612C6F1F2FA44E006E1715 /* CSPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20612C6C1F2FA44E006E1715 /* CSPopupController.m */; };
+		20F350BC1F30D30A001C0513 /* CSRootCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F350BB1F30D30A001C0513 /* CSRootCell.m */; };
+		20F350BF1F30D3C5001C0513 /* CSRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F350BE1F30D3C5001C0513 /* CSRootModel.m */; };
+		20F350C21F30D3F1001C0513 /* CSRootLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F350C11F30D3F1001C0513 /* CSRootLayout.m */; };
+		20F350CA1F30DCC8001C0513 /* NSArray+Unicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F350C51F30DCC8001C0513 /* NSArray+Unicode.m */; };
+		20F350CB1F30DCC8001C0513 /* NSDictionary+Unicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F350C71F30DCC8001C0513 /* NSDictionary+Unicode.m */; };
+		20F350CC1F30DCC8001C0513 /* NSSet+Unicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F350C91F30DCC8001C0513 /* NSSet+Unicode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -499,7 +504,6 @@
 		200E93371F2B819D004A3800 /* NSDictionary+ShowProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ShowProperty.m"; sourceTree = "<group>"; };
 		200E93381F2B819D004A3800 /* NSObject+CSModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CSModel.h"; sourceTree = "<group>"; };
 		200E93391F2B819D004A3800 /* NSObject+CSModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CSModel.m"; sourceTree = "<group>"; };
-		200E933A1F2B819D004A3800 /* ModelNetworking.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = ModelNetworking.zip; sourceTree = "<group>"; };
 		200E933D1F2B819D004A3800 /* CSTextContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTextContainerView.h; sourceTree = "<group>"; };
 		200E933E1F2B819D004A3800 /* CSTextContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTextContainerView.m; sourceTree = "<group>"; };
 		200E933F1F2B819D004A3800 /* CSTextDebugOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTextDebugOption.h; sourceTree = "<group>"; };
@@ -613,6 +617,18 @@
 		20612C6A1F2FA44E006E1715 /* CSIconLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSIconLabel.m; sourceTree = "<group>"; };
 		20612C6B1F2FA44E006E1715 /* CSPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPopupController.h; sourceTree = "<group>"; };
 		20612C6C1F2FA44E006E1715 /* CSPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPopupController.m; sourceTree = "<group>"; };
+		20F350BA1F30D30A001C0513 /* CSRootCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSRootCell.h; sourceTree = "<group>"; };
+		20F350BB1F30D30A001C0513 /* CSRootCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSRootCell.m; sourceTree = "<group>"; };
+		20F350BD1F30D3C5001C0513 /* CSRootModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSRootModel.h; sourceTree = "<group>"; };
+		20F350BE1F30D3C5001C0513 /* CSRootModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSRootModel.m; sourceTree = "<group>"; };
+		20F350C01F30D3F1001C0513 /* CSRootLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSRootLayout.h; sourceTree = "<group>"; };
+		20F350C11F30D3F1001C0513 /* CSRootLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSRootLayout.m; sourceTree = "<group>"; };
+		20F350C41F30DCC8001C0513 /* NSArray+Unicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Unicode.h"; sourceTree = "<group>"; };
+		20F350C51F30DCC8001C0513 /* NSArray+Unicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Unicode.m"; sourceTree = "<group>"; };
+		20F350C61F30DCC8001C0513 /* NSDictionary+Unicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Unicode.h"; sourceTree = "<group>"; };
+		20F350C71F30DCC8001C0513 /* NSDictionary+Unicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Unicode.m"; sourceTree = "<group>"; };
+		20F350C81F30DCC8001C0513 /* NSSet+Unicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+Unicode.h"; sourceTree = "<group>"; };
+		20F350C91F30DCC8001C0513 /* NSSet+Unicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+Unicode.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -643,11 +659,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0468DC751F302E4500925E87 /* CSNetworkTools */ = {
+		0468DC751F302E4500925E87 /* CSNetworkTools(网络工具) */ = {
 			isa = PBXGroup;
 			children = (
 				0468DC7B1F3056B700925E87 /* CSNetworkTopMaskView */,
 			);
+			name = "CSNetworkTools(网络工具)";
 			path = CSNetworkTools;
 			sourceTree = "<group>";
 		};
@@ -863,6 +880,12 @@
 				200E92521F2B7F5D004A3800 /* AppDelegate.m */,
 				200E92541F2B7F5D004A3800 /* ViewController.h */,
 				200E92551F2B7F5D004A3800 /* ViewController.m */,
+				20F350BA1F30D30A001C0513 /* CSRootCell.h */,
+				20F350BB1F30D30A001C0513 /* CSRootCell.m */,
+				20F350C01F30D3F1001C0513 /* CSRootLayout.h */,
+				20F350C11F30D3F1001C0513 /* CSRootLayout.m */,
+				20F350BD1F30D3C5001C0513 /* CSRootModel.h */,
+				20F350BE1F30D3C5001C0513 /* CSRootModel.m */,
 				200E93F61F2B81AB004A3800 /* UITableViewProtocol(TEST) */,
 				200E92571F2B7F5D004A3800 /* Main.storyboard */,
 				200E925A1F2B7F5D004A3800 /* Assets.xcassets */,
@@ -909,7 +932,6 @@
 				200E92A01F2B819D004A3800 /* Extended */,
 				200E93151F2B819D004A3800 /* Image */,
 				200E93311F2B819D004A3800 /* Model */,
-				200E933A1F2B819D004A3800 /* ModelNetworking.zip */,
 				200E933B1F2B819D004A3800 /* Text */,
 				200E93671F2B819D004A3800 /* Utility */,
 			);
@@ -934,7 +956,7 @@
 		200E928D1F2B819D004A3800 /* CustomClass */ = {
 			isa = PBXGroup;
 			children = (
-				0468DC751F302E4500925E87 /* CSNetworkTools */,
+				0468DC751F302E4500925E87 /* CSNetworkTools(网络工具) */,
 				20612C641F2FA44E006E1715 /* CSPopupController(各种弹出) */,
 				20612C491F2F8B66006E1715 /* CSIndicator(指示器) */,
 				20612C2D1F2F893E006E1715 /* CSImageBrowser(图片浏览器) */,
@@ -1170,6 +1192,7 @@
 		200E93311F2B819D004A3800 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				20F350C31F30DCC8001C0513 /* Unicode */,
 				200E93321F2B819D004A3800 /* CSClassInfo.h */,
 				200E93331F2B819D004A3800 /* CSClassInfo.m */,
 				200E93341F2B819D004A3800 /* CSModel.h */,
@@ -1435,6 +1458,19 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
+		20F350C31F30DCC8001C0513 /* Unicode */ = {
+			isa = PBXGroup;
+			children = (
+				20F350C41F30DCC8001C0513 /* NSArray+Unicode.h */,
+				20F350C51F30DCC8001C0513 /* NSArray+Unicode.m */,
+				20F350C61F30DCC8001C0513 /* NSDictionary+Unicode.h */,
+				20F350C71F30DCC8001C0513 /* NSDictionary+Unicode.m */,
+				20F350C81F30DCC8001C0513 /* NSSet+Unicode.h */,
+				20F350C91F30DCC8001C0513 /* NSSet+Unicode.m */,
+			);
+			path = Unicode;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1547,7 +1583,6 @@
 				20612C601F2F8B66006E1715 /* CSProgressIndicatorImage.bundle in Resources */,
 				200E925E1F2B7F5D004A3800 /* LaunchScreen.storyboard in Resources */,
 				0468DC7F1F3056E300925E87 /* CSNetworkTools.bundle in Resources */,
-				200E93D51F2B819D004A3800 /* ModelNetworking.zip in Resources */,
 				200E925B1F2B7F5D004A3800 /* Assets.xcassets in Resources */,
 				200E94041F2B81AB004A3800 /* data.plist in Resources */,
 				200E92591F2B7F5D004A3800 /* Main.storyboard in Resources */,
@@ -1607,6 +1642,7 @@
 				0468DD221F306E1000925E87 /* AFSecurityPolicy.m in Sources */,
 				0468DD421F306E1700925E87 /* UIRefreshControl+AFNetworking.m in Sources */,
 				0468DD001F306A9200925E87 /* MJRefreshComponent.m in Sources */,
+				20F350CC1F30DCC8001C0513 /* NSSet+Unicode.m in Sources */,
 				0468DD411F306E1700925E87 /* UIProgressView+AFNetworking.m in Sources */,
 				200E93BF1F2B819D004A3800 /* UIView+Extended.m in Sources */,
 				200E939B1F2B819D004A3800 /* NSObject+KVOExtended.m in Sources */,
@@ -1632,6 +1668,7 @@
 				20612C5D1F2F8B66006E1715 /* CSNotificationIndicator.m in Sources */,
 				200E93BE1F2B819D004A3800 /* UITextView+Extended.m in Sources */,
 				200E93CB1F2B819D004A3800 /* CSImage.m in Sources */,
+				20F350CA1F30DCC8001C0513 /* NSArray+Unicode.m in Sources */,
 				200E93B11F2B819D004A3800 /* UIImageView+Extended.m in Sources */,
 				200E93DF1F2B819D004A3800 /* CSTextArchiver.m in Sources */,
 				20612C5C1F2F8B66006E1715 /* CSIndicator.m in Sources */,
@@ -1640,6 +1677,7 @@
 				200E93DA1F2B819D004A3800 /* CSTextKeyboardManager.m in Sources */,
 				200E93D31F2B819D004A3800 /* NSDictionary+ShowProperty.m in Sources */,
 				200E93D61F2B819D004A3800 /* CSTextContainerView.m in Sources */,
+				20F350BF1F30D3C5001C0513 /* CSRootModel.m in Sources */,
 				200E93821F2B819D004A3800 /* CSKVStorage.m in Sources */,
 				20612C461F2F893E006E1715 /* CSImageBrowserCell.m in Sources */,
 				200E93A91F2B819D004A3800 /* UIButton+Extended.m in Sources */,
@@ -1657,6 +1695,7 @@
 				200E93AD1F2B819D004A3800 /* UIFont+Extended.m in Sources */,
 				200E93F51F2B819D004A3800 /* CSWeakProxy.m in Sources */,
 				0468DD3E1F306E1700925E87 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				20F350BC1F30D30A001C0513 /* CSRootCell.m in Sources */,
 				0468DCFF1F306A9200925E87 /* MJRefreshBackFooter.m in Sources */,
 				200E93951F2B819D004A3800 /* NSHTTPCookieStorage+Utilities.m in Sources */,
 				200E939D1F2B819D004A3800 /* NSSet+Utilities.m in Sources */,
@@ -1685,6 +1724,7 @@
 				0468DD0D1F306A9200925E87 /* MJRefreshConst.m in Sources */,
 				200E93D01F2B819D004A3800 /* CSWebImageOperation.m in Sources */,
 				200E93B01F2B819D004A3800 /* UIImage+Extended.m in Sources */,
+				20F350C21F30D3F1001C0513 /* CSRootLayout.m in Sources */,
 				200E938F1F2B819D004A3800 /* NSBundle+Extended.m in Sources */,
 				20612C471F2F893E006E1715 /* CSImageItem.m in Sources */,
 				200E93E01F2B819D004A3800 /* CSTextAttribute.m in Sources */,
@@ -1722,6 +1762,7 @@
 				200E93AF1F2B819D004A3800 /* UIImage+Blur.m in Sources */,
 				200E93AC1F2B819D004A3800 /* UIDevice+Extended.m in Sources */,
 				200E93EB1F2B819D004A3800 /* CSDispatchQueuePool.m in Sources */,
+				20F350CB1F30DCC8001C0513 /* NSDictionary+Unicode.m in Sources */,
 				200E93E41F2B819D004A3800 /* CSTextUtilities.m in Sources */,
 				200E939F1F2B819D004A3800 /* NSString+Identify.m in Sources */,
 				200E93961F2B819D004A3800 /* NSKeyedUnarchiver+Extended.m in Sources */,

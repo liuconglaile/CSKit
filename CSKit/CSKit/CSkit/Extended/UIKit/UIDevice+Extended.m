@@ -543,7 +543,7 @@ static cs_net_interface_counter cs_get_net_interface_counter() {
     
     NSString *errorString = [NSString stringWithFormat:@"SecItemAdd can't create sacObject: %@", error];
     
-    NSLog(@"%@",errorString);
+    CSNSLog(@"%@",errorString);
     
     return (sacObject == NULL || error != NULL);
     //return (&kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly != NULL);
@@ -556,7 +556,7 @@ static cs_net_interface_counter cs_get_net_interface_counter() {
 - (CSPasscodeStatus)passcodeStatus
 {
 #if TARGET_IPHONE_SIMULATOR
-    NSLog(@"-[%@ %@] - not supported in simulator", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+    CSNSLog(@"-[%@ %@] - not supported in simulator", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
     return CSPasscodeStatusUnknown;
 #endif
     

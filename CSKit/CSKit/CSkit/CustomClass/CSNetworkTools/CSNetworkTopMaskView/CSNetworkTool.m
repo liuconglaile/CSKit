@@ -14,6 +14,47 @@
 static NSMutableArray *globalReqManagerArr_;
 static char const * const kRequestUrlKey    = "kRequestUrlKey";
 
+
+
+@interface CSHTTPSessionManager : NSObject
+
++ (AFHTTPSessionManager *)sharedManager;
+
+@end
+
+
+@implementation CSHTTPSessionManager
+
+static AFHTTPSessionManager *manager;
+
++ (AFHTTPSessionManager *)sharedManager {
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        // 初始化请求管理类
+        manager = [AFHTTPSessionManager manager];
+        manager.requestSerializer = [AFJSONRequestSerializer serializer];
+        
+        // 设置15秒超时 - 取消请求
+        manager.requestSerializer.timeoutInterval = 15.0;
+        // 编码
+        manager.requestSerializer.stringEncoding = NSUTF8StringEncoding;
+        // 缓存策略(这里先不设置)
+        //manager.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+        
+        manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        // 支持内容格式
+        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/JavaScript", @"text/json", @"text/html", nil];
+        
+    });
+    return manager;
+    
+}
+
+@end
+
+
+
 @implementation CSNetworkTool
 
 + (void)load{
@@ -52,12 +93,14 @@ static char const * const kRequestUrlKey    = "kRequestUrlKey";
  创建请求管理者
  */
 + (AFHTTPSessionManager *)afManager{
-    AFHTTPSessionManager *mgr_ = [AFHTTPSessionManager manager];
-    mgr_.responseSerializer = [AFJSONResponseSerializer serializer];
-    mgr_.requestSerializer = [AFJSONRequestSerializer serializer];
-    mgr_.requestSerializer.timeoutInterval = 60;//默认超时时间
-    mgr_.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json",nil];
-    return mgr_;
+    //    AFHTTPSessionManager *mgr_ = [AFHTTPSessionManager manager];
+    //    mgr_.responseSerializer = [AFJSONResponseSerializer serializer];
+    //    mgr_.requestSerializer = [AFJSONRequestSerializer serializer];
+    //    mgr_.requestSerializer.timeoutInterval = 60;//默认超时时间
+    //    mgr_.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json",nil];
+    //    return mgr_;
+    
+    return [CSHTTPSessionManager sharedManager];
 }
 
 #pragma mark -======== 底层公共请求入口 ========
@@ -268,6 +311,8 @@ static char const * const kRequestUrlKey    = "kRequestUrlKey";
             if (sessionDataTask.state == NSURLSessionTaskStateCompleted) {
                 [reqArr removeObject:sessionDataTask];
                 CSNSLog(@"移除管理数组中完成了的请求===%@",reqArr);
+            }else{
+                CSNSLog(@"请求状态:%@",@(sessionDataTask.state));
             }
         }
     }

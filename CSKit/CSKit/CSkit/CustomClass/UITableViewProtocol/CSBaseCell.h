@@ -27,10 +27,10 @@ typedef void(^CSCellAction)(id action);
 @property(assign ,nonatomic) CAGradientLayer *line;//分割线
 @property(strong ,nonatomic) UIColor *lineColor;
 @property(copy   ,nonatomic) CSCellAction cellAction;
+//@property(copy   ,nonatomic) NSString* identifier;
 
 
-
-//初始化视图控件 这个方法教给子类去重写 不需要调用父类
+//初始化视图控件 这个方法交给子类去重写 不需要调用父类
 - (void)setUpView;
 - (UITableView*)currnTableView;
 - (NSIndexPath *)currnIndexPath;

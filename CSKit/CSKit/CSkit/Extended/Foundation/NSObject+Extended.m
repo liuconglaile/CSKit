@@ -425,7 +425,7 @@ struct dummy arg = va_arg(args, struct dummy); \
                  */
                 struct dummy {char tmp;};
                 for (int i = 0; i < size; i++) va_arg(args, struct dummy);
-                NSLog(@"YYKit performSelectorWithArgs unsupported type:%s (%lu bytes)",
+                CSNSLog(@"CSKit performSelectorWithArgs unsupported type:%s (%lu bytes)",
                       [sig getArgumentTypeAtIndex:index],(unsigned long)size);
             }
 #undef case_size
@@ -681,7 +681,7 @@ struct dummy arg = va_arg(args, struct dummy); \
         obj = [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:self]];
     }
     @catch (NSException *exception) {
-        NSLog(@"%@", exception);
+        CSNSLog(@"%@", exception);
     }
     return obj;
 }
@@ -698,7 +698,7 @@ struct dummy arg = va_arg(args, struct dummy); \
         obj = [unarchiver unarchiveObjectWithData:[archiver archivedDataWithRootObject:self]];
     }
     @catch (NSException *exception) {
-        NSLog(@"%@", exception);
+        CSNSLog(@"%@", exception);
     }
     return obj;
 }
@@ -793,18 +793,18 @@ struct dummy arg = va_arg(args, struct dummy); \
         BOOL creatResult = [fileManager createDirectoryAtPath:pathString withIntermediateDirectories:YES attributes:nil error:nil];
         if (creatResult == YES)
         {
-            NSLog(@"创建文件下载路径成功");
+            CSNSLog(@"创建文件下载路径成功");
             success = YES;
         }
         else
         {
-            NSLog(@"创建文件下载路径失败");
+            CSNSLog(@"创建文件下载路径失败");
             success = NO;
         }
     }
     else
     {
-        NSLog(@"文件下载路径已创建");
+        CSNSLog(@"文件下载路径已创建");
         success = YES;
     }
     return success;

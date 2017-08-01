@@ -29,7 +29,7 @@
     ///TODO:这个是在子类实现的
     
 }
--(CSTextLayout *)layout:(UIFont *)font color:(UIColor*)color width:(CGFloat )width string:(NSString *)string max:(BOOL)max{
+- (CSTextLayout *)layout:(UIFont *)font color:(UIColor*)color width:(CGFloat )width string:(NSString *)string max:(BOOL)max{
     
     NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:string];
     text.font =font;
@@ -66,7 +66,7 @@
     
     
     CSTextContainer *container = [CSTextContainer new];
-    container.size =CGSizeMake(width, CGFLOAT_MAX);
+    container.size = CGSizeMake(width, CGFLOAT_MAX);
     if (max) {
         container.maximumNumberOfRows = 0;//最多行数
     }else{

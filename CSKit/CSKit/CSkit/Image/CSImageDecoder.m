@@ -1480,12 +1480,12 @@ BOOL CSImageWebPAvailable() {
 }
 
 CFDataRef CSCGImageCreateEncodedWebPData(CGImageRef imageRef, BOOL lossless, CGFloat quality, int compressLevel, CSImagePreset preset) {
-    NSLog(@"WebP decoder is disabled");
+    CSNSLog(@"WebP decoder is disabled");
     return NULL;
 }
 
 NSUInteger CSImageGetWebPFrameCount(CFDataRef webpData) {
-    NSLog(@"WebP decoder is disabled");
+    CSNSLog(@"WebP decoder is disabled");
     return 0;
 }
 
@@ -1494,7 +1494,7 @@ CGImageRef CSCGImageCreateWithWebPData(CFDataRef webpData,
                                        BOOL useThreads,
                                        BOOL bypassFiltering,
                                        BOOL noFancyUpsampling) {
-    NSLog(@"WebP decoder is disabled");
+    CSNSLog(@"WebP decoder is disabled");
     return NULL;
 }
 
@@ -1894,7 +1894,7 @@ CGImageRef CSCGImageCreateWithWebPData(CFDataRef webpData,
     static const int line = __LINE__;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSLog(@"[%s: %d] WebP is not available, check the documentation to see how to install WebP component: https://github.com/ibireme/YYImage#installation", func, line);
+        CSNSLog(@"[%s: %d] WebP is not available, check the documentation to see how to install WebP component: https://github.com/ibireme/YYImage#installation", func, line);
     });
 #endif
 }
@@ -2380,19 +2380,19 @@ CGImageRef CSCGImageCreateWithWebPData(CFDataRef webpData,
 }
 
 - (instancetype)init {
-    @throw [NSException exceptionWithName:@"YYImageEncoder init error" reason:@"YYImageEncoder must be initialized with a type. Use 'initWithType:' instead." userInfo:nil];
+    @throw [NSException exceptionWithName:@"CSImageEncoder init error" reason:@"CSImageEncoder must be initialized with a type. Use 'initWithType:' instead." userInfo:nil];
     return [self initWithType:CSImageTypeUnknown];
 }
 
 - (instancetype)initWithType:(CSImageType)type {
     if (type == CSImageTypeUnknown || type >= CSImageTypeOther) {
-        NSLog(@"[%s: %d] Unsupported image type:%d",__FUNCTION__, __LINE__, (int)type);
+        CSNSLog(@"[%s: %d] Unsupported image type:%d",__FUNCTION__, __LINE__, (int)type);
         return nil;
     }
     
 #if !CSIMAGE_WEBP_ENABLED
     if (type == CSImageTypeWebP) {
-        NSLog(@"[%s: %d] WebP is not available, check the documentation to see how to install WebP component: https://github.com/ibireme/YYImage#installation", __FUNCTION__, __LINE__);
+        CSNSLog(@"[%s: %d] WebP is not available, check the documentation to see how to install WebP component: https://github.com/ibireme/CSImage#installation", __FUNCTION__, __LINE__);
         return nil;
     }
 #endif

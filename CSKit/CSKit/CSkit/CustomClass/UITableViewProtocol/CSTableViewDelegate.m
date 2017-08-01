@@ -86,15 +86,15 @@
 }
 -(void)setCellForRow:(CSCellForRowBlock)block{
     
-    cellForRowBlock=block;
+    cellForRowBlock = block;
     
 }
 -(void)addSelectRowAction:(CSTableViewAction)action{
     
-    rowClickAction=action;
+    rowClickAction = action;
 }
 -(void)addCellClickAction:(CSTableViewAction)action{
-    cellClickAction=action;
+    cellClickAction = action;
     
 }
 #pragma mark delegate datasource
@@ -176,7 +176,11 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (rowClickAction)  rowClickAction(tableView,dataSource,indexPath,nil);
+    if (rowClickAction)
+    {
+        rowClickAction(tableView,dataSource,indexPath,nil);
+    }
+    
     
     
 }

@@ -88,8 +88,8 @@
 }
 -(void)getlayout:(CSTestTableLayout *)layout{
     
-    CSTestTableModel *feed=layout.dataModel;
-    iconView.frame=layout.avtarFrame;
+    CSTestTableModel *feed = layout.dataModel;
+    iconView.frame = layout.avtarFrame;
     
     userNameLabel.size = layout.userNameLayout.textBoundingSize;
     userNameLabel.textLayout = layout.userNameLayout;
@@ -123,9 +123,9 @@
     
     
     
-    if (feed.imageArr.count>0){
+    if (feed.imageArr.count > 0){
         
-        @weakify(self);
+        //@weakify(self);
         [imgViewArray enumerateObjectsUsingBlock:^(CSPictureView *view, NSUInteger idx, BOOL * _Nonnull stop) {
             if (feed.imageArr.count-1 >= idx) {
                 
@@ -141,7 +141,7 @@
                                     options:CSWebImageOptionAvoidSetImage //图像提取完成后,请勿将图像设置为视图.您可以手动设置图像
                                  completion:^(UIImage *image, NSURL *url, CSWebImageFromType from, CSWebImageStage stage, NSError *error) {
                                      @strongify(view);
-                                     @strongify(self);
+                                     //@strongify(self);
                                      
                                      if (!view) return;
                                      if (image && stage == CSWebImageStageFinished) {
@@ -161,13 +161,13 @@
                                          
                                          
                                          ///配置图片点击事件
-                                         NSMutableArray<CSPictureView *>* tempClickImages = @[].mutableCopy;
-                                         for (CSPictureView *object in imgViewArray) {
-                                             if (!CGRectEqualToRect(object.frame, CGRectZero)) {
-                                                 [tempClickImages addObject:object];
-                                             }
-                                         }
-                                         [self imageClick:view AndImages:tempClickImages];
+//                                         NSMutableArray<CSPictureView *>* tempClickImages = @[].mutableCopy;
+//                                         for (CSPictureView *object in imgViewArray) {
+//                                             if (!CGRectEqualToRect(object.frame, CGRectZero)) {
+//                                                 [tempClickImages addObject:object];
+//                                             }
+//                                         }
+                                         //[self imageClick:view AndImages:tempClickImages];
                                      }
                                  }];
                 
@@ -231,8 +231,8 @@
     
     [layout celllayout];
     
-    UITableView *tableView =[self currnTableView];
-    NSIndexPath *indexPath =[self currnIndexPath];
+    UITableView *tableView = [self currnTableView];
+    NSIndexPath *indexPath = [self currnIndexPath];
     [tableView beginUpdates];
     
     
@@ -240,7 +240,7 @@
     [tableView endUpdates];
     
     
-    if (self.self.cellAction) self.cellAction(@(butn.selected));
+    if (self.cellAction) self.cellAction(@(butn.selected));
 }
 
 //这个图片处理不一定放这里，放到图片工具类

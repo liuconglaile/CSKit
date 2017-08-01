@@ -798,15 +798,15 @@ typedef uint32_t dword;
                     saturation:(CGFloat)saturation
                      maskImage:(UIImage *)maskImage {
     if (self.size.width < 1 || self.size.height < 1) {
-        NSLog(@"UIImage+YYAdd error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", self.size.width, self.size.height, self);
+        CSNSLog(@"error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", self.size.width, self.size.height, self);
         return nil;
     }
     if (!self.CGImage) {
-        NSLog(@"UIImage+YYAdd error: inputImage must be backed by a CGImage: %@", self);
+        CSNSLog(@"error: inputImage must be backed by a CGImage: %@", self);
         return nil;
     }
     if (maskImage && !maskImage.CGImage) {
-        NSLog(@"UIImage+YYAdd error: effectMaskImage must be backed by a CGImage: %@", maskImage);
+        CSNSLog(@"error: effectMaskImage must be backed by a CGImage: %@", maskImage);
         return nil;
     }
     
@@ -842,12 +842,12 @@ typedef uint32_t dword;
         vImage_Error err;
         err = vImageBuffer_InitWithCGImage(&effect, &format, NULL, imageRef, kvImagePrintDiagnosticsToConsole);
         if (err != kvImageNoError) {
-            NSLog(@"UIImage+YYAdd error: vImageBuffer_InitWithCGImage returned error code %zi for inputImage: %@", err, self);
+            CSNSLog(@"error: vImageBuffer_InitWithCGImage returned error code %zi for inputImage: %@", err, self);
             return nil;
         }
         err = vImageBuffer_Init(&scratch, effect.height, effect.width, format.bitsPerPixel, kvImageNoFlags);
         if (err != kvImageNoError) {
-            NSLog(@"UIImage+YYAdd error: vImageBuffer_Init returned error code %zi for inputImage: %@", err, self);
+            CSNSLog(@"error: vImageBuffer_Init returned error code %zi for inputImage: %@", err, self);
             return nil;
         }
     } else {
@@ -1281,10 +1281,10 @@ static UIImage *animatedImageWithAnimatedGIFReleasingImageSource(CGImageSourceRe
     NSArray *features = [UIImage __faceFeaturesInImage:self accuracy:accurary];
     
     if ([features count]==0) {
-        NSLog(@"no faces");
+        CSNSLog(@"no faces");
         return nil;
     } else {
-        NSLog(@"succeed %lu faces", (unsigned long)[features count]);
+        CSNSLog(@"succeed %lu faces", (unsigned long)[features count]);
         return [self __subImageForFaceFeatures:features size:size];
     }
 }
@@ -1630,7 +1630,7 @@ static UIImage *animatedImageWithAnimatedGIFReleasingImageSource(CGImageSourceRe
     //        NSURLRequest* request = [NSURLRequest requestWithURL:imgURL];
     //
     //        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *resp, NSData *d, NSError *e) {
-    //            NSLog(@"respone%@", [(NSHTTPURLResponse*)resp allHeaderFields]);
+    //            CSNSLog(@"respone%@", [(NSHTTPURLResponse*)resp allHeaderFields]);
     //
     //
     //        }];

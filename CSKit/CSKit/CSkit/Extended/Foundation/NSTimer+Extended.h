@@ -31,6 +31,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSTimer *)timerWithTimeInterval:(NSTimeInterval)seconds block:(void (^)(NSTimer *timer))block repeats:(BOOL)repeats;
 
+
+
+/**
+ *  创建一个不会造成循环引用的循环执行的Timer
+ */
++ (instancetype)pltScheduledTimerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector userInfo:(id)userInfo;
+
+
 @end
 
 
