@@ -11,6 +11,9 @@
 #import "CSTestTableModel.h"
 #import "UITableView+Protocol.h"
 
+#import "CSKit.h"
+#import "CSNetworkTool+Extension.h"
+
 @interface CSTestTableController ()
 
 @property (nonatomic, strong) UITableView * tableView;
@@ -33,6 +36,22 @@ static  NSString *CellName=@"CSTestTableCell";
     [self initTableView];
     [self initData];
     
+    
+    
+    NSString* url = @"https://api.cs.juworker.com/home/index/get/";
+    CSNetworkModel* model = [[CSNetworkModel alloc] init];
+    model.requestUrl = url;
+    model.parameters = @{};
+    model.requestType = CSNetworkMethodPOST;
+    model.requestCachePolicy = CSNetworkStoreCachePolicy;
+    model.attemptRequestWhenFail = YES;
+    model.forbidTipErrorInfo = YES;
+    
+    [CSNetworkTool sendExtensionRequest:model success:^(id returnValue) {
+        CSNSLog(@"我是返回:%@",returnValue);
+    } failure:^(NSError *error) {
+        CSNSLog(@"我是错误返回:%@",error);
+    }];
 }
 
 - (void)initTableView{

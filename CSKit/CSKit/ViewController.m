@@ -8,8 +8,7 @@
 
 #import "ViewController.h"
 #import "CSTestTableController.h"
-#import "CSKit.h"
-#import "CSNetworkTool+Extension.h"
+
 
 
 @interface ViewController ()
@@ -24,20 +23,7 @@
     
     
     
-    NSString* url = @"https://api.cs.juworker.com/home/index/get/";
-    CSNetworkModel* model = [[CSNetworkModel alloc] init];
-    model.requestUrl = @"https://www.baidu.com";
-    model.parameters = @{};
-    model.requestType = CSNetworkMethodPOST;
-    model.requestCachePolicy = CSNetworkStoreCachePolicy;
-    model.attemptRequestWhenFail = YES;
-    model.forbidTipErrorInfo = YES;
     
-    [CSNetworkTool sendExtensionRequest:model success:^(id returnValue) {
-        CSNSLog(@"我是返回:%@",returnValue);
-    } failure:^(NSError *error) {
-        CSNSLog(@"我是错误返回:%@",error);
-    }];
     
 }
 

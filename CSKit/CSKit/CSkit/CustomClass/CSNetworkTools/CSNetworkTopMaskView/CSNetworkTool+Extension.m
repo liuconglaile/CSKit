@@ -207,6 +207,7 @@ static char const * const kRequestTimeCountKey    = "kRequestTimeCountKey";
 //                }
                 
                 if (responseObject) { //保存数据到数据库
+                    
                     NSString *cachekey = [self getCacheKeyByRequestUrl:requestModel.requestUrl parameter:requestModel.parameters];//缓存key
                     
                     CSCache* cache = [CSCache cacheWithName:@"CSNetworkTool"];
@@ -228,9 +229,13 @@ static char const * const kRequestTimeCountKey    = "kRequestTimeCountKey";
         //缓存key
         NSString *cachekey = [self getCacheKeyByRequestUrl:requestModel.requestUrl parameter:requestModel.parameters];
         CSCache* cache = [CSCache cacheWithName:@"CSNetworkTool"];
+        
         [cache objectForKey:cachekey withBlock:^(NSString * _Nonnull key, id<NSCoding>  _Nonnull object) {
             CSNSLog(@"请求接口基地址= %@\n\n请求参数= %@\n\n缓存数据成功返回= %@",requestModel.requestUrl,requestModel.parameters,object);
-            succResultBlock(object,YES);
+            if (object) {
+                succResultBlock(object,YES);
+            }
+            
         }];
     }
     
