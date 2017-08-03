@@ -13,11 +13,11 @@
 
 -(id )initWithModel:(id)model identifier:(NSString *)identifier{
     
-    self  =[super init];
+    self  = [super init];
     
     if (self) {
-        self.dataModel=model;
-        self.reuseIdentifier=identifier;
+        self.dataModel = model;
+        self.reuseIdentifier = identifier;
         
         [self celllayout];
     }
@@ -32,14 +32,14 @@
 - (CSTextLayout *)layout:(UIFont *)font color:(UIColor*)color width:(CGFloat )width string:(NSString *)string max:(BOOL)max{
     
     NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:string];
-    text.font =font;
-    text.lineSpacing=5;
-    text.color=color;
+    text.font = font;
+    text.lineSpacing = 5;
+    text.color = color;
     
     
     
     
-    NSArray *array=[self  compareUrl:string];
+    NSArray *array = [self compareUrl:string];
     
     
     ///TODO:这里统一设置 URL 的点击事件

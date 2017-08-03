@@ -55,7 +55,7 @@ static void CSReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
     static dispatch_queue_t queue;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        queue = dispatch_queue_create("com.ibireme.yykit.reachability", DISPATCH_QUEUE_SERIAL);
+        queue = dispatch_queue_create("com.ibireme.CSKit.reachability", DISPATCH_QUEUE_SERIAL);
     });
     return queue;
 }

@@ -158,7 +158,7 @@ char detectorKey;
 
 - (void)faceDetect:(UIImage *)aImage
 {
-    dispatch_queue_t queue = dispatch_queue_create("com.croath.betterface.queue", NULL);
+    dispatch_queue_t queue = dispatch_queue_create("com.ibireme.CSKit.croath.betterface.queue", NULL);
     dispatch_async(queue, ^{
         CIImage* image = aImage.CIImage;
         if (image == nil) { // just in case the UIImage was created using a CGImage revert to the previous, slower implementation

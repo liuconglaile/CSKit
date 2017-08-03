@@ -10,12 +10,11 @@
 #import "UIView+Extended.h"
 #import "UIColor+Extended.h"
 #import "NSObject+CGUtilities.h"
-#import "CSBaseClickView.h"
+
 
 
 @interface CSBaseCell()
 
-//@property (nonatomic, strong) UITableView* tableView;
 
 @end
 
@@ -24,7 +23,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    [self.contentView removeAllSubviews];
+    //[self.contentView removeAllSubviews];
     //初始化默认控件
     [self setDefaultView];
     
@@ -35,7 +34,7 @@
     
     if (self) {
         
-        [self.contentView removeAllSubviews];
+        //[self.contentView removeAllSubviews];
         
         //初始化默认控件
         [self setDefaultView];
@@ -46,32 +45,40 @@
     return self;
     
 }
+
 -(void)setDefaultView{
     
     //去除选中状态
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-    _containerView = [[CSBaseClickView alloc] initWithFrame:self.bounds];
+    self.containerView = [[CSControl alloc] initWithFrame:CGRectZero];
     
-    _containerView.selectColor = UIColorHex(f0f0f0);
-    _containerView.defaultColor= UIColorHex(fafafa);
-    _containerView.showClickEffect = YES;
-    self.line = [_containerView addPixLineToBottom];
+    self.containerView.selectColor = UIColorHex(f0f0f0);
+    self.containerView.defaultColor= UIColorHex(fafafa);
+    self.containerView.showClickEffect = YES;
     
-    [self.contentView addSubview:_containerView];
+    //self.containerView.hidden = YES;
+    self.containerView.clipsToBounds = YES;
+    self.containerView.layer.masksToBounds = YES;
+    self.containerView.layer.contentsGravity = kCAGravityCenter;
+    self.containerView.layer.backgroundColor = UIColorHex(fafafa).CGColor;
+    self.containerView.exclusiveTouch = YES;
     
-    __block typeof(self) cell = self;
+    self.line = [self.containerView addPixLineToBottom];
     
-    [_containerView addTouchBlock:^(CSBaseClickView *view, CSBaseClickState state, NSSet *touches, UIEvent *event) {
+    [self.contentView addSubview:self.containerView];
+    
+    @weakify(self);//切记只能弱引用,否则内存泄漏
+    self.containerView.touchBlock = ^(CSControl *view, CSGestureRecognizerState state, NSSet *touches, UIEvent *event) {
         
-        if (state == CSBaseClickStateEnded) {
-            NSIndexPath *indepath = [cell currnIndexPath];
-            UITableView *tableView = [cell currnTableView];
+        if (state == CSGestureRecognizerStateEnded) {
+            NSIndexPath *indepath = [weak_self currnIndexPath];
+            UITableView *tableView = [weak_self currnTableView];
             
             if ([tableView.delegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
                 [tableView.delegate tableView:tableView didSelectRowAtIndexPath:indepath];
             }
         }
-    }];
+    };
     
 }
 - (void)setUpView{
@@ -93,14 +100,14 @@
     
     self.line.colors = @[(id)lineColor.CGColor,(id)lineColor.CGColor];
 }
-- (void)addActionBlock:(CSCellAction)block{
-    self.cellAction = block;
-    
-}
+//- (void)addActionBlock:(CSCellAction)block{
+//    _cellAction = block;
+//    
+//}
 - (void)setFrame:(CGRect)frame{
     
-    _containerView.frame=CGRectMake(0, 0, frame.size.width, frame.size.height);
-    self.line.frame=CGRectMake(0, _containerView.height-CSSizeFromPixel(1),_containerView.width , CGFloatFromPixel(1));
+    self.containerView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+    self.line.frame = CGRectMake(0, self.containerView.height-CSSizeFromPixel(1),self.containerView.width , CGFloatFromPixel(1));
     
     [super setFrame:frame];
 }
@@ -130,7 +137,7 @@
      
      目前的解决办法是把tableView声明为全局成员变量
      */
-
+    
     UITableView *tableView = nil;
     if(!tableView){
         

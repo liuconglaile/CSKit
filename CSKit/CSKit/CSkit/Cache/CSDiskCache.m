@@ -201,7 +201,7 @@ static void _CSDiskCacheSetGlobal(CSDiskCache *cache) {
     _kv = kv;
     _path = path;
     _lock = dispatch_semaphore_create(1);
-    _queue = dispatch_queue_create("com.ibireme.cache.disk", DISPATCH_QUEUE_CONCURRENT);
+    _queue = dispatch_queue_create("com.ibireme.CSKit.cache.disk", DISPATCH_QUEUE_CONCURRENT);
     _inlineThreshold = threshold;
     _countLimit = NSUIntegerMax;
     _costLimit = NSUIntegerMax;

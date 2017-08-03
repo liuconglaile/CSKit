@@ -45,6 +45,9 @@
     self.nameLabel.left = 15;
     self.nameLabel.top = 10;
     
+    
+    
+    
 }
 
 - (void)setBaseTableView:(UITableView *)baseTableView{

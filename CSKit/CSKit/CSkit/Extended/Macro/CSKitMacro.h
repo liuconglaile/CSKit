@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import <sys/time.h>
 #import <pthread.h>
+#import "UIApplication+Extended.h"
 
 #ifndef CSKitMacro_h
 #define CSKitMacro_h
@@ -402,6 +403,19 @@ static inline NSDate *_CSCompileTime(const char *data, const char *time) {
 }
 
 
+
+#ifndef CSIdentitfier
+/** 这个值必须每次新建项目的时候就填写 */
+#define CSIdentitfier @"com.ibireme.CSKit"
+#endif
+/**
+ 获取程序索引
+
+ @return 程序索引
+ */
+static inline NSString* _getAppBundleID(){
+    return [UIApplication sharedApplication].appBundleID;
+}
 
 
 

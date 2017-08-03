@@ -10,7 +10,10 @@
 #import "CSWebImageOperation.h"
 #import <libkern/OSAtomic.h>
 
-NSString *const _CSWebImageFadeAnimationKey = @"YYWebImageFade";
+
+#import "CSKitMacro.h"
+
+NSString *const _CSWebImageFadeAnimationKey = @"CSWebImageFade";
 const NSTimeInterval _CSWebImageFadeTime = 0.2;
 const NSTimeInterval _CSWebImageProgressiveFadeTime = 0.4;
 
@@ -55,7 +58,9 @@ const NSTimeInterval _CSWebImageProgressiveFadeTime = 0.4;
     NSOperation *operation = [manager requestImageWithURL:imageURL options:options progress:progress transform:transform completion:completion];
     if (!operation && completion) {
         NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : @"CSWebImageOperation create failed." };
-        completion(nil, imageURL, CSWebImageFromNone, CSWebImageStageFinished, [NSError errorWithDomain:@"com.ibireme.cskit.webimage" code:-1 userInfo:userInfo]);
+        
+        
+        completion(nil, imageURL, CSWebImageFromNone, CSWebImageStageFinished, [NSError errorWithDomain:CSIdentitfier@"com.ibireme.CSKit.webimage" code:-1 userInfo:userInfo]);
     }
     
     dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
@@ -91,11 +96,12 @@ const NSTimeInterval _CSWebImageProgressiveFadeTime = 0.4;
     static dispatch_queue_t queue;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        queue = dispatch_queue_create("com.ibireme.cskit.webimage.setter", DISPATCH_QUEUE_SERIAL);
+        queue = dispatch_queue_create("com.ibireme.CSKit.webimage.setter", DISPATCH_QUEUE_SERIAL);
         dispatch_set_target_queue(queue, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
     });
     return queue;
 }
+
 
 @end
 

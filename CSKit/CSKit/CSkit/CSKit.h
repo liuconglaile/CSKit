@@ -173,8 +173,8 @@
 #import "UITableView+Protocol.h"
 #import "CSBaseCell.h"
 #import "CSBaseLayoutModel.h"
-#import "CSBaseClickView.h"
-#import "CSPictureView.h"
+#import "CSControl.h"
+
 
 
 

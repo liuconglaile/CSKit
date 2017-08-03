@@ -73,7 +73,7 @@ typedef NS_ENUM(NSUInteger, CSPermissionAccess) {
 /// 应用程序的捆绑名称(在SpringBoard中显示).
 @property (nullable, nonatomic, readonly) NSString *appBundleName;
 
-/// 应用程序的Bundle ID. 例如'com.ibireme.MyApp'
+/// 应用程序的Bundle ID. 例如'com.ibireme.CSKit'
 @property (nullable, nonatomic, readonly) NSString *appBundleID;
 
 /// 应用程序的版本.例如'1.2.0'

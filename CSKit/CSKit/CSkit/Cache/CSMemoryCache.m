@@ -347,7 +347,7 @@ static inline dispatch_queue_t CSMemoryCacheGetReleaseQueue() {
     self = super.init;
     pthread_mutex_init(&_lock, NULL);
     _lru = [_CSLinkedMap new];
-    _queue = dispatch_queue_create("com.ibireme.cache.memory", DISPATCH_QUEUE_SERIAL);
+    _queue = dispatch_queue_create("com.ibireme.CSKit.cache.memory", DISPATCH_QUEUE_SERIAL);
     
     _countLimit = NSUIntegerMax;
     _costLimit = NSUIntegerMax;

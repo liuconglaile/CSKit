@@ -110,6 +110,8 @@ typedef UIView *(^CSHeaderFooterViewBlock)(id data,NSInteger secion);
  */
 - (void)setData:(id)data;
 
+- (void)removeDelegate;
+
 /**
  返回数据
  

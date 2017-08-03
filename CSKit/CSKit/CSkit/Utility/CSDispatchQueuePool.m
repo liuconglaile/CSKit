@@ -171,7 +171,7 @@ static CSDispatchContext *CSDispatchContextGetForQOS(NSQualityOfService qos) {
             dispatch_once(&onceToken, ^{
                 int count = (int)[NSProcessInfo processInfo].activeProcessorCount;
                 count = count < 1 ? 1 : count > MAX_QUEUE_COUNT ? MAX_QUEUE_COUNT : count;
-                context[0] = CSDispatchContextCreate("com.ibireme.cskit.user-interactive", count, qos);
+                context[0] = CSDispatchContextCreate("com.ibireme.CSKit.user-interactive", count, qos);
             });
             return context[0];
         } break;
@@ -183,7 +183,7 @@ static CSDispatchContext *CSDispatchContextGetForQOS(NSQualityOfService qos) {
             dispatch_once(&onceToken, ^{
                 int count = (int)[NSProcessInfo processInfo].activeProcessorCount;
                 count = count < 1 ? 1 : count > MAX_QUEUE_COUNT ? MAX_QUEUE_COUNT : count;
-                context[1] = CSDispatchContextCreate("com.ibireme.cskit.user-initiated", count, qos);
+                context[1] = CSDispatchContextCreate("com.ibireme.CSKit.user-initiated", count, qos);
             });
             return context[1];
         } break;
@@ -199,7 +199,7 @@ static CSDispatchContext *CSDispatchContextGetForQOS(NSQualityOfService qos) {
             dispatch_once(&onceToken, ^{
                 int count = (int)[NSProcessInfo processInfo].activeProcessorCount;
                 count = count < 1 ? 1 : count > MAX_QUEUE_COUNT ? MAX_QUEUE_COUNT : count;
-                context[2] = CSDispatchContextCreate("com.ibireme.cskit.utility", count, qos);
+                context[2] = CSDispatchContextCreate("com.ibireme.CSKit.utility", count, qos);
             });
             return context[2];
         } break;
@@ -213,7 +213,7 @@ static CSDispatchContext *CSDispatchContextGetForQOS(NSQualityOfService qos) {
             dispatch_once(&onceToken, ^{
                 int count = (int)[NSProcessInfo processInfo].activeProcessorCount;
                 count = count < 1 ? 1 : count > MAX_QUEUE_COUNT ? MAX_QUEUE_COUNT : count;
-                context[3] = CSDispatchContextCreate("com.ibireme.cskit.background", count, qos);
+                context[3] = CSDispatchContextCreate("com.ibireme.CSKit.background", count, qos);
             });
             return context[3];
         } break;
@@ -229,7 +229,7 @@ static CSDispatchContext *CSDispatchContextGetForQOS(NSQualityOfService qos) {
             dispatch_once(&onceToken, ^{
                 int count = (int)[NSProcessInfo processInfo].activeProcessorCount;
                 count = count < 1 ? 1 : count > MAX_QUEUE_COUNT ? MAX_QUEUE_COUNT : count;
-                context[4] = CSDispatchContextCreate("com.ibireme.cskit.default", count, qos);
+                context[4] = CSDispatchContextCreate("com.ibireme.CSKit.default", count, qos);
             });
             return context[4];
         } break;

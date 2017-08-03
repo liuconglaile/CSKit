@@ -11,7 +11,7 @@
 
 @interface CSTestTableCell : CSBaseCell
 
-
+@property (nonatomic, copy) void (^imageTouchBlock)(CSControl *view, NSArray<CSControl*>*aImageArr);
 
 @end
 

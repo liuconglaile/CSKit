@@ -40,11 +40,11 @@ static dispatch_queue_t CSAsyncLayerGetDisplayQueue() {
         if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0) {
             for (NSUInteger i = 0; i < queueCount; i++) {
                 dispatch_queue_attr_t attr = dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_USER_INITIATED, 0);
-                queues[i] = dispatch_queue_create("com.ibireme.cskit.render", attr);
+                queues[i] = dispatch_queue_create("com.ibireme.CSKit.render", attr);
             }
         } else {
             for (NSUInteger i = 0; i < queueCount; i++) {
-                queues[i] = dispatch_queue_create("com.ibireme.cskit.render", DISPATCH_QUEUE_SERIAL);
+                queues[i] = dispatch_queue_create("com.ibireme.CSKit.render", DISPATCH_QUEUE_SERIAL);
                 dispatch_set_target_queue(queues[i], dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
             }
         }

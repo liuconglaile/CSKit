@@ -122,7 +122,7 @@ static void URLInBlackListAdd(NSURL *url) {
 ///MARK: 网络线程入口点
 + (void)_networkThreadMain:(id)object {
     @autoreleasepool {
-        [[NSThread currentThread] setName:@"com.ibireme.yykit.webimage.request"];
+        [[NSThread currentThread] setName:@"com.ibireme.CSKit.webimage.request"];
         NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
         [runLoop addPort:[NSMachPort port] forMode:NSDefaultRunLoopMode];
         [runLoop run];
@@ -159,11 +159,11 @@ static void URLInBlackListAdd(NSURL *url) {
         if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0) {
             for (NSUInteger i = 0; i < queueCount; i++) {
                 dispatch_queue_attr_t attr = dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_UTILITY, 0);
-                queues[i] = dispatch_queue_create("com.ibireme.yykit.decode", attr);
+                queues[i] = dispatch_queue_create("com.ibireme.CSKit.decode", attr);
             }
         } else {
             for (NSUInteger i = 0; i < queueCount; i++) {
-                queues[i] = dispatch_queue_create("com.ibireme.yykit.decode", DISPATCH_QUEUE_SERIAL);
+                queues[i] = dispatch_queue_create("com.ibireme.CSKit.decode", DISPATCH_QUEUE_SERIAL);
                 dispatch_set_target_queue(queues[i], dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0));
             }
         }
@@ -247,11 +247,11 @@ static void URLInBlackListAdd(NSURL *url) {
     [self _endBackgroundTask];
 }
 
-// runs on network thread
+// 在网络线程上运行
 - (void)_startOperation {
     if ([self isCancelled]) return;
     @autoreleasepool {
-        // get image from cache
+        // 从缓存获取图像
         if (_cache &&
             !(_options & CSWebImageOptionUseNSURLCache) &&
             !(_options & CSWebImageOptionRefreshImageCache)) {
@@ -285,7 +285,7 @@ static void URLInBlackListAdd(NSURL *url) {
     [self performSelector:@selector(_startRequest:) onThread:[self.class _networkThread] withObject:nil waitUntilDone:NO];
 }
 
-// runs on network thread
+// 在网络线程上运行
 - (void)_startRequest:(id)object {
     if ([self isCancelled]) return;
     @autoreleasepool {
@@ -307,7 +307,7 @@ static void URLInBlackListAdd(NSURL *url) {
             _expectedSize = fileSize ? fileSize.unsignedIntegerValue : -1;
         }
         
-        // request image from web
+        // 从网络请求图像
         [_lock lock];
         if (![self isCancelled]) {
             _connection = [[NSURLConnection alloc] initWithRequest:_request delegate:[CSWeakProxy proxyWithTarget:self]];
@@ -319,7 +319,7 @@ static void URLInBlackListAdd(NSURL *url) {
     }
 }
 
-// runs on network thread, called from outer "cancel"
+// 在网络线程上运行，从外部"取消"
 - (void)_cancelOperation {
     @autoreleasepool {
         if (_connection) {
@@ -366,7 +366,7 @@ static void URLInBlackListAdd(NSURL *url) {
             _data = nil;
             NSError *error = nil;
             if (!image) {
-                error = [NSError errorWithDomain:@"com.ibireme.cskit.image" code:-1 userInfo:@{ NSLocalizedDescriptionKey : @"Web image decode fail." }];
+                error = [NSError errorWithDomain:@"com.ibireme.CSKit.image" code:-1 userInfo:@{ NSLocalizedDescriptionKey : @"Web image decode fail." }];
                 if (_options & CSWebImageOptionIgnoreFailedURL) {
                     if (URLBlackListContains(_request.URL)) {
                         error = [NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorFileDoesNotExist userInfo:@{ NSLocalizedDescriptionKey : @"Failed to load URL, blacklisted." }];

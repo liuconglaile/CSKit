@@ -525,7 +525,7 @@ static CSKeychainQuerySynchronizationMode CSKeychainQuerySynchonizationEnum(NSNu
     CSKeychainErrorCode code = CSKeychainErrorCodeFromOSStatus(osCode);
     NSString *desc = CSKeychainErrorDesc(code);
     NSDictionary *userInfo = desc ? @{ NSLocalizedDescriptionKey : desc } : nil;
-    return [NSError errorWithDomain:@"com.ibireme.cskit.keychain" code:code userInfo:userInfo];
+    return [NSError errorWithDomain:@"com.ibireme.CSKit.keychain" code:code userInfo:userInfo];
 }
 
 @end

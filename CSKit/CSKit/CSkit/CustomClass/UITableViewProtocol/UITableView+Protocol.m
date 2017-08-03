@@ -34,6 +34,16 @@ static void * CSProtocolKey = @"CSProtocolKey";
     }
     
 }
+
+- (void)removeDelegate{
+    if ([self protocol]) {
+        
+        //CSTableViewDelegate *delegate =[[CSTableViewDelegate alloc]initWithTableView:self];
+        
+        objc_setAssociatedObject(self, CSProtocolKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+}
+
 - (void)setData:(id)data{
     
     if (![self protocol]) {

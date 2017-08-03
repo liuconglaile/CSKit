@@ -30,6 +30,7 @@
 
 /** 设置数据源&代理 */
 - (void)setUpTableView;
+- (void)removeDelegate;
 
 /** 设置分区数 */
 - (void)setNumberOfSections:(CSSecionNumBlock)block;

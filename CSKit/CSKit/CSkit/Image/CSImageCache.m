@@ -87,7 +87,7 @@ static inline dispatch_queue_t CSImageCacheDecodeQueue() {
     dispatch_once(&onceToken, ^{
         NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,
                                                                    NSUserDomainMask, YES) firstObject];
-        cachePath = [cachePath stringByAppendingPathComponent:@"com.ibireme.yykit"];
+        cachePath = [cachePath stringByAppendingPathComponent:@"com.ibireme.CSKit"];
         cachePath = [cachePath stringByAppendingPathComponent:@"images"];
         cache = [[self alloc] initWithPath:cachePath];
     });

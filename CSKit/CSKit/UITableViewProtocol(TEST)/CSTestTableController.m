@@ -13,6 +13,7 @@
 
 #import "CSKit.h"
 #import "CSNetworkTool+Extension.h"
+#import "CSFPSLabel.h"
 
 @interface CSTestTableController ()
 
@@ -37,28 +38,45 @@ static  NSString *CellName=@"CSTestTableCell";
     [self initData];
     
     
+    CSFPSLabel* titleView = [CSFPSLabel new];
+    [titleView sizeToFit];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:titleView];
     
-//    NSString* url = @"https://api.cs.juworker.com/home/index/get/";
-//    CSNetworkModel* model = [[CSNetworkModel alloc] init];
-//    model.requestUrl = url;
-//    model.parameters = @{};
-//    model.requestType = CSNetworkMethodPOST;
-//    model.requestCachePolicy = CSNetworkStoreCachePolicy;
-//    model.attemptRequestWhenFail = YES;
-//    model.forbidTipErrorInfo = YES;
-//    
-//    [CSNetworkTool sendExtensionRequest:model success:^(id returnValue) {
-//        //CSNSLog(@"我是返回:%@",returnValue);
-//    } failure:^(NSError *error) {
-//        //CSNSLog(@"我是错误返回:%@",error);
-//    }];
+    /*
+    NSString* url = @"https://api.cs.juworker.com/home/index/get/";
+    CSNetworkModel* model = [[CSNetworkModel alloc] init];
+    model.requestUrl = url;
+    model.parameters = @{};
+    model.requestType = CSNetworkMethodPOST;
+    model.requestCachePolicy = CSNetworkStoreCachePolicy;
+    model.attemptRequestWhenFail = YES;
+    model.forbidTipErrorInfo = YES;
+    
+    [CSNetworkTool sendExtensionRequest:model success:^(id returnValue) {
+        //CSNSLog(@"我是返回:%@",returnValue);
+    } failure:^(NSError *error) {
+        //CSNSLog(@"我是错误返回:%@",error);
+    }];
+     */
 }
 
 - (void)dealloc{
-    CSNSLog(@"执行了....");
+    CSNSLog(@"执行了...222222.");
+    [self.tableView removeDelegate];
     [self.tableView removeAllSubviews];
     [self.tableView removeFromSuperview];
     self.tableView = nil;
+  
+ 
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    [[CSImageCache sharedCache].memoryCache removeAllObjects];
+    [[CSImageCache sharedCache].diskCache removeAllObjectsWithBlock:^{
+        
+    }];
 }
 
 - (void)initTableView{
@@ -70,15 +88,6 @@ static  NSString *CellName=@"CSTestTableCell";
     [self.view addSubview:self.tableView];
     
     [self.tableView registerClass:CellName identifier:CellName];
-    
-    
-//    [self.tableView addSelectRowAction:^(UITableView *tableView, id data, NSIndexPath *indexPath, id action) {
-//        
-//        
-//        
-//        
-//        
-//    }];
     
     
     [self.tableView addCellClickAction:^(UITableView *tableView, id data, NSIndexPath *indexPath, id action) {

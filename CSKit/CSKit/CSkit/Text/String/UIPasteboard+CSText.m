@@ -15,7 +15,7 @@
 
 CSSYNTH_DUMMY_CLASS(UIPasteboard_CSText)
 
-NSString *const CSPasteboardTypeAttributedString = @"com.ibireme.NSAttributedString";
+NSString *const CSPasteboardTypeAttributedString = @"com.ibireme.CSKit.NSAttributedString";
 NSString *const CSUTTypeWEBP = @"com.google.webp";
 #define kPasteboardkitYey @"com.apple.uikit.image"
 
