@@ -22,6 +22,9 @@
 
 
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-variable"
+
 /**
  如果要出来 webp 图片就直接导入
  这里只是判断是否有导入 webp 框架
@@ -165,25 +168,6 @@ typedef NS_OPTIONS(NSUInteger, CS_PNG_BLEND_OP) {
     CS_PNG_BLEND_OP_SOURCE = 1 << 0,
     CS_PNG_BLEND_OP_OVER = 1 << 1
 };
-
-/**
- typedef enum {
- YY_PNG_ALPHA_TYPE_PALEETE = 1 << 0,
- YY_PNG_ALPHA_TYPE_COLOR = 1 << 1,
- YY_PNG_ALPHA_TYPE_ALPHA = 1 << 2,
- } yy_png_alpha_type;
- 
- typedef enum {
- YY_PNG_DISPOSE_OP_NONE = 0,
- YY_PNG_DISPOSE_OP_BACKGROUND = 1,
- YY_PNG_DISPOSE_OP_PREVIOUS = 2,
- } yy_png_dispose_op;
- 
- typedef enum {
- YY_PNG_BLEND_OP_SOURCE = 0,
- YY_PNG_BLEND_OP_OVER = 1,
- } yy_png_blend_op;
- */
 
 
 
@@ -1890,11 +1874,10 @@ CGImageRef CSCGImageCreateWithWebPData(CFDataRef webpData,
     _frames = frames;
     dispatch_semaphore_signal(_framesLock);
 #else
-    //static const char *func = __FUNCTION__;
-    //static const int line = __LINE__;
+
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        CSNSLog(@"[%s: %d] WebP is not available, check the documentation to see how to install WebP component: https://github.com/ibireme/YYImage#installation", __FUNCTION__, __LINE__);
+        CSNSLog(@"[%s: %d] WebP is not available, check the documentation to see how to install WebP component: https://github.com/ibireme/CSImage#installation", __FUNCTION__, __LINE__);
     });
 #endif
 }
@@ -2935,6 +2918,8 @@ CGImageRef CSCGImageCreateWithWebPData(CFDataRef webpData,
     }
     return data;
 }
+
+#pragma clang diagnostic pop
 
 @end
 

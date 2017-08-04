@@ -27,6 +27,9 @@ NSString * const UIDevicePasscodeKeychainAccount = @"UIDevice-PasscodeStatus_Key
 
 @implementation UIDevice (Extended)
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-variable"
+
 + (double)systemVersion {
     static double version;
     static dispatch_once_t onceToken;
@@ -625,7 +628,7 @@ static cs_net_interface_counter cs_get_net_interface_counter() {
 #endif
 }
 
-
+#pragma clang diagnostic pop
 
 
 
