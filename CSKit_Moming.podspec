@@ -68,7 +68,7 @@ s.platform       = :ios, "8.4"
 #  支持 git, hg, bzr, svn 和 HTTP.
 #
 
-s.source       = { :git => "https://github.com/liuconglaile/CSKit.git", :tag => "1.0.0" }
+s.source       = { :git => "https://github.com/liuconglaile/CSKit.git", :tag => "1.1.0" }
 
 
 # ――― 源代码  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
