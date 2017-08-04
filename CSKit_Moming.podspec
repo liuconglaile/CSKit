@@ -8,8 +8,8 @@ Pod::Spec.new do |s|
 #  这些信息将帮助别人找到您的库,一下信息可以简单描述你的库,让人更加简单的了解你的库文件.摘要应该是tweet-length,并且描述更深入.
 #
 
-s.name         = "CSKit"
-s.version      = "1.0.0"
+s.name         = "CSKit_Moming"
+s.version      = "1.1.0"
 s.summary      = "CSKit.Integration of some commonly used tools and controls,Write it casually."
 
 # 此描述用于生成标签并改进搜索结果.
