@@ -1,19 +1,16 @@
 //
 //  CSKitMacro.h
-//  CSCategory
+//  CSKit
 //
-//  Created by mac on 2017/6/14.
-//  Copyright © 2017年 mac. All rights reserved.
+//  Created by mac on 2017/8/4.
+//  Copyright © 2017年 Moming. All rights reserved.
 //
 
-
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <sys/time.h>
 #import <pthread.h>
 #import "UIApplication+Extended.h"
-
-#ifndef CSKitMacro_h
-#define CSKitMacro_h
 
 
 #ifdef __cplusplus
@@ -25,10 +22,9 @@
 #endif
 
 
-
-
-
 CS_EXTERN_C_BEGIN
+
+
 
 //MARK:Log重构
 #ifdef DEBUG
@@ -264,55 +260,55 @@ objc_setAssociatedObject(self, &kProperty##PROPERTY_NAME , @(PROPERTY_NAME) , OB
 
 /**
  弱引用
-
+ 
  示例:
  @weakify(self)
  [self doSomething^{
-     @strongify(self)
-     if (!self) return;
-     ...
+ @strongify(self)
+ if (!self) return;
+ ...
  }];
  
  @param objc_arc 引用对象
  @return 引用后的对象
  */
 #ifndef weakify
-    #if DEBUG
-        #if __has_feature(objc_arc)
-            #define weakify(object) autoreleasepool{} __weak __typeof__(object) weak##_##object = object;
-        #else
-            #define weakify(object) autoreleasepool{} __block __typeof__(object) block##_##object = object;
-        #endif
-    #else
-        #if __has_feature(objc_arc)
-            #define weakify(object) try{} @finally{} {} __weak __typeof__(object) weak##_##object = object;
-        #else
-            #define weakify(object) try{} @finally{} {} __block __typeof__(object) block##_##object = object;
-        #endif
-    #endif
+#if DEBUG
+#if __has_feature(objc_arc)
+#define weakify(object) autoreleasepool{} __weak __typeof__(object) weak##_##object = object;
+#else
+#define weakify(object) autoreleasepool{} __block __typeof__(object) block##_##object = object;
+#endif
+#else
+#if __has_feature(objc_arc)
+#define weakify(object) try{} @finally{} {} __weak __typeof__(object) weak##_##object = object;
+#else
+#define weakify(object) try{} @finally{} {} __block __typeof__(object) block##_##object = object;
+#endif
+#endif
 #endif
 
 
 /**
  强引用
-
+ 
  @param objc_arc 引用对象
  @return 引用后的对象
  */
 #ifndef strongify
-    #if DEBUG
-        #if __has_feature(objc_arc)
-            #define strongify(object) autoreleasepool{} __typeof__(object) object = weak##_##object;
-        #else
-            #define strongify(object) autoreleasepool{} __typeof__(object) object = block##_##object;
-        #endif
-    #else
-        #if __has_feature(objc_arc)
-            #define strongify(object) try{} @finally{} __typeof__(object) object = weak##_##object;
-        #else
-            #define strongify(object) try{} @finally{} __typeof__(object) object = block##_##object;
-        #endif
-    #endif
+#if DEBUG
+#if __has_feature(objc_arc)
+#define strongify(object) autoreleasepool{} __typeof__(object) object = weak##_##object;
+#else
+#define strongify(object) autoreleasepool{} __typeof__(object) object = block##_##object;
+#endif
+#else
+#if __has_feature(objc_arc)
+#define strongify(object) try{} @finally{} __typeof__(object) object = weak##_##object;
+#else
+#define strongify(object) try{} @finally{} __typeof__(object) object = block##_##object;
+#endif
+#endif
 #endif
 
 
@@ -321,7 +317,7 @@ objc_setAssociatedObject(self, &kProperty##PROPERTY_NAME , @(PROPERTY_NAME) , OB
 
 /**
  将CFRange转换为NSRange
-
+ 
  @param range 要转换的CFRange
  @return NSRange
  */
@@ -331,7 +327,7 @@ static inline NSRange CSNSRangeFromCFRange(CFRange range) {
 
 /**
  将NSRange转换为CFRange
-
+ 
  @param range NSRange
  @return CFRange
  */
@@ -342,7 +338,7 @@ static inline CFRange CSCFRangeFromNSRange(NSRange range) {
 
 /**
  与 CFAutorelease()相同,兼容 iOS6
-
+ 
  @param arg CFObject
  @return 与输入相同
  */
@@ -358,7 +354,7 @@ static inline CFTypeRef CSCFAutorelease(CFTypeRef CF_RELEASES_ARGUMENT arg) {
 
 /**
  代码运算成本
-
+ 
  @param block 测试代码块
  代码时间成本(毫秒)
  */
@@ -377,9 +373,9 @@ static inline void CSBenchmark(void (^block)(void), void (^complete)(double ms))
     /**
      用法:
      CSBenchmark(^{
-        // code....
+     // code....
      }, ^(double ms) {
-        NSLog("time cost: %.2f ms",ms);
+     NSLog("time cost: %.2f ms",ms);
      });
      
      */
@@ -410,7 +406,7 @@ static inline NSDate *_CSCompileTime(const char *data, const char *time) {
 #endif
 /**
  获取程序索引
-
+ 
  @return 程序索引
  */
 static inline NSString* _getAppBundleID(){
@@ -436,7 +432,7 @@ static inline NSString* _getAppBundleID(){
 
 /**
  调度_时间_延迟
-
+ 
  @param second 延迟秒数
  @return <#return value description#>
  */
@@ -508,9 +504,8 @@ assert(res == 0); \
 
 
 
+@interface CSKitMacro : NSObject
+
+@end
+
 CS_EXTERN_C_END
-
-#endif /* CSKitMacro_h */
-
-
-

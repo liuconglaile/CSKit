@@ -26,12 +26,12 @@
                   moduleName = "CSKit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mac/Documents/CSKit/CSKit/CSKit/CSkit/CustomClass/CSNetworkTools/CSNetworkTopMaskView/CSNetworkTool.m"
-                  timestampString = "523457147.817608"
+                  timestampString = "523512950.676557"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "162"
                   endingLineNumber = "162"
-                  offsetFromSymbolStart = "996">
+                  offsetFromSymbolStart = "1026">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -41,12 +41,12 @@
                   moduleName = "CSKit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mac/Documents/CSKit/CSKit/CSKit/CSkit/CustomClass/CSNetworkTools/CSNetworkTopMaskView/CSNetworkTool.m"
-                  timestampString = "523457147.819792"
+                  timestampString = "523512950.679175"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "164"
                   endingLineNumber = "164"
-                  offsetFromSymbolStart = "64">
+                  offsetFromSymbolStart = "54">
                </Location>
             </Locations>
          </BreakpointContent>

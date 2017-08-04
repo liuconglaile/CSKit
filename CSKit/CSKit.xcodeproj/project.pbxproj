@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042E3C311F342C310072D135 /* CSKitMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 042E3C301F342C310072D135 /* CSKitMacro.m */; };
 		0468DC7F1F3056E300925E87 /* CSNetworkTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0468DC7C1F3056E300925E87 /* CSNetworkTools.bundle */; };
 		0468DC801F3056E300925E87 /* CSProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0468DC7E1F3056E300925E87 /* CSProgressHUD.m */; };
 		0468DC831F3056FC00925E87 /* CSNetworkTopMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0468DC821F3056FC00925E87 /* CSNetworkTopMaskView.m */; };
@@ -231,6 +232,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042E3C2F1F342C310072D135 /* CSKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKitMacro.h; sourceTree = "<group>"; };
+		042E3C301F342C310072D135 /* CSKitMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSKitMacro.m; sourceTree = "<group>"; };
 		0468DC7C1F3056E300925E87 /* CSNetworkTools.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CSNetworkTools.bundle; sourceTree = "<group>"; };
 		0468DC7D1F3056E300925E87 /* CSProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSProgressHUD.h; sourceTree = "<group>"; };
 		0468DC7E1F3056E300925E87 /* CSProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSProgressHUD.m; sourceTree = "<group>"; };
@@ -413,7 +416,6 @@
 		200E92CD1F2B819D004A3800 /* NSURL+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Utilities.m"; sourceTree = "<group>"; };
 		200E92CE1F2B819D004A3800 /* NSUserDefaults+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Utilities.h"; sourceTree = "<group>"; };
 		200E92CF1F2B819D004A3800 /* NSUserDefaults+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Utilities.m"; sourceTree = "<group>"; };
-		200E92D11F2B819D004A3800 /* CSKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKitMacro.h; sourceTree = "<group>"; };
 		200E92D31F2B819D004A3800 /* CALayer+Extended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Extended.h"; sourceTree = "<group>"; };
 		200E92D41F2B819D004A3800 /* CALayer+Extended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Extended.m"; sourceTree = "<group>"; };
 		200E92D51F2B819D004A3800 /* NSObject+CGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CGUtilities.h"; sourceTree = "<group>"; };
@@ -1087,7 +1089,8 @@
 		200E92D01F2B819D004A3800 /* Macro */ = {
 			isa = PBXGroup;
 			children = (
-				200E92D11F2B819D004A3800 /* CSKitMacro.h */,
+				042E3C2F1F342C310072D135 /* CSKitMacro.h */,
+				042E3C301F342C310072D135 /* CSKitMacro.m */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -1712,6 +1715,7 @@
 				0468DC831F3056FC00925E87 /* CSNetworkTopMaskView.m in Sources */,
 				200E93CC1F2B819D004A3800 /* CSImageCache.m in Sources */,
 				200E93D71F2B819D004A3800 /* CSTextDebugOption.m in Sources */,
+				042E3C311F342C310072D135 /* CSKitMacro.m in Sources */,
 				200E93A81F2B819D004A3800 /* UIBezierPath+Extended.m in Sources */,
 				200E93DB1F2B819D004A3800 /* CSTextLayout.m in Sources */,
 				0468DD231F306E1000925E87 /* AFURLRequestSerialization.m in Sources */,
