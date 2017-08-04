@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "CSKit_Moming"
-s.version      = "1.1.0"
+s.version      = "1.1.1"
 s.summary      = "CSKit.Integration of some commonly used tools and controls,Write it casually."
 
 # 此描述用于生成标签并改进搜索结果.
@@ -67,7 +67,7 @@ s.platform       = :ios, "8.4"
 #  支持 git, hg, bzr, svn 和 HTTP.
 #
 
-s.source       = { :git => "https://github.com/liuconglaile/CSKit.git", :tag => "1.1.0" }
+s.source       = { :git => "https://github.com/liuconglaile/CSKit.git", :tag => "#{s.version}" }
 
 
 # ――― 源代码  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
