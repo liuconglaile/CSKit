@@ -1890,11 +1890,11 @@ CGImageRef CSCGImageCreateWithWebPData(CFDataRef webpData,
     _frames = frames;
     dispatch_semaphore_signal(_framesLock);
 #else
-    static const char *func = __FUNCTION__;
-    static const int line = __LINE__;
+    //static const char *func = __FUNCTION__;
+    //static const int line = __LINE__;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        CSNSLog(@"[%s: %d] WebP is not available, check the documentation to see how to install WebP component: https://github.com/ibireme/YYImage#installation", func, line);
+        CSNSLog(@"[%s: %d] WebP is not available, check the documentation to see how to install WebP component: https://github.com/ibireme/YYImage#installation", __FUNCTION__, __LINE__);
     });
 #endif
 }

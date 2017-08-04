@@ -541,9 +541,9 @@ static cs_net_interface_counter cs_get_net_interface_counter() {
                                                                     kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly,
                                                                     kSecAccessControlUserPresence, &error);
     
-    NSString *errorString = [NSString stringWithFormat:@"SecItemAdd can't create sacObject: %@", error];
+    //NSString *errorString = [NSString stringWithFormat:@"SecItemAdd can't create sacObject: %@", error];
     
-    CSNSLog(@"%@",errorString);
+    CSNSLog(@"%@",[NSString stringWithFormat:@"SecItemAdd can't create sacObject: %@", error]);
     
     return (sacObject == NULL || error != NULL);
     //return (&kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly != NULL);
