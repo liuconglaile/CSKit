@@ -30,8 +30,8 @@ s.homepage      = "https://github.com/liuconglaile/CSKit"
 #  常用的许可证为 'MIT', 'BSD' 和 'Apache License, Version 2.0'.
 #
 
-# s.license        = "MIT"
-s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+s.license        = "MIT"
+# s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
 # ――― 作者元数据   ―――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
