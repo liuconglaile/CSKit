@@ -1,4 +1,3 @@
-
 #  运行'pod spec lint CSKit.podspec'前确保这是一个有效的规范,并在提交规范之前删除包括这些在内的所有备注
 
 Pod::Spec.new do |s|
@@ -18,8 +17,8 @@ s.summary      = "CSKit.Integration of some commonly used tools and controls,Wri
 #   * 在下面的DESC分隔符之间写下描述.
 #   * 不用担心缩进,CocoaPods吧!
 s.description  = <<-DESC
-                    CSKit.Integration of some commonly used tools and controls,Write it casually,Look at yourself.
-                    DESC
+CSKit.Integration of some commonly used tools and controls,Write it casually,Look at yourself.
+DESC
 
 s.homepage      = "https://github.com/liuconglaile/CSKit"
 
