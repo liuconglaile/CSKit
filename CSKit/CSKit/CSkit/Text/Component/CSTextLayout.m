@@ -377,6 +377,28 @@ dispatch_semaphore_signal(_lock);
     return self;
 }
 
++ (CSTextLayout *)layout:(UIFont *)font color:(UIColor*)color width:(CGFloat )width string:(NSString *)string max:(BOOL)max{
+    
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:string];
+    text.font = font;
+    text.lineSpacing = 5;
+    text.color = color;
+    
+
+    CSTextContainer *container = [CSTextContainer new];
+    container.size = CGSizeMake(width, CGFLOAT_MAX);
+    
+    if (max) {
+        container.maximumNumberOfRows = 0;//最多行数
+    }else{
+        
+        container.maximumNumberOfRows = 5;//最多行数
+    }
+    
+    CSTextLayout *layout = [CSTextLayout layoutWithContainer:container text:text];
+    return layout;
+}
+
 + (CSTextLayout *)layoutWithContainerSize:(CGSize)size text:(NSAttributedString *)text {
     CSTextContainer *container = [CSTextContainer containerWithSize:size];
     return [self layoutWithContainer:container text:text];
