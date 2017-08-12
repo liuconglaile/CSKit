@@ -236,20 +236,18 @@ EOS
 
                 ssss.subspec 'Model' do |ss|
                     sssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSNetworkTools/CSNetworkTopMaskView/Model/*'
-                    sssss.resource      =  'CSKit/CSKit/CSKit/CustomClass/CSNetworkTools/CSNetworkTopMaskView/CSNetworkTools.bundle
+                    sssss.resource     =  'CSKit/CSKit/CSKit/CustomClass/CSNetworkTools/CSNetworkTopMaskView/CSNetworkTools.bundle
                 end
             end
         end
 
         # modal 工具
-        ss.subspec 'CSPopupController' do |ss|
-
-            sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSPopupController/*'
-
-            sss.subspec 'CustomView' do |ss|
-                ssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSPopupController/Classes/CustomView/*'
-            end
-        end
+#ss.subspec 'CSPopupController' do |ss|
+#sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSPopupController/*'
+#sss.subspec 'CustomView' do |ss|
+#ssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSPopupController/Classes/CustomView/*'
+#end
+#end
 
 
         # 指示器
