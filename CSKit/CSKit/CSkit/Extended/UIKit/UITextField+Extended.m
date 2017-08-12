@@ -8,7 +8,13 @@
 
 #import "UITextField+Extended.h"
 #import <objc/runtime.h>
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSKitMacro.h>
+
+#else
 #import "CSKitMacro.h"
+
+#endif
 
 CSSYNTH_DUMMY_CLASS(UITextField_Extended)
 

@@ -7,9 +7,15 @@
 //
 
 #import "NSObject+KVOExtended.h"
-#import "CSKitMacro.h"
 #import <objc/objc.h>
 #import <objc/runtime.h>
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSKitMacro.h>
+
+#else
+#import "CSKitMacro.h"
+
+#endif
 
 CSSYNTH_DUMMY_CLASS(NSObject_KVOExtended)
 

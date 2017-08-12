@@ -8,10 +8,17 @@
 
 #import "UIPasteboard+CSText.h"
 #import <MobileCoreServices/MobileCoreServices.h>
+
+
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSKitMacro.h>
+#import <CSkit/NSAttributedString+CSText.h>
+#import <CSkit/CSImage.h>
+#else
+#import "CSKitMacro.h"
 #import "NSAttributedString+CSText.h"
 #import "CSImage.h"
-
-#import "CSKitMacro.h"
+#endif
 
 CSSYNTH_DUMMY_CLASS(UIPasteboard_CSText)
 

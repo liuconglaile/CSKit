@@ -8,7 +8,13 @@
 
 #import "UIImage+Blur.h"
 #import <Accelerate/Accelerate.h>
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSKitMacro.h>
+
+#else
 #import "CSKitMacro.h"
+
+#endif
 
 
 //LOMO

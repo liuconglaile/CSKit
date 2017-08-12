@@ -8,11 +8,21 @@
 
 #import "CSAnimatedImageView.h"
 
+
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSKitMacro.h>
+#import <CSkit/CSImageDecoder.h>
+#import <CSkit/CSWeakProxy.h>
+#import <CSkit/UIDevice+Extended.h>
+#else
+#import "CSKitMacro.h"
 #import "CSImageDecoder.h"
 #import "CSWeakProxy.h"
-#import "CSKitMacro.h"
-
 #import "UIDevice+Extended.h"
+#endif
+
+
+
 
 
 #define BUFFER_SIZE (10 * 1024 * 1024) // 10MB (minimum memory buffer size)

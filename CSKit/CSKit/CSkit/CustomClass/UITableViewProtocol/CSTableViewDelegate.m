@@ -7,9 +7,17 @@
 //
 
 #import "CSTableViewDelegate.h"
+
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSKitMacro.h>
+#import <CSkit/CSBaseCell.h>
+#import <CSkit/CSBaseLayoutModel.h>
+#else
+#import "CSKitMacro.h"
 #import "CSBaseCell.h"
 #import "CSBaseLayoutModel.h"
-#import "CSKitMacro.h"
+#endif
+
 
 @interface CSTableViewDelegate()
 

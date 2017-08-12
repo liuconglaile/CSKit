@@ -8,10 +8,13 @@
 
 #import "CSTextLine.h"
 #import <objc/runtime.h>
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSKitMacro.h>
 
-
+#else
 #import "CSKitMacro.h"
 
+#endif
 @interface CSTextLine ()
 
 //@property (nonatomic,copy) NSArray<CSTextGlyph *>* glyphs;

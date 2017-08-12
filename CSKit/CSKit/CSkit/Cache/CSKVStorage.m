@@ -10,8 +10,15 @@
 #import <UIKit/UIKit.h>
 #import <time.h>
 
-#import "UIApplication+Extended.h"
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSKitMacro.h>
+#import <CSkit/UIApplication+Extended.h>
+#else
 #import "CSKitMacro.h"
+#import "UIApplication+Extended.h"
+#endif
+
+
 
 #if __has_include(<sqlite3.h>)
 #import <sqlite3.h>

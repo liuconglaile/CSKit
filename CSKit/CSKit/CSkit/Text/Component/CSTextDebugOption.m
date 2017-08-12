@@ -7,7 +7,13 @@
 //
 
 #import "CSTextDebugOption.h"
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSKitMacro.h>
+
+#else
 #import "CSKitMacro.h"
+
+#endif
 
 static pthread_mutex_t _sharedDebugLock;
 static CFMutableSetRef _sharedDebugTargets = nil;

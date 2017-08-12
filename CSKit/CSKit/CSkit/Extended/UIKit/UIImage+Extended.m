@@ -12,10 +12,19 @@
 #import <CoreText/CoreText.h>
 #import <objc/runtime.h>
 
+
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSKitMacro.h>
+#import <CSkit/UIDevice+Extended.h>
+#import <CSkit/NSString+Extended.h>
+#import <CSkit/NSObject+CGUtilities.h>
+#else
+#import "CSKitMacro.h"
 #import "UIDevice+Extended.h"
 #import "NSString+Extended.h"
-#import "CSKitMacro.h"
 #import "NSObject+CGUtilities.h"
+#endif
+
 
 #if __has_feature(objc_arc)
 #define toCF (__bridge CFTypeRef)

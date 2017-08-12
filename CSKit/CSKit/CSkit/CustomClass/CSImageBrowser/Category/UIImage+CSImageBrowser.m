@@ -10,7 +10,13 @@
 #import <float.h>
 @import Accelerate;
 
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSKitMacro.h>
+
+#else
 #import "CSKitMacro.h"
+
+#endif
 
 @implementation UIImage (CSImageBrowser)
 

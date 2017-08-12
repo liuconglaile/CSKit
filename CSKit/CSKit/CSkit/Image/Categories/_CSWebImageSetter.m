@@ -7,11 +7,18 @@
 //
 
 #import "_CSWebImageSetter.h"
-#import "CSWebImageOperation.h"
 #import <libkern/OSAtomic.h>
 
-
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSKitMacro.h>
+#import <CSkit/CSWebImageOperation.h>
+#else
 #import "CSKitMacro.h"
+#import "CSWebImageOperation.h"
+#endif
+
+
+
 
 NSString *const _CSWebImageFadeAnimationKey = @"CSWebImageFade";
 const NSTimeInterval _CSWebImageFadeTime = 0.2;

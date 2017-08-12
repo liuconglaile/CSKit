@@ -7,13 +7,25 @@
 //
 
 #import "CSTextLayout.h"
-#import "UIFont+Extended.h"
+
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSKitMacro.h>
+#import <CSkit/UIFont+Extended.h>
+#import <CSkit/CSTextAttribute.h>
+#import <CSkit/NSAttributedString+CSText.h>
+#import <CSkit/NSObject+CGUtilities.h>
+#import <CSkit/CSTextUtilities.h>
+#import <CSkit/CSTextArchiver.h>
+#else
 #import "CSKitMacro.h"
+#import "UIFont+Extended.h"
 #import "CSTextAttribute.h"
 #import "NSAttributedString+CSText.h"
 #import "NSObject+CGUtilities.h"
 #import "CSTextUtilities.h"
 #import "CSTextArchiver.h"
+#endif
+
 
 const CGSize CSTextContainerMaxSize = (CGSize){0x100000, 0x100000};
 

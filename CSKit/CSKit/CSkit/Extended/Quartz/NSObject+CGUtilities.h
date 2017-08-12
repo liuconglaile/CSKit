@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
 
-#if __has_include(<AsyncDisplayKit/CSAsyncDisplayKit.h>)
-#import <AsyncDisplayKit/CSKitMacro.h>
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSKitMacro.h>
+
 #else
 #import "CSKitMacro.h"
+
 #endif
 
 CS_EXTERN_C_BEGIN
