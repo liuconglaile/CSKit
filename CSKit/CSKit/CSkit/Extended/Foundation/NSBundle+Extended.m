@@ -7,8 +7,16 @@
 //
 
 #import "NSBundle+Extended.h"
-#import "NSString+Extended.h"
+
+
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSKitMacro.h>
+#import <CSkit/NSString+Extended.h>
+#else
 #import "CSKitMacro.h"
+#import "NSString+Extended.h"
+#endif
+
 
 CSSYNTH_DUMMY_CLASS(NSBundle_Extended)
 
