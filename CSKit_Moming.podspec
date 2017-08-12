@@ -109,6 +109,10 @@ Pod::Spec.new do |s|
 #                    "CSKit/CSKit/CSKit/Utility/*" ,
 
 
+s.subspec 'CSKit' do |ss|
+
+
+
     # 常用
     s.subspec 'Utility' do |ss|
         ss.source_files = 'CSKit/CSKit/CSKit/Utility/*'
@@ -234,7 +238,7 @@ Pod::Spec.new do |s|
 
                 ssss.subspec 'Model' do |sssss|
                     sssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSNetworkTools/CSNetworkTopMaskView/Model/*'
-                    sssss.resource     = 'CSKit/CSKit/CSKit/CustomClass/CSNetworkTools/CSNetworkTopMaskView/CSNetworkTools.bundle'
+                    sssss.resource     = 'CSKit/CSKit/CustomClass/CSNetworkTools/CSNetworkTopMaskView/CSNetworkTools.bundle'
                 end
             end
         end
@@ -260,7 +264,7 @@ Pod::Spec.new do |s|
 
             sss.subspec 'CSProgressIndicator' do |ssss|
                 ssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/*'
-                ssss.resource     = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/CSProgressIndicatorImage.bundle'
+                ssss.resource     = 'CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/CSProgressIndicatorImage.bundle'
             end
 
             sss.subspec 'CSToastIndicator' do |ssss|
@@ -269,7 +273,7 @@ Pod::Spec.new do |s|
         end
     end
 
-
+end
 
 
 
