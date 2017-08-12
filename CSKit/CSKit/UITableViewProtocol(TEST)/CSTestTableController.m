@@ -42,7 +42,7 @@ static  NSString *CellName=@"CSTestTableCell";
     [titleView sizeToFit];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:titleView];
     
-    /*
+    
     NSString* url = @"https://api.cs.juworker.com/home/index/get/";
     CSNetworkModel* model = [[CSNetworkModel alloc] init];
     model.requestUrl = url;
@@ -57,7 +57,7 @@ static  NSString *CellName=@"CSTestTableCell";
     } failure:^(NSError *error) {
         //CSNSLog(@"我是错误返回:%@",error);
     }];
-     */
+     
 }
 
 - (void)dealloc{

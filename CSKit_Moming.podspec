@@ -110,69 +110,69 @@ Pod::Spec.new do |s|
 
 
 s.subspec 'CSKit' do |ss|
-
+    ss.source_files = 'CSKit/CSKit/CSKit/*'
 
 
     # 常用
-    s.subspec 'Utility' do |ss|
-        ss.source_files = 'CSKit/CSKit/CSKit/Utility/*'
+    ss.subspec 'Utility' do | sss |
+        sss.source_files = 'CSKit/CSKit/CSKit/Utility/*'
     end
 
 
     # 文本
-    s.subspec 'Text' do |ss|
-        ss.subspec 'Component' do |sss|
-            sss.source_files = 'CSKit/CSKit/CSKit/Text/Component/*'
+    ss.subspec 'Text' do | sss |
+        sss.subspec 'Component' do | ssss |
+            ssss.source_files = 'CSKit/CSKit/CSKit/Text/Component/*'
         end
 
-        ss.subspec 'String' do |sss|
-            sss.source_files = 'CSKit/CSKit/CSKit/Text/String/*'
+        sss.subspec 'String' do | ssss |
+            ssss.source_files = 'CSKit/CSKit/CSKit/Text/String/*'
         end
 
-        ss.subspec 'UseClass' do |sss|
-            sss.source_files = 'CSKit/CSKit/CSKit/Text/UseClass/*'
+        sss.subspec 'UseClass' do | ssss |
+            ssss.source_files = 'CSKit/CSKit/CSKit/Text/UseClass/*'
         end
     end
 
 
     # 模型
-    s.subspec 'Model' do |ss|
-        ss.source_files = 'CSKit/CSKit/CSKit/Model/*'
+    ss.subspec 'Model' do | sss |
+        sss.source_files = 'CSKit/CSKit/CSKit/Model/*'
 
-        ss.subspec 'Unicode' do |sss|
-            sss.source_files = 'CSKit/CSKit/CSKit/Model/Unicode/*'
+        sss.subspec 'Unicode' do | ssss |
+            ssss.source_files = 'CSKit/CSKit/CSKit/Model/Unicode/*'
         end
     end
 
 
 
     # 图片
-    s.subspec 'Image' do |ss|
-        ss.source_files = 'CSKit/CSKit/CSKit/Image/*'
+    ss.subspec 'Image' do | sss |
+        sss.source_files = 'CSKit/CSKit/CSKit/Image/*'
 
-        ss.subspec 'Categories' do |sss|
-            sss.source_files = 'CSKit/CSKit/CSKit/Image/Categories/*'
+        sss.subspec 'Categories' do | ssss |
+            ssss.source_files = 'CSKit/CSKit/CSKit/Image/Categories/*'
         end
     end
 
 
     # 分类
-    s.subspec 'Extended' do |ss|
+    ss.subspec 'Extended' do | sss |
 
-        ss.subspec 'Foundation' do |sss|
-            sss.source_files = 'CSKit/CSKit/CSKit/Extended/Foundation/*'
+        sss.subspec 'Foundation' do | ssss |
+            ssss.source_files = 'CSKit/CSKit/CSKit/Extended/Foundation/*'
         end
 
-        ss.subspec 'Macro' do |sss|
-            sss.source_files = 'CSKit/CSKit/CSKit/Extended/Macro/*'
+        sss.subspec 'Macro' do | ssss |
+            ssss.source_files = 'CSKit/CSKit/CSKit/Extended/Macro/*'
         end
 
-        ss.subspec 'Quartz' do |sss|
-            sss.source_files = 'CSKit/CSKit/CSKit/Extended/Quartz/*'
+        sss.subspec 'Quartz' do | ssss |
+            ssss.source_files = 'CSKit/CSKit/CSKit/Extended/Quartz/*'
         end
 
-        ss.subspec 'UIKit' do |sss|
-            sss.source_files = 'CSKit/CSKit/CSKit/Extended/UIKit/*'
+        sss.subspec 'UIKit' do | ssss |
+            ssss.source_files = 'CSKit/CSKit/CSKit/Extended/UIKit/*'
         end
 
     end
@@ -181,8 +181,8 @@ s.subspec 'CSKit' do |ss|
 
 
     # 缓存
-    s.subspec 'Cache' do |ss|
-        ss.source_files = 'CSKit/CSKit/CSKit/Cache/*'
+    ss.subspec 'Cache' do | sss |
+        sss.source_files = 'CSKit/CSKit/CSKit/Cache/*'
     end
 
 
@@ -190,85 +190,85 @@ s.subspec 'CSKit' do |ss|
 
 
     # 自定义类
-    s.subspec 'CustomClass' do |ss|
+    ss.subspec 'CustomClass' do | sss |
 
 
 
 
         # UITableView封装
-        ss.subspec 'UITableViewProtocol' do |sss|
-            sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/UITableViewProtocol/*'
+        sss.subspec 'UITableViewProtocol' do | ssss |
+            ssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/UITableViewProtocol/*'
         end
 
         # 图片浏览器1
-        ss.subspec 'CSImageBrowser' do |sss|
+        sss.subspec 'CSImageBrowser' do | ssss |
 
-            sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/*'
+            ssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/*'
 
-            sss.subspec 'Category' do |ssss|
-                ssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Category/*'
+            ssss.subspec 'Category' do | sssss |
+                sssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Category/*'
             end
 
-            sss.subspec 'Model' do |ssss|
-                ssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Model/*'
+            ssss.subspec 'Model' do | sssss |
+                sssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Model/*'
             end
 
-            sss.subspec 'View' do |ssss|
-                ssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/View/*'
+            ssss.subspec 'View' do | sssss |
+                sssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/View/*'
             end
         end
 
         # 图片浏览器2
-        ss.subspec 'CSPhotoGroupView' do |sss|
-            sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSPhotoGroupView/*'
+        sss.subspec 'CSPhotoGroupView' do | ssss |
+            ssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSPhotoGroupView/*'
         end
 
 
         # 基类
-        ss.subspec 'CSBaseClass' do |sss|
-            sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSBaseClass/*'
+        sss.subspec 'CSBaseClass' do | ssss |
+            ssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSBaseClass/*'
         end
 
 
         # 请求库
-        ss.subspec 'CSNetworkTools' do |sss|
-            sss.subspec 'CSNetworkTopMaskView' do |ssss|
+        sss.subspec 'CSNetworkTools' do | ssss |
+            ssss.subspec 'CSNetworkTopMaskView' do | sssss |
 
-                ssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSNetworkTools/CSNetworkTopMaskView/*'
+                sssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSNetworkTools/CSNetworkTopMaskView/*'
 
-                ssss.subspec 'Model' do |sssss|
-                    sssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSNetworkTools/CSNetworkTopMaskView/Model/*'
-                    sssss.resource     = 'CSKit/CSKit/CustomClass/CSNetworkTools/CSNetworkTopMaskView/CSNetworkTools.bundle'
+                sssss.subspec 'Model' do | ssssss |
+                    ssssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSNetworkTools/CSNetworkTopMaskView/Model/*'
+                    ssssss.resource     = 'CSKit/CSKit/CSKit/CustomClass/CSNetworkTools/CSNetworkTopMaskView/CSNetworkTools.bundle'
                 end
             end
         end
 
 
         # modal 工具
-        ss.subspec 'CSPopupController' do |sss|
-            sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSPopupController/*'
-            sss.subspec 'CustomView' do |ssss|
-                ssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSPopupController/Classes/CustomView/*'
+        sss.subspec 'CSPopupController' do | ssss |
+            ssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSPopupController/*'
+            ssss.subspec 'CustomView' do | sssss |
+                sssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSPopupController/Classes/CustomView/*'
             end
         end
 
 
         # 指示器
-        ss.subspec 'CSIndicator' do |sss|
+        sss.subspec 'CSIndicator' do | ssss |
 
-            sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/*'
+            ssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/*'
 
-            sss.subspec 'CSNotificationIndicator' do |ssss|
-                ssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSNotificationIndicator/*'
+            ssss.subspec 'CSNotificationIndicator' do | sssss |
+                sssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSNotificationIndicator/*'
             end
 
-            sss.subspec 'CSProgressIndicator' do |ssss|
-                ssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/*'
-                ssss.resource     = 'CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/CSProgressIndicatorImage.bundle'
+            ssss.subspec 'CSProgressIndicator' do | sssss |
+                sssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/*'
+                sssss.resource     = 'CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/CSProgressIndicatorImage.bundle'
             end
 
-            sss.subspec 'CSToastIndicator' do |ssss|
-                ssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSToastIndicator/*'
+            ssss.subspec 'CSToastIndicator' do | sssss |
+                sssss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSToastIndicator/*'
             end
         end
     end
