@@ -217,8 +217,8 @@ static AFHTTPSessionManager *manager;
     }
     else if(requestModel.requestType == CSNetworkMethodPOST){
         
-        NSString* tempStr = [CSNetworkTool generateGETAbsoluteURL:requestModel.requestUrl params:requestModel.parameters];
-        CSNSLog(@"请求拼接:%@",tempStr);
+//        NSString* tempStr = [CSNetworkTool generateGETAbsoluteURL:requestModel.requestUrl params:requestModel.parameters];
+//        CSNSLog(@"请求拼接:%@",tempStr);
         //post请求
         sessionDataTask = [mgr_ POST:requestModel.requestUrl
                           parameters:requestModel.parameters
