@@ -22,7 +22,7 @@ NSString *const kNetworkErrorStatues = @"9";
 /** 数据码键 */
 NSString *const kNetworkCodeKey = @"code";
 /** 后台反馈消息键 */
-NSString *const kNetworkMessageKey = @"message";
+NSString *const kNetworkMessageKey = @"msg";
 /** 数据键 */
 NSString *const kNetworkDataKey = @"data";
 /** 列表数据键.可选 */

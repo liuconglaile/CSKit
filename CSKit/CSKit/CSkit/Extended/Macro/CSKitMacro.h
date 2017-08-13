@@ -10,7 +10,16 @@
 #import <UIKit/UIKit.h>
 #import <sys/time.h>
 #import <pthread.h>
+
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/UIApplication+Extended.h>
+
+#else
 #import "UIApplication+Extended.h"
+
+#endif
+
+
 
 
 #ifdef __cplusplus

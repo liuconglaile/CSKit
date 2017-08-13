@@ -121,6 +121,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** 返回使用AES解密的NSData */
 - (nullable NSData *)aes256DecryptWithkey:(NSData *)key iv:(nullable NSData *)iv;
 
+- (NSData *)aes256_encrypt:(NSString *)key;
+- (NSData *)aes256_decrypt:(NSString *)key;
+
 /** 利用3DES加密数据 */
 - (NSData *)encryptedWith3DESUsingKey:(NSString*)key andIV:(NSData*)iv;
 

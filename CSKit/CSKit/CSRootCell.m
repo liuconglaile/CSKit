@@ -38,7 +38,7 @@
 
     //CSRootModel *feed = layout.dataModel;
 
-    CSNSLog(@"cellH:%f --- labelH:%f",layout.cellHeight,layout.nameLayout.textBoundingSize.height);
+    //CSNSLog(@"cellH:%f --- labelH:%f",layout.cellHeight,layout.nameLayout.textBoundingSize.height);
     
     self.nameLabel.size = layout.nameLayout.textBoundingSize;
     self.nameLabel.textLayout = layout.nameLayout;

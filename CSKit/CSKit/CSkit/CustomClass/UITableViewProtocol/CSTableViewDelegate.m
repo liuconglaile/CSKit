@@ -199,8 +199,8 @@
     CSBaseLayoutModel *layout = array[indexPath.row];
     NSString* identifier = layout.reuseIdentifier;
     
-    CSNSLog(@"%@",identifier);
-    CSNSLog(@"我是 cell:---->%@",[tableView dequeueReusableCellWithIdentifier:identifier]);
+    //CSNSLog(@"%@",identifier);
+    //CSNSLog(@"我是 cell:---->%@",[tableView dequeueReusableCellWithIdentifier:identifier]);
     
     
     CSBaseCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];

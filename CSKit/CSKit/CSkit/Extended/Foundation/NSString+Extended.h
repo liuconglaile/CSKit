@@ -72,6 +72,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSString*)encryptedWith3DESUsingKey:(NSString*)key andIV:(NSData*)iv;
 - (nullable NSString*)decryptedWith3DESUsingKey:(NSString*)key andIV:(NSData*)iv;
 
+- (NSString *)aes256_encrypt:(NSString *)key;
+- (NSString *)aes256_decrypt:(NSString *)key;
 
 #pragma mark - 拼音处理
 ///=============================================================================
