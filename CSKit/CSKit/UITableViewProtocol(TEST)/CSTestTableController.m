@@ -15,8 +15,8 @@
 #import "CSNetworkTool+Extension.h"
 #import "CSFPSLabel.h"
 
-#import "LCAES128.h"
-#import "OKHttpRequestTools+OKExtension.h"
+#import "NSString+JKEncrypt.h"
+#import "NSData+JKBase64.h"
 
 @interface CSTestTableController ()
 
@@ -55,8 +55,13 @@ static  NSString *CellName=@"CSTestTableCell";
     NSString *timestamp = [NSString stringWithFormat:@"%ld", (long)[senddate timeIntervalSince1970]];
     
     NSString* tempJsonStr = [@{@"tpl":tpl,@"mobile":mobile} jsonStringEncoded];
-    CSNSLog(@"打印tempJsonStr:  %@",tempJsonStr);
-    NSString* data = [LCAES128 AES128Encrypt:tempJsonStr];//[tempJsonStr aes256_encrypt:access_token];//加密
+    CSNSLog(@"打印tempJsonStr:  %@  ----key:%@",tempJsonStr,[access_token substringToIndex:16]);
+    
+    NSString* keyValue = [access_token substringToIndex:16];
+    
+  
+    
+    NSString* data = [NSString AES128Encrypt:tempJsonStr AndKey:keyValue AndIv:keyValue];//加密
     CSNSLog(@"打印data:  %@",data);
     
     

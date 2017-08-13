@@ -303,6 +303,22 @@ CSSYNTH_DUMMY_CLASS(NSData_Extended)
     }
 }
 
+/*
+ 三端统一
+ 
+ CCCryptorStatus cryptStatus = CCCrypt(kCCDecrypt,
+ kCCAlgorithmAES128,
+ 0x0000,
+ keyPtr,
+ kCCBlockSizeAES128,
+ ivPtr,
+ [data bytes],
+ dataLength,
+ buffer,
+ bufferSize,
+ &numBytesCrypted);
+ */
+
 - (NSData *)aes256DecryptWithkey:(NSData *)key iv:(NSData *)iv {
     
     /**
@@ -347,52 +363,9 @@ CSSYNTH_DUMMY_CLASS(NSData_Extended)
 }
 
 
-- (NSData *)aes256_encrypt:(NSString *)key   //加密
-{
-    char keyPtr[kCCKeySizeAES256+1];
-    bzero(keyPtr, sizeof(keyPtr));
-    [key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
-    NSUInteger dataLength = [self length];
-    size_t bufferSize = dataLength + kCCBlockSizeAES128;
-    void *buffer = malloc(bufferSize);
-    size_t numBytesEncrypted = 0;
-    CCCryptorStatus cryptStatus = CCCrypt(kCCEncrypt, kCCAlgorithmAES128,
-                                          kCCOptionPKCS7Padding ,
-                                          keyPtr, kCCBlockSizeAES128,
-                                          [key UTF8String],
-                                          [self bytes], dataLength,
-                                          buffer, bufferSize,
-                                          &numBytesEncrypted);
-    if (cryptStatus == kCCSuccess) {
-        return [NSData dataWithBytesNoCopy:buffer length:numBytesEncrypted];
-    }
-    free(buffer);
-    return nil;
-}
 
-- (NSData *)aes256_decrypt:(NSString *)key   //解密
-{
-    char keyPtr[kCCKeySizeAES256+1];
-    bzero(keyPtr, sizeof(keyPtr));
-    [key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
-    NSUInteger dataLength = [self length];
-    size_t bufferSize = dataLength + kCCBlockSizeAES128;
-    void *buffer = malloc(bufferSize);
-    size_t numBytesDecrypted = 0;
-    CCCryptorStatus cryptStatus = CCCrypt(kCCDecrypt, kCCAlgorithmAES128,
-                                          kCCOptionPKCS7Padding ,
-                                          keyPtr, kCCBlockSizeAES128,
-                                          [key UTF8String],
-                                          [self bytes], dataLength,
-                                          buffer, bufferSize,
-                                          &numBytesDecrypted);
-    if (cryptStatus == kCCSuccess) {
-        return [NSData dataWithBytesNoCopy:buffer length:numBytesDecrypted];
-        
-    }
-    free(buffer);
-    return nil;
-}
+
+
 
 
 
