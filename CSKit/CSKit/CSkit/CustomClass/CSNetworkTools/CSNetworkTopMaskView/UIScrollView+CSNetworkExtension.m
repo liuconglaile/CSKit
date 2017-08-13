@@ -7,13 +7,22 @@
 //
 
 #import "UIScrollView+CSNetworkExtension.h"
+
+
+
+#if __has_include(<CSkit/CSkit.h>)
+#import <AFNetworkReachabilityManager.h>
+#import <CSkit/CSNetworkTopMaskView.h>
+#import <CSkit/CSNetworkModel.h>
+#import <CSkit/CSKit.h>
+#else
 #import "AFNetworkReachabilityManager.h"
 #import "CSNetworkTopMaskView.h"
 #import "CSNetworkModel.h"
 
 
 #import "CSKit.h"
-
+#endif
 
 
 
