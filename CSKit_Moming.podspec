@@ -7,20 +7,20 @@ Pod::Spec.new do |s|
 #  这些信息将帮助别人找到您的库,一下信息可以简单描述你的库,让人更加简单的了解你的库文件.摘要应该是tweet-length,并且描述更深入.
 #
 
-    s.name         = "CSKit_Moming"
-    s.version      = "1.1.4"
-    s.summary      = "CSKit.Integration of some commonly used tools and controls,Write it casually."
+s.name         = "CSKit_Moming"
+s.version      = "1.1.4"
+s.summary      = "CSKit.Integration of some commonly used tools and controls,Write it casually."
 
 # 此描述用于生成标签并改进搜索结果.
 #   * 想想:做什么?你为什么写这个库,什么是焦点?
 #   * 尽量保持短暂,快速,至关重要.
 #   * 在下面的DESC分隔符之间写下描述.
 #   * 不用担心缩进,CocoaPods吧!
-    s.description  = <<-DESC
-    CSKit.Integration of some commonly used tools and controls,Write it casually,Look at yourself.
-    DESC
+s.description  = <<-DESC
+CSKit.Integration of some commonly used tools and controls,Write it casually,Look at yourself.
+DESC
 
-    s.homepage      = "https://github.com/liuconglaile/CSKit"
+s.homepage      = "https://github.com/liuconglaile/CSKit"
 
 
 # ―――  许可证规范   ―――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 #  常用的许可证为 'MIT', 'BSD' 和 'Apache License, Version 2.0'.
 #
 
-    s.license        = "MIT"
+s.license        = "MIT"
 # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
 #  指定其他人可以参考的social_media_url,例如twitter个人资料网址.
 #
 
-    s.author             = { "Moming" => "281090013@qq.com" }
+s.author             = { "Moming" => "281090013@qq.com" }
 # Or just: s.author    = "Moming"
 # s.authors            = { "Moming" => "281090013@qq.com" }
 # s.social_media_url   = "http://twitter.com/Moming"
@@ -52,7 +52,7 @@ Pod::Spec.new do |s|
 #
 
 # s.platform     = :ios
-    s.platform       = :ios, "8.4"
+s.platform       = :ios, "8.4"
 
 #  When using multiple platforms
 # s.ios.deployment_target = "5.0"
@@ -67,7 +67,7 @@ Pod::Spec.new do |s|
 #  支持 git, hg, bzr, svn 和 HTTP.
 #
 
-    s.source       = { :git => "https://github.com/liuconglaile/CSKit.git", :tag => "#{s.version}" }
+s.source       = { :git => "https://github.com/liuconglaile/CSKit.git", :tag => "#{s.version}" }
 
 
 # ――― 源代码  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -79,37 +79,32 @@ Pod::Spec.new do |s|
 #
 
 s.source_files   =  "CSKit/CSKit/CSKit/*" ,
-                    "CSKit/CSKit/CSKit/Cache/*" ,
-                    "CSKit/CSKit/CSKit/CustomClass/CSBaseClass/*" ,
-                    "CSKit/CSKit/CSKit/CustomClass/CSPopupController/*" ,
-                    "CSKit/CSKit/CSKit/CustomClass/CSPopupController/Classes/CustomView/*" ,
-                    "CSKit/CSKit/CSKit/CustomClass/CSIndicator/*" ,
-                    "CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSNotificationIndicator/*" ,
-                    "CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/*" ,
-                    "CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSToastIndicator/*" ,
-                    "CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/*" ,
-                    "CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Category/*" ,
-                    "CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Model/*" ,
-                    "CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/View/*" ,
-                    "CSKit/CSKit/CSKit/CustomClass/CSPhotoGroupView/*" ,
-                    "CSKit/CSKit/CSKit/CustomClass/UITableViewProtocol/*" ,
-                    "CSKit/CSKit/CSKit/Extended/Foundation/*" ,
-                    "CSKit/CSKit/CSKit/Extended/Macro/*" ,
-                    "CSKit/CSKit/CSKit/Extended/Quartz/*" ,
-                    "CSKit/CSKit/CSKit/Extended/UIKit/*" ,
-                    "CSKit/CSKit/CSKit/Image/*" ,
-                    "CSKit/CSKit/CSKit/Image/Categories/*" ,
-                    "CSKit/CSKit/CSKit/Model/*" ,
-                    "CSKit/CSKit/CSKit/Model/Unicode/*" ,
-                    "CSKit/CSKit/CSKit/Text/Component/*" ,
-                    "CSKit/CSKit/CSKit/Text/String/*" ,
-                    "CSKit/CSKit/CSKit/Text/UseClass/*" ,
-                    "CSKit/CSKit/CSKit/Utility/*" ,
-
-
-
-#"CSKit/CSKit/CSKit/CustomClass/CSNetworkTools/CSNetworkTopMaskView/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSNetworkTools/CSNetworkTopMaskView/Model/*" ,
+"CSKit/CSKit/CSKit/Cache/*" ,
+"CSKit/CSKit/CSKit/CustomClass/CSBaseClass/*" ,
+"CSKit/CSKit/CSKit/CustomClass/CSPopupController/*" ,
+"CSKit/CSKit/CSKit/CustomClass/CSPopupController/Classes/CustomView/*" ,
+"CSKit/CSKit/CSKit/CustomClass/CSIndicator/*" ,
+"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSNotificationIndicator/*" ,
+"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/*" ,
+"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSToastIndicator/*" ,
+"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/*" ,
+"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Category/*" ,
+"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Model/*" ,
+"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/View/*" ,
+"CSKit/CSKit/CSKit/CustomClass/CSPhotoGroupView/*" ,
+"CSKit/CSKit/CSKit/CustomClass/UITableViewProtocol/*" ,
+"CSKit/CSKit/CSKit/Extended/Foundation/*" ,
+"CSKit/CSKit/CSKit/Extended/Macro/*" ,
+"CSKit/CSKit/CSKit/Extended/Quartz/*" ,
+"CSKit/CSKit/CSKit/Extended/UIKit/*" ,
+"CSKit/CSKit/CSKit/Image/*" ,
+"CSKit/CSKit/CSKit/Image/Categories/*" ,
+"CSKit/CSKit/CSKit/Model/*" ,
+"CSKit/CSKit/CSKit/Model/Unicode/*" ,
+"CSKit/CSKit/CSKit/Text/Component/*" ,
+"CSKit/CSKit/CSKit/Text/String/*" ,
+"CSKit/CSKit/CSKit/Text/UseClass/*" ,
+"CSKit/CSKit/CSKit/Utility/*" ,
 
 #s.exclude_files = "CSKit/CSKit"
 
@@ -145,10 +140,10 @@ s.libraries    = "sqlite3", "z"
 #  如果你的库依赖于编译器标志，你可以在xcconfig哈希中设置它们
 #  该设置只适用于你的库.如果你依赖其他Podspecs你可以包括多个依赖关系,以确保它有效
 
-    s.requires_arc = true
+s.requires_arc = true
 
 # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-    s.dependency "AFNetworking"
-    s.dependency "MJRefresh"
+s.dependency "AFNetworking"
+s.dependency "MJRefresh"
 
 end
