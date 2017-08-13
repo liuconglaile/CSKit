@@ -13,7 +13,7 @@
 #import <MJRefresh.h>
 #else
 #import "CSKitMacro.h"
-#import "MJRefresh.h"
+#import <MJRefresh.h>
 #endif
 
 
