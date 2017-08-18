@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		042E3C311F342C310072D135 /* CSKitMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 042E3C301F342C310072D135 /* CSKitMacro.m */; };
+		044DECA91F46F0D90021870A /* CSHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 044DECA41F46F0D90021870A /* CSHTTPSessionManager.m */; };
+		044DECAA1F46F0D90021870A /* CSNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 044DECA61F46F0D90021870A /* CSNetworkCache.m */; };
+		044DECAB1F46F0D90021870A /* CSNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 044DECA81F46F0D90021870A /* CSNetworking.m */; };
 		0468DC7F1F3056E300925E87 /* CSNetworkTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0468DC7C1F3056E300925E87 /* CSNetworkTools.bundle */; };
 		0468DC801F3056E300925E87 /* CSProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0468DC7E1F3056E300925E87 /* CSProgressHUD.m */; };
 		0468DC831F3056FC00925E87 /* CSNetworkTopMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0468DC821F3056FC00925E87 /* CSNetworkTopMaskView.m */; };
@@ -204,6 +207,12 @@
 /* Begin PBXFileReference section */
 		042E3C2F1F342C310072D135 /* CSKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKitMacro.h; sourceTree = "<group>"; };
 		042E3C301F342C310072D135 /* CSKitMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSKitMacro.m; sourceTree = "<group>"; };
+		044DECA31F46F0D90021870A /* CSHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSHTTPSessionManager.h; sourceTree = "<group>"; };
+		044DECA41F46F0D90021870A /* CSHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSHTTPSessionManager.m; sourceTree = "<group>"; };
+		044DECA51F46F0D90021870A /* CSNetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNetworkCache.h; sourceTree = "<group>"; };
+		044DECA61F46F0D90021870A /* CSNetworkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNetworkCache.m; sourceTree = "<group>"; };
+		044DECA71F46F0D90021870A /* CSNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNetworking.h; sourceTree = "<group>"; };
+		044DECA81F46F0D90021870A /* CSNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNetworking.m; sourceTree = "<group>"; };
 		0468DC7C1F3056E300925E87 /* CSNetworkTools.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CSNetworkTools.bundle; sourceTree = "<group>"; };
 		0468DC7D1F3056E300925E87 /* CSProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSProgressHUD.h; sourceTree = "<group>"; };
 		0468DC7E1F3056E300925E87 /* CSProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSProgressHUD.m; sourceTree = "<group>"; };
@@ -646,6 +655,12 @@
 		04FE726E1F40051A00220061 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				044DECA31F46F0D90021870A /* CSHTTPSessionManager.h */,
+				044DECA41F46F0D90021870A /* CSHTTPSessionManager.m */,
+				044DECA51F46F0D90021870A /* CSNetworkCache.h */,
+				044DECA61F46F0D90021870A /* CSNetworkCache.m */,
+				044DECA71F46F0D90021870A /* CSNetworking.h */,
+				044DECA81F46F0D90021870A /* CSNetworking.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1490,6 +1505,8 @@
 				200E93D81F2B819D004A3800 /* CSTextEffectWindow.m in Sources */,
 				04FE72A71F40389800220061 /* NSData+JKBase64.m in Sources */,
 				200E93971F2B819D004A3800 /* NSNotificationCenter+Extended.m in Sources */,
+				044DECA91F46F0D90021870A /* CSHTTPSessionManager.m in Sources */,
+				044DECAA1F46F0D90021870A /* CSNetworkCache.m in Sources */,
 				200E93B71F2B819D004A3800 /* UIScreen+Extended.m in Sources */,
 				20612C6E1F2FA44E006E1715 /* CSIconLabel.m in Sources */,
 				200E938E1F2B819D004A3800 /* NSAttributedString+Height.m in Sources */,
@@ -1609,6 +1626,7 @@
 				200E93E51F2B819D004A3800 /* NSAttributedString+CSText.m in Sources */,
 				20612C451F2F893E006E1715 /* CSImageBrowserButton.m in Sources */,
 				0474883F1F32F5120047DCDE /* CSControl.m in Sources */,
+				044DECAB1F46F0D90021870A /* CSNetworking.m in Sources */,
 				200E93F01F2B819D004A3800 /* CSSentinel.m in Sources */,
 				200E93DE1F2B819D004A3800 /* CSTextSelectionView.m in Sources */,
 				200E93EF1F2B819D004A3800 /* CSReachability.m in Sources */,
