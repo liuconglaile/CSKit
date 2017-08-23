@@ -1,4 +1,4 @@
-platform :ios, '8.4'
+platform :ios, '8.2'
 
 #//通过指定use_frameworks!要求生成的是framework而不是静态库
 #use_frameworks!

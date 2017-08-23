@@ -9,20 +9,20 @@
 #import <Foundation/Foundation.h>
 
 /**
- Debug method for NSObject when using ARC.
+ 使用ARC时NSObject的调试方法.
  */
 @interface NSObject (ARCExtended)
 
-/// Same as `retain`
+/// 和'retain'一样
 - (instancetype)arcDebugRetain NS_AUTOMATED_REFCOUNT_UNAVAILABLE;
 
-/// Same as `release`
+/// 和'release'一样
 - (oneway void)arcDebugRelease NS_AUTOMATED_REFCOUNT_UNAVAILABLE;
 
-/// Same as `autorelease`
+/// 和'autorelease'一样
 - (instancetype)arcDebugAutorelease NS_AUTOMATED_REFCOUNT_UNAVAILABLE;
 
-/// Same as `retainCount`
+/// 和'retainCount'一样
 - (NSUInteger)arcDebugRetainCount OBJC_ARC_UNAVAILABLE;
 
 @end
