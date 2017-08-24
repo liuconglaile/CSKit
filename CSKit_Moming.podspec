@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "CSKit_Moming"
-s.version      = "1.1.5"
+s.version      = "1.1.6"
 s.summary      = "CSKit.Integration of some commonly used tools and controls,Write it casually."
 
 # 此描述用于生成标签并改进搜索结果.
@@ -52,7 +52,7 @@ s.author             = { "Moming" => "281090013@qq.com" }
 #
 
 # s.platform     = :ios
-s.platform       = :ios, "8.4"
+s.platform       = :ios, "8.2"
 
 #  When using multiple platforms
 # s.ios.deployment_target = "5.0"

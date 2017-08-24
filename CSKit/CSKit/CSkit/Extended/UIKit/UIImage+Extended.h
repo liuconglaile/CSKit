@@ -255,6 +255,17 @@ typedef void (^CSUIImageSizeRequestCompleted) (NSURL* imgURL, CGSize size);
  
  @param borderLineJoin The border line join.
  */
+
+/**
+ <#Description#>
+
+ @param radius <#radius description#>
+ @param corners <#corners description#>
+ @param borderWidth <#borderWidth description#>
+ @param borderColor <#borderColor description#>
+ @param borderLineJoin <#borderLineJoin description#>
+ @return <#return value description#>
+ */
 - (nullable UIImage *)imageByRoundCornerRadius:(CGFloat)radius
                                        corners:(UIRectCorner)corners
                                    borderWidth:(CGFloat)borderWidth
@@ -265,9 +276,8 @@ typedef void (^CSUIImageSizeRequestCompleted) (NSURL* imgURL, CGSize size);
  返回一个新的旋转图像(相对于中心).
  
  @param radians   逆时针旋转弧度.⟲
- 
- @param fitSize   YES: new image's size is extend to fit all content.
- NO: image's size will not change, content may be clipped.
+ @param fitSize   YES: 新的图像的尺寸被拉伸,以适应所有内容.
+                   NO: 图像的大小不会改变,内容可能会被剪辑.
  */
 - (nullable UIImage *)imageByRotate:(CGFloat)radians fitSize:(BOOL)fitSize;
 
