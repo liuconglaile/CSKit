@@ -15,7 +15,7 @@
 #import <MJRefresh/MJRefresh.h>
 #else
 #import "CSMacrosHeader.h"
-#import "MJRefresh.h"
+#import <MJRefresh/MJRefresh.h>
 #endif
 
 
