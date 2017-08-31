@@ -7,17 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-
-
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <MJRefresh/MJRefresh.h>
-#else
 #import "CSMacrosHeader.h"
-#import <MJRefresh/MJRefresh.h>
-#endif
-
+//#import <MJRefresh/MJRefresh.h>
+#import <MJRefresh.h>
 
 /**
  提示状态枚举
