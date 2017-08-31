@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CSMacrosHeader.h"
 //#import <MJRefresh/MJRefresh.h>
-#import <MJRefresh.h>
+#import "MJRefresh.h"
 
 /**
  提示状态枚举
