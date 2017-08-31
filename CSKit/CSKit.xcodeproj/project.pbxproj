@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		042E3C311F342C310072D135 /* CSKitMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 042E3C301F342C310072D135 /* CSKitMacro.m */; };
+		041C748C1F57EA19005613F5 /* CSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C748B1F57EA19005613F5 /* CSKit.m */; };
+		041C748F1F57EA2E005613F5 /* CSKitMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C748E1F57EA2E005613F5 /* CSKitMacro.m */; };
 		044DECA91F46F0D90021870A /* CSHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 044DECA41F46F0D90021870A /* CSHTTPSessionManager.m */; };
 		044DECAA1F46F0D90021870A /* CSNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 044DECA61F46F0D90021870A /* CSNetworkCache.m */; };
 		044DECAB1F46F0D90021870A /* CSNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 044DECA81F46F0D90021870A /* CSNetworking.m */; };
@@ -40,7 +41,6 @@
 		200E93811F2B819D004A3800 /* CSDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 200E92861F2B819D004A3800 /* CSDiskCache.m */; };
 		200E93821F2B819D004A3800 /* CSKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 200E92881F2B819D004A3800 /* CSKVStorage.m */; };
 		200E93831F2B819D004A3800 /* CSMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 200E928A1F2B819D004A3800 /* CSMemoryCache.m */; };
-		200E93841F2B819D004A3800 /* CSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 200E928C1F2B819D004A3800 /* CSKit.m */; };
 		200E93851F2B819D004A3800 /* CSPhotoGroupItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 200E92901F2B819D004A3800 /* CSPhotoGroupItem.m */; };
 		200E93861F2B819D004A3800 /* CSPhotoGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 200E92921F2B819D004A3800 /* CSPhotoGroupView.m */; };
 		200E93871F2B819D004A3800 /* CSBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 200E92951F2B819D004A3800 /* CSBaseCell.m */; };
@@ -205,8 +205,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		042E3C2F1F342C310072D135 /* CSKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKitMacro.h; sourceTree = "<group>"; };
-		042E3C301F342C310072D135 /* CSKitMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSKitMacro.m; sourceTree = "<group>"; };
+		041C748A1F57EA19005613F5 /* CSKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKit.h; sourceTree = "<group>"; };
+		041C748B1F57EA19005613F5 /* CSKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSKit.m; sourceTree = "<group>"; };
+		041C748D1F57EA2E005613F5 /* CSKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKitMacro.h; sourceTree = "<group>"; };
+		041C748E1F57EA2E005613F5 /* CSKitMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSKitMacro.m; sourceTree = "<group>"; };
 		044DECA31F46F0D90021870A /* CSHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSHTTPSessionManager.h; sourceTree = "<group>"; };
 		044DECA41F46F0D90021870A /* CSHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSHTTPSessionManager.m; sourceTree = "<group>"; };
 		044DECA51F46F0D90021870A /* CSNetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNetworkCache.h; sourceTree = "<group>"; };
@@ -271,8 +273,6 @@
 		200E92881F2B819D004A3800 /* CSKVStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSKVStorage.m; sourceTree = "<group>"; };
 		200E92891F2B819D004A3800 /* CSMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMemoryCache.h; sourceTree = "<group>"; };
 		200E928A1F2B819D004A3800 /* CSMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSMemoryCache.m; sourceTree = "<group>"; };
-		200E928B1F2B819D004A3800 /* CSKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKit.h; sourceTree = "<group>"; };
-		200E928C1F2B819D004A3800 /* CSKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSKit.m; sourceTree = "<group>"; };
 		200E928F1F2B819D004A3800 /* CSPhotoGroupItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPhotoGroupItem.h; sourceTree = "<group>"; };
 		200E92901F2B819D004A3800 /* CSPhotoGroupItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPhotoGroupItem.m; sourceTree = "<group>"; };
 		200E92911F2B819D004A3800 /* CSPhotoGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPhotoGroupView.h; sourceTree = "<group>"; };
@@ -589,6 +589,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041C74891F57EA00005613F5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				041C748D1F57EA2E005613F5 /* CSKitMacro.h */,
+				041C748E1F57EA2E005613F5 /* CSKitMacro.m */,
+				041C748A1F57EA19005613F5 /* CSKit.h */,
+				041C748B1F57EA19005613F5 /* CSKit.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		0468DC751F302E4500925E87 /* CSNetworkTools(网络工具) */ = {
 			isa = PBXGroup;
 			children = (
@@ -742,9 +753,8 @@
 		200E92811F2B819D004A3800 /* CSkit */ = {
 			isa = PBXGroup;
 			children = (
+				041C74891F57EA00005613F5 /* Base */,
 				200E92821F2B819D004A3800 /* Cache */,
-				200E928B1F2B819D004A3800 /* CSKit.h */,
-				200E928C1F2B819D004A3800 /* CSKit.m */,
 				200E928D1F2B819D004A3800 /* CustomClass */,
 				200E92A01F2B819D004A3800 /* Extended */,
 				200E93151F2B819D004A3800 /* Image */,
@@ -815,7 +825,6 @@
 			isa = PBXGroup;
 			children = (
 				200E92A11F2B819D004A3800 /* Foundation */,
-				200E92D01F2B819D004A3800 /* Macro */,
 				200E92D21F2B819D004A3800 /* Quartz */,
 				200E92D71F2B819D004A3800 /* UIKit */,
 			);
@@ -876,15 +885,6 @@
 				200E92CF1F2B819D004A3800 /* NSUserDefaults+Utilities.m */,
 			);
 			path = Foundation;
-			sourceTree = "<group>";
-		};
-		200E92D01F2B819D004A3800 /* Macro */ = {
-			isa = PBXGroup;
-			children = (
-				042E3C2F1F342C310072D135 /* CSKitMacro.h */,
-				042E3C301F342C310072D135 /* CSKitMacro.m */,
-			);
-			path = Macro;
 			sourceTree = "<group>";
 		};
 		200E92D21F2B819D004A3800 /* Quartz */ = {
@@ -1496,7 +1496,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				200E94031F2B81AB004A3800 /* CSTestTableModel.m in Sources */,
-				200E93841F2B819D004A3800 /* CSKit.m in Sources */,
 				200E938B1F2B819D004A3800 /* CSTableViewDelegate.m in Sources */,
 				200E93BB1F2B819D004A3800 /* UITableView+Extended.m in Sources */,
 				200E93931F2B819D004A3800 /* NSDictionary+Extended.m in Sources */,
@@ -1540,6 +1539,7 @@
 				200E92561F2B7F5D004A3800 /* ViewController.m in Sources */,
 				200E93D91F2B819D004A3800 /* CSTextInput.m in Sources */,
 				200E93B81F2B819D004A3800 /* UIScrollView+Extended.m in Sources */,
+				041C748C1F57EA19005613F5 /* CSKit.m in Sources */,
 				200E939A1F2B819D004A3800 /* NSObject+Extended.m in Sources */,
 				200E92531F2B7F5D004A3800 /* AppDelegate.m in Sources */,
 				200E93C11F2B819D004A3800 /* UIViewController+Extended.m in Sources */,
@@ -1568,7 +1568,6 @@
 				0468DC831F3056FC00925E87 /* CSNetworkTopMaskView.m in Sources */,
 				200E93CC1F2B819D004A3800 /* CSImageCache.m in Sources */,
 				200E93D71F2B819D004A3800 /* CSTextDebugOption.m in Sources */,
-				042E3C311F342C310072D135 /* CSKitMacro.m in Sources */,
 				200E93A81F2B819D004A3800 /* UIBezierPath+Extended.m in Sources */,
 				200E93DB1F2B819D004A3800 /* CSTextLayout.m in Sources */,
 				200E93B51F2B819D004A3800 /* UINavigationItem+Extended.m in Sources */,
@@ -1587,6 +1586,7 @@
 				20612C611F2F8B66006E1715 /* CSProgressIndicatorView.m in Sources */,
 				20612C431F2F893E006E1715 /* CSImageBrowserFlowLayout.m in Sources */,
 				200E93A01F2B819D004A3800 /* NSThread+Extended.m in Sources */,
+				041C748F1F57EA2E005613F5 /* CSKitMacro.m in Sources */,
 				200E93EE1F2B819D004A3800 /* CSKeychain.m in Sources */,
 				200E94011F2B81AB004A3800 /* CSTestTableController.m in Sources */,
 				0468DD461F30717A00925E87 /* CSNetworkTool.m in Sources */,

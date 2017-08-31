@@ -112,6 +112,13 @@ s.source       = { :git => "https://github.com/liuconglaile/CSKit.git", :tag => 
 s.source_files   =  "CSKit/CSKit/CSKit/*"
 s.public_header_files = 'CSKit/CSKit/CSKit/*.{h}'
 
+
+s.subspec 'Base' do |ss|
+    ss.source_files = 'CSKit/CSKit/CSKit/Base/*'
+    ss.public_header_files = 'CSKit/CSKit/CSKit/Base/*.{h}'
+end
+
+
 s.subspec 'Cache' do |ss|
     ss.source_files = 'CSKit/CSKit/CSKit/Cache/*'
     ss.public_header_files = 'CSKit/CSKit/CSKit/Cache/*.{h}'
@@ -235,10 +242,6 @@ s.subspec 'Extended' do |ss|
     ss.subspec 'Foundation' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/Extended/Foundation/*'
         sss.public_header_files = 'CSKit/CSKit/CSKit/Extended/Foundation/*.{h}'
-    end
-    ss.subspec 'Macro' do |sss|
-        sss.source_files = 'CSKit/CSKit/CSKit/Extended/Macro/*'
-        sss.public_header_files = 'CSKit/CSKit/CSKit/Extended/Macro/*.{h}'
     end
     ss.subspec 'Quartz' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/Extended/Quartz/*'
