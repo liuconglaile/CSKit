@@ -13,7 +13,7 @@
 #import "CSCache.h"
 #import "NSString+Extended.h"
 
-#import "CSKit.h"
+#import "CSKitHeader.h"
 
 //重复请求次数key
 static char const * const kRequestTimeCountKey    = "kRequestTimeCountKey";

@@ -19,10 +19,10 @@
 
 
 #if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSKitMacro.h>
+#import <CSkit/CSMacrosHeader.h>
 #import <CSkit/CSImage.h>
 #else
-#import "CSKitMacro.h"
+#import "CSMacrosHeader.h"
 #import "CSImage.h"
 #endif
 

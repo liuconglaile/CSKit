@@ -11,9 +11,9 @@
 #import <Foundation/Foundation.h>
 
 #if __has_include(<CSKit/CSKit.h>)
-#import <CSKit/CSKitMacro.h>
+#import <CSkit/CSMacrosHeader.h>
 #else
-#import "CSKitMacro.h"
+#import "CSMacrosHeader.h"
 #endif
 
 

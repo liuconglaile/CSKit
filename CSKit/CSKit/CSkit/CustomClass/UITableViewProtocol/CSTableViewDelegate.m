@@ -9,11 +9,11 @@
 #import "CSTableViewDelegate.h"
 
 #if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSKitMacro.h>
+#import <CSkit/CSMacrosHeader.h>
 #import <CSkit/CSBaseCell.h>
 #import <CSkit/CSBaseLayoutModel.h>
 #else
-#import "CSKitMacro.h"
+#import "CSMacrosHeader.h"
 #import "CSBaseCell.h"
 #import "CSBaseLayoutModel.h"
 #endif

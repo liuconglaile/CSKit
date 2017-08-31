@@ -11,14 +11,14 @@
 
 
 #if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSKitMacro.h>
+#import <CSkit/CSMacrosHeader.h>
 #import <CSkit/CSImage.h>
 #import <CSkit/CSWeakProxy.h>
 
 #import <CSkit/UIApplication+Extended.h>
 #import <CSkit/UIImage+Extended.h>
 #else
-#import "CSKitMacro.h"
+#import "CSMacrosHeader.h"
 #import "CSImage.h"
 #import "CSWeakProxy.h"
 

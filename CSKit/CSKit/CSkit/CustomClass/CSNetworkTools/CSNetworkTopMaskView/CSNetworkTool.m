@@ -9,7 +9,7 @@
 #import "CSNetworkTool.h"
 #import <objc/runtime.h>
 #import "AFNetworking.h"
-#import "CSKit.h"
+#import "CSKitHeader.h"
 
 static NSMutableArray *globalReqManagerArr_;
 static char const * const kRequestUrlKey    = "kRequestUrlKey";

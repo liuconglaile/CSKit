@@ -8,10 +8,10 @@
 
 #import "UIColor+Extended.h"
 #if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSKitMacro.h>
+#import <CSkit/CSMacrosHeader.h>
 #import <CSkit/NSString+Extended.h>
 #else
-#import "CSKitMacro.h"
+#import "CSMacrosHeader.h"
 #import "NSString+Extended.h"
 #endif
 

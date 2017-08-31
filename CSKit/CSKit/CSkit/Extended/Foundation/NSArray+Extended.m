@@ -8,10 +8,10 @@
 
 #import "NSArray+Extended.h"
 #if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSKitMacro.h>
+#import <CSkit/CSMacrosHeader.h>
 #import <CSkit/NSData+Extended.h>
 #else
-#import "CSKitMacro.h"
+#import "CSMacrosHeader.h"
 #import "NSData+Extended.h"
 #endif
 

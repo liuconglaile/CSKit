@@ -9,7 +9,7 @@
 #import "CSTextLayout.h"
 
 #if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSKitMacro.h>
+#import <CSkit/CSMacrosHeader.h>
 #import <CSkit/UIFont+Extended.h>
 #import <CSkit/CSTextAttribute.h>
 #import <CSkit/NSAttributedString+CSText.h>
@@ -17,7 +17,7 @@
 #import <CSkit/CSTextUtilities.h>
 #import <CSkit/CSTextArchiver.h>
 #else
-#import "CSKitMacro.h"
+#import "CSMacrosHeader.h"
 #import "UIFont+Extended.h"
 #import "CSTextAttribute.h"
 #import "NSAttributedString+CSText.h"

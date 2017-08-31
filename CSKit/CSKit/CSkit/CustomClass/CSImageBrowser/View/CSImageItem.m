@@ -8,7 +8,7 @@
 
 #import "CSImageItem.h"
 #import "CSProgeressHUD.h"
-#import "CSKit.h"
+#import "CSKitHeader.h"
 
 @interface CSImageItem ()<UIScrollViewDelegate,UIActionSheetDelegate>
 

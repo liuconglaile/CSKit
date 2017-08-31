@@ -9,12 +9,12 @@
 #import "NSDictionary+Extended.h"
 
 #if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSKitMacro.h>
+#import <CSkit/CSMacrosHeader.h>
 #import <CSkit/NSString+Extended.h>
 #import <CSkit/NSData+Extended.h>
 #import <CSkit/UIDevice+Extended.h>
 #else
-#import "CSKitMacro.h"
+#import "CSMacrosHeader.h"
 #import "NSString+Extended.h"
 #import "NSData+Extended.h"
 #import "UIDevice+Extended.h"

@@ -13,7 +13,7 @@
 
 
 #if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSKitMacro.h>
+#import <CSkit/CSMacrosHeader.h>
 #import <CSkit/UIDevice+Extended.h>
 #import <CSkit/UIFont+Extended.h>
 
@@ -23,7 +23,7 @@
 #import <CSkit/CSAnimatedImageView.h>
 #import <CSkit/NSParagraphStyle+CSText.h>
 #else
-#import "CSKitMacro.h"
+#import "CSMacrosHeader.h"
 #import "UIDevice+Extended.h"
 #import "UIFont+Extended.h"
 

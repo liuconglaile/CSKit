@@ -1,23 +1,27 @@
 //
-//  CSKitMacro.h
+//  CSMacrosHeader.h
 //  CSKit
 //
-//  Created by mac on 2017/8/4.
+//  Created by mac on 2017/8/31.
 //  Copyright © 2017年 Moming. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#ifndef CSMacrosHeader_h
+#define CSMacrosHeader_h
+
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
 #import <sys/time.h>
 #import <pthread.h>
 
-//#if __has_include(<CSkit/CSkit.h>)
-//#import <CSkit/UIApplication+Extended.h>
-//
-//#else
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/UIApplication+Extended.h>
+
+#else
 #import "UIApplication+Extended.h"
 
-//#endif
+#endif
 
 
 
@@ -511,10 +515,7 @@ assert(res == 0); \
 #undef CSMUTEX_ASSERT_ON_ERROR
 }
 
-
-
-@interface CSKitMacro : NSObject
-
-@end
-
 CS_EXTERN_C_END
+
+
+#endif /* CSMacrosHeader_h */

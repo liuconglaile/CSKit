@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "CSKit.h"
+#import "CSKitHeader.h"
 
 /**
  统一处理图片缓存

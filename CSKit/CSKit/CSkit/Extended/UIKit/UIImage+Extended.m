@@ -14,12 +14,12 @@
 
 
 #if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSKitMacro.h>
+#import <CSkit/CSMacrosHeader.h>
 #import <CSkit/UIDevice+Extended.h>
 #import <CSkit/NSString+Extended.h>
 #import <CSkit/NSObject+CGUtilities.h>
 #else
-#import "CSKitMacro.h"
+#import "CSMacrosHeader.h"
 #import "UIDevice+Extended.h"
 #import "NSString+Extended.h"
 #import "NSObject+CGUtilities.h"

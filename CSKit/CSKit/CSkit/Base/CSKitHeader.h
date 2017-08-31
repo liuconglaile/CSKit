@@ -1,13 +1,13 @@
 //
-//  CSKit.h
-//  CSCategory
+//  CSKitHeader.h
+//  CSKit
 //
-//  Created by mac on 2017/7/28.
-//  Copyright © 2017年 mac. All rights reserved.
+//  Created by mac on 2017/8/31.
+//  Copyright © 2017年 Moming. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
+#ifndef CSKitHeader_h
+#define CSKitHeader_h
 
 #if __has_include(<CSkit/CSkit.h>)
 
@@ -80,7 +80,7 @@
 ///MARK: ===================================================
 ///MARK: Macro
 ///MARK: ===================================================
-#import <CSkit/CSKitMacro.h>
+#import <CSkit/CSMacrosHeader.h>
 
 
 ///MARK: ===================================================
@@ -249,7 +249,7 @@
 ///MARK: ===================================================
 ///MARK: Macro
 ///MARK: ===================================================
-#import "CSKitMacro.h"
+#import "CSMacrosHeader.h"
 
 
 ///MARK: ===================================================
@@ -345,13 +345,5 @@
 #endif
 
 
-@interface CSKit : NSObject
 
-@end
-
-
-
-
-
-
-
+#endif /* CSKitHeader_h */

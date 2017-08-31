@@ -11,12 +11,12 @@
 
 
 #if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSKitMacro.h>
+#import <CSkit/CSMacrosHeader.h>
 #import <CSkit/UIDevice+Extended.h>
 #import <CSkit/CSTextArchiver.h>
 #import <CSkit/UIFont+Extended.h>
 #else
-#import "CSKitMacro.h"
+#import "CSMacrosHeader.h"
 #import "UIDevice+Extended.h"
 #import "CSTextArchiver.h"
 #import "UIFont+Extended.h"

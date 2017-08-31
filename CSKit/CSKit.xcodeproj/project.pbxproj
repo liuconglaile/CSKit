@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		041C748C1F57EA19005613F5 /* CSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C748B1F57EA19005613F5 /* CSKit.m */; };
-		041C748F1F57EA2E005613F5 /* CSKitMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C748E1F57EA2E005613F5 /* CSKitMacro.m */; };
 		044DECA91F46F0D90021870A /* CSHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 044DECA41F46F0D90021870A /* CSHTTPSessionManager.m */; };
 		044DECAA1F46F0D90021870A /* CSNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 044DECA61F46F0D90021870A /* CSNetworkCache.m */; };
 		044DECAB1F46F0D90021870A /* CSNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 044DECA81F46F0D90021870A /* CSNetworking.m */; };
@@ -205,10 +203,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		041C748A1F57EA19005613F5 /* CSKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKit.h; sourceTree = "<group>"; };
-		041C748B1F57EA19005613F5 /* CSKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSKit.m; sourceTree = "<group>"; };
-		041C748D1F57EA2E005613F5 /* CSKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKitMacro.h; sourceTree = "<group>"; };
-		041C748E1F57EA2E005613F5 /* CSKitMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSKitMacro.m; sourceTree = "<group>"; };
+		041C74901F57ECBD005613F5 /* CSKitHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKitHeader.h; sourceTree = "<group>"; };
+		041C74911F57ED34005613F5 /* CSMacrosHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMacrosHeader.h; sourceTree = "<group>"; };
 		044DECA31F46F0D90021870A /* CSHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSHTTPSessionManager.h; sourceTree = "<group>"; };
 		044DECA41F46F0D90021870A /* CSHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSHTTPSessionManager.m; sourceTree = "<group>"; };
 		044DECA51F46F0D90021870A /* CSNetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNetworkCache.h; sourceTree = "<group>"; };
@@ -592,10 +588,8 @@
 		041C74891F57EA00005613F5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				041C748D1F57EA2E005613F5 /* CSKitMacro.h */,
-				041C748E1F57EA2E005613F5 /* CSKitMacro.m */,
-				041C748A1F57EA19005613F5 /* CSKit.h */,
-				041C748B1F57EA19005613F5 /* CSKit.m */,
+				041C74901F57ECBD005613F5 /* CSKitHeader.h */,
+				041C74911F57ED34005613F5 /* CSMacrosHeader.h */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1539,7 +1533,6 @@
 				200E92561F2B7F5D004A3800 /* ViewController.m in Sources */,
 				200E93D91F2B819D004A3800 /* CSTextInput.m in Sources */,
 				200E93B81F2B819D004A3800 /* UIScrollView+Extended.m in Sources */,
-				041C748C1F57EA19005613F5 /* CSKit.m in Sources */,
 				200E939A1F2B819D004A3800 /* NSObject+Extended.m in Sources */,
 				200E92531F2B7F5D004A3800 /* AppDelegate.m in Sources */,
 				200E93C11F2B819D004A3800 /* UIViewController+Extended.m in Sources */,
@@ -1586,7 +1579,6 @@
 				20612C611F2F8B66006E1715 /* CSProgressIndicatorView.m in Sources */,
 				20612C431F2F893E006E1715 /* CSImageBrowserFlowLayout.m in Sources */,
 				200E93A01F2B819D004A3800 /* NSThread+Extended.m in Sources */,
-				041C748F1F57EA2E005613F5 /* CSKitMacro.m in Sources */,
 				200E93EE1F2B819D004A3800 /* CSKeychain.m in Sources */,
 				200E94011F2B81AB004A3800 /* CSTestTableController.m in Sources */,
 				0468DD461F30717A00925E87 /* CSNetworkTool.m in Sources */,

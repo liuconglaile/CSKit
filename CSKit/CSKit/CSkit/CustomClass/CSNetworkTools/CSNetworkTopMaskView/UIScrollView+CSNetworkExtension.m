@@ -14,14 +14,14 @@
 #import <AFNetworkReachabilityManager.h>
 #import <CSkit/CSNetworkTopMaskView.h>
 #import <CSkit/CSNetworkModel.h>
-#import <CSkit/CSKit.h>
+#import <CSkit/CSKitHeader.h>
 #else
 #import "AFNetworkReachabilityManager.h"
 #import "CSNetworkTopMaskView.h"
 #import "CSNetworkModel.h"
 
 
-#import "CSKit.h"
+#import "CSKitHeader.h"
 #endif
 
 

@@ -9,7 +9,7 @@
 #import "CSTextView.h"
 
 #if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSKitMacro.h>
+#import <CSkit/CSMacrosHeader.h>
 #import <CSkit/NSObject+CGUtilities.h>
 #import <CSkit/UIPasteboard+CSText.h>
 #import <CSkit/NSAttributedString+CSText.h>
@@ -32,7 +32,7 @@
 #import <CSkit/CSWeakProxy.h>
 #import <CSkit/CSTextAttribute.h>
 #else
-#import "CSKitMacro.h"
+#import "CSMacrosHeader.h"
 #import "NSObject+CGUtilities.h"
 #import "UIPasteboard+CSText.h"
 #import "NSAttributedString+CSText.h"
