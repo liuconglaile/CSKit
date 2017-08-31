@@ -110,24 +110,27 @@ s.source       = { :git => "https://github.com/liuconglaile/CSKit.git", :tag => 
 
 
 s.source_files   =  "CSKit/CSKit/CSKit/*"
-
+s.public_header_files = 'CSKit/CSKit/CSKit/*.{h}'
 
 s.subspec 'Cache' do |ss|
     ss.source_files = 'CSKit/CSKit/CSKit/Cache/*'
+    ss.public_header_files = 'CSKit/CSKit/CSKit/Cache/*.{h}'
 end
 
 
 s.subspec 'CSBaseClass' do |ss|
     ss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSBaseClass/*'
+    ss.public_header_files = 'CSKit/CSKit/CSKit/CustomClass/CSBaseClass/*.{h}'
 end
 
 
 
 s.subspec 'CSPopupController' do |ss|
     ss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSPopupController/*'
-
+    ss.public_header_files = 'CSKit/CSKit/CSKit/CustomClass/CSPopupController/*.{h}'
     ss.subspec 'CustomView' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSPopupController/Classes/CustomView/*'
+        sss.public_header_files = 'CSKit/CSKit/CSKit/CustomClass/CSPopupController/Classes/CustomView/*.{h}'
     end
 end
 
@@ -136,15 +139,18 @@ end
 
 s.subspec 'CSIndicator' do |ss|
     ss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/*'
-
+    ss.public_header_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/*.{h}'
     ss.subspec 'CSNotificationIndicator' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSNotificationIndicator/*'
+        sss.public_header_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSNotificationIndicator/*.{h}'
     end
     ss.subspec 'CSProgressIndicator' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/*'
+        sss.public_header_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/*.{h}'
     end
     ss.subspec 'CSToastIndicator' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSToastIndicator/*'
+        sss.public_header_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSToastIndicator/*.{h}'
     end
 end
 
@@ -152,15 +158,18 @@ end
 
 s.subspec 'CSImageBrowser' do |ss|
     ss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/*'
-
+    ss.public_header_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/*.{h}'
     ss.subspec 'Category' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Category/*'
+        sss.public_header_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Category/*.{h}'
     end
     ss.subspec 'Model' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Model/*'
+        sss.public_header_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Model/*.{h}'
     end
     ss.subspec 'View' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/View/*'
+        sss.public_header_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/View/*.{h}'
     end
 end
 
@@ -169,35 +178,43 @@ end
 
 s.subspec 'CSPhotoGroupView' do |ss|
     ss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSPhotoGroupView/*'
+    ss.public_header_files = 'CSKit/CSKit/CSKit/CustomClass/CSPhotoGroupView/*.{h}'
 end
 
 
 s.subspec 'UITableViewProtocol' do |ss|
     ss.source_files = 'CSKit/CSKit/CSKit/CustomClass/UITableViewProtocol/*'
+    ss.public_header_files = 'CSKit/CSKit/CSKit/CustomClass/UITableViewProtocol/*.{h}'
 end
 
 
 s.subspec 'Utility' do |ss|
     ss.source_files = 'CSKit/CSKit/CSKit/Utility/*'
+    ss.public_header_files = 'CSKit/CSKit/CSKit/Utility/*.{h}'
 end
 
 s.subspec 'Text' do |ss|
     ss.subspec 'Component' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/Text/Component/*'
+        sss.public_header_files = 'CSKit/CSKit/CSKit/Text/Component/*.{h}'
     end
     ss.subspec 'String' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/Text/String/*'
+        sss.public_header_files = 'CSKit/CSKit/CSKit/Text/String/*.{h}'
     end
     ss.subspec 'UseClass' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/Text/UseClass/*'
+        sss.public_header_files = 'CSKit/CSKit/CSKit/Text/UseClass/*.{h}'
     end
 end
 
 
 s.subspec 'Model' do |ss|
     ss.source_files = 'CSKit/CSKit/CSKit/Model/*'
+    ss.public_header_files = 'CSKit/CSKit/CSKit/Model/*.{h}'
     ss.subspec 'Unicode' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/Model/Unicode/*'
+        sss.public_header_files = 'CSKit/CSKit/CSKit/Model/Unicode/*.{h}'
     end
 end
 
@@ -205,8 +222,10 @@ end
 
 s.subspec 'Image' do |ss|
     ss.source_files = 'CSKit/CSKit/CSKit/Image/*'
+    ss.public_header_files = 'CSKit/CSKit/CSKit/Image/*.{h}'
     ss.subspec 'Categories' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/Image/Categories/*'
+        sss.public_header_files = 'CSKit/CSKit/CSKit/Image/Categories/*.{h}'
     end
 end
 
@@ -215,15 +234,19 @@ end
 s.subspec 'Extended' do |ss|
     ss.subspec 'Foundation' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/Extended/Foundation/*'
+        sss.public_header_files = 'CSKit/CSKit/CSKit/Extended/Foundation/*.{h}'
     end
     ss.subspec 'Macro' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/Extended/Macro/*'
+        sss.public_header_files = 'CSKit/CSKit/CSKit/Extended/Macro/*.{h}'
     end
     ss.subspec 'Quartz' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/Extended/Quartz/*'
+        sss.public_header_files = 'CSKit/CSKit/CSKit/Extended/Quartz/*.{h}'
     end
     ss.subspec 'UIKit' do |sss|
         sss.source_files = 'CSKit/CSKit/CSKit/Extended/UIKit/*'
+        sss.public_header_files = 'CSKit/CSKit/CSKit/Extended/UIKit/*.{h}'
     end
 end
 
