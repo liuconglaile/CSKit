@@ -78,33 +78,157 @@ s.source       = { :git => "https://github.com/liuconglaile/CSKit.git", :tag => 
 #  不包括public_header_files将使所有标题公开.
 #
 
-s.source_files   =  "CSKit/CSKit/CSKit/*" ,
-"CSKit/CSKit/CSKit/Cache/*" ,
-"CSKit/CSKit/CSKit/CustomClass/CSBaseClass/*" ,
-"CSKit/CSKit/CSKit/CustomClass/CSPopupController/*" ,
-"CSKit/CSKit/CSKit/CustomClass/CSPopupController/Classes/CustomView/*" ,
-"CSKit/CSKit/CSKit/CustomClass/CSIndicator/*" ,
-"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSNotificationIndicator/*" ,
-"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/*" ,
-"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSToastIndicator/*" ,
-"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/*" ,
-"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Category/*" ,
-"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Model/*" ,
-"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/View/*" ,
-"CSKit/CSKit/CSKit/CustomClass/CSPhotoGroupView/*" ,
-"CSKit/CSKit/CSKit/CustomClass/UITableViewProtocol/*" ,
-"CSKit/CSKit/CSKit/Extended/Foundation/*" ,
-"CSKit/CSKit/CSKit/Extended/Macro/*" ,
-"CSKit/CSKit/CSKit/Extended/Quartz/*" ,
-"CSKit/CSKit/CSKit/Extended/UIKit/*" ,
-"CSKit/CSKit/CSKit/Image/*" ,
-"CSKit/CSKit/CSKit/Image/Categories/*" ,
-"CSKit/CSKit/CSKit/Model/*" ,
-"CSKit/CSKit/CSKit/Model/Unicode/*" ,
-"CSKit/CSKit/CSKit/Text/Component/*" ,
-"CSKit/CSKit/CSKit/Text/String/*" ,
-"CSKit/CSKit/CSKit/Text/UseClass/*" ,
-"CSKit/CSKit/CSKit/Utility/*" ,
+#s.source_files   =  "CSKit/CSKit/CSKit/*" ,
+#"CSKit/CSKit/CSKit/Cache/*" ,
+#"CSKit/CSKit/CSKit/CustomClass/CSBaseClass/*" ,
+#"CSKit/CSKit/CSKit/CustomClass/CSPopupController/*" ,
+#"CSKit/CSKit/CSKit/CustomClass/CSPopupController/Classes/CustomView/*" ,
+#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/*" ,
+#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSNotificationIndicator/*" ,
+#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/*" ,
+#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSToastIndicator/*" ,
+#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/*" ,
+#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Category/*" ,
+#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Model/*" ,
+#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/View/*" ,
+#"CSKit/CSKit/CSKit/CustomClass/CSPhotoGroupView/*" ,
+#"CSKit/CSKit/CSKit/CustomClass/UITableViewProtocol/*" ,
+#"CSKit/CSKit/CSKit/Extended/Foundation/*" ,
+#"CSKit/CSKit/CSKit/Extended/Macro/*" ,
+#"CSKit/CSKit/CSKit/Extended/Quartz/*" ,
+#"CSKit/CSKit/CSKit/Extended/UIKit/*" ,
+#"CSKit/CSKit/CSKit/Image/*" ,
+#"CSKit/CSKit/CSKit/Image/Categories/*" ,
+#"CSKit/CSKit/CSKit/Model/*" ,
+#"CSKit/CSKit/CSKit/Model/Unicode/*" ,
+#"CSKit/CSKit/CSKit/Text/Component/*" ,
+#"CSKit/CSKit/CSKit/Text/String/*" ,
+#"CSKit/CSKit/CSKit/Text/UseClass/*" ,
+#"CSKit/CSKit/CSKit/Utility/*" ,
+
+
+
+
+s.source_files   =  "CSKit/CSKit/CSKit/*"
+
+
+s.subspec 'Cache' do |ss|
+    ss.source_files = 'CSKit/CSKit/CSKit/Cache/*'
+end
+
+
+s.subspec 'CSBaseClass' do |ss|
+    ss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSBaseClass/*'
+end
+
+
+
+s.subspec 'CSPopupController' do |ss|
+    ss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSPopupController/*'
+
+    ss.subspec 'CustomView' do |sss|
+        sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSPopupController/Classes/CustomView/*'
+    end
+end
+
+
+
+
+s.subspec 'CSIndicator' do |ss|
+    ss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/*'
+
+    ss.subspec 'CSNotificationIndicator' do |sss|
+        sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSNotificationIndicator/*'
+    end
+    ss.subspec 'CSProgressIndicator' do |sss|
+        sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/*'
+    end
+    ss.subspec 'CSToastIndicator' do |sss|
+        sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSToastIndicator/*'
+    end
+end
+
+
+
+s.subspec 'CSImageBrowser' do |ss|
+    ss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/*'
+
+    ss.subspec 'Category' do |sss|
+        sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Category/*'
+    end
+    ss.subspec 'Model' do |sss|
+        sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Model/*'
+    end
+    ss.subspec 'View' do |sss|
+        sss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/View/*'
+    end
+end
+
+
+
+
+s.subspec 'CSPhotoGroupView' do |ss|
+    ss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSPhotoGroupView/*'
+end
+
+
+s.subspec 'UITableViewProtocol' do |ss|
+    ss.source_files = 'CSKit/CSKit/CSKit/CustomClass/UITableViewProtocol/*'
+end
+
+
+s.subspec 'Utility' do |ss|
+    ss.source_files = 'CSKit/CSKit/CSKit/Utility/*'
+end
+
+s.subspec 'Text' do |ss|
+    ss.subspec 'Component' do |sss|
+        sss.source_files = 'CSKit/CSKit/CSKit/Text/Component/*'
+    end
+    ss.subspec 'String' do |sss|
+        sss.source_files = 'CSKit/CSKit/CSKit/Text/String/*'
+    end
+    ss.subspec 'UseClass' do |sss|
+        sss.source_files = 'CSKit/CSKit/CSKit/Text/UseClass/*'
+    end
+end
+
+
+s.subspec 'Model' do |ss|
+    ss.source_files = 'CSKit/CSKit/CSKit/Model/*'
+    ss.subspec 'Unicode' do |sss|
+        sss.source_files = 'CSKit/CSKit/CSKit/Model/Unicode/*'
+    end
+end
+
+
+
+s.subspec 'Image' do |ss|
+    ss.source_files = 'CSKit/CSKit/CSKit/Image/*'
+    ss.subspec 'Categories' do |sss|
+        sss.source_files = 'CSKit/CSKit/CSKit/Image/Categories/*'
+    end
+end
+
+
+
+s.subspec 'Extended' do |ss|
+    ss.subspec 'Foundation' do |sss|
+        sss.source_files = 'CSKit/CSKit/CSKit/Extended/Foundation/*'
+    end
+    ss.subspec 'Macro' do |sss|
+        sss.source_files = 'CSKit/CSKit/CSKit/Extended/Macro/*'
+    end
+    ss.subspec 'Quartz' do |sss|
+        sss.source_files = 'CSKit/CSKit/CSKit/Extended/Quartz/*'
+    end
+    ss.subspec 'UIKit' do |sss|
+        sss.source_files = 'CSKit/CSKit/CSKit/Extended/UIKit/*'
+    end
+end
+
+
+
 
 #s.exclude_files = "CSKit/CSKit"
 
