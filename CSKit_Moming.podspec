@@ -109,8 +109,8 @@ s.source       = { :git => "https://github.com/liuconglaile/CSKit.git", :tag => 
 
 
 
-s.source_files   =  "CSKit/CSKit/CSKit//**/*"
-s.public_header_files = 'CSKit/CSKit/CSKit//**/*.{h}'
+s.source_files   =  "CSKit/CSKit/CSKit/**/*"
+s.public_header_files = 'CSKit/CSKit/CSKit/**/*.{h}'
 
 
 #s.subspec 'Base' do |ss|
