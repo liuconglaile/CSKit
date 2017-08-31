@@ -78,34 +78,6 @@ s.source       = { :git => "https://github.com/liuconglaile/CSKit.git", :tag => 
 #  不包括public_header_files将使所有标题公开.
 #
 
-#s.source_files   =  "CSKit/CSKit/CSKit/*" ,
-#"CSKit/CSKit/CSKit/Cache/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSBaseClass/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSPopupController/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSPopupController/Classes/CustomView/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSNotificationIndicator/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSToastIndicator/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Category/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Model/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/View/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSPhotoGroupView/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/UITableViewProtocol/*" ,
-#"CSKit/CSKit/CSKit/Extended/Foundation/*" ,
-#"CSKit/CSKit/CSKit/Extended/Macro/*" ,
-#"CSKit/CSKit/CSKit/Extended/Quartz/*" ,
-#"CSKit/CSKit/CSKit/Extended/UIKit/*" ,
-#"CSKit/CSKit/CSKit/Image/*" ,
-#"CSKit/CSKit/CSKit/Image/Categories/*" ,
-#"CSKit/CSKit/CSKit/Model/*" ,
-#"CSKit/CSKit/CSKit/Model/Unicode/*" ,
-#"CSKit/CSKit/CSKit/Text/Component/*" ,
-#"CSKit/CSKit/CSKit/Text/String/*" ,
-#"CSKit/CSKit/CSKit/Text/UseClass/*" ,
-#"CSKit/CSKit/CSKit/Utility/*" ,
-
 
 
 
