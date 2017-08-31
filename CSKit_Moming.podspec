@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "CSKit_Moming"
-s.version      = "1.1.6"
+s.version      = "1.1.7"
 s.summary      = "CSKit.Integration of some commonly used tools and controls,Write it casually."
 
 # 此描述用于生成标签并改进搜索结果.
