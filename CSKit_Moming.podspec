@@ -15,6 +15,7 @@ s.platform       = :ios, "8.2"
 s.source       = { :git => "https://github.com/liuconglaile/CSKit.git", :tag => "#{s.version}" }
 s.source_files   =  "CSKit/CSKit/CSKit/**/*"
 s.public_header_files = 'CSKit/CSKit/CSKit/**/*.{h}'
+s.resource = "CSKit/CSKit/CSKit/CSkit/CustomClass/CSNetworkTools/CSNetworkTopMaskView/CSNetworkTools.bundle"
 s.libraries    = "sqlite3", "z"
 s.requires_arc = true
 s.dependency "AFNetworking"
