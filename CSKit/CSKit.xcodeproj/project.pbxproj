@@ -22,7 +22,6 @@
 		04BC90671F590000005633BF /* CSNetworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BC90641F590000005633BF /* CSNetworkModel.m */; };
 		04BC906E1F59002E005633BF /* CSNetworkTool+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BC906B1F59002E005633BF /* CSNetworkTool+Extension.m */; };
 		04BC906F1F59002E005633BF /* CSNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BC906D1F59002E005633BF /* CSNetworkTool.m */; };
-		04BC90711F5900DA005633BF /* CSNetworkTools.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BC90701F5900DA005633BF /* CSNetworkTools.xcassets */; };
 		04FE72A71F40389800220061 /* NSData+JKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE72A61F40389800220061 /* NSData+JKBase64.m */; };
 		04FE72AA1F4038B300220061 /* NSString+JKEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE72A91F4038B300220061 /* NSString+JKEncrypt.m */; };
 		04FE72AD1F4038CA00220061 /* NSData+JKEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE72AC1F4038CA00220061 /* NSData+JKEncrypt.m */; };
@@ -235,7 +234,6 @@
 		04BC906B1F59002E005633BF /* CSNetworkTool+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CSNetworkTool+Extension.m"; sourceTree = "<group>"; };
 		04BC906C1F59002E005633BF /* CSNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNetworkTool.h; sourceTree = "<group>"; };
 		04BC906D1F59002E005633BF /* CSNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNetworkTool.m; sourceTree = "<group>"; };
-		04BC90701F5900DA005633BF /* CSNetworkTools.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CSNetworkTools.xcassets; sourceTree = "<group>"; };
 		04FE72A51F40389800220061 /* NSData+JKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JKBase64.h"; sourceTree = "<group>"; };
 		04FE72A61F40389800220061 /* NSData+JKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JKBase64.m"; sourceTree = "<group>"; };
 		04FE72A81F4038B300220061 /* NSString+JKEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKEncrypt.h"; sourceTree = "<group>"; };
@@ -642,7 +640,6 @@
 				04BC90621F590000005633BF /* CSNetworkModel+Extension.m */,
 				04BC90631F590000005633BF /* CSNetworkModel.h */,
 				04BC90641F590000005633BF /* CSNetworkModel.m */,
-				04BC90701F5900DA005633BF /* CSNetworkTools.xcassets */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1421,7 +1418,6 @@
 			files = (
 				20612C601F2F8B66006E1715 /* CSProgressIndicatorImage.bundle in Resources */,
 				200E925E1F2B7F5D004A3800 /* LaunchScreen.storyboard in Resources */,
-				04BC90711F5900DA005633BF /* CSNetworkTools.xcassets in Resources */,
 				200E925B1F2B7F5D004A3800 /* Assets.xcassets in Resources */,
 				200E94041F2B81AB004A3800 /* data.plist in Resources */,
 				200E92591F2B7F5D004A3800 /* Main.storyboard in Resources */,
