@@ -29,14 +29,15 @@
 
 
 + (NSURLSessionDataTask *)sendExtensionRequest:(CSNetworkModel *)requestModel
-                                       success:(CSLoadSuccessBlock)successBlock
-                                       failure:(CSLoadFailureBlock)failureBlock;
+                                      Progress:(CSProgress)aProgress
+                                       success:(CSSuccess)successBlock
+                                       failure:(CSFailure)failureBlock;
 
 
 + (NSURLSessionDataTask *)sendExtensionRequest:(CSNetworkModel *)requestModel
                                      jsonClass:(Class)aJsonClass
-                                       success:(CSLoadSuccessBlock)successBlock
-                                       failure:(CSLoadFailureBlock)failureBlock;
+                                       success:(CSSuccess)successBlock
+                                       failure:(CSFailure)failureBlock;
 
 
 

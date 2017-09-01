@@ -20,4 +20,20 @@ s.requires_arc = true
 s.dependency "AFNetworking"
 s.dependency "MJRefresh"
 
+s.subspec 'Base' do |sp|
+    sp.source_files   =  "CSKit/CSKit/CSKit/Base/**/*"
+    sp.public_header_files = 'CSKit/CSKit/CSKit/Base/**/*.{h}'
+end
+
+s.subspec 'Cache' do |sp|
+    sp.source_files   =  "CSKit/CSKit/CSKit/Cache/**/*"
+    sp.public_header_files = 'CSKit/CSKit/CSKit/Cache/**/*.{h}'
+end
+
+s.subspec 'Cache' do |sp|
+    sp.source_files   =  "CSKit/CSKit/CSKit/Cache/**/*"
+    sp.public_header_files = 'CSKit/CSKit/CSKit/Cache/**/*.{h}'
+end
+
+
 end

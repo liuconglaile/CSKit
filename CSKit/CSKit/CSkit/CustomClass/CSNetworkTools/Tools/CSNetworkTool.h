@@ -10,24 +10,35 @@
 #import "CSNetworkModel.h"
 
 
-typedef void (^CSLoadSuccessBlock) (id returnValue);
-typedef void (^CSLoadFailureBlock) (NSError * error);
+//typedef void (^CSLoadSuccessBlock) (id returnValue);
+//typedef void (^CSLoadFailureBlock) (NSError * error);
+
+
+typedef void (^CSProgress)(NSProgress *downloadProgress);
+typedef void (^CSSuccess)(id responseObject);
+typedef void (^CSFailure)(NSError   *error);
+
+
 
 
 @interface CSNetworkTool : NSObject
 
 
+
 /**
- http 发送请求入口
+ 发起请求入口
 
  @param requestModel 请求模型
- @param successBlock 成功回调
- @param failureBlock 失败回调
+ @param aProgress 请求进度
+ @param aSuccess 请求成功回调
+ @param aFailure 请求失败回调
  @return 请求体
  */
-+ (NSURLSessionDataTask *)sendOKRequest:(CSNetworkModel *)requestModel
-                                success:(CSLoadSuccessBlock)successBlock
-                                failure:(CSLoadFailureBlock)failureBlock;
++ (NSURLSessionDataTask *)sendRequest:(CSNetworkModel *)requestModel
+                             Progress:(CSProgress)aProgress
+                              Success:(CSSuccess)aSuccess
+                              Failure:(CSFailure)aFailure;
+
 
 /**
  取消全局请求管理数组中所有请求操作

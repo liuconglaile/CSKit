@@ -14,7 +14,6 @@
 #import "NSString+Extended.h"
 
 #import "CSKitHeader.h"
-#import <MJRefresh/MJRefresh.h>
 
 //重复请求次数key
 static char const * const kRequestTimeCountKey    = "kRequestTimeCountKey";
@@ -50,20 +49,22 @@ static char const * const kRequestTimeCountKey    = "kRequestTimeCountKey";
 
 + (NSURLSessionDataTask *)sendExtensionRequest:(CSNetworkModel *)requestModel
                                      jsonClass:(Class)aJsonClass
-                                       success:(CSLoadSuccessBlock)successBlock
-                                       failure:(CSLoadFailureBlock)failureBlock{
+                                       success:(CSSuccess)successBlock
+                                       failure:(CSFailure)failureBlock{
     
-    return [CSNetworkTool sendOKRequest:requestModel success:^(id returnValue) {
+    
+    return [CSNetworkTool sendRequest:requestModel Progress:^(NSProgress *downloadProgress) {
         
-        if (returnValue) { // 请求数据判断
-            CSNSLog(@"请求的数据：%@",returnValue);
+    } Success:^(id responseObject) {
+        if (responseObject) { // 请求数据判断
+            CSNSLog(@"请求的数据：%@",responseObject);
         } else {
             CSNSLog(@" 请求数据为空");
             failureBlock([NSError errorWithDomain:@"数据解析失败!" code:110 userInfo:nil]);
         }
         NSDictionary *dic = nil;
-        if ([returnValue isKindOfClass:[NSDictionary class]]) {
-            dic = returnValue;
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            dic = responseObject;
         }
         BOOL isError = [[dic valueForKey:kNetworkCodeKey] integerValue] == 1;
         if (isError) { //判断返回的数据是否为错误信息
@@ -90,8 +91,7 @@ static char const * const kRequestTimeCountKey    = "kRequestTimeCountKey";
             id modelDataArr = [NSArray modelArrayWithClass:aJsonClass json:tempJson];
             successBlock(modelDataArr);
         }
-        
-    } failure:^(NSError *error) {
+    } Failure:^(NSError *error) {
         failureBlock(error);
     }];
 }
@@ -105,8 +105,9 @@ static char const * const kRequestTimeCountKey    = "kRequestTimeCountKey";
  @return 返回当前请求的对象
  */
 + (NSURLSessionDataTask *)sendExtensionRequest:(CSNetworkModel *)requestModel
-                                       success:(CSLoadSuccessBlock)successBlock
-                                       failure:(CSLoadFailureBlock)failureBlock
+                                      Progress:(CSProgress)aProgress
+                                       success:(CSSuccess)successBlock
+                                       failure:(CSFailure)failureBlock
 {
     //失败回调
     void (^failResultBlock)(NSError *) = ^(NSError *error){
@@ -192,21 +193,7 @@ static char const * const kRequestTimeCountKey    = "kRequestTimeCountKey";
             
             /** <3>.是否需要缓存 */
             if (isCacheData == NO && requestModel.requestCachePolicy == CSNetworkStoreCachePolicy) {
-                
-                
-                
-//                NSData  *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
-//                NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-//                NSData * data = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
-                
-//                NSDictionary* data = @{};
-//                if ([responseObject isKindOfClass:[NSString class]]) {
-//                    NSString* dataString = (NSString*)responseObject;
-//                    data = [dataString dictionaryValue];
-//                }else{
-//                
-//                }
-                
+      
                 if (responseObject) { //保存数据到数据库
                     
                     NSString *cachekey = [self getCacheKeyByRequestUrl:requestModel.requestUrl parameter:requestModel.parameters];//缓存key
@@ -215,8 +202,7 @@ static char const * const kRequestTimeCountKey    = "kRequestTimeCountKey";
                     [cache setObject:responseObject forKey:cachekey withBlock:^{
                         CSNSLog(@"缓存文件成功~~~~:%@",cachekey);
                     }];
-                    
-                    //[OKFMDBTool saveDataToDB:data byObjectId:cachekey toTable:JsonDataTableType];
+
                 }
             }
             
@@ -232,7 +218,7 @@ static char const * const kRequestTimeCountKey    = "kRequestTimeCountKey";
         CSCache* cache = [CSCache cacheWithName:@"CSNetworkTool"];
         
         [cache objectForKey:cachekey withBlock:^(NSString * _Nonnull key, id<NSCoding>  _Nonnull object) {
-            CSNSLog(@"请求接口基地址= %@\n\n请求参数= %@\n\n缓存数据成功返回= %@",requestModel.requestUrl,requestModel.parameters,object);
+            //CSNSLog(@"请求接口基地址= %@\n\n请求参数= %@\n\n缓存数据成功返回= %@",requestModel.requestUrl,requestModel.parameters,object);
             if (object) {
                 succResultBlock(object,YES);
             }
@@ -250,11 +236,11 @@ static char const * const kRequestTimeCountKey    = "kRequestTimeCountKey";
     __block NSURLSessionDataTask *sessionDataTask = nil;
     
     //发送网络请求,二次封装入口
-    sessionDataTask = [CSNetworkTool sendOKRequest:requestModel success:^(id returnValue) {
-        succResultBlock(returnValue, NO);
-        
-    } failure:^(NSError *error) {
-        
+    sessionDataTask = [CSNetworkTool sendRequest:requestModel Progress:^(NSProgress *downloadProgress) {
+        aProgress(downloadProgress);
+    } Success:^(id responseObject) {
+        succResultBlock(responseObject, NO);
+    } Failure:^(NSError *error) {
         if (!requestModel.attemptRequestWhenFail) {
             
             NSInteger countNum = [objc_getAssociatedObject(requestModel, kRequestTimeCountKey) integerValue];
@@ -264,8 +250,8 @@ static char const * const kRequestTimeCountKey    = "kRequestTimeCountKey";
                 
                 //给requestModel关联一个重复请求次数的key
                 objc_setAssociatedObject(requestModel, kRequestTimeCountKey, @(countNum), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-                sessionDataTask = [CSNetworkTool sendExtensionRequest:requestModel success:successBlock failure:failureBlock];
-                
+                //sessionDataTask = [CSNetworkTool sendExtensionRequest:requestModel success:successBlock failure:failureBlock];
+                sessionDataTask = [CSNetworkTool sendExtensionRequest:requestModel Progress:aProgress success:successBlock failure:failureBlock];
             } else {
                 failResultBlock(error);
             }
@@ -274,6 +260,7 @@ static char const * const kRequestTimeCountKey    = "kRequestTimeCountKey";
             failResultBlock(error);
         }
     }];
+    
     return sessionDataTask;
 }
 
