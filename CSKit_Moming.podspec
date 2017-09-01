@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "CSKit_Moming"
-s.version      = "1.2.0"
+s.version      = "1.2.1"
 s.summary      = "CSKit.Integration of some commonly used tools and controls,Write it casually."
 s.homepage      = "https://github.com/liuconglaile/CSKit"
 s.license        = "MIT"
