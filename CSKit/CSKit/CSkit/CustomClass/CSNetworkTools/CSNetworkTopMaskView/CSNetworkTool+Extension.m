@@ -14,6 +14,7 @@
 #import "NSString+Extended.h"
 
 #import "CSKitHeader.h"
+#import <MJRefresh/MJRefresh.h>
 
 //重复请求次数key
 static char const * const kRequestTimeCountKey    = "kRequestTimeCountKey";
