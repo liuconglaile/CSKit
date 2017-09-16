@@ -7,13 +7,24 @@
 //
 
 #import "UIScrollView+CSNetworkExtension.h"
+
+
+
+#if __has_include(<CSkit/CSkit.h>)
+#import <AFNetworkReachabilityManager.h>
+#import <CSkit/CSNetworkTopMaskView.h>
+#import <CSkit/CSNetworkModel.h>
+#import <CSkit/CSKitHeader.h>
+#else
 #import "AFNetworkReachabilityManager.h"
 #import "CSNetworkTopMaskView.h"
 #import "CSNetworkModel.h"
 
+#import <MJRefresh/MJRefresh.h>
 
-#import "CSKit.h"
 
+#import "CSKitHeader.h"
+#endif
 
 
 
@@ -304,17 +315,17 @@ static char const * const kNetErrorStrKey = "kNetErrorStrKey";
         
     } else if (state == CSTableVieTipStatusEmptyData) { //请求空数据
         tipText = self.emptyString ? : @"暂无数据 ";
-        imageName = self.emptyImageName ? : @"ok_empty_data_icon";
+        imageName = self.emptyImageName ? : @"noData";
         
     } else if (state == CSTableVieTipStatusNoNetwork) { //网络连接失败
         tipText = @"网络开小差, 请稍后再试哦!";
         actionTitle = @"重新加载";
-        imageName = self.errorImageName ? : @"ok_networkfail_icon";
+        imageName = self.errorImageName ? : @"loadingFail";
         
     } else if (state == CSTableVieTipStatusFail) { //请求失败
         tipText = @"加载失败了哦!";
         actionTitle = @"重新加载";
-        imageName = self.errorImageName ? : @"ok_loading_fail_icon";
+        imageName = self.errorImageName ? : @"loadingFail";
     }
     
     //这里防止表格有偏移量，一定要设置y的起始位置为0

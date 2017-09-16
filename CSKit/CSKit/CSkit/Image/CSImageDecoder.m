@@ -17,9 +17,14 @@
 #import <pthread.h>
 #import <zlib.h>
 
-#import "CSImage.h"
-#import "CSKitMacro.h"
 
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+#import <CSkit/CSImage.h>
+#else
+#import "CSMacrosHeader.h"
+#import "CSImage.h"
+#endif
 
 
 #pragma clang diagnostic push

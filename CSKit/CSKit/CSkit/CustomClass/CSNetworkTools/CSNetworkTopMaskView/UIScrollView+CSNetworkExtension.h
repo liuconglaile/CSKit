@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MJRefresh.h"
+#import "CSMacrosHeader.h"
 
 
 /**
@@ -24,6 +24,10 @@ typedef NS_ENUM(NSUInteger, CSTableVieTipStatus) {
     CSTableVieTipStatusFail,
     CSTableVieTipStatusNoNetwork,
 };
+
+
+/** 进入刷新状态的回调 */
+typedef void (^CSRefreshComponentRefreshingBlock)();
 
 
 @interface UIScrollView (CSNetworkExtension)
@@ -63,8 +67,8 @@ typedef NS_ENUM(NSUInteger, CSTableVieTipStatus) {
  @param headerBlock 下拉刷新需要调用的函数
  @param footerBlock 上啦刷新需要调用的函数
  */
-- (void)addheaderRefresh:(MJRefreshComponentRefreshingBlock)headerBlock
-             footerBlock:(MJRefreshComponentRefreshingBlock)footerBlock;
+- (void)addheaderRefresh:(CSRefreshComponentRefreshingBlock)headerBlock
+             footerBlock:(CSRefreshComponentRefreshingBlock)footerBlock;
 
 
 #pragma mark - 处理表格上下拉刷新,分页,添加空白页事件

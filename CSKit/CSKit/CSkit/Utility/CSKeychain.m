@@ -8,9 +8,15 @@
 
 #import "CSKeychain.h"
 #import <Security/Security.h>
-
-#import "CSKitMacro.h"
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+#import <CSkit/UIDevice+Extended.h>
+#else
+#import "CSMacrosHeader.h"
 #import "UIDevice+Extended.h"
+#endif
+
+
 
 
 /**

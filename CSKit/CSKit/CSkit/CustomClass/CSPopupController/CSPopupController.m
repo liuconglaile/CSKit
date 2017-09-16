@@ -8,7 +8,13 @@
 
 #import "CSPopupController.h"
 #import <objc/runtime.h>
-#import "CSKitMacro.h"
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+
+#else
+#import "CSMacrosHeader.h"
+
+#endif
 
 /**
  随机值

@@ -9,9 +9,16 @@
 #import "UIImageView+CSWebImage.h"
 #import <objc/runtime.h>
 
+
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+#import <CSkit/_CSWebImageSetter.h>
+#import <CSkit/CSWebImageOperation.h>
+#else
+#import "CSMacrosHeader.h"
 #import "_CSWebImageSetter.h"
 #import "CSWebImageOperation.h"
-#import "CSKitMacro.h"
+#endif
 
 
 CSSYNTH_DUMMY_CLASS(UIImageView_CSWebImage)

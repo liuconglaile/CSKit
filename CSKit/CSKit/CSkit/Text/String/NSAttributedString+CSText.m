@@ -9,16 +9,32 @@
 #import "NSAttributedString+CSText.h"
 #import <CoreFoundation/CoreFoundation.h>
 
+
+
+
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+#import <CSkit/UIDevice+Extended.h>
+#import <CSkit/UIFont+Extended.h>
+
+#import <CSkit/CSTextArchiver.h>
+#import <CSkit/CSTextUtilities.h>
+#import <CSkit/CSTextRunDelegate.h>
+#import <CSkit/CSAnimatedImageView.h>
+#import <CSkit/NSParagraphStyle+CSText.h>
+#else
+#import "CSMacrosHeader.h"
 #import "UIDevice+Extended.h"
 #import "UIFont+Extended.h"
 
-
-#import "CSKitMacro.h"
 #import "CSTextArchiver.h"
 #import "CSTextUtilities.h"
 #import "CSTextRunDelegate.h"
 #import "CSAnimatedImageView.h"
 #import "NSParagraphStyle+CSText.h"
+
+#endif
+
 
 
 CSSYNTH_DUMMY_CLASS(NSAttributedString_CSText)

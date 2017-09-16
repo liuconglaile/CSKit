@@ -7,9 +7,17 @@
 //
 
 #import "CSTableViewDelegate.h"
+
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+#import <CSkit/CSBaseCell.h>
+#import <CSkit/CSBaseLayoutModel.h>
+#else
+#import "CSMacrosHeader.h"
 #import "CSBaseCell.h"
 #import "CSBaseLayoutModel.h"
-#import "CSKitMacro.h"
+#endif
+
 
 @interface CSTableViewDelegate()
 
@@ -191,8 +199,8 @@
     CSBaseLayoutModel *layout = array[indexPath.row];
     NSString* identifier = layout.reuseIdentifier;
     
-    CSNSLog(@"%@",identifier);
-    CSNSLog(@"我是 cell:---->%@",[tableView dequeueReusableCellWithIdentifier:identifier]);
+    //CSNSLog(@"%@",identifier);
+    //CSNSLog(@"我是 cell:---->%@",[tableView dequeueReusableCellWithIdentifier:identifier]);
     
     
     CSBaseCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];

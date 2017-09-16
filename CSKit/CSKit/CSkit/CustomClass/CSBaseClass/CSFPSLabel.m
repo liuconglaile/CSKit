@@ -7,7 +7,7 @@
 //
 
 #import "CSFPSLabel.h"
-#import "CSKit.h"
+#import "CSKitHeader.h"
 
 #define kSize CGSizeMake(55, 20)
 

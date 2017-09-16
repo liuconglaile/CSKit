@@ -13,32 +13,23 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSObject (KVOExtended)
 
 /**
- Registers a block to receive KVO notifications for the specified key-path
- relative to the receiver.
+ 注册一个块以接收相对于接收器的指定密钥路径的KVO通知.
  
- @discussion The block and block captured objects are retained. Call
- `removeObserverBlocksForKeyPath:` or `removeObserverBlocks` to release.
- 
- @param keyPath The key path, relative to the receiver, of the property to
- observe. This value must not be nil.
- 
- @param block   The block to register for KVO notifications.
+ @discussion    块和块捕获的对象被保留.调用'removeObserverBlocksForKeyPath:'或'removeObserverBlocks'来释放.
+ @param keyPath 跟踪的属性的关键路径,相对于接收者.该值不能为nil.
+ @param block   注册KVO通知的块.
  */
 - (void)addObserverBlockForKeyPath:(NSString*)keyPath block:(void (^)(id _Nonnull obj, _Nullable id oldVal, _Nullable id newVal))block;
 
 /**
- Stops all blocks (associated by `addObserverBlockForKeyPath:block:`) from
- receiving change notifications for the property specified by a given key-path
- relative to the receiver, and release these blocks.
+ 停止所有块(通过'addObserverBlockForKeyPath:block:'关联)从接收到给定密钥路径指定的属性的更改通知,并释放这些块.
  
- @param keyPath A key-path, relative to the receiver, for which blocks is
- registered to receive KVO change notifications.
+ @param keyPath 相对于接收器的密钥路径,哪些块被注册以接收KVO改变通知.
  */
 - (void)removeObserverBlocksForKeyPath:(NSString*)keyPath;
 
 /**
- Stops all blocks (associated by `addObserverBlockForKeyPath:block:`) from
- receiving change notifications, and release these blocks.
+ 停止所有块 (associated by `addObserverBlockForKeyPath:block:`) 接收更改通知,并释放这些块.
  */
 - (void)removeObserverBlocks;
 

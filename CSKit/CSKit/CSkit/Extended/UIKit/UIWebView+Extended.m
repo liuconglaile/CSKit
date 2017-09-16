@@ -11,8 +11,13 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 #import <objc/runtime.h>
 
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+#import <CSkit/NSString+Extended.h>
+#else
+#import "CSMacrosHeader.h"
 #import "NSString+Extended.h"
-#import "CSKitMacro.h"
+#endif
 
 static void (^__loadedBlock)(UIWebView *webView);
 static void (^__failureBlock)(UIWebView *webView, NSError *error);

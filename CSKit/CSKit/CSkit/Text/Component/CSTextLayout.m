@@ -7,13 +7,25 @@
 //
 
 #import "CSTextLayout.h"
+
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+#import <CSkit/UIFont+Extended.h>
+#import <CSkit/CSTextAttribute.h>
+#import <CSkit/NSAttributedString+CSText.h>
+#import <CSkit/NSObject+CGUtilities.h>
+#import <CSkit/CSTextUtilities.h>
+#import <CSkit/CSTextArchiver.h>
+#else
+#import "CSMacrosHeader.h"
 #import "UIFont+Extended.h"
-#import "CSKitMacro.h"
 #import "CSTextAttribute.h"
 #import "NSAttributedString+CSText.h"
 #import "NSObject+CGUtilities.h"
 #import "CSTextUtilities.h"
 #import "CSTextArchiver.h"
+#endif
+
 
 const CGSize CSTextContainerMaxSize = (CGSize){0x100000, 0x100000};
 
@@ -375,6 +387,28 @@ dispatch_semaphore_signal(_lock);
 - (instancetype)_init {
     self = [super init];
     return self;
+}
+
++ (CSTextLayout *)layout:(UIFont *)font color:(UIColor*)color width:(CGFloat )width string:(NSString *)string max:(BOOL)max{
+    
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:string];
+    text.font = font;
+    text.lineSpacing = 5;
+    text.color = color;
+    
+
+    CSTextContainer *container = [CSTextContainer new];
+    container.size = CGSizeMake(width, CGFLOAT_MAX);
+    
+    if (max) {
+        container.maximumNumberOfRows = 0;//最多行数
+    }else{
+        
+        container.maximumNumberOfRows = 5;//最多行数
+    }
+    
+    CSTextLayout *layout = [CSTextLayout layoutWithContainer:container text:text];
+    return layout;
 }
 
 + (CSTextLayout *)layoutWithContainerSize:(CGSize)size text:(NSAttributedString *)text {

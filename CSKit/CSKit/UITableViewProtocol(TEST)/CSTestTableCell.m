@@ -7,7 +7,7 @@
 //
 
 #import "CSTestTableCell.h"
-#import "CSKit.h"
+#import "CSKitHeader.h"
 
 #import "CSTestTableLayout.h"
 #import "CSTestTableModel.h"

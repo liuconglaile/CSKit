@@ -7,7 +7,13 @@
 //
 
 #import "NSDictionary+ShowProperty.h"
-#import "CSKitMacro.h"
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+
+#else
+#import "CSMacrosHeader.h"
+
+#endif
 
 @implementation NSDictionary (ShowProperty)
 

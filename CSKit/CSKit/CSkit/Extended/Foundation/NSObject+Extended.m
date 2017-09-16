@@ -9,8 +9,14 @@
 #import "NSObject+Extended.h"
 #import <objc/objc.h>
 #import <objc/runtime.h>
-#import "CSKitMacro.h"
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+#import <CSkit/NSString+Extended.h>
+#else
+#import "CSMacrosHeader.h"
 #import "NSString+Extended.h"
+#endif
+
 
 /** 默认下载文件存储位置 */
 #define DefaultKeyedArchiverPath @"%@/Library/Caches/DefaultKeyedArchiverPath"

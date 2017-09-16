@@ -7,9 +7,15 @@
 //
 
 #import "UIBezierPath+Extended.h"
-#import "UIFont+Extended.h"
 #import <CoreText/CoreText.h>
-#import "CSKitMacro.h"
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+#import <CSkit/UIFont+Extended.h>
+#else
+#import "CSMacrosHeader.h"
+#import "UIFont+Extended.h"
+#endif
+
 
 CSSYNTH_DUMMY_CLASS(UIBezierPath_YYAdd)
 

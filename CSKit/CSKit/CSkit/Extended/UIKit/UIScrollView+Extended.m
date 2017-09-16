@@ -7,7 +7,13 @@
 //
 
 #import "UIScrollView+Extended.h"
-#import "CSKitMacro.h"
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+
+#else
+#import "CSMacrosHeader.h"
+
+#endif
 
 CSSYNTH_DUMMY_CLASS(UIScrollView_Extended)
 

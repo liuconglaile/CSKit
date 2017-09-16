@@ -7,9 +7,16 @@
 //
 
 #import "NSData+Extended.h"
-#import "CSKitMacro.h"
 #include <CommonCrypto/CommonCrypto.h>
 #include <zlib.h>
+
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+
+#else
+#import "CSMacrosHeader.h"
+
+#endif
 
 CSSYNTH_DUMMY_CLASS(NSData_Extended)
 
@@ -296,6 +303,22 @@ CSSYNTH_DUMMY_CLASS(NSData_Extended)
     }
 }
 
+/*
+ 三端统一
+ 
+ CCCryptorStatus cryptStatus = CCCrypt(kCCDecrypt,
+ kCCAlgorithmAES128,
+ 0x0000,
+ keyPtr,
+ kCCBlockSizeAES128,
+ ivPtr,
+ [data bytes],
+ dataLength,
+ buffer,
+ bufferSize,
+ &numBytesCrypted);
+ */
+
 - (NSData *)aes256DecryptWithkey:(NSData *)key iv:(NSData *)iv {
     
     /**
@@ -338,6 +361,11 @@ CSSYNTH_DUMMY_CLASS(NSData_Extended)
         return nil;
     }
 }
+
+
+
+
+
 
 
 

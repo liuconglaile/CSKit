@@ -1,4 +1,4 @@
-platform :ios, '8.4'
+platform :ios, '8.2'
 
 #//通过指定use_frameworks!要求生成的是framework而不是静态库
 #use_frameworks!
@@ -8,7 +8,7 @@ inhibit_all_warnings!
 
 target 'CSKit' do
 
-pod 'AFNetworking'
+pod 'AFNetworking'#, '~> 3.0.4'
 pod 'MJRefresh'
 
 end

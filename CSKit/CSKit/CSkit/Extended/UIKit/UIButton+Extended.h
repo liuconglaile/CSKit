@@ -29,6 +29,23 @@ typedef NS_ENUM(NSInteger, CSImagePosition) {
 
 @interface UIButton (Extended)
 
+@property (nonatomic, strong) UIFont  *titleFont;
+@property (strong, nonatomic) UIColor *titleColor;
+@property (strong, nonatomic) UIColor *highlightedTitleColor;
+@property (strong, nonatomic) UIColor *selectedTitleColor;
+@property (copy, nonatomic) NSString *title;
+@property (copy, nonatomic) NSString *highlightedTitle;
+@property (copy, nonatomic) NSString *selectedTitle;
+@property (copy, nonatomic) NSString *image;
+@property (copy, nonatomic) NSString *highlightedImage;
+@property (copy, nonatomic) NSString *selectedImage;
+@property (copy, nonatomic) NSString *bgImage;
+@property (copy, nonatomic) NSString *highlightedBgImage;
+@property (copy, nonatomic) NSString *selectedBgImage;
+
+
+
+
 /** 使用颜色设置按钮背景 */
 - (void)setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state;
 

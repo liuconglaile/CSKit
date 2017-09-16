@@ -7,8 +7,15 @@
 //
 
 #import "NSNotificationCenter+Extended.h"
-#import "CSKitMacro.h"
 #include <pthread.h>
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+
+#else
+#import "CSMacrosHeader.h"
+
+#endif
+
 
 CSSYNTH_DUMMY_CLASS(NSNotificationCenter_Extended)
 

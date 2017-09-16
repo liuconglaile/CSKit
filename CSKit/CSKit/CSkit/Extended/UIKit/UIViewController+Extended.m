@@ -10,8 +10,13 @@
 #import <objc/runtime.h>
 #import <StoreKit/StoreKit.h>
 #import <MobileCoreServices/UTCoreTypes.h>
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
 
-#import "CSKitMacro.h"
+#else
+#import "CSMacrosHeader.h"
+
+#endif
 
 static const void *CSBackButtonHandlerKey = &CSBackButtonHandlerKey;
 static const void *UIViewControllerDictionaryBlockKey = &UIViewControllerDictionaryBlockKey;

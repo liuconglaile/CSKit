@@ -8,6 +8,31 @@
 
 #import "CSTextView.h"
 
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+#import <CSkit/NSObject+CGUtilities.h>
+#import <CSkit/UIPasteboard+CSText.h>
+#import <CSkit/NSAttributedString+CSText.h>
+
+#import <CSkit/UIDevice+Extended.h>
+#import <CSkit/UIApplication+Extended.h>
+#import <CSkit/UIView+Layout.h>
+#import <CSkit/UIView+Extended.h>
+
+
+#import <CSkit/CSTextInput.h>
+#import <CSkit/CSTextContainerView.h>
+#import <CSkit/CSTextSelectionView.h>
+#import <CSkit/CSTextMagnifier.h>
+#import <CSkit/CSTextEffectWindow.h>
+#import <CSkit/CSTextKeyboardManager.h>
+#import <CSkit/CSTextUtilities.h>
+#import <CSkit/CSTransaction_Utility.h>
+#import <CSkit/CSImage.h>
+#import <CSkit/CSWeakProxy.h>
+#import <CSkit/CSTextAttribute.h>
+#else
+#import "CSMacrosHeader.h"
 #import "NSObject+CGUtilities.h"
 #import "UIPasteboard+CSText.h"
 #import "NSAttributedString+CSText.h"
@@ -17,7 +42,7 @@
 #import "UIView+Layout.h"
 #import "UIView+Extended.h"
 
-#import "CSKitMacro.h"
+
 #import "CSTextInput.h"
 #import "CSTextContainerView.h"
 #import "CSTextSelectionView.h"
@@ -29,8 +54,7 @@
 #import "CSImage.h"
 #import "CSWeakProxy.h"
 #import "CSTextAttribute.h"
-
-
+#endif
 
 
 

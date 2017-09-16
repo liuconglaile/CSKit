@@ -7,8 +7,14 @@
 //
 
 #import "UIScreen+Extended.h"
+
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+#import <CSkit/UIDevice+Extended.h>
+#else
+#import "CSMacrosHeader.h"
 #import "UIDevice+Extended.h"
-#import "CSKitMacro.h"
+#endif
 
 CSSYNTH_DUMMY_CLASS(UIScreen_Extended);
 

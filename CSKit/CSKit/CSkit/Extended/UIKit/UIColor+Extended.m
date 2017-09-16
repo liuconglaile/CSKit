@@ -7,8 +7,13 @@
 //
 
 #import "UIColor+Extended.h"
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+#import <CSkit/NSString+Extended.h>
+#else
+#import "CSMacrosHeader.h"
 #import "NSString+Extended.h"
-#import "CSKitMacro.h"
+#endif
 
 CSSYNTH_DUMMY_CLASS(UIColor_Extended)
 

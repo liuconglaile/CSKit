@@ -16,8 +16,14 @@
 #include <ifaddrs.h>
 #import <Security/Security.h>
 
-#import "CSKitMacro.h"
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+#import <CSkit/NSString+Extended.h>
+#else
+#import "CSMacrosHeader.h"
 #import "NSString+Extended.h"
+#endif
+
 
 CSSYNTH_DUMMY_CLASS(UIDevice_Extended)
 

@@ -7,10 +7,29 @@
 //
 
 #import "NSString+Extended.h"
+#include <CommonCrypto/CommonCrypto.h>
+#import <CommonCrypto/CommonCryptor.h>
+#import <CommonCrypto/CommonDigest.h>
+#include <zlib.h>
+
+
+#define gkey			@"1234567812345678" //自行修改
+#define gIv             @"1234567812345678" //自行修改
+
+
+
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+#import <CSkit/NSData+Extended.h>
+#import <CSkit/NSNumber+Extended.h>
+#import <CSkit/UIDevice+Extended.h>
+#else
+#import "CSMacrosHeader.h"
 #import "NSData+Extended.h"
 #import "NSNumber+Extended.h"
 #import "UIDevice+Extended.h"
-#import "CSKitMacro.h"
+#import "GTMBase64.h"
+#endif
 
 CSSYNTH_DUMMY_CLASS(NSString_Extended)
 
@@ -76,6 +95,169 @@ CSSYNTH_DUMMY_CLASS(NSString_Extended)
     return decryptedString;
 }
 
+
+
+
+// 32位MD5加密方式
++ (NSString *)getMd5_32Bit_String:(NSString *)srcString isUppercase:(BOOL)isUppercase{
+    const char *cStr = [srcString UTF8String];
+    unsigned char digest[CC_MD5_DIGEST_LENGTH];
+    CC_MD5( cStr, (int)strlen(cStr), digest );
+    NSMutableString *result = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
+        [result appendFormat:@"%02x", digest[i]];
+    
+    if (isUppercase) {
+        return   [result uppercaseString];
+    }else{
+        return result;
+    }
+    
+}
+
+// base64加密和解密
++ (NSString*)encodeBase64String:(NSString * )input {
+    NSData *data = [input dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+    data = [GTMBase64 encodeData:data];
+    NSString *base64String = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    return base64String;
+}
+
++ (NSString*)decodeBase64String:(NSString * )input {
+    
+    NSData *data = [input dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+    data = [GTMBase64 decodeData:data];
+    NSString *base64String = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    return base64String;
+}
+
++ (NSString*)encodeBase64Data:(NSData *)data {
+    data = [GTMBase64 encodeData:data];
+    NSString *base64String = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    return base64String;
+}
+
++ (NSString*)decodeBase64Data:(NSData *)data {
+    data = [GTMBase64 decodeData:data];
+    NSString *base64String = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    return base64String;
+}
+
+
+/**
+ AES128加密数据
+ 
+ @param plainText 明文
+ @param aKey 加密 key, 就是密码
+ @param aIv 补码(偏移量)
+ @return 加密后的字符串
+ */
++(NSString *)AES128Encrypt:(NSString *)plainText AndKey:(NSString*)aKey AndIv:(NSString*)aIv{
+    char keyPtr[kCCKeySizeAES128+1];
+    memset(keyPtr, 0, sizeof(keyPtr));
+    [aKey getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
+    
+    char ivPtr[kCCBlockSizeAES128+1];
+    memset(ivPtr, 0, sizeof(ivPtr));
+    [aIv getCString:ivPtr maxLength:sizeof(ivPtr) encoding:NSUTF8StringEncoding];
+    
+    NSData* data = [plainText dataUsingEncoding:NSUTF8StringEncoding];
+    NSUInteger dataLength = [data length];
+    
+    int diff = kCCKeySizeAES128 - (dataLength % kCCKeySizeAES128);
+    int newSize = 0;
+    
+    if(diff > 0)
+    {
+        
+        newSize = (int)dataLength + diff; // 这里把NSUInteger 强转为 int 类型
+    }
+    
+    char dataPtr[newSize];
+    memcpy(dataPtr, [data bytes], [data length]);
+    for(int i = 0; i < diff; i++)
+    {
+        dataPtr[i + dataLength] = 0x00;
+    }
+    
+    size_t bufferSize = newSize + kCCBlockSizeAES128;
+    void *buffer = malloc(bufferSize);
+    memset(buffer, 0, bufferSize);
+    
+    size_t numBytesCrypted = 0;
+    
+    CCCryptorStatus cryptStatus = CCCrypt(kCCEncrypt,
+                                          kCCAlgorithmAES128,
+                                          0x0000,               //No padding
+                                          keyPtr,
+                                          kCCKeySizeAES128,
+                                          ivPtr,
+                                          dataPtr,
+                                          sizeof(dataPtr),
+                                          buffer,
+                                          bufferSize,
+                                          &numBytesCrypted);
+    
+    if (cryptStatus == kCCSuccess) {
+        NSData *resultData = [NSData dataWithBytesNoCopy:buffer length:numBytesCrypted];
+        return [GTMBase64 stringByEncodingData:resultData];
+    }
+    free(buffer);
+    return nil;
+}
+
+/**
+ AES128解密数据
+ 
+ @param encryptText 密文
+ @param aKey 加密 key, 就是密码
+ @param aIv 补码(偏移量)
+ @return 解密后的字符串
+ */
++(NSString *)AES128Decrypt:(NSString *)encryptText AndKey:(NSString*)aKey AndIv:(NSString*)aIv{
+    char keyPtr[kCCKeySizeAES128 + 1];
+    memset(keyPtr, 0, sizeof(keyPtr));
+    [aKey getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
+    
+    char ivPtr[kCCBlockSizeAES128 + 1];
+    memset(ivPtr, 0, sizeof(ivPtr));
+    [aIv getCString:ivPtr maxLength:sizeof(ivPtr) encoding:NSUTF8StringEncoding];
+    
+    NSData *data = [GTMBase64 decodeData:[encryptText dataUsingEncoding:NSUTF8StringEncoding]];
+    NSUInteger dataLength = [data length];
+    size_t bufferSize = dataLength + kCCBlockSizeAES128;
+    void *buffer = malloc(bufferSize);
+    
+    size_t numBytesCrypted = 0;
+    CCCryptorStatus cryptStatus = CCCrypt(kCCDecrypt,
+                                          kCCAlgorithmAES128,
+                                          0x0000,
+                                          keyPtr,
+                                          kCCBlockSizeAES128,
+                                          ivPtr,
+                                          [data bytes],
+                                          dataLength,
+                                          buffer,
+                                          bufferSize,
+                                          &numBytesCrypted);
+    if (cryptStatus == kCCSuccess) {
+        NSData *resultData = [NSData dataWithBytesNoCopy:buffer length:numBytesCrypted];
+        return [[NSString alloc] initWithData:resultData encoding:NSUTF8StringEncoding];
+    }
+    free(buffer);
+    return nil;
+}
+
+
++(NSString *)AES128Encrypt:(NSString *)plainText
+{
+    return [self AES128Encrypt:plainText AndKey:gkey AndIv:gIv];
+}
+
++(NSString *)AES128Decrypt:(NSString *)encryptText
+{
+    return [self AES128Decrypt:encryptText AndKey:gkey AndIv:gIv];
+}
 
 
 

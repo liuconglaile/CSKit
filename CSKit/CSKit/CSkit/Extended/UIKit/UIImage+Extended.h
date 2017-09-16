@@ -255,6 +255,17 @@ typedef void (^CSUIImageSizeRequestCompleted) (NSURL* imgURL, CGSize size);
  
  @param borderLineJoin The border line join.
  */
+
+/**
+ <#Description#>
+
+ @param radius <#radius description#>
+ @param corners <#corners description#>
+ @param borderWidth <#borderWidth description#>
+ @param borderColor <#borderColor description#>
+ @param borderLineJoin <#borderLineJoin description#>
+ @return <#return value description#>
+ */
 - (nullable UIImage *)imageByRoundCornerRadius:(CGFloat)radius
                                        corners:(UIRectCorner)corners
                                    borderWidth:(CGFloat)borderWidth
@@ -262,115 +273,93 @@ typedef void (^CSUIImageSizeRequestCompleted) (NSURL* imgURL, CGSize size);
                                 borderLineJoin:(CGLineJoin)borderLineJoin;
 
 /**
- Returns a new rotated image (relative to the center).
+ 返回一个新的旋转图像(相对于中心).
  
- @param radians   Rotated radians in counterclockwise.⟲
- 
- @param fitSize   YES: new image's size is extend to fit all content.
- NO: image's size will not change, content may be clipped.
+ @param radians   逆时针旋转弧度.⟲
+ @param fitSize   YES: 新的图像的尺寸被拉伸,以适应所有内容.
+                   NO: 图像的大小不会改变,内容可能会被剪辑.
  */
 - (nullable UIImage *)imageByRotate:(CGFloat)radians fitSize:(BOOL)fitSize;
 
 /**
- Returns a new image rotated counterclockwise by a quarter‑turn (90°). ⤺
- The width and height will be exchanged.
+ 返回逆时针旋转四分之一圈的新图像 (90°). ⤺
+ 宽度和高度将被交换.
  */
 - (nullable UIImage *)imageByRotateLeft90;
 
 /**
- Returns a new image rotated clockwise by a quarter‑turn (90°). ⤼
- The width and height will be exchanged.
+ 返回顺时针旋转四分之一圈的新图像 (90°). ⤼
+ 宽度和高度将被交换.
  */
 - (nullable UIImage *)imageByRotateRight90;
 
 /**
- Returns a new image rotated 180° . ↻
+ 返回一个旋转的新图像 180° . ↻
  */
 - (nullable UIImage *)imageByRotate180;
 
 /**
- Returns a vertically flipped image. ⥯
+ 返回垂直翻转的图像. ⥯
  */
 - (nullable UIImage *)imageByFlipVertical;
 
 /**
- Returns a horizontally flipped image. ⇋
+ 返回一个水平翻转的图像. ⇋
  */
 - (nullable UIImage *)imageByFlipHorizontal;
 
-
-#pragma mark - Image Effect
 ///=============================================================================
-/// @name Image Effect
+/// @name 图像效果
 ///=============================================================================
 
 /**
- Tint the image in alpha channel with the given color.
+ 使用给定的颜色对Alpha通道中的图像进行着色.
  
- @param color  The color.
+ @param color  渲染颜色.
  */
 - (nullable UIImage *)imageByTintColor:(UIColor *)color;
 
 /**
- Returns a grayscaled image.
+ 返回灰度图像.
  */
 - (nullable UIImage *)imageByGrayscale;
 
 /**
- Applies a blur effect to this image. Suitable for blur any content.
+ 对此图像应用模糊效果. 适合模糊任何内容.
  */
 - (nullable UIImage *)imageByBlurSoft;
 
 /**
- Applies a blur effect to this image. Suitable for blur any content except pure white.
- (same as iOS Control Panel)
+ 对此图像应用模糊效果. 适合于模糊任何除纯白色以外的内容. (与iOS控制面板相同)
  */
 - (nullable UIImage *)imageByBlurLight;
 
 /**
- Applies a blur effect to this image. Suitable for displaying black text.
- (same as iOS Navigation Bar White)
+ 对此图像应用模糊效果. 适合显示黑色文字.(与iOS导航栏白色相同)
  */
 - (nullable UIImage *)imageByBlurExtraLight;
 
 /**
- Applies a blur effect to this image. Suitable for displaying white text.
- (same as iOS Notification Center)
+ 对此图像应用模糊效果. 适合显示白色文字. (与iOS通知中心相同)
  */
 - (nullable UIImage *)imageByBlurDark;
 
 /**
- Applies a blur and tint color to this image.
+ 对此图像应用模糊和色彩.
  
- @param tintColor  The tint color.
+ @param tintColor  色调颜色.
  */
 - (nullable UIImage *)imageByBlurWithTint:(UIColor *)tintColor;
 
 /**
- Applies a blur, tint color, and saturation adjustment to this image,
- optionally within the area specified by @a maskImage.
- 
- @param blurRadius     The radius of the blur in points, 0 means no blur effect.
- 
- @param tintColor      An optional UIColor object that is uniformly blended with
- the result of the blur and saturation operations. The
- alpha channel of this color determines how strong the
- tint is. nil means no tint.
- 
- @param tintBlendMode  The @a tintColor blend mode. Default is kCGBlendModeNormal (0).
- 
- @param saturation     A value of 1.0 produces no change in the resulting image.
- Values less than 1.0 will desaturation the resulting image
- while values greater than 1.0 will have the opposite effect.
- 0 means gray scale.
- 
- @param maskImage      If specified, @a inputImage is only modified in the area(s)
- defined by this mask.  This must be an image mask or it
- must meet the requirements of the mask parameter of
- CGContextClipToMask.
- 
- @return               image with effect, or nil if an error occurs (e.g. no
- enough memory).
+ 对图片设置模糊&色彩&饱和度,可设置在指定的区域
+
+ @param blurRadius 模糊半径,0为不设模糊
+ @param tintColor  alpha 通道渲染色值
+ @param tintBlendMode 混合模式,默认为 kCGBlendModeNormal (0)
+ @param saturation 饱和度 1为不变, minValue < 1 < maxValue 均可设置不同效果饱和度
+ @param maskImage 如果指定,@a inputImage仅在此掩码定义的区域中进行修改.这必须是一个图像掩码,或者它必须满足CGContextClipToMask的mask参数的要求.
+ @return 有效图像,如果发生错误,则返回 nil(例如内存不足).
  */
 - (nullable UIImage *)imageByBlurRadius:(CGFloat)blurRadius
                               tintColor:(nullable UIColor *)tintColor
@@ -466,22 +455,20 @@ typedef void (^CSUIImageSizeRequestCompleted) (NSURL* imgURL, CGSize size);
 
 
 /**
- *  压缩上传图片到指定字节
- *
- *  @param image     压缩的图片
- *  @param maxLength 压缩后最大字节大小
- *
- *  @return 压缩后图片的二进制
+ 压缩上传图片到指定字节
+ 
+ @param image     压缩的图片
+ @param maxLength 压缩后最大字节大小
+ @return 压缩后图片的二进制
  */
 + (NSData *)compressImage:(UIImage *)image toMaxLength:(NSInteger) maxLength maxWidth:(NSInteger)maxWidth;
 
 /**
- *  获得指定size的图片
- *
- *  @param image   原始图片
- *  @param newSize 指定的size
- *
- *  @return 调整后的图片
+ 获得指定size的图片
+ 
+ @param image   原始图片
+ @param newSize 指定的size
+ @return 调整后的图片
  */
 + (UIImage *)resizeImage:(UIImage *) image withNewSize:(CGSize) newSize;
 
@@ -493,12 +480,11 @@ typedef void (^CSUIImageSizeRequestCompleted) (NSURL* imgURL, CGSize size);
 - (UIImage *)resizeAspectImageWithSize:(CGSize)size;
 
 /**
- *  通过指定图片最长边，获得等比例的图片size
- *
- *  @param image       原始图片
- *  @param imageLength 图片允许的最长宽度（高度）
- *
- *  @return 获得等比例的size
+ 通过指定图片最长边，获得等比例的图片size
+ 
+ @param image       原始图片
+ @param imageLength 图片允许的最长宽度（高度）
+ @return 获得等比例的size
  */
 + (CGSize)scaleImage:(UIImage *) image withLength:(CGFloat) imageLength;
 
@@ -509,10 +495,10 @@ typedef void (^CSUIImageSizeRequestCompleted) (NSURL* imgURL, CGSize size);
 
 
 /**
- *  @brief 获取远程图片的大小
- *
- *  @param imgURL     图片url
- *  @param completion 完成回调
+ 获取远程图片的大小
+ 
+ @param imgURL     图片url
+ @param completion 完成回调
  */
 + (void)requestSizeNoHeader:(NSURL*)imgURL completion:(CSUIImageSizeRequestCompleted)completion;
 /**

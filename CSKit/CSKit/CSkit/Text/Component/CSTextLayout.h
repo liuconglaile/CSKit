@@ -231,6 +231,8 @@ extern const CGSize CSTextContainerMaxSize;
 ///MARK: 生成文本布局
 ///MARK: ===================================================
 
++ (CSTextLayout *)layout:(UIFont *)font color:(UIColor*)color width:(CGFloat )width string:(NSString *)string max:(BOOL)max;
+
 /**
  使用给定的容器大小和文本生成布局
  

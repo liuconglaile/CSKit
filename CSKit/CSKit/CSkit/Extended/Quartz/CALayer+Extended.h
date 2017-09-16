@@ -78,26 +78,26 @@ typedef NS_ENUM(NSUInteger, CSTransitionCurve) {
 @interface CALayer (Extended)
 
 /**
- Take snapshot without transform, image's size equals to bounds.
+ 拍摄快照无变换,图像大小等于边界.
  */
 - (nullable UIImage *)snapshotImage;
 
 /**
- Take snapshot without transform, PDF's page size equals to bounds.
+ 拍摄快照无变换,PDF页面大小等于边界.
  */
 - (nullable NSData *)snapshotPDF;
 
 /**
- Shortcut to set the layer's shadow
+ 设置图层阴影的快捷方式
  
- @param color  Shadow Color
- @param offset Shadow offset
- @param radius Shadow radius
+ @param color  阴影颜色
+ @param offset 阴影偏移
+ @param radius 阴影半径
  */
 - (void)setLayerShadow:(UIColor*)color offset:(CGSize)offset radius:(CGFloat)radius;
 
 /**
- Remove all sublayers.
+ 删除所有子层.
  */
 - (void)removeAllSublayers;
 
@@ -126,27 +126,28 @@ typedef NS_ENUM(NSUInteger, CSTransitionCurve) {
 @property (nonatomic) CGFloat transformTranslationY; ///< key path "tranform.translation.y"
 @property (nonatomic) CGFloat transformTranslationZ; ///< key path "tranform.translation.z"
 
+
 /**
- Shortcut for transform.m34, -1/1000 is a good value.
- It should be set before other transform shortcut.
+ 变换深度,应该在其他变换快捷方式之前设置
+ transform.m34, -1/1000 是最佳值
  */
 @property (nonatomic) CGFloat transformDepth;
 
 /**
- Wrapper for `contentsGravity` property.
+ contentGravity属性的包装器.
  */
 @property (nonatomic) UIViewContentMode contentMode;
 
 /**
- Add a fade animation to layer's contents when the contents is changed.
+ 当内容更改时，向图层的内容添加淡入淡出的动画.
  
- @param duration Animation duration
- @param curve    Animation curve.
+ @param duration 动画持续时间
+ @param curve    动画曲线.
  */
 - (void)addFadeAnimationWithDuration:(NSTimeInterval)duration curve:(UIViewAnimationCurve)curve;
 
 /**
- Cancel fade animation which is added with "-addFadeAnimationWithDuration:curve:".
+ 取消淡化动画,添加必须使用'-addFadeAnimationWithDuration:curve:'.
  */
 - (void)removePreviousFadeAnimation;
 

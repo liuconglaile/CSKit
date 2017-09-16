@@ -9,7 +9,7 @@
 #import "CSImageBrowserModel.h"
 //#import "SDWebImageManager.h"
 #import "CSWebImageManager.h"
-#import "CSKit.h"
+#import "CSKitHeader.h"
 
 @interface CSImageBrowserModel ()
 

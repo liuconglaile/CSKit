@@ -11,7 +11,13 @@
 #import <netinet/in.h>
 #import <arpa/inet.h>
 
-#import "CSKitMacro.h"
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+
+#else
+#import "CSMacrosHeader.h"
+
+#endif
 
 @implementation NSObject (Socket)
 

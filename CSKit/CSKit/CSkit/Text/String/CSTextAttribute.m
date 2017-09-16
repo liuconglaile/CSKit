@@ -8,11 +8,19 @@
 
 #import "CSTextAttribute.h"
 #import <CoreText/CoreText.h>
+
+
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+#import <CSkit/UIDevice+Extended.h>
+#import <CSkit/CSTextArchiver.h>
+#import <CSkit/UIFont+Extended.h>
+#else
+#import "CSMacrosHeader.h"
 #import "UIDevice+Extended.h"
 #import "CSTextArchiver.h"
 #import "UIFont+Extended.h"
-
-#import "CSKitMacro.h"
+#endif
 
 NSString *const CSTextBackedStringAttributeName = @"CSTextBackedString";
 NSString *const CSTextBindingAttributeName = @"CSTextBinding";

@@ -9,8 +9,14 @@
 #import "NSParagraphStyle+CSText.h"
 #import <CoreText/CoreText.h>
 
-#import "CSKitMacro.h"
+#if __has_include(<CSkit/CSkit.h>)
+#import <CSkit/CSMacrosHeader.h>
+#import <CSkit/CSTextAttribute.h>
+#else
+#import "CSMacrosHeader.h"
 #import "CSTextAttribute.h"
+#endif
+
 
 
 CSSYNTH_DUMMY_CLASS(NSParagraphStyle_CSText)

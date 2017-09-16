@@ -8,7 +8,7 @@
 
 #import "CSTestTableLayout.h"
 #import "CSTestTableModel.h"
-#import "CSKit.h"
+#import "CSKitHeader.h"
 
 #define NAMEFONT [UIFont systemFontOfSize:15]    //用户名字体
 #define NAMECOLOR UIColorHex(333333)             //用户名颜色
