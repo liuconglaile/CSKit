@@ -25,57 +25,51 @@ s.dependency "MJRefresh"
 
 
 s.subspec 'CSkit' do |ss|
-ss.dependency 'CSkit/Base'
-ss.dependency 'CSkit/Cache'
-ss.dependency 'CSkit/Utility'
+    ss.dependency 'CSkit/Base'
+    ss.dependency 'CSkit/Cache'
+    ss.dependency 'CSkit/Utility'
 
-ss.dependency 'CSkit/Text/Component'
-ss.dependency 'CSkit/Text/String'
-ss.dependency 'CSkit/Text/UseClass'
+    ss.dependency 'CSkit/Text/Component'
+    ss.dependency 'CSkit/Text/String'
+    ss.dependency 'CSkit/Text/UseClass'
 
-ss.dependency 'CSkit/Model'
-ss.dependency 'CSkit/Model/Unicode'
+    ss.dependency 'CSkit/Model'
+    ss.dependency 'CSkit/Model/Unicode'
 
-ss.dependency 'CSkit/Image'
-ss.dependency 'CSkit/Image/Categories'
+    ss.dependency 'CSkit/Image'
+    ss.dependency 'CSkit/Image/Categories'
 
-ss.dependency 'CSkit/Extended/Foundation'
-ss.dependency 'CSkit/Extended/Quartz'
-ss.dependency 'CSkit/Extended/UIKit'
+    ss.dependency 'CSkit/Extended/Foundation'
+    ss.dependency 'CSkit/Extended/Quartz'
+    ss.dependency 'CSkit/Extended/UIKit'
 
-ss.dependency 'CSkit/CustomClass/CSBaseClass'
+    ss.dependency 'CSkit/CustomClass/CSBaseClass'
 
-ss.dependency 'CSkit/CustomClass/CSNetworkTools'
-ss.dependency 'CSkit/CustomClass/CSNetworkTools/Tools'
-ss.dependency 'CSkit/CustomClass/CSNetworkTools/Model'
-ss.dependency 'CSkit/CustomClass/CSNetworkTools/CSNetworkTopMaskView'
+    ss.dependency 'CSkit/CustomClass/CSNetworkTools'
+    ss.dependency 'CSkit/CustomClass/CSNetworkTools/Tools'
+    ss.dependency 'CSkit/CustomClass/CSNetworkTools/Model'
+    ss.dependency 'CSkit/CustomClass/CSNetworkTools/CSNetworkTopMaskView'
 
-ss.dependency 'CSkit/CustomClass/CSPopupController'
-ss.dependency 'CSkit/CustomClass/CSPopupController/Classes'
-
-
-ss.dependency 'CSkit/CustomClass/CSIndicator'
-ss.dependency 'CSkit/CustomClass/CSIndicator/CSNotificationIndicator'
-ss.dependency 'CSkit/CustomClass/CSIndicator/CSProgressIndicator'
-ss.dependency 'CSkit/CustomClass/CSIndicator/CSToastIndicator'
+    ss.dependency 'CSkit/CustomClass/CSPopupController'
+    ss.dependency 'CSkit/CustomClass/CSPopupController/Classes'
 
 
-ss.dependency 'CSkit/CustomClass/CSImageBrowser'
-ss.dependency 'CSkit/CustomClass/CSImageBrowser/Category'
-ss.dependency 'CSkit/CustomClass/CSImageBrowser/Model'
-ss.dependency 'CSkit/CustomClass/CSImageBrowser/View'
+    ss.dependency 'CSkit/CustomClass/CSIndicator'
+    ss.dependency 'CSkit/CustomClass/CSIndicator/CSNotificationIndicator'
+    ss.dependency 'CSkit/CustomClass/CSIndicator/CSProgressIndicator'
+    ss.dependency 'CSkit/CustomClass/CSIndicator/CSToastIndicator'
 
 
-ss.dependency 'CSkit/CustomClass/CSPhotoGroupView'
+    ss.dependency 'CSkit/CustomClass/CSImageBrowser'
+    ss.dependency 'CSkit/CustomClass/CSImageBrowser/Category'
+    ss.dependency 'CSkit/CustomClass/CSImageBrowser/Model'
+    ss.dependency 'CSkit/CustomClass/CSImageBrowser/View'
 
-ss.dependency 'CSkit/CustomClass/UITableViewProtocol'
 
+    ss.dependency 'CSkit/CustomClass/CSPhotoGroupView'
 
+    ss.dependency 'CSkit/CustomClass/UITableViewProtocol'
 
-
-#ss.ios.dependency 'BlocksKit/MessageUI'
-$ss.ios.dependency 'BlocksKit/QuickLook'
-#ss.ios.dependency 'BlocksKit/UIKit'
 end
 
 
@@ -126,36 +120,8 @@ ss.dependency 'CSkit/CustomClass/CSImageBrowser/View'
 ss.dependency 'CSkit/CustomClass/CSPhotoGroupView'
 
 ss.dependency 'CSkit/CustomClass/UITableViewProtocol'
-ss.source_files = 'CSKit/CSKit/CSKit/CustomClass/CSBaseClass/*.{h,m}'
+ss.source_files = 'CSKit/CSKit/CSKit/Base/*.{h,m}'
 
-
-#s.source_files   =  "CSKit/CSKit/CSKit/*" ,
-#"CSKit/CSKit/CSKit/Cache/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSBaseClass/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSPopupController/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSPopupController/Classes/CustomView/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSNotificationIndicator/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSToastIndicator/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Category/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Model/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/View/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSPhotoGroupView/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/UITableViewProtocol/*" ,
-#"CSKit/CSKit/CSKit/Extended/Foundation/*" ,
-#"CSKit/CSKit/CSKit/Extended/Macro/*" ,
-#"CSKit/CSKit/CSKit/Extended/Quartz/*" ,
-#"CSKit/CSKit/CSKit/Extended/UIKit/*" ,
-#"CSKit/CSKit/CSKit/Image/*" ,
-#"CSKit/CSKit/CSKit/Image/Categories/*" ,
-#"CSKit/CSKit/CSKit/Model/*" ,
-#"CSKit/CSKit/CSKit/Model/Unicode/*" ,
-#"CSKit/CSKit/CSKit/Text/Component/*" ,
-#"CSKit/CSKit/CSKit/Text/String/*" ,
-#"CSKit/CSKit/CSKit/Text/UseClass/*" ,
-#"CSKit/CSKit/CSKit/Utility/*" ,
 
 
 end
@@ -211,32 +177,6 @@ ss.dependency 'CSkit/CustomClass/UITableViewProtocol'
 ss.source_files = 'CSKit/CSKit/CSKit/Cache/*.{h,m}'
 
 
-#"CSKit/CSKit/CSKit/CustomClass/CSBaseClass/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSPopupController/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSPopupController/Classes/CustomView/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSNotificationIndicator/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSToastIndicator/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Category/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Model/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/View/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSPhotoGroupView/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/UITableViewProtocol/*" ,
-#"CSKit/CSKit/CSKit/Extended/Foundation/*" ,
-#"CSKit/CSKit/CSKit/Extended/Macro/*" ,
-#"CSKit/CSKit/CSKit/Extended/Quartz/*" ,
-#"CSKit/CSKit/CSKit/Extended/UIKit/*" ,
-#"CSKit/CSKit/CSKit/Image/*" ,
-#"CSKit/CSKit/CSKit/Image/Categories/*" ,
-#"CSKit/CSKit/CSKit/Model/*" ,
-#"CSKit/CSKit/CSKit/Model/Unicode/*" ,
-#"CSKit/CSKit/CSKit/Text/Component/*" ,
-#"CSKit/CSKit/CSKit/Text/String/*" ,
-#"CSKit/CSKit/CSKit/Text/UseClass/*" ,
-#"CSKit/CSKit/CSKit/Utility/*" ,
-
 
 end
 
@@ -290,32 +230,6 @@ ss.dependency 'CSkit/CustomClass/CSPhotoGroupView'
 ss.dependency 'CSkit/CustomClass/UITableViewProtocol'
 ss.source_files = 'CSKit/CSKit/CSKit/Utility/*.{h,m}'
 
-
-#"CSKit/CSKit/CSKit/CustomClass/CSBaseClass/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSPopupController/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSPopupController/Classes/CustomView/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSNotificationIndicator/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSProgressIndicator/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSIndicator/CSToastIndicator/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Category/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/Model/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSImageBrowser/View/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/CSPhotoGroupView/*" ,
-#"CSKit/CSKit/CSKit/CustomClass/UITableViewProtocol/*" ,
-#"CSKit/CSKit/CSKit/Extended/Foundation/*" ,
-#"CSKit/CSKit/CSKit/Extended/Macro/*" ,
-#"CSKit/CSKit/CSKit/Extended/Quartz/*" ,
-#"CSKit/CSKit/CSKit/Extended/UIKit/*" ,
-#"CSKit/CSKit/CSKit/Image/*" ,
-#"CSKit/CSKit/CSKit/Image/Categories/*" ,
-#"CSKit/CSKit/CSKit/Model/*" ,
-#"CSKit/CSKit/CSKit/Model/Unicode/*" ,
-#"CSKit/CSKit/CSKit/Text/Component/*" ,
-#"CSKit/CSKit/CSKit/Text/String/*" ,
-#"CSKit/CSKit/CSKit/Text/UseClass/*" ,
-#"CSKit/CSKit/CSKit/Utility/*" ,
 
 
 end
