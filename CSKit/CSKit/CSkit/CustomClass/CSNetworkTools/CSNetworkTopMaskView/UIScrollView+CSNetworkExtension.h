@@ -27,7 +27,7 @@ typedef NS_ENUM(NSUInteger, CSTableVieTipStatus) {
 
 
 /** 进入刷新状态的回调 */
-typedef void (^CSRefreshComponentRefreshingBlock)();
+typedef void (^CSRefreshComponentRefreshingBlock)(void);
 
 
 @interface UIScrollView (CSNetworkExtension)

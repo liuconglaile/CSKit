@@ -14,7 +14,7 @@
 @property (nonatomic) BOOL needsBetterFace;
 @property (nonatomic) BOOL fast;
 
-void hack_uiimageview_bf();
+void hack_uiimageview_bf(void);
 
 - (void)setBetterFaceImage:(UIImage *)image;
 

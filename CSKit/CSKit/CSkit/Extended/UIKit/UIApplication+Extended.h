@@ -139,23 +139,23 @@ typedef NS_ENUM(NSUInteger, CSPermissionAccess) {
 //MARK:有回调要求许可
 
 /* 请求访问日历 */
--(void)requestAccessToCalendarWithSuccess:(void(^)())accessGranted andFailure:(void(^)())accessDenied;
+-(void)requestAccessToCalendarWithSuccess:(void(^)(void))accessGranted andFailure:(void(^)(void))accessDenied;
 /* 请求访问联系人 */
--(void)requestAccessToContactsWithSuccess:(void(^)())accessGranted andFailure:(void(^)())accessDenied;
+-(void)requestAccessToContactsWithSuccess:(void(^)(void))accessGranted andFailure:(void(^)(void))accessDenied;
 /* 请求访问麦克风 */
--(void)requestAccessToMicrophoneWithSuccess:(void(^)())accessGranted andFailure:(void(^)())accessDenied;
+-(void)requestAccessToMicrophoneWithSuccess:(void(^)(void))accessGranted andFailure:(void(^)(void))accessDenied;
 /* 请求访问照片 */
--(void)requestAccessToPhotosWithSuccess:(void(^)())accessGranted andFailure:(void(^)())accessDenied;
+-(void)requestAccessToPhotosWithSuccess:(void(^)(void))accessGranted andFailure:(void(^)(void))accessDenied;
 /* 请求打开提醒推送 */
--(void)requestAccessToRemindersWithSuccess:(void(^)())accessGranted andFailure:(void(^)())accessDenied;
+-(void)requestAccessToRemindersWithSuccess:(void(^)(void))accessGranted andFailure:(void(^)(void))accessDenied;
 
 //MARK:实例方法
 /* 请求访问定位 */
--(void)requestAccessToLocationWithSuccess:(void(^)())accessGranted andFailure:(void(^)())accessDenied;
+-(void)requestAccessToLocationWithSuccess:(void(^)(void))accessGranted andFailure:(void(^)(void))accessDenied;
 
 //无故障回调
 /* 请求访问运动 */
--(void)requestAccessToMotionWithSuccess:(void(^)())accessGranted;
+-(void)requestAccessToMotionWithSuccess:(void(^)(void))accessGranted;
 
 //Needs investigating - unsure whether it can be implemented because of required delegate callbacks
 //-(void)requestAccessToBluetoothLEWithSuccess:(void(^)())accessGranted;

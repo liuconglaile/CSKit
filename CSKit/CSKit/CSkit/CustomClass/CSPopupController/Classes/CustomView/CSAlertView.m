@@ -84,7 +84,7 @@ static void *CSAlertViewActionKey = &CSAlertViewActionKey;
         
         _contentSize.width = 200; // default width = 200
         if (width > 0) _contentSize.width = width;
-        _paddingTop = 15, _paddingBottom = 15, _paddingLeft = 20, _spacing = 15;
+        (void)(_paddingTop = 15), (void)(_paddingBottom = 15), (void)(_paddingLeft = 20), _spacing = 15;
         
         if (![self isEmptyString:title]) {
             _titleLabel = [[UILabel alloc] init];

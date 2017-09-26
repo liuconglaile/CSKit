@@ -10,7 +10,6 @@
 #import <sys/sysctl.h>
 #import <mach/mach.h>
 #import <stdatomic.h>
-#import <objc/runtime.h>
 #import <libkern/OSAtomic.h>
 #import <objc/runtime.h>
 //Import required frameworks
@@ -49,8 +48,8 @@ CSSYNTH_DUMMY_CLASS(UIApplication_Extended)
 
 
 
-typedef void (^CSLocationSuccessCallback)();
-typedef void (^CSLocationFailureCallback)();
+typedef void (^CSLocationSuccessCallback)(void);
+typedef void (^CSLocationFailureCallback)(void);
 
 static char CSPermissionsLocationManagerPropertyKey;
 static char CSPermissionsLocationBlockSuccessPropertyKey;
@@ -506,7 +505,7 @@ CSSYNTH_DYNAMIC_PROPERTY_OBJECT(networkActivityInfo,
 
 
 #pragma mark - Request permissions
--(void)requestAccessToCalendarWithSuccess:(void(^)())accessGranted andFailure:(void(^)())accessDenied {
+-(void)requestAccessToCalendarWithSuccess:(void(^)(void))accessGranted andFailure:(void(^)(void))accessDenied {
     EKEventStore *eventStore = [[EKEventStore alloc] init];
     [eventStore requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -519,7 +518,7 @@ CSSYNTH_DYNAMIC_PROPERTY_OBJECT(networkActivityInfo,
     }];
 }
 
--(void)requestAccessToContactsWithSuccess:(void(^)())accessGranted andFailure:(void(^)())accessDenied {
+-(void)requestAccessToContactsWithSuccess:(void(^)(void))accessGranted andFailure:(void(^)(void))accessDenied {
     ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, NULL);
     if(addressBook) {
         ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
@@ -534,7 +533,7 @@ CSSYNTH_DYNAMIC_PROPERTY_OBJECT(networkActivityInfo,
     }
 }
 
--(void)requestAccessToMicrophoneWithSuccess:(void(^)())accessGranted andFailure:(void(^)())accessDenied {
+-(void)requestAccessToMicrophoneWithSuccess:(void(^)(void))accessGranted andFailure:(void(^)(void))accessDenied {
     AVAudioSession *session = [[AVAudioSession alloc] init];
     [session requestRecordPermission:^(BOOL granted) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -547,7 +546,7 @@ CSSYNTH_DYNAMIC_PROPERTY_OBJECT(networkActivityInfo,
     }];
 }
 
--(void)requestAccessToMotionWithSuccess:(void(^)())accessGranted {
+-(void)requestAccessToMotionWithSuccess:(void(^)(void))accessGranted {
     CMMotionActivityManager *motionManager = [[CMMotionActivityManager alloc] init];
     NSOperationQueue *motionQueue = [[NSOperationQueue alloc] init];
     [motionManager startActivityUpdatesToQueue:motionQueue withHandler:^(CMMotionActivity *activity) {
@@ -556,7 +555,7 @@ CSSYNTH_DYNAMIC_PROPERTY_OBJECT(networkActivityInfo,
     }];
 }
 
--(void)requestAccessToPhotosWithSuccess:(void(^)())accessGranted andFailure:(void(^)())accessDenied {
+-(void)requestAccessToPhotosWithSuccess:(void(^)(void))accessGranted andFailure:(void(^)(void))accessDenied {
     ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc] init];
     [assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAlbum usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
         accessGranted();
@@ -565,7 +564,7 @@ CSSYNTH_DYNAMIC_PROPERTY_OBJECT(networkActivityInfo,
     }];
 }
 
--(void)requestAccessToRemindersWithSuccess:(void(^)())accessGranted andFailure:(void(^)())accessDenied {
+-(void)requestAccessToRemindersWithSuccess:(void(^)(void))accessGranted andFailure:(void(^)(void))accessDenied {
     EKEventStore *eventStore = [[EKEventStore alloc] init];
     [eventStore requestAccessToEntityType:EKEntityTypeReminder completion:^(BOOL granted, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -586,7 +585,7 @@ CSSYNTH_DYNAMIC_PROPERTY_OBJECT(networkActivityInfo,
  }
  */
 
--(void)requestAccessToLocationWithSuccess:(void(^)())accessGranted andFailure:(void(^)())accessDenied {
+-(void)requestAccessToLocationWithSuccess:(void(^)(void))accessGranted andFailure:(void(^)(void))accessDenied {
     self.permissionsLocationManager = [[CLLocationManager alloc] init];
     self.permissionsLocationManager.delegate = self;
     

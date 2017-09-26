@@ -29,11 +29,11 @@ typedef NS_ENUM(NSInteger, MJRefreshState) {
 };
 
 /** 进入刷新状态的回调 */
-typedef void (^MJRefreshComponentRefreshingBlock)();
+typedef void (^MJRefreshComponentRefreshingBlock)(void);
 /** 开始刷新后的回调(进入刷新状态后的回调) */
-typedef void (^MJRefreshComponentbeginRefreshingCompletionBlock)();
+typedef void (^MJRefreshComponentbeginRefreshingCompletionBlock)(void);
 /** 结束刷新后的回调 */
-typedef void (^MJRefreshComponentEndRefreshingCompletionBlock)();
+typedef void (^MJRefreshComponentEndRefreshingCompletionBlock)(void);
 
 /** 刷新控件的基类 */
 @interface MJRefreshComponent : UIView

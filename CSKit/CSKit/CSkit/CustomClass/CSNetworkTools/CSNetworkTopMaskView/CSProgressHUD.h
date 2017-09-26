@@ -65,7 +65,7 @@ typedef NS_ENUM(NSInteger, CSProgressHUDBackgroundStyle) {
     CSProgressHUDBackgroundStyleBlur
 };
 
-typedef void (^CSProgressHUDCompletionBlock)();
+typedef void (^CSProgressHUDCompletionBlock)(void);
 
 
 NS_ASSUME_NONNULL_BEGIN

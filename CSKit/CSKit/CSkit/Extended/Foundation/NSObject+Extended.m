@@ -30,7 +30,7 @@ BOOL method_swizzle(Class klass, SEL origSel, SEL altSel)
     
     Method __block origMethod, __block altMethod;
     
-    void (^find_methods)() = ^
+    void (^find_methods)(void) = ^
     {
         unsigned methodCount = 0;
         Method *methodList = class_copyMethodList(klass, &methodCount);

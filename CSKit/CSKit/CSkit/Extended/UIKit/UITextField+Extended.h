@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^ShakeCompletion)();
+typedef void (^ShakeCompletion)(void);
 
 typedef NS_ENUM(NSUInteger, CSShakedDirection) {
     CSShakedDirectionHorizontal,

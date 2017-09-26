@@ -278,13 +278,13 @@ static inline UTF32Char UTF16SurrogatePairToUTF32Char(UTF16Char char16[_Nullable
  获取应垂直旋转的字符集.
  @return 共享字符集.
  */
-NSCharacterSet *CSTextVerticalFormRotateCharacterSet();
+NSCharacterSet *CSTextVerticalFormRotateCharacterSet(void);
 
 /**
  获取应旋转并以垂直形式移动的字符集.
  @return 共享字符集.
  */
-NSCharacterSet *CSTextVerticalFormRotateAndMoveCharacterSet();
+NSCharacterSet *CSTextVerticalFormRotateAndMoveCharacterSet(void);
 
 
 

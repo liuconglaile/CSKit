@@ -47,7 +47,7 @@ CGContextRef _Nullable CSCGContextCreateGrayBitmapContext(CGSize size, CGFloat s
 
  @return 返回英寸数值
  */
-CGFloat CSScreenScale();
+CGFloat CSScreenScale(void);
 
 
 /**
@@ -55,7 +55,7 @@ CGFloat CSScreenScale();
 
  @return 正屏的尺寸,像素单位
  */
-CGSize CSScreenSize();
+CGSize CSScreenSize(void);
 
 
 /**

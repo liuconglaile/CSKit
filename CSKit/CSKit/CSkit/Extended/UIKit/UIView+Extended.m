@@ -811,22 +811,22 @@ static const CGFloat kCSInsetShadowViewTag      = 80.0;
     return (moveAlongX) ? [moveAlongX boolValue] : YES;
 }
 
-- (void)setDraggingStartedBlock:(void (^)())draggingStartedBlock
+- (void)setDraggingStartedBlock:(void (^)(void))draggingStartedBlock
 {
     objc_setAssociatedObject(self, @selector(draggingStartedBlock), draggingStartedBlock, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (void (^)())draggingStartedBlock
+- (void (^)(void))draggingStartedBlock
 {
     return objc_getAssociatedObject(self, @selector(draggingStartedBlock));
 }
 
-- (void)setDraggingEndedBlock:(void (^)())draggingEndedBlock
+- (void)setDraggingEndedBlock:(void (^)(void))draggingEndedBlock
 {
     objc_setAssociatedObject(self, @selector(draggingEndedBlock), draggingEndedBlock, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (void (^)())draggingEndedBlock
+- (void (^)(void))draggingEndedBlock
 {
     return objc_getAssociatedObject(self, @selector(draggingEndedBlock));
 }

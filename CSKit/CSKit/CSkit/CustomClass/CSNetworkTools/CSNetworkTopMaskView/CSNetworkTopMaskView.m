@@ -17,7 +17,7 @@
 
 @interface CSNetworkTopMaskView ()
 
-@property (nonatomic, copy) void (^touchBlock)();
+@property (nonatomic, copy) void (^touchBlock)(void);
 
 @end
 
@@ -116,7 +116,7 @@
               tipImageName:(NSString *)imageName
                    tipText:(id)tipText
                actionTitle:(NSString *)actionTitle
-               actionBlock:(void(^)())touchBlock
+               actionBlock:(void(^)(void))touchBlock
 {
     CSNetworkTopMaskView *tipBgView = [[CSNetworkTopMaskView alloc] initCustomView:frame tipImageName:imageName tipText:tipText actionTitle:actionTitle actionBlock:touchBlock];
     tipBgView.tag = kRequestTipViewTag;
@@ -129,7 +129,7 @@
                   tipImageName:(NSString *)imageName
                        tipText:(id)tipText
                    actionTitle:(NSString *)actionTitle
-                   actionBlock:(void(^)())touchBlock{
+                   actionBlock:(void(^)(void))touchBlock{
     if (self == [super initWithFrame:frame]) {
         self.touchBlock = touchBlock;
         

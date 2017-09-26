@@ -134,9 +134,9 @@ typedef void (^CSSuperviewBlock) (UIView* superview);
 /** 制约沿Y轴的移动 */
 @property (nonatomic) BOOL shouldMoveAlongY;
 /** 拖拽开始时候的回调 */
-@property (nonatomic, copy) void (^draggingStartedBlock)();
+@property (nonatomic, copy) void (^draggingStartedBlock)(void);
 /** 拖拽结束时候的回调 */
-@property (nonatomic, copy) void (^draggingEndedBlock)();
+@property (nonatomic, copy) void (^draggingEndedBlock)(void);
 /** 启用拖动 */
 - (void)enableDragging;
 /** 禁用或启用视图拖动 */

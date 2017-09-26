@@ -368,9 +368,9 @@ CG_EXTERN CSImageType CSImageTypeFromUTType(CFStringRef uti);
 ///MARK: 获取图片类型的文件扩展名(如@“jpg”).
 CG_EXTERN NSString *_Nullable CSImageTypeGetExtension(CSImageType type);
 ///MARK: 返回共享的DeviceRGB颜色空间
-CG_EXTERN CGColorSpaceRef CSCGColorSpaceGetDeviceRGB();
+CG_EXTERN CGColorSpaceRef CSCGColorSpaceGetDeviceRGB(void);
 ///MARK: 返回共享的DeviceGray颜色空间
-CG_EXTERN CGColorSpaceRef CSCGColorSpaceGetDeviceGray();
+CG_EXTERN CGColorSpaceRef CSCGColorSpaceGetDeviceGray(void);
 ///MARK: 返回颜色空间是否为DeviceRGB
 CG_EXTERN BOOL CSCGColorSpaceIsDeviceRGB(CGColorSpaceRef space);
 ///MARK: 返回颜色空间是否为DeviceGray
@@ -435,7 +435,7 @@ CG_EXTERN CFDataRef _Nullable CSCGImageCreateEncodedData(CGImageRef imageRef, CS
 /**
  WebP是否可用于CSImage.
  */
-CG_EXTERN BOOL CSImageWebPAvailable();
+CG_EXTERN BOOL CSImageWebPAvailable(void);
 
 
 /**
