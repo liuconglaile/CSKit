@@ -165,7 +165,6 @@
 
 -(void)dealloc{
     CSNSLog(@"执行了.....");
-    
     [self.userNameLabel removeFromSuperview];
     [self.cotentLabel removeFromSuperview];
     [self.timeLabel removeFromSuperview];
