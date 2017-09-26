@@ -155,8 +155,8 @@ static char const * const kNetErrorStrKey = "kNetErrorStrKey";
  @param headerBlock 下拉刷新需要调用的函数
  @param footerBlock 上啦刷新需要调用的函数
  */
-- (void)addheaderRefresh:(MJRefreshComponentRefreshingBlock)headerBlock
-             footerBlock:(MJRefreshComponentRefreshingBlock)footerBlock{
+- (void)addheaderRefresh:(CSRefreshComponentRefreshingBlock)headerBlock
+             footerBlock:(CSRefreshComponentRefreshingBlock)footerBlock{
     if (headerBlock) {
         @weakify(self)
         self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{

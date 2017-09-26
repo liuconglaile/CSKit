@@ -168,6 +168,7 @@ va_end(args);
  */
 - (id)performSelectorWithArgsOnMainThread:(SEL)sel waitUntilDone:(BOOL)wait, ...{
     INIT_INV(wait, nil);
+    
     if (!wait) [inv retainArguments];
     [inv performSelectorOnMainThread:@selector(invoke) withObject:nil waitUntilDone:wait];
     return wait ? [NSObject getReturnFromInv:inv withSig:sig] : nil;
