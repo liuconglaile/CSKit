@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "UINavigationBar+Extended.h"
 #import "UIColor+Extended.h"
 
 @interface AppDelegate ()
@@ -59,13 +58,13 @@ UIColor *MainViewColor = nil;
     MainViewColor   = [UIColor whiteColor];
     
     // 设置导航栏默认的背景颜色
-    [UIColor runtimeSetDefaultNavBarTintColor:MainNavBarColor];
-    // 设置导航栏所有按钮的默认颜色
-    [UIColor runtimeSetDefaultNavBarTintColor:[UIColor FontColor1]];
-    // 设置导航栏标题默认颜色
-    [UIColor runtimeSetDefaultNavBarTitleColor:[UIColor FontColor1]];
-    // 统一设置状态栏样式
-    [UIColor runtimeSetDefaultStatusBarStyle:UIStatusBarStyleDefault];
+//    [UIColor runtimeSetDefaultNavBarTintColor:MainNavBarColor];
+//    // 设置导航栏所有按钮的默认颜色
+//    [UIColor runtimeSetDefaultNavBarTintColor:[UIColor FontColor1]];
+//    // 设置导航栏标题默认颜色
+//    [UIColor runtimeSetDefaultNavBarTitleColor:[UIColor FontColor1]];
+//    // 统一设置状态栏样式
+//    [UIColor runtimeSetDefaultStatusBarStyle:UIStatusBarStyleDefault];
     // 如果需要设置导航栏底部分割线隐藏，可以在这里统一设置
     // [UIColor wr_setDefaultNavBarShadowImageHidden:YES];
 }

@@ -1,62 +1,52 @@
 //
-//  NSFileManager+Utilities.m
-//  CSCategory
+//  NSFileManager+Extended.m
+//  CSKit
 //
-//  Created by mac on 17/5/18.
-//  Copyright © 2017年 mac. All rights reserved.
+//  Created by mac on 2017/10/11.
+//  Copyright © 2017年 Moming. All rights reserved.
 //
 
-#import "NSFileManager+Utilities.h"
+#import "NSFileManager+Extended.h"
 
-@implementation NSFileManager (Utilities)
+@implementation NSFileManager (Extended)
 
-+ (NSURL *)URLForDirectory:(NSSearchPathDirectory)directory
-{
++ (NSURL *)URLForDirectory:(NSSearchPathDirectory)directory{
     return [self.defaultManager URLsForDirectory:directory inDomains:NSUserDomainMask].lastObject;
 }
 
-+ (NSString *)pathForDirectory:(NSSearchPathDirectory)directory
-{
++ (NSString *)pathForDirectory:(NSSearchPathDirectory)directory{
     return NSSearchPathForDirectoriesInDomains(directory, NSUserDomainMask, YES)[0];
 }
 
-+ (NSURL *)documentsURL
-{
++ (NSURL *)documentsURL{
     return [self URLForDirectory:NSDocumentDirectory];
 }
 
-+ (NSString *)documentsPath
-{
++ (NSString *)documentsPath{
     return [self pathForDirectory:NSDocumentDirectory];
 }
 
-+ (NSURL *)libraryURL
-{
++ (NSURL *)libraryURL{
     return [self URLForDirectory:NSLibraryDirectory];
 }
 
-+ (NSString *)libraryPath
-{
++ (NSString *)libraryPath{
     return [self pathForDirectory:NSLibraryDirectory];
 }
 
-+ (NSURL *)cachesURL
-{
++ (NSURL *)cachesURL{
     return [self URLForDirectory:NSCachesDirectory];
 }
 
-+ (NSString *)cachesPath
-{
++ (NSString *)cachesPath{
     return [self pathForDirectory:NSCachesDirectory];
 }
 
-+ (BOOL)addSkipBackupAttributeToFile:(NSString *)path
-{
++ (BOOL)addSkipBackupAttributeToFile:(NSString *)path{
     return [[NSURL.alloc initFileURLWithPath:path] setResourceValue:@(YES) forKey:NSURLIsExcludedFromBackupKey error:nil];
 }
 
-+ (double)availableDiskSpace
-{
++ (double)availableDiskSpace{
     NSDictionary *attributes = [self.defaultManager attributesOfFileSystemForPath:self.documentsPath error:nil];
     
     return [attributes[NSFileSystemFreeSize] unsignedLongLongValue] / (double)0x100000;

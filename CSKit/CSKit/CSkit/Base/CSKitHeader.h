@@ -221,7 +221,6 @@
 #import "UIImage+Extended.h"
 #import "UIImageView+Extended.h"
 #import "UILabel+Extended.h"
-#import "UINavigationBar+Extended.h"
 #import "UINavigationController+Extended.h"
 #import "UINavigationItem+Extended.h"
 #import "UIResponder+Extended.h"

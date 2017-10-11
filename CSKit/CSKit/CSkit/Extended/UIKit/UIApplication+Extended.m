@@ -21,17 +21,13 @@
 #import <CoreMotion/CoreMotion.h>
 #import <EventKit/EKEventStore.h>
 
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <CSkit/NSArray+Extended.h>
-#import <CSkit/NSObject+Extended.h>
-#import <CSkit/UIDevice+Extended.h>
-#else
+
+
 #import "CSMacrosHeader.h"
 #import "NSArray+Extended.h"
 #import "NSObject+Extended.h"
 #import "UIDevice+Extended.h"
-#endif
+
 
 
 
