@@ -1,14 +1,14 @@
 //
-//  NSHTTPCookieStorage+Utilities.m
-//  CSCategory
+//  NSHTTPCookieStorage+Extended.m
+//  CSKit
 //
-//  Created by mac on 17/5/18.
-//  Copyright © 2017年 mac. All rights reserved.
+//  Created by mac on 2017/10/11.
+//  Copyright © 2017年 Moming. All rights reserved.
 //
 
-#import "NSHTTPCookieStorage+Utilities.h"
+#import "NSHTTPCookieStorage+Extended.h"
 
-@implementation NSHTTPCookieStorage (Utilities)
+@implementation NSHTTPCookieStorage (Extended)
 
 - (void)saveCookie {
     NSMutableArray* cookieData = [NSMutableArray new];

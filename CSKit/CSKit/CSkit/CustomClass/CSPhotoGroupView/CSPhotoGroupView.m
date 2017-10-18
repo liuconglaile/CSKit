@@ -7,6 +7,7 @@
 //
 
 #import "CSPhotoGroupView.h"
+#import "UIView+Layout.h"
 
 @interface CSPhotoGroupView()
 <UIScrollViewDelegate, UIGestureRecognizerDelegate>

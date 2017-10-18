@@ -7,12 +7,12 @@
 //
 
 #import "UIFont+Extended.h"
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
 
-#else
-#import "CSMacrosHeader.h"
 
+#ifndef CSSYNTH_DUMMY_CLASS
+#define CSSYNTH_DUMMY_CLASS(_name_) \
+@interface CSSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation CSSYNTH_DUMMY_CLASS_ ## _name_ @end
 #endif
 
 CSSYNTH_DUMMY_CLASS(UIFont_Extended)
@@ -152,7 +152,7 @@ CSSYNTH_DUMMY_CLASS(UIFont_Extended)
     CFErrorRef error;
     BOOL suc = CTFontManagerRegisterFontsForURL((__bridge CFTypeRef)url, kCTFontManagerScopeNone, &error);
     if (!suc) {
-        CSNSLog(@"无法加载字体: %@", error);
+        NSLog(@"无法加载字体: %@", error);
     }
     return suc;
 }
@@ -173,7 +173,7 @@ CSSYNTH_DUMMY_CLASS(UIFont_Extended)
     BOOL suc = CTFontManagerRegisterGraphicsFont(fontRef, &errorRef);
     if (!suc) {
         CFRelease(fontRef);
-        CSNSLog(@"%@", errorRef);
+        NSLog(@"%@", errorRef);
         return nil;
     } else {
         CFStringRef fontName = CGFontCopyPostScriptName(fontRef);
@@ -190,7 +190,7 @@ CSSYNTH_DUMMY_CLASS(UIFont_Extended)
     CFErrorRef errorRef;
     BOOL suc = CTFontManagerUnregisterGraphicsFont(fontRef, &errorRef);
     CFRelease(fontRef);
-    if (!suc) CSNSLog(@"%@", errorRef);
+    if (!suc) NSLog(@"%@", errorRef);
     return suc;
 }
 

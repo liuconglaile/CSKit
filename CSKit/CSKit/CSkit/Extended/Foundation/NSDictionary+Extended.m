@@ -8,21 +8,27 @@
 
 #import "NSDictionary+Extended.h"
 
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <CSkit/NSString+Extended.h>
-#import <CSkit/NSData+Extended.h>
-#import <CSkit/UIDevice+Extended.h>
-#else
-#import "CSMacrosHeader.h"
-#import "NSString+Extended.h"
-#import "NSData+Extended.h"
-#import "UIDevice+Extended.h"
+
+/**
+ 在每个类别实现之前添加这个宏,所以我们不必使用  -all_load 或 -force_load 仅从静态库加载对象文件包含类别,没有类.
+ 更多信息: http://developer.apple.com/library/mac/#qa/qa2006/qa1490.html .
+ *******************************************************************************
+ 
+ 示例:
+ CSSYNTH_DUMMY_CLASS(NSString_CSAdd)
+ 
+ @param _name_ 类别名
+ @return 添加的类别
+ */
+#ifndef CSSYNTH_DUMMY_CLASS
+#define CSSYNTH_DUMMY_CLASS(_name_) \
+@interface CSSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation CSSYNTH_DUMMY_CLASS_ ## _name_ @end
 #endif
 
 
-
 CSSYNTH_DUMMY_CLASS(NSDictionary_Extended)
+
 
 
 @interface _CSXMLDictionaryParser : NSObject <NSXMLParserDelegate>
@@ -58,7 +64,7 @@ CSSYNTH_DUMMY_CLASS(NSDictionary_Extended)
 #define XMLPref @"_"
 
 - (void)textEnd {
-    _text = _text.stringByTrim.mutableCopy;
+    _text = [self stringByTrimForString:_text].mutableCopy;
     if (_text.length) {
         NSMutableDictionary *top = _stack.lastObject;
         id existing = top[XMLText];
@@ -72,6 +78,19 @@ CSSYNTH_DUMMY_CLASS(NSDictionary_Extended)
     }
     _text = nil;
 }
+
+/**
+ 修剪头部和尾部的空白字符(空格和换行符)
+ 
+ @return 处理好的字符串
+ */
+- (NSString *)stringByTrimForString:(NSString*)aString {
+    NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    return [aString stringByTrimmingCharactersInSet:set];
+}
+
+
+
 
 - (void)parser:(__unused NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(__unused NSString *)namespaceURI qualifiedName:(__unused NSString *)qName attributes:(NSDictionary *)attributeDict {
     [self textEnd];
@@ -212,22 +231,39 @@ CSSYNTH_DUMMY_CLASS(NSDictionary_Extended)
 
 - (NSString *)URLQueryString
 {
-    NSMutableString *string = [NSMutableString string];
-    for (NSString *key in [self allKeys]) {
-        if ([string length]) {
-            [string appendString:@"&"];
-        }
-        
-
-//        CFStringRef escaped  = CFURLCreateStringByAddingPercentEscapes(NULL,(CFStringRef)[[self objectForKey:key] description],
-//                                                          NULL,(CFStringRef)@"!*'();:@&=+$,/?%#[]",
-//                                                          kCFStringEncodingUTF8);
-
-        
-        [string appendFormat:@"%@", [[[self objectForKey:key] description] stringByURLEncode]];
-        //CFRelease(escaped);
+    
+    
+    //NSMutableString *string = [NSMutableString stringWithString:@"?"];
+    NSMutableString *string = [NSMutableString stringWithString:@""];
+    [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        [string appendFormat:@"%@=%@&",key,obj];
+    }];
+    
+    if ([string rangeOfString:@"&"].length) {
+        [string deleteCharactersInRange:NSMakeRange(string.length - 1, 1)];
     }
+    
     return string;
+    
+    
+    //    #import "NSString+Extended.h"
+    
+    //    NSMutableString *string = [NSMutableString string];
+    //    for (NSString *key in [self allKeys]) {
+    //        if ([string length]) {
+    //            [string appendString:@"&"];
+    //        }
+    //
+    //
+    //        //        CFStringRef escaped  = CFURLCreateStringByAddingPercentEscapes(NULL,(CFStringRef)[[self objectForKey:key] description],
+    //        //                                                          NULL,(CFStringRef)@"!*'();:@&=+$,/?%#[]",
+    //        //                                                          kCFStringEncodingUTF8);
+    //
+    //
+    //        [string appendFormat:@"%@", [[[self objectForKey:key] description] stringByURLEncode]];
+    //        //CFRelease(escaped);
+    //    }
+    //    return string;
 }
 
 
@@ -237,8 +273,15 @@ CSSYNTH_DUMMY_CLASS(NSDictionary_Extended)
 
 - (NSString *)plistString {
     NSData *xmlData = [NSPropertyListSerialization dataWithPropertyList:self format:NSPropertyListXMLFormat_v1_0 options:kNilOptions error:NULL];
-    if (xmlData) return xmlData.utf8String;
+    if (xmlData) return [self utf8StringWithData:xmlData];
     return nil;
+}
+
+- (NSString *)utf8StringWithData:(NSData*)aData {
+    if (aData.length > 0) {
+        return [[NSString alloc] initWithData:aData encoding:NSUTF8StringEncoding];
+    }
+    return @"";
 }
 
 - (NSArray *)allKeysSorted {

@@ -29,13 +29,13 @@
 }
 
 - (oneway void)arcDebugRelease {
-
+    
 #if __has_feature(objc_arc)
-
+    
 #else
     [self release];
 #endif
-
+    
 }
 
 - (instancetype)arcDebugAutorelease {
@@ -48,9 +48,9 @@
 
 - (NSUInteger)arcDebugRetainCount OBJC_ARC_UNAVAILABLE{
 #   if __has_feature(objc_arc)
-  return 0;
+    return 0;
 #   else
-  return [self retainCount];
+    return [self retainCount];
 #   endif
 }
 

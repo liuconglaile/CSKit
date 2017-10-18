@@ -7,13 +7,20 @@
 //
 
 #import "NSDictionary+ShowProperty.h"
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
 
-#else
-#import "CSMacrosHeader.h"
+//MARK:Log重构
+#ifdef DEBUG
+
+/* 重写NSLog,Debug模式下打印日志和当前行数 */
+#define CSNSLog(FORMAT, ...) fprintf(stderr,"\n\n\n🍎🍎🍎方法:%s \n🍊🍊🍊行号:%d \n🍌🍌🍌内容:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+
+#else // 开发模式
+
+#define CSNSLog(FORMAT, ...) nil
 
 #endif
+
 
 @implementation NSDictionary (ShowProperty)
 

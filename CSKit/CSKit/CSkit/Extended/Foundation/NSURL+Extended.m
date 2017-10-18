@@ -1,18 +1,14 @@
 //
-//  NSURL+Utilities.m
-//  CSCategory
+//  NSURL+Extended.m
+//  CSKit
 //
-//  Created by mac on 2017/5/20.
-//  Copyright © 2017年 mac. All rights reserved.
+//  Created by mac on 2017/10/18.
+//  Copyright © 2017年 Moming. All rights reserved.
 //
 
-#import "NSURL+Utilities.h"
-#import "NSString+Extended.h"
-#import "NSObject+Extended.h"
+#import "NSURL+Extended.h"
 
-@implementation NSURL (Utilities)
-
-@dynamic queryValue;
+@implementation NSURL (Extended)
 
 - (NSDictionary *)queryValue{
     return [self queryValues];
@@ -88,12 +84,16 @@
                     [ms appendString:@"&"];
                 }
                 value = [NSString stringWithFormat:@"%@",value] ;
-                value = [value stringByURLEncode];// 对value做下URLEncode编码,以免里面有'=',' '之类的字符造成异常
+                
+                // 对value做下URLEncode编码,以免里面有'=',' '之类的字符造成异常
+                NSString *encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)value, NULL, (CFStringRef)@":/?#[]@!$ &'()*+,;=\"<>%{}|\\^~`", kCFStringEncodingUTF8));
+                
+                value = encodedString;
                 [ms appendFormat:@"%@=%@",key,value];
                 isFirst = NO;
             }
             
-            if ([value isDictionary]) {
+            if ([value isKindOfClass:[NSDictionary class]]) {
                 
             }
             // 如果value是NSNULL类型，将不能成功常见NSURL xxxxx
@@ -144,3 +144,7 @@
 }
 
 @end
+
+
+
+

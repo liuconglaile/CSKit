@@ -8,13 +8,6 @@
 
 #import "UIImage+Blur.h"
 #import <Accelerate/Accelerate.h>
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-
-#else
-#import "CSMacrosHeader.h"
-
-#endif
 
 
 //LOMO
@@ -268,17 +261,17 @@ static UIImage *filterOutputImage(UIImage *image,const float *f){
     // Check pre-conditions.
     if (self.size.width < 1 || self.size.height < 1)
     {
-        CSNSLog(@"*** error: 无效 Size: (%.2f x %.2f). 这两种尺寸必须 >= 1: %@", self.size.width, self.size.height, self);
+        NSLog(@"*** error: 无效 Size: (%.2f x %.2f). 这两种尺寸必须 >= 1: %@", self.size.width, self.size.height, self);
         return nil;
     }
     if (!self.CGImage)
     {
-        CSNSLog(@"*** error: inputImage必须由CGImage支持: %@", self);
+        NSLog(@"*** error: inputImage必须由CGImage支持: %@", self);
         return nil;
     }
     if (maskImage && !maskImage.CGImage)
     {
-        CSNSLog(@"*** error: effectMaskImage必须由CGImage支持: %@", maskImage);
+        NSLog(@"*** error: effectMaskImage必须由CGImage支持: %@", maskImage);
         return nil;
     }
     
@@ -327,7 +320,7 @@ static UIImage *filterOutputImage(UIImage *image,const float *f){
         vImage_Error e = vImageBuffer_InitWithCGImage(&effectInBuffer, &format, NULL, self.CGImage, kvImagePrintDiagnosticsToConsole);
         if (e != kvImageNoError)
         {
-            CSNSLog(@"*** error: vImageBuffer_InitWithCGImage returned error code %zi for inputImage: %@", e, self);
+            NSLog(@"*** error: vImageBuffer_InitWithCGImage returned error code %zi for inputImage: %@", e, self);
             UIGraphicsEndImageContext();
             return nil;
         }
@@ -1953,7 +1946,7 @@ void cleanupBuffer(void *userData, void *buf_data){
     CIFilter *clamp = [CIFilter filterWithName:clampFilterName];
     if (!clamp) {
         
-        CSNSLog(@"");
+        NSLog(@"");
         return nil;
     }
     
@@ -1967,7 +1960,7 @@ void cleanupBuffer(void *userData, void *buf_data){
     CIFilter *gaussianBlur           = [CIFilter filterWithName:gaussianBlurFilterName];
     if (!gaussianBlur) {
         
-        CSNSLog(@"");
+        NSLog(@"");
         return nil;
     }
     

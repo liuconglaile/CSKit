@@ -24,6 +24,50 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)fileSize;
 
+/**
+ 根据数字转换成字符串数字
+ 
+ @param digit 限制最大位数
+ @return 结果
+ */
+- (NSString*)toDisplayNumberWithDigit:(NSInteger)digit;
+
+
+/**
+ 根据数字显示百分百
+ 
+ @param digit 限制最大位数
+ @return 结果
+ */
+- (NSString*)toDisplayPercentageWithDigit:(NSInteger)digit;
+
+
+/**
+ 四舍五入
+ 
+ @param digit 限制最大位数
+ @return 结果
+ */
+- (NSNumber*)doRoundWithDigit:(NSUInteger)digit;
+
+/**
+ 取上整
+ 
+ @param digit 限制最大位数
+ @return 结果
+ */
+- (NSNumber*)doCeilWithDigit:(NSUInteger)digit;
+
+/**
+ 取下整
+ 
+ @param digit 限制最大位数
+ @return 结果
+ */
+- (NSNumber*)doFloorWithDigit:(NSUInteger)digit;
+
+
+
 @end
 
 

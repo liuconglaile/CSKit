@@ -7,12 +7,12 @@
 //
 
 #import "UIColor+Extended.h"
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <CSkit/NSString+Extended.h>
-#else
-#import "CSMacrosHeader.h"
-#import "NSString+Extended.h"
+
+
+#ifndef CSSYNTH_DUMMY_CLASS
+#define CSSYNTH_DUMMY_CLASS(_name_) \
+@interface CSSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation CSSYNTH_DUMMY_CLASS_ ## _name_ @end
 #endif
 
 CSSYNTH_DUMMY_CLASS(UIColor_Extended)
@@ -85,7 +85,10 @@ static inline NSUInteger hexStrToInt(NSString *str) {
 
 static BOOL hexStrToRGBA(NSString *str,
                          CGFloat *r, CGFloat *g, CGFloat *b, CGFloat *a) {
-    str = [[str stringByTrim] uppercaseString];
+    
+    NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    str = [[str stringByTrimmingCharactersInSet:set] uppercaseString];
+    
     if ([str hasPrefix:@"#"]) {
         str = [str substringFromIndex:1];
     } else if ([str hasPrefix:@"0X"]) {
@@ -313,7 +316,7 @@ static BOOL hexStrToRGBA(NSString *str,
     int r = arrRGBA[0] * 255;
     int g = arrRGBA[1] * 255;
     int b = arrRGBA[2] * 255;
-    CSNSLog(@"%d,%d,%d", r, g, b);
+    NSLog(@"%d,%d,%d", r, g, b);
     NSString *webColor = [NSString stringWithFormat:@"#%02X%02X%02X", r, g, b];
     return webColor;
 }

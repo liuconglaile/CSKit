@@ -1,16 +1,16 @@
 //
-//  NSUserDefaults+Utilities.m
-//  CSCategory
+//  NSUserDefaults+Extended.m
+//  CSKit
 //
-//  Created by mac on 17/5/19.
-//  Copyright © 2017年 mac. All rights reserved.
+//  Created by mac on 2017/10/18.
+//  Copyright © 2017年 Moming. All rights reserved.
 //
 
-#import "NSUserDefaults+Utilities.h"
+#import "NSUserDefaults+Extended.h"
 
-@implementation NSUserDefaults (Utilities)
+@implementation NSUserDefaults (Extended)
 
--(void)setValue:(id)value forKey:(NSString *)key iCloudSync:(BOOL)sync
+- (void)setValue:(id)value forKey:(NSString *)key iCloudSync:(BOOL)sync
 {
     if (sync)
         [[NSUbiquitousKeyValueStore defaultStore] setValue:value forKey:key];
@@ -18,7 +18,7 @@
     [self setValue:value forKey:key];
 }
 
--(id)valueForKey:(NSString *)key iCloudSync:(BOOL)sync
+- (id)valueForKey:(NSString *)key iCloudSync:(BOOL)sync
 {
     if (sync)
     {
@@ -42,7 +42,7 @@
 
 
 
--(void)setObject:(id)value forKey:(NSString *)defaultName iCloudSync:(BOOL)sync
+- (void)setObject:(id)value forKey:(NSString *)defaultName iCloudSync:(BOOL)sync
 {
     if (sync)
         [[NSUbiquitousKeyValueStore defaultStore] setObject:value forKey:defaultName];
@@ -50,7 +50,7 @@
     [self setObject:value forKey:defaultName];
 }
 
--(id)objectForKey:(NSString *)key iCloudSync:(BOOL)sync
+- (id)objectForKey:(NSString *)key iCloudSync:(BOOL)sync
 {
     if (sync)
     {
@@ -161,14 +161,7 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-
-
-
-
-
-
-
-
-
-
 @end
+
+
+

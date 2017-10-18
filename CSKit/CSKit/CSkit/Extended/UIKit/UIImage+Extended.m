@@ -12,18 +12,8 @@
 #import <CoreText/CoreText.h>
 #import <objc/runtime.h>
 
-
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <CSkit/UIDevice+Extended.h>
-#import <CSkit/NSString+Extended.h>
-#import <CSkit/NSObject+CGUtilities.h>
-#else
-#import "CSMacrosHeader.h"
-#import "UIDevice+Extended.h"
-#import "NSString+Extended.h"
 #import "NSObject+CGUtilities.h"
-#endif
+
 
 
 #if __has_feature(objc_arc)
@@ -32,6 +22,13 @@
 #else
 #define toCF (CFTypeRef)
 #define fromCF (id)
+#endif
+
+
+#ifndef CSSYNTH_DUMMY_CLASS
+#define CSSYNTH_DUMMY_CLASS(_name_) \
+@interface CSSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation CSSYNTH_DUMMY_CLASS_ ## _name_ @end
 #endif
 
 CSSYNTH_DUMMY_CLASS(UIImage_Extended)
@@ -807,15 +804,15 @@ typedef uint32_t dword;
                     saturation:(CGFloat)saturation
                      maskImage:(UIImage *)maskImage {
     if (self.size.width < 1 || self.size.height < 1) {
-        CSNSLog(@"error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", self.size.width, self.size.height, self);
+        NSLog(@"error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", self.size.width, self.size.height, self);
         return nil;
     }
     if (!self.CGImage) {
-        CSNSLog(@"error: inputImage must be backed by a CGImage: %@", self);
+        NSLog(@"error: inputImage must be backed by a CGImage: %@", self);
         return nil;
     }
     if (maskImage && !maskImage.CGImage) {
-        CSNSLog(@"error: effectMaskImage must be backed by a CGImage: %@", maskImage);
+        NSLog(@"error: effectMaskImage must be backed by a CGImage: %@", maskImage);
         return nil;
     }
     
@@ -851,12 +848,12 @@ typedef uint32_t dword;
         vImage_Error err;
         err = vImageBuffer_InitWithCGImage(&effect, &format, NULL, imageRef, kvImagePrintDiagnosticsToConsole);
         if (err != kvImageNoError) {
-            CSNSLog(@"error: vImageBuffer_InitWithCGImage returned error code %zi for inputImage: %@", err, self);
+            NSLog(@"error: vImageBuffer_InitWithCGImage returned error code %zi for inputImage: %@", err, self);
             return nil;
         }
         err = vImageBuffer_Init(&scratch, effect.height, effect.width, format.bitsPerPixel, kvImageNoFlags);
         if (err != kvImageNoError) {
-            CSNSLog(@"error: vImageBuffer_Init returned error code %zi for inputImage: %@", err, self);
+            NSLog(@"error: vImageBuffer_Init returned error code %zi for inputImage: %@", err, self);
             return nil;
         }
     } else {

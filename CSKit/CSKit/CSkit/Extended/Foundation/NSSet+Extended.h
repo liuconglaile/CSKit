@@ -1,14 +1,14 @@
 //
-//  NSSet+Utilities.h
-//  CSCategory
+//  NSSet+Extended.h
+//  CSKit
 //
-//  Created by mac on 17/5/19.
-//  Copyright © 2017年 mac. All rights reserved.
+//  Created by mac on 2017/10/18.
+//  Copyright © 2017年 Moming. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface NSSet (Utilities)
+@interface NSSet (Extended)
 
 - (void)each:(void (^)(id))block;
 - (void)eachWithIndex:(void (^)(id, int))block;

@@ -8,12 +8,21 @@
 
 #import "NSNumber+Extended.h"
 
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <CSkit/NSString+Extended.h>
-#else
-#import "CSMacrosHeader.h"
-#import "NSString+Extended.h"
+/**
+ 在每个类别实现之前添加这个宏,所以我们不必使用  -all_load 或 -force_load 仅从静态库加载对象文件包含类别,没有类.
+ 更多信息: http://developer.apple.com/library/mac/#qa/qa2006/qa1490.html .
+ *******************************************************************************
+ 
+ 示例:
+ CSSYNTH_DUMMY_CLASS(NSString_CSAdd)
+ 
+ @param _name_ 类别名
+ @return 添加的类别
+ */
+#ifndef CSSYNTH_DUMMY_CLASS
+#define CSSYNTH_DUMMY_CLASS(_name_) \
+@interface CSSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation CSSYNTH_DUMMY_CLASS_ ## _name_ @end
 #endif
 
 CSSYNTH_DUMMY_CLASS(NSNumber_Extended)
@@ -21,7 +30,7 @@ CSSYNTH_DUMMY_CLASS(NSNumber_Extended)
 @implementation NSNumber (Extended)
 
 + (NSNumber *)numberWithString:(NSString *)string {
-    NSString *str = [[string stringByTrim] lowercaseString];
+    NSString *str = [[self stringByTrimForString:string] lowercaseString];
     if (!str || !str.length) {
         return nil;
     }
@@ -76,6 +85,84 @@ CSSYNTH_DUMMY_CLASS(NSNumber_Extended)
     
     return ret;
 }
+
+
+/**
+ 修剪头部和尾部的空白字符(空格和换行符)
+ 
+ @return 处理好的字符串
+ */
++ (NSString *)stringByTrimForString:(NSString*)aString {
+    NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    return [aString stringByTrimmingCharactersInSet:set];
+}
+
+
+
+
+#pragma mark - Display
+- (NSString*)toDisplayNumberWithDigit:(NSInteger)digit
+{
+    NSString *result = nil;
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    [formatter setRoundingMode:NSNumberFormatterRoundHalfUp];
+    [formatter setMaximumFractionDigits:digit];
+    result = [formatter  stringFromNumber:self];
+    if (result == nil)
+        return @"";
+    return result;
+    
+}
+
+- (NSString*)toDisplayPercentageWithDigit:(NSInteger)digit
+{
+    NSString *result = nil;
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterPercentStyle];
+    [formatter setRoundingMode:NSNumberFormatterRoundHalfUp];
+    [formatter setMaximumFractionDigits:digit];
+    result = [formatter  stringFromNumber:self];
+    return result;
+}
+
+
+
+#pragma mark - round, ceil, floor
+- (NSNumber*)doRoundWithDigit:(NSUInteger)digit
+{
+    NSNumber *result = nil;
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setRoundingMode:NSNumberFormatterRoundHalfUp];
+    [formatter setMaximumFractionDigits:digit];
+    [formatter setMinimumFractionDigits:digit];
+    result = [NSNumber numberWithDouble:[[formatter  stringFromNumber:self] doubleValue]];
+    return result;
+}
+
+
+- (NSNumber*)doCeilWithDigit:(NSUInteger)digit
+{
+    NSNumber *result = nil;
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setRoundingMode:NSNumberFormatterRoundCeiling];
+    [formatter setMaximumFractionDigits:digit];
+    result = [NSNumber numberWithDouble:[[formatter  stringFromNumber:self] doubleValue]];
+    return result;
+}
+
+- (NSNumber*)doFloorWithDigit:(NSUInteger)digit
+{
+    NSNumber *result = nil;
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setRoundingMode:NSNumberFormatterRoundFloor];
+    [formatter setMaximumFractionDigits:digit];
+    result = [NSNumber numberWithDouble:[[formatter  stringFromNumber:self] doubleValue]];
+    return result;
+}
+
+
+
 
 
 @end

@@ -9,15 +9,10 @@
 #import "CSCache.h"
 
 
-//#if __has_include(<CSkit/CSkit.h>)
-//#import <CSkit/CSMacrosHeader.h>
-//#import <CSkit/CSMemoryCache.h>
-//#import <CSkit/CSDiskCache.h>
-//#else
 #import "CSMemoryCache.h"
 #import "CSDiskCache.h"
 #import "CSMacrosHeader.h"
-//#endif
+
 
 @implementation CSCache
 

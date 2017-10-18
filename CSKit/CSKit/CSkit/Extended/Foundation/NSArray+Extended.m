@@ -7,9 +7,7 @@
 //
 
 #import "NSArray+Extended.h"
-
-//#import "CSMacrosHeader.h"
-#import "NSData+Extended.h"
+//#import "NSData+Extended.h"
 
 
 
@@ -58,9 +56,17 @@
  */
 - (NSString *)plistString {
     NSData *xmlData = [NSPropertyListSerialization dataWithPropertyList:self format:NSPropertyListXMLFormat_v1_0 options:kNilOptions error:NULL];
-    if (xmlData) return xmlData.utf8String;
+    if (xmlData) return [self utf8StringWithData:xmlData];//xmlData.utf8String;
     return nil;
 }
+
+- (NSString *)utf8StringWithData:(NSData*)data {
+    if (data.length > 0) {
+        return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    }
+    return @"";
+}
+
 
 /**
  返回位于随机索引处的对象.

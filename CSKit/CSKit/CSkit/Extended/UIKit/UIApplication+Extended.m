@@ -20,13 +20,51 @@
 #import <CoreLocation/CoreLocation.h>
 #import <CoreMotion/CoreMotion.h>
 #import <EventKit/EKEventStore.h>
+#import <pthread.h>
 
 
 
-#import "CSMacrosHeader.h"
-#import "NSArray+Extended.h"
-#import "NSObject+Extended.h"
-#import "UIDevice+Extended.h"
+
+/**
+ 在每个类别实现之前添加这个宏,所以我们不必使用  -all_load 或 -force_load 仅从静态库加载对象文件包含类别,没有类.
+ 更多信息: http://developer.apple.com/library/mac/#qa/qa2006/qa1490.html .
+ *******************************************************************************
+ 
+ 示例:
+ CSSYNTH_DUMMY_CLASS(NSString_CSAdd)
+ 
+ @param _name_ 类别名
+ @return 添加的类别
+ */
+#ifndef CSSYNTH_DUMMY_CLASS
+#define CSSYNTH_DUMMY_CLASS(_name_) \
+@interface CSSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation CSSYNTH_DUMMY_CLASS_ ## _name_ @end
+#endif
+
+
+#ifndef CSSYNTH_DYNAMIC_PROPERTY_OBJECT
+#define CSSYNTH_DYNAMIC_PROPERTY_OBJECT(_getter_, _setter_, _association_, _type_) \
+- (void)_setter_ : (_type_)object { \
+[self willChangeValueForKey:@#_getter_]; \
+objc_setAssociatedObject(self, _cmd, object, OBJC_ASSOCIATION_ ## _association_); \
+[self didChangeValueForKey:@#_getter_]; \
+} \
+- (_type_)_getter_ { \
+return objc_getAssociatedObject(self, @selector(_setter_:)); \
+}
+#endif
+
+
+/** 在主队列上提交用于异步执行的块,并立即返回 */
+static inline void dispatch_async_on_main_queue(void (^block)(void)) {
+    if (pthread_main_np()) {
+        block();
+    } else {
+        dispatch_async(dispatch_get_main_queue(), block);
+    }
+}
+
 
 
 
@@ -115,8 +153,17 @@ static volatile int32_t numberOfActiveNetworkConnectionsxxx;
     return [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject];
 }
 
+///是否模拟器
+- (BOOL)isSimulator {
+#if TARGET_OS_SIMULATOR
+    return YES;
+#else
+    return NO;
+#endif
+}
+
 - (BOOL)isPirated {
-    if ([[UIDevice currentDevice] isSimulator]) return YES; // 模拟器不是来自AppStore
+    if ([self isSimulator]) return YES; // 模拟器不是来自AppStore
     
     if (getgid() <= 10) return YES; // 进程ID不应该是root
     
@@ -632,3 +679,8 @@ CSSYNTH_DYNAMIC_PROPERTY_OBJECT(networkActivityInfo,
 
 
 @end
+
+
+
+
+

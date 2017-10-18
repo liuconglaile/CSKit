@@ -11,13 +11,9 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 #import <objc/runtime.h>
 
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <CSkit/NSString+Extended.h>
-#else
-#import "CSMacrosHeader.h"
-#import "NSString+Extended.h"
-#endif
+
+//#import "NSString+Extended.h"
+
 
 static void (^__loadedBlock)(UIWebView *webView);
 static void (^__failureBlock)(UIWebView *webView, NSError *error);
@@ -415,8 +411,10 @@ static NSHashTable* g_webViews = nil;
 //    NSString *encodedUrl = (__bridge NSString *) CFURLCreateStringByAddingPercentEscapes (NULL, (__bridge CFStringRef) URLString, NULL, NULL,kCFStringEncodingUTF8);
     
     
+    NSString *encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)URLString, NULL, (CFStringRef)@":/?#[]@!$ &'()*+,;=\"<>%{}|\\^~`", kCFStringEncodingUTF8));
     
-    NSURL *url = [NSURL URLWithString:[URLString stringByURLEncode]];
+    
+    NSURL *url = [NSURL URLWithString:encodedString];
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     [self loadRequest:req];
 }
@@ -483,7 +481,7 @@ static NSHashTable* g_webViews = nil;
     NSError*   error = nil;
     id array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
     
-    if(array==nil) CSNSLog(@"An error occured in meta parser.");
+    if(array==nil) NSLog(@"An error occured in meta parser.");
     return array;
 }
 
@@ -632,7 +630,7 @@ static NSHashTable* g_webViews = nil;
     for (int i = 0; i < [self nodeCountOfTag:@"a"]; i++) {
         NSString *jsString = [NSString stringWithFormat:@"document.getElementsByTagName('a')[%d].getAttribute('onclick')", i];
         NSString *clickString = [self stringByEvaluatingJavaScriptFromString:jsString];
-        CSNSLog(@"%@", clickString);
+        NSLog(@"%@", clickString);
         [arrOnClicks addObject:clickString];
     }
     return arrOnClicks;

@@ -9,13 +9,15 @@
 #import "UIControl+Extended.h"
 #import <objc/runtime.h>
 #import <AVFoundation/AVFoundation.h>
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
 
-#else
-#import "CSMacrosHeader.h"
 
+#ifndef CSSYNTH_DUMMY_CLASS
+#define CSSYNTH_DUMMY_CLASS(_name_) \
+@interface CSSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation CSSYNTH_DUMMY_CLASS_ ## _name_ @end
 #endif
+
+
 
 CSSYNTH_DUMMY_CLASS(UIControl_Extended)
 
@@ -145,7 +147,7 @@ static char const * const kSoundsKey = "kSoundsKey";
     [sounds setObject:tapSound forKey:controlEventKey];
     [tapSound prepareToPlay];
     if (!tapSound) {
-        CSNSLog(@"Couldn't add sound - error: %@", error);
+        NSLog(@"Couldn't add sound - error: %@", error);
         return;
     }
     

@@ -1,14 +1,14 @@
 //
-//  NSDateFormatter+Utilities.h
-//  CSCategory
+//  NSDateFormatter+Extended.h
+//  CSKit
 //
-//  Created by mac on 17/5/18.
-//  Copyright © 2017年 mac. All rights reserved.
+//  Created by mac on 2017/10/11.
+//  Copyright © 2017年 Moming. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface NSDateFormatter (Utilities)
+@interface NSDateFormatter (Extended)
 
 /* 日期格式化，格式为 */
 +(NSDateFormatter *)dateFormatterWithFormat:(NSString *)format;

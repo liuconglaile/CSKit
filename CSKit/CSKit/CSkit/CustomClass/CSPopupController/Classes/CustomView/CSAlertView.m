@@ -8,8 +8,10 @@
 
 #import "CSAlertView.h"
 #import "UIView+Extended.h"
-#import "NSObject+Extended.h"
+#import "NSObject+CSRuntime.h"
 #import "CALayer+Extended.h"
+#import "UIView+Layout.h"
+
 #define ACTION_HEIGHT 49.0
 
 @interface CSAlertButton()

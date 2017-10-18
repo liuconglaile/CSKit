@@ -10,13 +10,10 @@
 #import <UIKit/UIKit.h>
 #import <time.h>
 
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <CSkit/UIApplication+Extended.h>
-#else
+
 #import "CSMacrosHeader.h"
 #import "UIApplication+Extended.h"
-#endif
+
 
 
 

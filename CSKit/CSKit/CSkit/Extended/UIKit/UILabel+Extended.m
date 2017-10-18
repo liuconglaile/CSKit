@@ -8,10 +8,12 @@
 
 #import "UILabel+Extended.h"
 #import <objc/runtime.h>
+#import <CoreText/CoreText.h>
 
 NSTimeInterval const UILabelAWDefaultDuration = 0.4f;
 unichar const UILabelAWDefaultCharacter       = 124;
 
+/*
 static inline void AutomaticWritingSwizzleSelector(Class class, SEL originalSelector, SEL swizzledSelector) {
     Method originalMethod = class_getInstanceMethod(class, originalSelector);
     Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
@@ -21,6 +23,7 @@ static inline void AutomaticWritingSwizzleSelector(Class class, SEL originalSele
         method_exchangeImplementations(originalMethod, swizzledMethod);
     }
 }
+ */
 
 static char kAutomaticWritingOperationQueueKey;
 static char kAutomaticWritingEdgeInsetsKey;
@@ -31,65 +34,72 @@ static char kAutomaticWritingEdgeInsetsKey;
 @dynamic edgeInsets,automaticWritingOperationQueue;
 
 ///MARK: =========================================
-///MARK: 标签字体自动适配 & 拉进项目就可以了,不需要任何操作
+///MARK: 标签字体自动适配 & 拉进项目就可以了,不需要任何操作(会改变字体样式,慎用)
 ///MARK: =========================================
-+ (void)load{
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        AutomaticWritingSwizzleSelector([self class], @selector(textRectForBounds:limitedToNumberOfLines:), @selector(automaticWritingTextRectForBounds:limitedToNumberOfLines:));
-        AutomaticWritingSwizzleSelector([self class], @selector(drawTextInRect:), @selector(drawAutomaticWritingTextInRect:));
-        
-        
-        ///字体适配相关
-        Method imp = class_getInstanceMethod([self class], @selector(initWithCoder:));
-        Method myImp = class_getInstanceMethod([self class], @selector(myInitWithCoder:));
-        method_exchangeImplementations(imp, myImp);
-    });
-    
-    
-}
 
-- (id)myInitWithCoder:(NSCoder*)aDecode{
-    [self myInitWithCoder:aDecode];
-    
-    if (self) {
-        
-        if(self.tag != 999){
-            CGFloat fontSize = self.font.pointSize;
-            self.font = [UIFont systemFontOfSize:fontSize*p];
-            [self fit];
-        }
-    }
-    return self;
-}
+/*
+ + (void)load{
+ 
+ static dispatch_once_t onceToken;
+ dispatch_once(&onceToken, ^{
+ AutomaticWritingSwizzleSelector([self class], @selector(textRectForBounds:limitedToNumberOfLines:), @selector(automaticWritingTextRectForBounds:limitedToNumberOfLines:));
+ AutomaticWritingSwizzleSelector([self class], @selector(drawTextInRect:), @selector(drawAutomaticWritingTextInRect:));
+ 
+ 
+ ///字体适配相关
+ Method imp = class_getInstanceMethod([self class], @selector(initWithCoder:));
+ Method myImp = class_getInstanceMethod([self class], @selector(myInitWithCoder:));
+ method_exchangeImplementations(imp, myImp);
+ });
+ 
+ }
+ */
 
+/*
+ 
+ - (id)myInitWithCoder:(NSCoder*)aDecode{
+ [self myInitWithCoder:aDecode];
+ 
+ if (self) {
+ 
+ if(self.tag != 999){
+ CGFloat fontSize = self.font.pointSize;
+ self.font = [UIFont systemFontOfSize:fontSize*p];
+ [self fit];
+ }
+ }
+ return self;
+ }
+ 
+ 
+ -(void)awakeFromNib {
+ 
+ [super awakeFromNib];
+ 
+ [self fit];
+ }
+ 
+ -(void)fit {
+ 
+ [self.constraints enumerateObjectsUsingBlock:^(__kindof NSLayoutConstraint * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+ 
+ if (obj.identifier.length > 0) {
+ 
+ obj.constant = obj.constant *p;
+ }
+ }];
+ 
+ [self.superview.constraints enumerateObjectsUsingBlock:^(__kindof NSLayoutConstraint * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+ 
+ if (obj.identifier.length > 0) {
+ 
+ obj.constant = obj.constant *p;
+ }
+ }];
+ }
+ 
+ */
 
--(void)awakeFromNib {
-    
-    [super awakeFromNib];
-    
-    [self fit];
-}
-
--(void)fit {
-    
-    [self.constraints enumerateObjectsUsingBlock:^(__kindof NSLayoutConstraint * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-        if (obj.identifier.length > 0) {
-            
-            obj.constant = obj.constant *p;
-        }
-    }];
-    
-    [self.superview.constraints enumerateObjectsUsingBlock:^(__kindof NSLayoutConstraint * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-        if (obj.identifier.length > 0) {
-            
-            obj.constant = obj.constant *p;
-        }
-    }];
-}
 ///MARK: =========================================
 ///MARK: 标签字体自动适配 & 拉进项目就可以了,不需要任何操作
 ///MARK: =========================================
@@ -517,6 +527,43 @@ static char kAutomaticWritingEdgeInsetsKey;
 ///MARK: =========================================
 ///MARK: 渲染相关
 ///MARK: =========================================
+
+
+
+
+
++(instancetype)labelWithText:(NSString *)text textFont:(int)font textColor:(UIColor *)color frame:(CGRect)frame{
+    UILabel *label = [UILabel new];
+    label.text = text;
+    label.font = [UIFont systemFontOfSize:font];
+    label.textColor = color;
+    label.textAlignment=YES;
+    label.frame=frame;
+    return label;
+}
+
+- (void)setColumnSpace:(CGFloat)columnSpace
+{
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithAttributedString:self.attributedText];
+    //调整间距
+    [attributedString addAttribute:(__bridge NSString *)kCTKernAttributeName value:@(columnSpace) range:NSMakeRange(0, [attributedString length])];
+    self.attributedText = attributedString;
+}
+
+- (void)setRowSpace:(CGFloat)rowSpace
+{
+    self.numberOfLines = 0;
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithAttributedString:self.attributedText];
+    //调整行距
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = rowSpace;
+    paragraphStyle.baseWritingDirection = NSWritingDirectionLeftToRight;
+    paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
+    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [self.text length])];
+    self.attributedText = attributedString;
+}
+
+
 
 @end
 

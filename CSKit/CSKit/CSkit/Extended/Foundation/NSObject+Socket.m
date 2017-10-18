@@ -11,13 +11,6 @@
 #import <netinet/in.h>
 #import <arpa/inet.h>
 
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-
-#else
-#import "CSMacrosHeader.h"
-
-#endif
 
 @implementation NSObject (Socket)
 
@@ -94,7 +87,7 @@
         NSData * data = [NSData dataWithBytes:buffer length:recvCount];
         NSString * recvMsg = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         close(clientSocket);
-        CSNSLog(@"%@",recvMsg);
+        NSLog(@"%@",recvMsg);
         return recvMsg;
     }
     

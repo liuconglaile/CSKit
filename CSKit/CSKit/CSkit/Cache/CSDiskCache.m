@@ -11,7 +11,7 @@
 #import <time.h>
 #import "CSKVStorage.h"
 
-#import "NSString+Extended.h"
+#import "NSString+Encrypt.h"
 #import "UIDevice+Extended.h"
 
 

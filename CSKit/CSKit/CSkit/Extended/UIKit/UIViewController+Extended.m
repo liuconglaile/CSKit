@@ -10,13 +10,7 @@
 #import <objc/runtime.h>
 #import <StoreKit/StoreKit.h>
 #import <MobileCoreServices/UTCoreTypes.h>
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
 
-#else
-#import "CSMacrosHeader.h"
-
-#endif
 
 static const void *CSBackButtonHandlerKey = &CSBackButtonHandlerKey;
 static const void *UIViewControllerDictionaryBlockKey = &UIViewControllerDictionaryBlockKey;
@@ -80,7 +74,7 @@ void CSBlockSegue(void) {
     }
     
     if (!self.jmg_dictionaryBlock || !self.jmg_dictionaryBlock[segue.identifier]) {
-        CSNSLog(@"Segue identifier '%@' doesn't exist", segue.identifier);
+        NSLog(@"Segue identifier '%@' doesn't exist", segue.identifier);
         return;
     }
     

@@ -10,15 +10,27 @@
 #include <CommonCrypto/CommonCrypto.h>
 #include <zlib.h>
 
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
 
-#else
-#import "CSMacrosHeader.h"
-
+/**
+ 在每个类别实现之前添加这个宏,所以我们不必使用  -all_load 或 -force_load 仅从静态库加载对象文件包含类别,没有类.
+ 更多信息: http://developer.apple.com/library/mac/#qa/qa2006/qa1490.html .
+ *******************************************************************************
+ 
+ 示例:
+ CSSYNTH_DUMMY_CLASS(NSString_CSAdd)
+ 
+ @param _name_ 类别名
+ @return 添加的类别
+ */
+#ifndef CSSYNTH_DUMMY_CLASS
+#define CSSYNTH_DUMMY_CLASS(_name_) \
+@interface CSSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation CSSYNTH_DUMMY_CLASS_ ## _name_ @end
 #endif
 
+
 CSSYNTH_DUMMY_CLASS(NSData_Extended)
+
 
 #define kSDMaxCacheFileAmount 100
 
@@ -605,7 +617,7 @@ static const short base64DecodingTable[256] = {
     NSError *error = nil;
     id value = [NSJSONSerialization JSONObjectWithData:self options:kNilOptions error:&error];
     if (error) {
-        CSNSLog(@"jsonValueDecoded error:%@", error);
+        NSLog(@"jsonValueDecoded error:%@", error);
     }
     return value;
 }

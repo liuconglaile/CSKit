@@ -312,6 +312,7 @@
     }
 }
 
+
 #pragma  mark - 私有方法
 - (AFHTTPSessionManager *)getManagerWithWithPath:(const NSString *)path
                                       parameters:(id)parameters

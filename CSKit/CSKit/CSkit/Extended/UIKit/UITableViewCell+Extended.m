@@ -21,7 +21,7 @@
     return sv == self ? nil : sv;
 }
 
-- (void) setDelaysContentTouches:(BOOL)delaysContentTouches
+- (void)setDelaysContentTouches:(BOOL)delaysContentTouches
 {
     [self willChangeValueForKey: @"delaysContentTouches"];
     

@@ -1,14 +1,14 @@
 //
-//  NSDateFormatter+Utilities.m
-//  CSCategory
+//  NSDateFormatter+Extended.m
+//  CSKit
 //
-//  Created by mac on 17/5/18.
-//  Copyright © 2017年 mac. All rights reserved.
+//  Created by mac on 2017/10/11.
+//  Copyright © 2017年 Moming. All rights reserved.
 //
 
-#import "NSDateFormatter+Utilities.h"
+#import "NSDateFormatter+Extended.h"
 
-@implementation NSDateFormatter (Utilities)
+@implementation NSDateFormatter (Extended)
 
 +(NSDateFormatter *)dateFormatterWithFormat:(NSString *)format {
     return [self dateFormatterWithFormat:format timeZone:nil];

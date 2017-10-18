@@ -16,9 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
  执行插入,删除或选择接收器的行和部分的一系列方法调用.
  
  @discussion   执行一系列方法调用,插入,删除或选择表的行和部分.如果要进行后续插入,删除和选择操作
-               (例如,cellForRowAtIndexPath: 和 indexPathsForVisibleRows)并且执行动画.
+ (例如,cellForRowAtIndexPath: 和 indexPathsForVisibleRows)并且执行动画.
  @discussion   如果您不在此块内进行插入,删除和选择调用,则表属性(如行数)可能会变为无效.你不应该在块内调用reloadData;
-               如果您在组内调用此方法,您将需要自己执行动画.
+ 如果您在组内调用此方法,您将需要自己执行动画.
  @param block  代码块,组合了一系列方法调用.
  */
 - (void)updateWithBlock:(void (^)(UITableView *tableView))block;

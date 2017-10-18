@@ -17,6 +17,8 @@
 
 #import "CSImageHelper.h"
 
+#import "UIView+Layout.h"
+
 @interface CSTestTableCell ()
 
 @property (nonatomic, strong) CSLabel * userNameLabel;

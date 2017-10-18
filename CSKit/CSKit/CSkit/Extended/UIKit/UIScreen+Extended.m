@@ -7,14 +7,15 @@
 //
 
 #import "UIScreen+Extended.h"
+#include <sys/sysctl.h>
 
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <CSkit/UIDevice+Extended.h>
-#else
-#import "CSMacrosHeader.h"
-#import "UIDevice+Extended.h"
+
+#ifndef CSSYNTH_DUMMY_CLASS
+#define CSSYNTH_DUMMY_CLASS(_name_) \
+@interface CSSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation CSSYNTH_DUMMY_CLASS_ ## _name_ @end
 #endif
+
 
 CSSYNTH_DUMMY_CLASS(UIScreen_Extended);
 
@@ -98,7 +99,7 @@ static inline CGSize SizeSWAP(CGSize size) {
     CGSize size = CGSizeZero;
     
     if ([[UIScreen mainScreen] isEqual:self]) {
-        NSString *model = [UIDevice currentDevice].machineModel;
+        NSString *model = [self machineModel];
         
         if ([model hasPrefix:@"iPhone"]) {
             if ([model isEqualToString:@"iPhone7,1"]) return CGSizeMake(1080, 1920);
@@ -127,6 +128,21 @@ static inline CGSize SizeSWAP(CGSize size) {
         }
     }
     return size;
+}
+
+///获取机型
+- (NSString *)machineModel {
+    static dispatch_once_t one;
+    static NSString *model;
+    dispatch_once(&one, ^{
+        size_t size;
+        sysctlbyname("hw.machine", NULL, &size, NULL, 0);
+        char *machine = malloc(size);
+        sysctlbyname("hw.machine", machine, &size, NULL, 0);
+        model = [NSString stringWithUTF8String:machine];
+        free(machine);
+    });
+    return model;
 }
 
 - (CGFloat)pixelsPerInch {
@@ -208,7 +224,7 @@ static inline CGSize SizeSWAP(CGSize size) {
                                                      @"iPad6,7" : @264, //@"iPad Pro (12.9 inch)",
                                                      @"iPad6,8" : @264, //@"iPad Pro (12.9 inch)",
                                                      };
-        NSString *model = [UIDevice currentDevice].machineModel;
+        NSString *model = [self machineModel];
         if (model) {
             ppi = dic[name].doubleValue;
         }

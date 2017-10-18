@@ -8,12 +8,12 @@
 
 #import "UIBezierPath+Extended.h"
 #import <CoreText/CoreText.h>
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <CSkit/UIFont+Extended.h>
-#else
-#import "CSMacrosHeader.h"
-#import "UIFont+Extended.h"
+
+
+#ifndef CSSYNTH_DUMMY_CLASS
+#define CSSYNTH_DUMMY_CLASS(_name_) \
+@interface CSSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation CSSYNTH_DUMMY_CLASS_ ## _name_ @end
 #endif
 
 
@@ -22,7 +22,8 @@ CSSYNTH_DUMMY_CLASS(UIBezierPath_YYAdd)
 @implementation UIBezierPath (Extended)
 
 + (UIBezierPath *)bezierPathWithText:(NSString *)text font:(UIFont *)font {
-    CTFontRef ctFont = font.CTFontRef;
+    
+    CTFontRef ctFont = CTFontCreateWithName((__bridge CFStringRef)font.fontName, font.pointSize, NULL);
     if (!ctFont) return nil;
     NSDictionary *attrs = @{ (__bridge id)kCTFontAttributeName:(__bridge id)ctFont };
     NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:text attributes:attrs];
@@ -64,3 +65,6 @@ CSSYNTH_DUMMY_CLASS(UIBezierPath_YYAdd)
 }
 
 @end
+
+
+

@@ -16,13 +16,13 @@
 #include <ifaddrs.h>
 #import <Security/Security.h>
 
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <CSkit/NSString+Extended.h>
-#else
-#import "CSMacrosHeader.h"
-#import "NSString+Extended.h"
+
+#ifndef CSSYNTH_DUMMY_CLASS
+#define CSSYNTH_DUMMY_CLASS(_name_) \
+@interface CSSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation CSSYNTH_DUMMY_CLASS_ ## _name_ @end
 #endif
+
 
 
 CSSYNTH_DUMMY_CLASS(UIDevice_Extended)
@@ -83,13 +83,22 @@ NSString * const UIDevicePasscodeKeychainAccount = @"UIDevice-PasscodeStatus_Key
         return YES;
     }
     
-    NSString *path = [NSString stringWithFormat:@"/private/%@", [NSString stringWithUUID]];
+    
+    
+    NSString *path = [NSString stringWithFormat:@"/private/%@", [self stringWithUUID]];
     if ([@"test" writeToFile : path atomically : YES encoding : NSUTF8StringEncoding error : NULL]) {
         [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
         return YES;
     }
     
     return NO;
+}
+
+- (NSString *)stringWithUUID {
+    CFUUIDRef uuid = CFUUIDCreate(NULL);
+    CFStringRef string = CFUUIDCreateString(NULL, uuid);
+    CFRelease(uuid);
+    return (__bridge_transfer NSString *)string;
 }
 
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
@@ -552,7 +561,7 @@ static cs_net_interface_counter cs_get_net_interface_counter() {
     
     //NSString *errorString = [NSString stringWithFormat:@"SecItemAdd can't create sacObject: %@", error];
     
-    CSNSLog(@"%@",[NSString stringWithFormat:@"SecItemAdd can't create sacObject: %@", error]);
+    NSLog(@"%@",[NSString stringWithFormat:@"SecItemAdd can't create sacObject: %@", error]);
     
     return (sacObject == NULL || error != NULL);
     //return (&kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly != NULL);
@@ -565,7 +574,7 @@ static cs_net_interface_counter cs_get_net_interface_counter() {
 - (CSPasscodeStatus)passcodeStatus
 {
 #if TARGET_IPHONE_SIMULATOR
-    CSNSLog(@"-[%@ %@] - not supported in simulator", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+    NSLog(@"-[%@ %@] - not supported in simulator", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
     return CSPasscodeStatusUnknown;
 #endif
     

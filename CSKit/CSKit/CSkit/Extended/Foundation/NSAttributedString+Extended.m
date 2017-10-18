@@ -1,19 +1,19 @@
 //
-//  NSAttributedString+Height.m
-//  FuShuo
+//  NSAttributedString+Extended.m
+//  CSKit
 //
-//  Created by nonstriater on 14-5-3.
-//  Copyright (c) 2014年 xiaoran. All rights reserved.
+//  Created by mac on 2017/10/18.
+//  Copyright © 2017年 Moming. All rights reserved.
 //
 
-#import "NSAttributedString+Height.h"
+#import "NSAttributedString+Extended.h"
 
 const CGFloat AttributedString_Max_Height=1000.f;
 
-@implementation NSAttributedString (Height)
+@implementation NSAttributedString (Extended)
 
 - (CGFloat)boundingHeightForWidth:(CGFloat)inWidth{
-
+    
     CTFramesetterRef frameSetterRef = CTFramesetterCreateWithAttributedString((__bridge CFAttributedStringRef) self);
     CGFloat height = [self boundingHeightWithFrameSetter:frameSetterRef ForWidth:inWidth];
     CFRelease(frameSetterRef);
@@ -21,7 +21,7 @@ const CGFloat AttributedString_Max_Height=1000.f;
 }
 
 - (CGFloat)boundingHeightWithFrameSetter:(CTFramesetterRef)frameSetter ForWidth:(CGFloat)inWidth{
-
+    
     CGFloat height = 0.f;
     
     CGMutablePathRef path = CGPathCreateMutable();
@@ -45,6 +45,5 @@ const CGFloat AttributedString_Max_Height=1000.f;
     return height;
     
 }
-
 
 @end

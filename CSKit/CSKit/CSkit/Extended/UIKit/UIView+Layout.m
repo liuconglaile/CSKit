@@ -181,19 +181,30 @@
 }
 
 - (CGFloat)centerX {
-    return self.center.x;
+    return self.center.x + self.frame.size.width * 0.5;
 }
 
 - (void)setCenterX:(CGFloat)centerX {
-    self.center = CGPointMake(centerX, self.center.y);
+    
+    CGRect frame = self.frame;
+    frame.origin.x = centerX - frame.size.width * 0.5;
+    self.frame = frame;
+    
+    //self.center = CGPointMake(centerX, self.center.y);
 }
 
 - (CGFloat)centerY {
-    return self.center.y;
+    //return self.center.y;
+    
+    return self.center.y + self.frame.size.height * 0.5;
 }
 
 - (void)setCenterY:(CGFloat)centerY {
-    self.center = CGPointMake(self.center.x, centerY);
+    //self.center = CGPointMake(self.center.x, centerY);
+    
+    CGRect frame = self.frame;
+    frame.origin.y = centerY - frame.size.height * 0.5;
+    self.frame = frame;
 }
 
 - (CGPoint)origin {
@@ -224,81 +235,81 @@
 
 
 
-///MARK: ===================================================
-///MARK: 约束相关
-///MARK: ===================================================
-
-- (NSLayoutConstraint *)constraintForAttribute:(NSLayoutAttribute)attribute {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstAttribute = %d && (firstItem = %@ || secondItem = %@)", attribute, self, self];
-    NSArray *constraintArray = [self.superview constraints];
-    
-    if (attribute == NSLayoutAttributeWidth || attribute == NSLayoutAttributeHeight) {
-        constraintArray = [self constraints];
-    }
-    
-    NSArray *fillteredArray = [constraintArray filteredArrayUsingPredicate:predicate];
-    if(fillteredArray.count == 0) {
-        return nil;
-    } else {
-        return fillteredArray.firstObject;
-    }
-}
-
-- (NSLayoutConstraint *)leftConstraint {
-    return [self constraintForAttribute:NSLayoutAttributeLeft];
-}
-
-- (NSLayoutConstraint *)rightConstraint {
-    return [self constraintForAttribute:NSLayoutAttributeRight];
-}
-
-- (NSLayoutConstraint *)topConstraint {
-    return [self constraintForAttribute:NSLayoutAttributeTop];
-}
-
-- (NSLayoutConstraint *)bottomConstraint {
-    return [self constraintForAttribute:NSLayoutAttributeBottom];
-}
-
-- (NSLayoutConstraint *)leadingConstraint {
-    return [self constraintForAttribute:NSLayoutAttributeLeading];
-}
-
-- (NSLayoutConstraint *)trailingConstraint {
-    return [self constraintForAttribute:NSLayoutAttributeTrailing];
-}
-
-- (NSLayoutConstraint *)widthConstraint {
-    return [self constraintForAttribute:NSLayoutAttributeWidth];
-}
-
-- (NSLayoutConstraint *)heightConstraint {
-    return [self constraintForAttribute:NSLayoutAttributeHeight];
-}
-
-- (NSLayoutConstraint *)centerXConstraint {
-    return [self constraintForAttribute:NSLayoutAttributeCenterX];
-}
-
-- (NSLayoutConstraint *)centerYConstraint {
-    return [self constraintForAttribute:NSLayoutAttributeCenterY];
-}
-
-- (NSLayoutConstraint *)baseLineConstraint {
-    return [self constraintForAttribute:NSLayoutAttributeBaseline];
-}
-
-
-- (NSArray *)makeConstraints:(void (^)(CSConstraintMaker *))aBlock{
-    self.translatesAutoresizingMaskIntoConstraints = NO;
-    CSConstraintMaker *constraintMaker = [[CSConstraintMaker alloc] initWithView:self];
-    aBlock(constraintMaker);
-    return [constraintMaker install];
-}
-
-///MARK: ===================================================
-///MARK: 约束相关
-///MARK: ===================================================
+/////MARK: ===================================================
+/////MARK: 约束相关
+/////MARK: ===================================================
+//
+//- (NSLayoutConstraint *)constraintForAttribute:(NSLayoutAttribute)attribute {
+//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstAttribute = %d && (firstItem = %@ || secondItem = %@)", attribute, self, self];
+//    NSArray *constraintArray = [self.superview constraints];
+//    
+//    if (attribute == NSLayoutAttributeWidth || attribute == NSLayoutAttributeHeight) {
+//        constraintArray = [self constraints];
+//    }
+//    
+//    NSArray *fillteredArray = [constraintArray filteredArrayUsingPredicate:predicate];
+//    if(fillteredArray.count == 0) {
+//        return nil;
+//    } else {
+//        return fillteredArray.firstObject;
+//    }
+//}
+//
+//- (NSLayoutConstraint *)leftConstraint {
+//    return [self constraintForAttribute:NSLayoutAttributeLeft];
+//}
+//
+//- (NSLayoutConstraint *)rightConstraint {
+//    return [self constraintForAttribute:NSLayoutAttributeRight];
+//}
+//
+//- (NSLayoutConstraint *)topConstraint {
+//    return [self constraintForAttribute:NSLayoutAttributeTop];
+//}
+//
+//- (NSLayoutConstraint *)bottomConstraint {
+//    return [self constraintForAttribute:NSLayoutAttributeBottom];
+//}
+//
+//- (NSLayoutConstraint *)leadingConstraint {
+//    return [self constraintForAttribute:NSLayoutAttributeLeading];
+//}
+//
+//- (NSLayoutConstraint *)trailingConstraint {
+//    return [self constraintForAttribute:NSLayoutAttributeTrailing];
+//}
+//
+//- (NSLayoutConstraint *)widthConstraint {
+//    return [self constraintForAttribute:NSLayoutAttributeWidth];
+//}
+//
+//- (NSLayoutConstraint *)heightConstraint {
+//    return [self constraintForAttribute:NSLayoutAttributeHeight];
+//}
+//
+//- (NSLayoutConstraint *)centerXConstraint {
+//    return [self constraintForAttribute:NSLayoutAttributeCenterX];
+//}
+//
+//- (NSLayoutConstraint *)centerYConstraint {
+//    return [self constraintForAttribute:NSLayoutAttributeCenterY];
+//}
+//
+//- (NSLayoutConstraint *)baseLineConstraint {
+//    return [self constraintForAttribute:NSLayoutAttributeBaseline];
+//}
+//
+//
+//- (NSArray *)makeConstraints:(void (^)(CSConstraintMaker *))aBlock{
+//    self.translatesAutoresizingMaskIntoConstraints = NO;
+//    CSConstraintMaker *constraintMaker = [[CSConstraintMaker alloc] initWithView:self];
+//    aBlock(constraintMaker);
+//    return [constraintMaker install];
+//}
+//
+/////MARK: ===================================================
+/////MARK: 约束相关
+/////MARK: ===================================================
 
 
 
@@ -319,178 +330,178 @@ typedef NS_ENUM(NSUInteger, CSLayoutAttribute) {
 };
 
 
-@interface CSConstraintMaker()
-
-@property (nonatomic, weak) UIView *view;
-@property (nonatomic, strong) NSMutableArray<CSConstraint *> *constraints;
-
-@end
-
-@implementation CSConstraintMaker
-
-- (id)initWithView:(UIView *)view {
-    if (self = [super init]) {
-        self.view = view;
-        self.constraints = [NSMutableArray new];
-    }
-    return self;
-}
-
-- (NSArray *)install {
-    NSArray *constraints = self.constraints.copy;
-    for (CSConstraint *constraint in constraints) {
-        [constraint install];
-    }
-    return constraints;
-}
-
-- (CSConstraint *)addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute {
-    return [self constraint:nil addConstraintWithLayoutAttribute:layoutAttribute];
-}
-
-- (CSConstraint *)constraint:(CSConstraint *)aConstraint addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute {
-    CSConstraint *constraint = [[CSConstraint alloc] initWithView:self.view];
-    constraint.layoutAttributes = [NSMutableArray arrayWithObjects:@(layoutAttribute), nil];
-    [self.constraints addObject:constraint];
-    return constraint;
-}
-
-- (CSConstraint *)left {
-    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeLeft];
-}
-
-- (CSConstraint *)top {
-    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeTop];
-}
-
-- (CSConstraint *)right {
-    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeRight];
-}
-
-- (CSConstraint *)bottom {
-    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeBottom];
-}
-
-- (CSConstraint *)width {
-    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeWidth];
-}
-
-- (CSConstraint *)height {
-    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeHeight];
-}
-
-- (CSConstraint *)centerX {
-    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeCenterX];
-}
-
-- (CSConstraint *)centerY {
-    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeCenterY];
-}
-
-- (CSConstraint *)edges {
-    return [self _addConstraintWithLayoutAttribute:CSLayoutAttributeEdges];
-}
-
-- (CSConstraint *)size {
-    return [self _addConstraintWithLayoutAttribute:CSLayoutAttributeSize];
-}
-
-- (CSConstraint *)center {
-    return [self _addConstraintWithLayoutAttribute:CSLayoutAttributeCenter];
-}
-
-- (CSConstraint *)_addConstraintWithLayoutAttribute:(CSLayoutAttribute)layoutAttribute {
-    CSConstraint *constraint = [[CSConstraint alloc] initWithView:self.view];
-    constraint.layoutAttributes = [self layoutAttribute:layoutAttribute];
-    [self.constraints addObject:constraint];
-    return constraint;
-}
-
-- (NSMutableArray *)layoutAttribute:(CSLayoutAttribute)layoutAttribute {
-    switch (layoutAttribute) {
-        case CSLayoutAttributeEdges:
-            return [NSMutableArray arrayWithObjects:
-                    @(NSLayoutAttributeLeft),
-                    @(NSLayoutAttributeTop),
-                    @(NSLayoutAttributeBottom),
-                    @(NSLayoutAttributeRight), nil];
-        case CSLayoutAttributeSize:
-            return [NSMutableArray arrayWithObjects:
-                    @(NSLayoutAttributeWidth),
-                    @(NSLayoutAttributeHeight), nil];
-        case CSLayoutAttributeCenter:
-            return [NSMutableArray arrayWithObjects:
-                    @(NSLayoutAttributeCenterX),
-                    @(NSLayoutAttributeCenterY), nil];
-        default: break;
-    }
-}
-
-
-@end
-
-
-@implementation CSConstraint{
-    NSMutableArray* _constraints;
-}
-
-- (instancetype)initWithView:(UIView *)aView{
-    if (self = [super init]) {
-        _constraints = [[NSMutableArray alloc] init];
-        self.firstItem = aView;
-    }
-    return self;
-}
-
-- (void)install{
-    [self.firstItem.superview addConstraints:_constraints];
-}
-
-- (CSConstraint *)equalToView:(UIView *)aView{
-    for (NSNumber *obj in self.layoutAttributes) {
-        NSLayoutAttribute attr = (NSLayoutAttribute)obj.integerValue;
-        NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:self.firstItem
-                                                                      attribute:attr
-                                                                      relatedBy:NSLayoutRelationEqual
-                                                                         toItem:aView
-                                                                      attribute:attr
-                                                                     multiplier:1
-                                                                       constant:0];
-        [_constraints addObject:constraint];
-    }
-    return self;
-}
-
-- (CSConstraint *)equalTo:(CGFloat)c{
-    for (NSNumber *obj in self.layoutAttributes) {
-        NSLayoutAttribute attr = (NSLayoutAttribute)obj.integerValue;
-        
-        if (NSLayoutAttributeWidth == attr || NSLayoutAttributeHeight == attr) { // 宽高 -> size
-            
-            NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:self.firstItem
-                                                                          attribute:attr
-                                                                          relatedBy:NSLayoutRelationEqual
-                                                                             toItem:nil
-                                                                          attribute:NSLayoutAttributeNotAnAttribute
-                                                                         multiplier:1
-                                                                           constant:c];
-            [_constraints addObject:constraint];
-            
-        } else {
-            
-            NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:self.firstItem
-                                                                          attribute:attr
-                                                                          relatedBy:NSLayoutRelationEqual
-                                                                             toItem:self.firstItem.superview
-                                                                          attribute:attr
-                                                                         multiplier:1
-                                                                           constant:c];
-            [_constraints addObject:constraint];
-        }
-    }
-    return self;
-}
-
-@end
+//@interface CSConstraintMaker()
+//
+//@property (nonatomic, weak) UIView *view;
+//@property (nonatomic, strong) NSMutableArray<CSConstraint *> *constraints;
+//
+//@end
+//
+//@implementation CSConstraintMaker
+//
+//- (id)initWithView:(UIView *)view {
+//    if (self = [super init]) {
+//        self.view = view;
+//        self.constraints = [NSMutableArray new];
+//    }
+//    return self;
+//}
+//
+//- (NSArray *)install {
+//    NSArray *constraints = self.constraints.copy;
+//    for (CSConstraint *constraint in constraints) {
+//        [constraint install];
+//    }
+//    return constraints;
+//}
+//
+//- (CSConstraint *)addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute {
+//    return [self constraint:nil addConstraintWithLayoutAttribute:layoutAttribute];
+//}
+//
+//- (CSConstraint *)constraint:(CSConstraint *)aConstraint addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute {
+//    CSConstraint *constraint = [[CSConstraint alloc] initWithView:self.view];
+//    constraint.layoutAttributes = [NSMutableArray arrayWithObjects:@(layoutAttribute), nil];
+//    [self.constraints addObject:constraint];
+//    return constraint;
+//}
+//
+//- (CSConstraint *)left {
+//    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeLeft];
+//}
+//
+//- (CSConstraint *)top {
+//    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeTop];
+//}
+//
+//- (CSConstraint *)right {
+//    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeRight];
+//}
+//
+//- (CSConstraint *)bottom {
+//    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeBottom];
+//}
+//
+//- (CSConstraint *)width {
+//    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeWidth];
+//}
+//
+//- (CSConstraint *)height {
+//    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeHeight];
+//}
+//
+//- (CSConstraint *)centerX {
+//    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeCenterX];
+//}
+//
+//- (CSConstraint *)centerY {
+//    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeCenterY];
+//}
+//
+//- (CSConstraint *)edges {
+//    return [self _addConstraintWithLayoutAttribute:CSLayoutAttributeEdges];
+//}
+//
+//- (CSConstraint *)size {
+//    return [self _addConstraintWithLayoutAttribute:CSLayoutAttributeSize];
+//}
+//
+//- (CSConstraint *)center {
+//    return [self _addConstraintWithLayoutAttribute:CSLayoutAttributeCenter];
+//}
+//
+//- (CSConstraint *)_addConstraintWithLayoutAttribute:(CSLayoutAttribute)layoutAttribute {
+//    CSConstraint *constraint = [[CSConstraint alloc] initWithView:self.view];
+//    constraint.layoutAttributes = [self layoutAttribute:layoutAttribute];
+//    [self.constraints addObject:constraint];
+//    return constraint;
+//}
+//
+//- (NSMutableArray *)layoutAttribute:(CSLayoutAttribute)layoutAttribute {
+//    switch (layoutAttribute) {
+//        case CSLayoutAttributeEdges:
+//            return [NSMutableArray arrayWithObjects:
+//                    @(NSLayoutAttributeLeft),
+//                    @(NSLayoutAttributeTop),
+//                    @(NSLayoutAttributeBottom),
+//                    @(NSLayoutAttributeRight), nil];
+//        case CSLayoutAttributeSize:
+//            return [NSMutableArray arrayWithObjects:
+//                    @(NSLayoutAttributeWidth),
+//                    @(NSLayoutAttributeHeight), nil];
+//        case CSLayoutAttributeCenter:
+//            return [NSMutableArray arrayWithObjects:
+//                    @(NSLayoutAttributeCenterX),
+//                    @(NSLayoutAttributeCenterY), nil];
+//        default: break;
+//    }
+//}
+//
+//
+//@end
+//
+//
+//@implementation CSConstraint{
+//    NSMutableArray* _constraints;
+//}
+//
+//- (instancetype)initWithView:(UIView *)aView{
+//    if (self = [super init]) {
+//        _constraints = [[NSMutableArray alloc] init];
+//        self.firstItem = aView;
+//    }
+//    return self;
+//}
+//
+//- (void)install{
+//    [self.firstItem.superview addConstraints:_constraints];
+//}
+//
+//- (CSConstraint *)equalToView:(UIView *)aView{
+//    for (NSNumber *obj in self.layoutAttributes) {
+//        NSLayoutAttribute attr = (NSLayoutAttribute)obj.integerValue;
+//        NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:self.firstItem
+//                                                                      attribute:attr
+//                                                                      relatedBy:NSLayoutRelationEqual
+//                                                                         toItem:aView
+//                                                                      attribute:attr
+//                                                                     multiplier:1
+//                                                                       constant:0];
+//        [_constraints addObject:constraint];
+//    }
+//    return self;
+//}
+//
+//- (CSConstraint *)equalTo:(CGFloat)c{
+//    for (NSNumber *obj in self.layoutAttributes) {
+//        NSLayoutAttribute attr = (NSLayoutAttribute)obj.integerValue;
+//
+//        if (NSLayoutAttributeWidth == attr || NSLayoutAttributeHeight == attr) { // 宽高 -> size
+//
+//            NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:self.firstItem
+//                                                                          attribute:attr
+//                                                                          relatedBy:NSLayoutRelationEqual
+//                                                                             toItem:nil
+//                                                                          attribute:NSLayoutAttributeNotAnAttribute
+//                                                                         multiplier:1
+//                                                                           constant:c];
+//            [_constraints addObject:constraint];
+//
+//        } else {
+//
+//            NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:self.firstItem
+//                                                                          attribute:attr
+//                                                                          relatedBy:NSLayoutRelationEqual
+//                                                                             toItem:self.firstItem.superview
+//                                                                          attribute:attr
+//                                                                         multiplier:1
+//                                                                           constant:c];
+//            [_constraints addObject:constraint];
+//        }
+//    }
+//    return self;
+//}
+//
+//@end
 
 

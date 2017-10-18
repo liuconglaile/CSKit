@@ -7,7 +7,7 @@
 //
 
 #import "CSPhotoGroupItem.h"
-
+#import "UIView+Layout.h"
 
 @interface CSPhotoGroupItem()<NSCopying>
 

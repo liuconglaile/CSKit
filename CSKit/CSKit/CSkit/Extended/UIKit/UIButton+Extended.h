@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, CSImagePosition) {
 
 @interface UIButton (Extended)
 
-@property (nonatomic, strong) UIFont  *titleFont;
+@property (strong, nonatomic) UIFont  *titleFont;
 @property (strong, nonatomic) UIColor *titleColor;
 @property (strong, nonatomic) UIColor *highlightedTitleColor;
 @property (strong, nonatomic) UIColor *selectedTitleColor;

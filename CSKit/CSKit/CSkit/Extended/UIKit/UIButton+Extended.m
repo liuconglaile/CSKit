@@ -8,13 +8,7 @@
 
 #import "UIButton+Extended.h"
 #import <objc/runtime.h>
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
 
-#else
-#import "CSMacrosHeader.h"
-
-#endif
 
 static const void *UIButtonBlockKey = &UIButtonBlockKey;
 static NSString *const IndicatorViewKey = @"indicatorView";
@@ -193,8 +187,10 @@ static NSString *const ButtonTextObjectKey = @"buttonTextObject";
 
 
 ///MARK: =========================================
-///MARK: 按钮字体自动适配 & 拉进项目就可以了,不需要任何操作
+///MARK: 按钮字体自动适配 & 拉进项目就可以了,不需要任何操作(会改变字体样式,慎用)
 ///MARK: =========================================
+
+/*
 + (void)load{
     Method imp = class_getInstanceMethod([self class], @selector(initWithCoder:));
     Method myImp = class_getInstanceMethod([self class], @selector(myInitWithCoder:));
@@ -246,6 +242,10 @@ static NSString *const ButtonTextObjectKey = @"buttonTextObject";
         }
     }];
 }
+ 
+ */
+
+
 ///MARK: =========================================
 ///MARK: 按钮字体自动适配 & 拉进项目就可以了,不需要任何操作
 ///MARK: =========================================
@@ -322,7 +322,7 @@ static NSString *const ButtonTextObjectKey = @"buttonTextObject";
             NSString *strTime = [NSString stringWithFormat:@"%.2d", seconds];
             dispatch_async(dispatch_get_main_queue(), ^{
                 //设置界面的按钮显示 根据自己需求设置
-                CSNSLog(@"____%@",strTime);
+                NSLog(@"____%@",strTime);
                 [self setTitle:[NSString stringWithFormat:@"%@%@",strTime,waitTittle] forState:UIControlStateNormal];
                 self.userInteractionEnabled = NO;
                 

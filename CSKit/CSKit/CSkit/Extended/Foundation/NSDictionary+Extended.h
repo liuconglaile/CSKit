@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  将url参数转换成NSDictionary
-
+ 
  @param query url参数
  @return NSDictionary
  */
@@ -50,7 +50,6 @@ NS_ASSUME_NONNULL_BEGIN
  将字典序列化为二进制属性列表数据.
  
  @return 二进制plist数据,如果发生错误,则为nil.
- 
  @discussion 苹果已经实现了这种方法,但没有公开.
  */
 - (nullable NSData *)plistData;

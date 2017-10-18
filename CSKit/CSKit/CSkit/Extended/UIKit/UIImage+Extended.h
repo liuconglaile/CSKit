@@ -25,246 +25,146 @@ typedef void (^CSUIImageSizeRequestCompleted) (NSURL* imgURL, CGSize size);
 
 @interface UIImage (Extended)
 
-#pragma mark - Create image
-///=============================================================================
-/// @name Create image
-///=============================================================================
+#pragma mark - 创建图像
+
 
 /**
- Create an animated image with GIF data. After created, you can access
- the images via property '.images'. If the data is not animated gif, this
- function is same as [UIImage imageWithData:data scale:scale];
+ 使用GIF数据创建动画图像
  
- @discussion     It has a better display performance, but costs more memory
- (width * height * frames Bytes). It only suited to display small
- gif such as animated emoticon. If you want to display large gif,
- see `YYImage`.
+ 创建后,您可以通过属性'.images'访问图像.
+ 如果数据不是动画gif,这个功能与[UIImage imageWithData：data scale：scale]相同;
+  
+ @discussion
+ 它具有更好的显示性能,但成本更高的内存(width*height*frames Bytes).
+ 它只适合显示小gif,如动画表情符号.
+ 如果你想显示大的gif,参见'CSImage'.
  
- @param data     GIF data.
- 
- @param scale    The scale factor
- 
- @return A new image created from GIF, or nil when an error occurs.
+ @param data gif数据
+ @param scale 比例
+ @return 动态图
  */
 + (nullable UIImage *)imageWithSmallGIFData:(NSData *)data scale:(CGFloat)scale;
 
-/**
- Whether the data is animated GIF.
- 
- @param data Image data
- 
- @return Returns YES only if the data is gif and contains more than one frame,
- otherwise returns NO.
- */
+/** 数据是否为 gif 图像 */
 + (BOOL)isAnimatedGIFData:(NSData *)data;
 
-/**
- Whether the file in the specified path is GIF.
- 
- @param path An absolute file path.
- 
- @return Returns YES if the file is gif, otherwise returns NO.
- */
+/** 指定路径中的文件是否为GIF */
 + (BOOL)isAnimatedGIFFile:(NSString *)path;
 
 /**
- Create an image from a PDF file data or path.
+ 从PDF文件数据或路径创建图像
+ 如果PDF有多个页面,只是返回第一页内容.
+ 图像的比例等于当前屏幕的尺度,大小与原来的PDF的尺寸相同.
  
- @discussion If the PDF has multiple page, is just return's the first page's
- content. Image's scale is equal to current screen's scale, size is same as
- PDF's origin size.
- 
- @param dataOrPath PDF data in `NSData`, or PDF file path in `NSString`.
- 
- @return A new image create from PDF, or nil when an error occurs.
+ @param dataOrPath  pdf 文件路径
+ @return 从 pdf 文件创建的图像,如果发生错误则返回 nil
  */
 + (nullable UIImage *)imageWithPDF:(id)dataOrPath;
 
+
 /**
- Create an image from a PDF file data or path.
- 
- @discussion If the PDF has multiple page, is just return's the first page's
- content. Image's scale is equal to current screen's scale.
- 
- @param dataOrPath  PDF data in `NSData`, or PDF file path in `NSString`.
- 
- @param size     The new image's size, PDF's content will be stretched as needed.
- 
- @return A new image create from PDF, or nil when an error occurs.
+ 从PDF文件数据或路径创建图像
+ (基本属性同上)
+ @param dataOrPath  pdf 文件路径
+ @param size 图片尺寸(会导致拉伸)
+ @return 从 pdf 创建的图像
  */
 + (nullable UIImage *)imageWithPDF:(id)dataOrPath size:(CGSize)size;
 
+
 /**
- Create a square image from apple emoji.
+ 基于 Emoji 表情创建一个方形图像(Emoji 原始尺寸160*160)
  
- @discussion It creates a square image from apple emoji, image's scale is equal
- to current screen's scale. The original emoji image in `AppleColorEmoji` font
- is in size 160*160 px.
- 
- @param emoji single emoji, such as @"😄".
- 
- @param size  image's size.
- 
- @return Image from emoji, or nil when an error occurs.
+ @param emoji 手动输入的表情
+ @param size 图片大小
+ @return 表情图片,发生错误是为 nil
  */
 + (nullable UIImage *)imageWithEmoji:(NSString *)emoji size:(CGFloat)size;
 
-/**
- Create and return a 1x1 point size image with the given color.
- 
- @param color  The color.
- */
+/** 使用给定的颜色创建并返回1x1点大小的图像 */
 + (nullable UIImage *)imageWithColor:(UIColor *)color;
 
-/**
- Create and return a pure color image with the given color and size.
- 
- @param color  The color.
- @param size   New image's type.
- */
+/** 创建并返回具有给定颜色和大小的纯彩色图像 */
 + (nullable UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
 
 /**
- Create and return an image with custom draw code.
+ 使用自定义绘图代码创建并返回图像
  
- @param size      The image size.
- @param drawBlock The draw block.
- 
- @return The new image.
+ @param size 图像大小
+ @param drawBlock 绘制块
+ @return 新图片
  */
 + (nullable UIImage *)imageWithSize:(CGSize)size drawBlock:(void (^)(CGContextRef context))drawBlock;
 
-#pragma mark - Image Info
-///=============================================================================
-/// @name Image Info
-///=============================================================================
+#pragma mark - 图像信息
 
-/**
- Whether this image has alpha channel.
- */
+/** 该图像是否具有Alpha通道 */
 - (BOOL)hasAlphaChannel;
 
 
-#pragma mark - Modify Image
-///=============================================================================
-/// @name Modify Image
-///=============================================================================
-
+#pragma mark - 修改图像
 /**
- Draws the entire image in the specified rectangle, content changed with
- the contentMode.
+ 在指定的矩形中绘制整个图像,内容随contentMode更改
  
- @discussion This method draws the entire image in the current graphics context,
- respecting the image's orientation setting. In the default coordinate system,
- images are situated down and to the right of the origin of the specified
- rectangle. This method respects any transforms applied to the current graphics
- context, however.
+ 该方法在当前的图形上下文中绘制整个图像，并遵循图像的方向设置。
+ 在默认坐标系中，图像位于指定矩形原点的下方和右侧。
+ 然而，该方法遵循应用于当前图形上下文的任何变换。
  
- @param rect        The rectangle in which to draw the image.
- 
- @param contentMode Draw content mode
- 
- @param clips       A Boolean value that determines whether content are confined to the rect.
+ @param rect 绘制图像的矩形
+ @param contentMode 内容显示模式
+ @param clips 是否剪裁多余
  */
 - (void)drawInRect:(CGRect)rect withContentMode:(UIViewContentMode)contentMode clipsToBounds:(BOOL)clips;
 
+
 /**
- Returns a new image which is scaled from this image.
- The image will be stretched as needed.
+ 返回从该图像缩放的新图像. 图像内容将根据需要缩放
  
- @param size  The new size to be scaled, values should be positive.
- 
- @return      The new image with the given size.
+ @param size 新尺寸
+ @return 新图像
  */
 - (nullable UIImage *)imageByResizeToSize:(CGSize)size;
 
+
 /**
- Returns a new image which is scaled from this image.
- The image content will be changed with thencontentMode.
+ 返回从该图像缩放的新图像. 图像内容将随着内容模式更改
  
- @param size        The new size to be scaled, values should be positive.
- 
- @param contentMode The content mode for image content.
- 
- @return The new image with the given size.
+ @param size 新尺寸
+ @param contentMode 显示模式
+ @return 新的图像
  */
 - (nullable UIImage *)imageByResizeToSize:(CGSize)size contentMode:(UIViewContentMode)contentMode;
 
-/**
- Returns a new image which is cropped from this image.
- 
- @param rect  Image's inner rect.
- 
- @return      The new image, or nil if an error occurs.
- */
+/** 从图像内部裁剪出新的图像 */
 - (nullable UIImage *)imageByCropToRect:(CGRect)rect;
 
 /**
- Returns a new image which is edge inset from this image.
+ 设置圆角内间距
  
- @param insets  Inset (positive) for each of the edges, values can be negative to 'outset'.
- 
- @param color   Extend edge's fill color, nil means clear color.
- 
- @return        The new image, or nil if an error occurs.
+ @param insets 内间距
+ @param color 间距底色, nil 为清晰色
+ @return 新图像
  */
 - (nullable UIImage *)imageByInsetEdge:(UIEdgeInsets)insets withColor:(nullable UIColor *)color;
 
-/**
- Rounds a new image with a given corner size.
- 
- @param radius  The radius of each corner oval. Values larger than half the
- rectangle's width or height are clamped appropriately to half
- the width or height.
- */
+/** 图片设置圆角 */
 - (nullable UIImage *)imageByRoundCornerRadius:(CGFloat)radius;
 
-/**
- Rounds a new image with a given corner size.
- 
- @param radius       The radius of each corner oval. Values larger than half the
- rectangle's width or height are clamped appropriately to
- half the width or height.
- 
- @param borderWidth  The inset border line width. Values larger than half the rectangle's
- width or height are clamped appropriately to half the width
- or height.
- 
- @param borderColor  The border stroke color. nil means clear color.
- */
+/** 图片设置圆角&边框 */
 - (nullable UIImage *)imageByRoundCornerRadius:(CGFloat)radius
                                    borderWidth:(CGFloat)borderWidth
                                    borderColor:(nullable UIColor *)borderColor;
 
-/**
- Rounds a new image with a given corner size.
- 
- @param radius       The radius of each corner oval. Values larger than half the
- rectangle's width or height are clamped appropriately to
- half the width or height.
- 
- @param corners      A bitmask value that identifies the corners that you want
- rounded. You can use this parameter to round only a subset
- of the corners of the rectangle.
- 
- @param borderWidth  The inset border line width. Values larger than half the rectangle's
- width or height are clamped appropriately to half the width
- or height.
- 
- @param borderColor  The border stroke color. nil means clear color.
- 
- @param borderLineJoin The border line join.
- */
 
 /**
- <#Description#>
-
- @param radius <#radius description#>
- @param corners <#corners description#>
- @param borderWidth <#borderWidth description#>
- @param borderColor <#borderColor description#>
- @param borderLineJoin <#borderLineJoin description#>
- @return <#return value description#>
+ 图片设置圆角&边框
+ 
+ @param radius 圆角半径
+ @param corners 指定圆角位置
+ @param borderWidth 边框大小
+ @param borderColor 边框颜色
+ @param borderLineJoin 边框连接线样式(虚线)
+ @return 新图片
  */
 - (nullable UIImage *)imageByRoundCornerRadius:(CGFloat)radius
                                        corners:(UIRectCorner)corners
@@ -277,7 +177,7 @@ typedef void (^CSUIImageSizeRequestCompleted) (NSURL* imgURL, CGSize size);
  
  @param radians   逆时针旋转弧度.⟲
  @param fitSize   YES: 新的图像的尺寸被拉伸,以适应所有内容.
-                   NO: 图像的大小不会改变,内容可能会被剪辑.
+ NO: 图像的大小不会改变,内容可能会被剪辑.
  */
 - (nullable UIImage *)imageByRotate:(CGFloat)radians fitSize:(BOOL)fitSize;
 
@@ -353,7 +253,7 @@ typedef void (^CSUIImageSizeRequestCompleted) (NSURL* imgURL, CGSize size);
 
 /**
  对图片设置模糊&色彩&饱和度,可设置在指定的区域
-
+ 
  @param blurRadius 模糊半径,0为不设模糊
  @param tintColor  alpha 通道渲染色值
  @param tintBlendMode 混合模式,默认为 kCGBlendModeNormal (0)
@@ -476,11 +376,11 @@ typedef void (^CSUIImageSizeRequestCompleted) (NSURL* imgURL, CGSize size);
 - (UIImage *)resizeImageWithSize:(CGSize)size;
 
 
-// 考虑到图片的比例来压缩，以宽？高？为准
+// 考虑到图片的比例来压缩,以宽？高？为准
 - (UIImage *)resizeAspectImageWithSize:(CGSize)size;
 
 /**
- 通过指定图片最长边，获得等比例的图片size
+ 通过指定图片最长边,获得等比例的图片size
  
  @param image       原始图片
  @param imageLength 图片允许的最长宽度（高度）
@@ -501,6 +401,8 @@ typedef void (^CSUIImageSizeRequestCompleted) (NSURL* imgURL, CGSize size);
  @param completion 完成回调
  */
 + (void)requestSizeNoHeader:(NSURL*)imgURL completion:(CSUIImageSizeRequestCompleted)completion;
+
+
 /**
  从header中获取远程图片的大小 (服务器必须支持)
  

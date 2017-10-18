@@ -45,42 +45,42 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-///MARK: ===================================================
-///MARK: 约束相关
-///MARK: ===================================================
-
-// 约束的属性
-- (NSLayoutConstraint *)constraintForAttribute:(NSLayoutAttribute)attribute;
-// 左约束
-- (NSLayoutConstraint *)leftConstraint;
-- (NSLayoutConstraint *)rightConstraint;
-- (NSLayoutConstraint *)topConstraint;
-- (NSLayoutConstraint *)bottomConstraint;
-// 主导约束
-- (NSLayoutConstraint *)leadingConstraint;
-// 尾端约束
-- (NSLayoutConstraint *)trailingConstraint;
-
-- (NSLayoutConstraint *)widthConstraint;
-- (NSLayoutConstraint *)heightConstraint;
-- (NSLayoutConstraint *)centerXConstraint;
-- (NSLayoutConstraint *)centerYConstraint;
-
-- (NSLayoutConstraint *)baseLineConstraint;
-
-
-
-/**
- 添加约束
- 
- @param aBlock 返回约束抽象类
- @return 包含所有约束的数组
- */
-- (NSArray *)makeConstraints:(void(^)(CSConstraintMaker *make))aBlock;
-
-///MARK: ===================================================
-///MARK: 约束相关
-///MARK: ===================================================
+/////MARK: ===================================================
+/////MARK: 约束相关
+/////MARK: ===================================================
+//
+//// 约束的属性
+//- (NSLayoutConstraint *)constraintForAttribute:(NSLayoutAttribute)attribute;
+//// 左约束
+//- (NSLayoutConstraint *)leftConstraint;
+//- (NSLayoutConstraint *)rightConstraint;
+//- (NSLayoutConstraint *)topConstraint;
+//- (NSLayoutConstraint *)bottomConstraint;
+//// 主导约束
+//- (NSLayoutConstraint *)leadingConstraint;
+//// 尾端约束
+//- (NSLayoutConstraint *)trailingConstraint;
+//
+//- (NSLayoutConstraint *)widthConstraint;
+//- (NSLayoutConstraint *)heightConstraint;
+//- (NSLayoutConstraint *)centerXConstraint;
+//- (NSLayoutConstraint *)centerYConstraint;
+//
+//- (NSLayoutConstraint *)baseLineConstraint;
+//
+//
+//
+///**
+// 添加约束
+//
+// @param aBlock 返回约束抽象类
+// @return 包含所有约束的数组
+// */
+//- (NSArray *)makeConstraints:(void(^)(CSConstraintMaker *make))aBlock;
+//
+/////MARK: ===================================================
+/////MARK: 约束相关
+/////MARK: ===================================================
 
 
 @end
@@ -88,36 +88,36 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-@interface CSConstraintMaker : NSObject
-
-@property (nonatomic, strong, readonly) CSConstraint *left;
-@property (nonatomic, strong, readonly) CSConstraint *top;
-@property (nonatomic, strong, readonly) CSConstraint *right;
-@property (nonatomic, strong, readonly) CSConstraint *bottom;
-@property (nonatomic, strong, readonly) CSConstraint *edges;
-@property (nonatomic, strong, readonly) CSConstraint *width;
-@property (nonatomic, strong, readonly) CSConstraint *height;
-@property (nonatomic, strong, readonly) CSConstraint *size;
-@property (nonatomic, strong, readonly) CSConstraint *centerX;
-@property (nonatomic, strong, readonly) CSConstraint *centerY;
-@property (nonatomic, strong, readonly) CSConstraint *center;
-
-- (id)initWithView:(UIView *)aView;
-- (NSArray *)install; // @return    包含所有添加的CSConstraint的数组
-
-@end
-
-@interface CSConstraint : NSObject
-
-@property (nonatomic, strong) NSMutableArray *layoutAttributes;
-@property (nonatomic, weak) UIView *firstItem;
-
-- (instancetype)initWithView:(UIView *)aView;
-- (void)install;
-
-- (CSConstraint *)equalToView:(UIView *)aView;
-- (CSConstraint *)equalTo:(CGFloat)c;
-
-@end
+//@interface CSConstraintMaker : NSObject
+//
+//@property (nonatomic, strong, readonly) CSConstraint *left;
+//@property (nonatomic, strong, readonly) CSConstraint *top;
+//@property (nonatomic, strong, readonly) CSConstraint *right;
+//@property (nonatomic, strong, readonly) CSConstraint *bottom;
+//@property (nonatomic, strong, readonly) CSConstraint *edges;
+//@property (nonatomic, strong, readonly) CSConstraint *width;
+//@property (nonatomic, strong, readonly) CSConstraint *height;
+//@property (nonatomic, strong, readonly) CSConstraint *size;
+//@property (nonatomic, strong, readonly) CSConstraint *centerX;
+//@property (nonatomic, strong, readonly) CSConstraint *centerY;
+//@property (nonatomic, strong, readonly) CSConstraint *center;
+//
+//- (id)initWithView:(UIView *)aView;
+//- (NSArray *)install; // @return    包含所有添加的CSConstraint的数组
+//
+//@end
+//
+//@interface CSConstraint : NSObject
+//
+//@property (nonatomic, strong) NSMutableArray *layoutAttributes;
+//@property (nonatomic, weak) UIView *firstItem;
+//
+//- (instancetype)initWithView:(UIView *)aView;
+//- (void)install;
+//
+//- (CSConstraint *)equalToView:(UIView *)aView;
+//- (CSConstraint *)equalTo:(CGFloat)c;
+//
+//@end
 
 NS_ASSUME_NONNULL_END

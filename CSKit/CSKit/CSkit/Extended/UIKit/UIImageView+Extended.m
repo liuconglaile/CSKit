@@ -268,16 +268,16 @@ char detectorKey;
 
 
 
-
-+ (id)imageViewWithImageNamed:(NSString*)imageName
+///初始化方法
++ (instancetype)imageViewWithImageNamed:(NSString*)imageName
 {
     return [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
 }
-+ (id)imageViewWithFrame:(CGRect)frame
++ (instancetype)imageViewWithFrame:(CGRect)frame
 {
     return [[UIImageView alloc] initWithFrame:frame];
 }
-+ (id)imageViewWithStretchableImage:(NSString*)imageName Frame:(CGRect)frame
++ (instancetype)imageViewWithStretchableImage:(NSString*)imageName Frame:(CGRect)frame
 {
     UIImage *image =[UIImage imageNamed:imageName];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame];
@@ -289,7 +289,7 @@ char detectorKey;
     UIImage *image =[UIImage imageNamed:imageName];
     self.image = [image stretchableImageWithLeftCapWidth:image.size.width/2 topCapHeight:image.size.height/2];
 }
-+ (id)imageViewWithImageArray:(NSArray *)imageArray duration:(NSTimeInterval)duration;
++ (instancetype)imageViewWithImageArray:(NSArray *)imageArray duration:(NSTimeInterval)duration;
 {
     if (imageArray && [imageArray count]<=0)
     {
@@ -308,6 +308,12 @@ char detectorKey;
     [imageView setAnimationRepeatCount:0];
     return imageView;
 }
+
+
+
+
+
+
 // 画水印
 - (void)setImage:(UIImage *)image withWaterMark:(UIImage *)mark inRect:(CGRect)rect
 {

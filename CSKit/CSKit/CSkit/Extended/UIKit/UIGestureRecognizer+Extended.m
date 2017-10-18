@@ -8,13 +8,7 @@
 
 #import "UIGestureRecognizer+Extended.h"
 #import <objc/runtime.h>
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
 
-#else
-#import "CSMacrosHeader.h"
-
-#endif
 
 static const int block_key;
 

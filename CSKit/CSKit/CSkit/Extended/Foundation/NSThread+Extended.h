@@ -14,7 +14,7 @@
  将自动释放池添加到当前线程的当前runloop.
  
  @discussion 如果你创建自己的线程(NSThread / pthread),并且你使用runloop来管理您的任务,您可以使用此方法添加自动释放池到runloop.
-             它的行为与主线程的自动释放池相同.
+ 它的行为与主线程的自动释放池相同.
  */
 + (void)addAutoreleasePoolToCurrentRunloop NS_AUTOMATED_REFCOUNT_UNAVAILABLE;
 

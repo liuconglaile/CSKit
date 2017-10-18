@@ -1,14 +1,14 @@
 //
-//  NSSet+Utilities.m
-//  CSCategory
+//  NSSet+Extended.m
+//  CSKit
 //
-//  Created by mac on 17/5/19.
-//  Copyright © 2017年 mac. All rights reserved.
+//  Created by mac on 2017/10/18.
+//  Copyright © 2017年 Moming. All rights reserved.
 //
 
-#import "NSSet+Utilities.h"
+#import "NSSet+Extended.h"
 
-@implementation NSSet (Utilities)
+@implementation NSSet (Extended)
 
 - (void)each:(void (^)(id))block {
     [self enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
