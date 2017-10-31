@@ -10,21 +10,14 @@
 #import <ImageIO/ImageIO.h>
 
 
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <CSkit/CSImage.h>
-#import <CSkit/CSWeakProxy.h>
 
-#import <CSkit/UIApplication+Extended.h>
-#import <CSkit/UIImage+Extended.h>
-#else
 #import "CSMacrosHeader.h"
 #import "CSImage.h"
 #import "CSWeakProxy.h"
 
 #import "UIApplication+Extended.h"
 #import "UIImage+Extended.h"
-#endif
+
 
 
 

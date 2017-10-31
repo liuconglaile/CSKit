@@ -7,13 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-
-#if __has_include(<CSKit/CSKit.h>)
-#import <CSKit/CSImageCache.h>
-#else
 #import "CSImageCache.h"
-#endif
 
 @class CSWebImageOperation;
 

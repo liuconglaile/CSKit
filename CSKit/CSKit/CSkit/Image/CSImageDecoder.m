@@ -18,13 +18,29 @@
 #import <zlib.h>
 
 
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <CSkit/CSImage.h>
-#else
-#import "CSMacrosHeader.h"
+
+//#import "CSMacrosHeader.h"
 #import "CSImage.h"
-#endif
+#import <pthread.h>
+
+/** 初始化一个pthread互斥体 */
+static inline void pthread_mutex_init_recursive(pthread_mutex_t *mutex, bool recursive) {
+#define CSMUTEX_ASSERT_ON_ERROR(x_) do { \
+__unused volatile int res = (x_); \
+assert(res == 0); \
+} while (0)
+    assert(mutex != NULL);
+    if (!recursive) {
+        CSMUTEX_ASSERT_ON_ERROR(pthread_mutex_init(mutex, NULL));
+    } else {
+        pthread_mutexattr_t attr;
+        CSMUTEX_ASSERT_ON_ERROR(pthread_mutexattr_init (&attr));
+        CSMUTEX_ASSERT_ON_ERROR(pthread_mutexattr_settype (&attr, PTHREAD_MUTEX_RECURSIVE));
+        CSMUTEX_ASSERT_ON_ERROR(pthread_mutex_init (mutex, &attr));
+        CSMUTEX_ASSERT_ON_ERROR(pthread_mutexattr_destroy (&attr));
+    }
+#undef CSMUTEX_ASSERT_ON_ERROR
+}
 
 
 #pragma clang diagnostic push
@@ -1469,12 +1485,12 @@ BOOL CSImageWebPAvailable() {
 }
 
 CFDataRef CSCGImageCreateEncodedWebPData(CGImageRef imageRef, BOOL lossless, CGFloat quality, int compressLevel, CSImagePreset preset) {
-    CSNSLog(@"WebP decoder is disabled");
+    NSLog(@"WebP decoder is disabled");
     return NULL;
 }
 
 NSUInteger CSImageGetWebPFrameCount(CFDataRef webpData) {
-    CSNSLog(@"WebP decoder is disabled");
+    NSLog(@"WebP decoder is disabled");
     return 0;
 }
 
@@ -1483,7 +1499,7 @@ CGImageRef CSCGImageCreateWithWebPData(CFDataRef webpData,
                                        BOOL useThreads,
                                        BOOL bypassFiltering,
                                        BOOL noFancyUpsampling) {
-    CSNSLog(@"WebP decoder is disabled");
+    NSLog(@"WebP decoder is disabled");
     return NULL;
 }
 
@@ -1882,7 +1898,7 @@ CGImageRef CSCGImageCreateWithWebPData(CFDataRef webpData,
 
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        CSNSLog(@"[%s: %d] WebP is not available, check the documentation to see how to install WebP component: https://github.com/ibireme/CSImage#installation", __FUNCTION__, __LINE__);
+        NSLog(@"[%s: %d] WebP is not available, check the documentation to see how to install WebP component: https://github.com/ibireme/CSImage#installation", __FUNCTION__, __LINE__);
     });
 #endif
 }
@@ -2374,13 +2390,13 @@ CGImageRef CSCGImageCreateWithWebPData(CFDataRef webpData,
 
 - (instancetype)initWithType:(CSImageType)type {
     if (type == CSImageTypeUnknown || type >= CSImageTypeOther) {
-        CSNSLog(@"[%s: %d] Unsupported image type:%d",__FUNCTION__, __LINE__, (int)type);
+        NSLog(@"[%s: %d] Unsupported image type:%d",__FUNCTION__, __LINE__, (int)type);
         return nil;
     }
     
 #if !CSIMAGE_WEBP_ENABLED
     if (type == CSImageTypeWebP) {
-        CSNSLog(@"[%s: %d] WebP is not available, check the documentation to see how to install WebP component: https://github.com/ibireme/CSImage#installation", __FUNCTION__, __LINE__);
+        NSLog(@"[%s: %d] WebP is not available, check the documentation to see how to install WebP component: https://github.com/ibireme/CSImage#installation", __FUNCTION__, __LINE__);
         return nil;
     }
 #endif

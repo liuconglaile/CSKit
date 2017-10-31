@@ -9,20 +9,34 @@
 #import "CSAnimatedImageView.h"
 
 
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <CSkit/CSImageDecoder.h>
-#import <CSkit/CSWeakProxy.h>
-#import <CSkit/UIDevice+Extended.h>
-#else
-#import "CSMacrosHeader.h"
+
+//#import "CSMacrosHeader.h"
 #import "CSImageDecoder.h"
 #import "CSWeakProxy.h"
 #import "UIDevice+Extended.h"
+
+#import <pthread.h>
+
+/**
+ 返回间距值
+ 
+ @param _x_ <#_x_ description#>
+ @param _low_ 低值
+ @param _high_ 高值
+ @return <#return value description#>
+ */
+#ifndef CS_CLAMP ///
+#define CS_CLAMP(_x_, _low_, _high_)  (((_x_) > (_high_)) ? (_high_) : (((_x_) < (_low_)) ? (_low_) : (_x_)))
 #endif
 
-
-
+/** 在主队列上提交用于异步执行的块,并立即返回 */
+static inline void dispatch_async_on_main_queue(void (^block)(void)) {
+    if (pthread_main_np()) {
+        block();
+    } else {
+        dispatch_async(dispatch_get_main_queue(), block);
+    }
+}
 
 
 #define BUFFER_SIZE (10 * 1024 * 1024) // 10MB (minimum memory buffer size)

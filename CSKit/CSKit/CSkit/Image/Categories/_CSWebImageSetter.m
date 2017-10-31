@@ -9,14 +9,13 @@
 #import "_CSWebImageSetter.h"
 #import <libkern/OSAtomic.h>
 
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <CSkit/CSWebImageOperation.h>
-#else
-#import "CSMacrosHeader.h"
-#import "CSWebImageOperation.h"
-#endif
 
+#import "CSWebImageOperation.h"
+
+#ifndef CSIdentitfier
+/** 这个值必须每次新建项目的时候就填写 */
+#define CSIdentitfier @"com.ibireme.CSKit"
+#endif
 
 
 

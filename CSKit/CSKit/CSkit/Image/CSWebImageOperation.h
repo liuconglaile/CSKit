@@ -8,13 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#if __has_include(<CSKit/CSKit.h>)
-#import <CSKit/CSImageCache.h>
-#import <CSKit/CSWebImageManager.h>
-#else
 #import "CSImageCache.h"
 #import "CSWebImageManager.h"
-#endif
+
 
 NS_ASSUME_NONNULL_BEGIN
 

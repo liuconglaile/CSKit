@@ -8,21 +8,29 @@
 
 #import "CALayer+CSWebImage.h"
 #import <objc/runtime.h>
+#import <pthread.h>
 
 
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <CSkit/_CSWebImageSetter.h>
-#import <CSkit/CSWebImageOperation.h>
-#import <CSkit/CSMacrosHeader.h>
-#else
-#import "CSMacrosHeader.h"
+//#import "CSMacrosHeader.h"
 #import "_CSWebImageSetter.h"
 #import "CSWebImageOperation.h"
-#import "CSMacrosHeader.h"
+//#import "CSMacrosHeader.h"
+
+
+/** 在主队列上提交用于异步执行的块,并立即返回 */
+static inline void dispatch_async_on_main_queue(void (^block)(void)) {
+    if (pthread_main_np()) {
+        block();
+    } else {
+        dispatch_async(dispatch_get_main_queue(), block);
+    }
+}
+
+#ifndef CSSYNTH_DUMMY_CLASS
+#define CSSYNTH_DUMMY_CLASS(_name_) \
+@interface CSSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation CSSYNTH_DUMMY_CLASS_ ## _name_ @end
 #endif
-
-
 
 
 CSSYNTH_DUMMY_CLASS(CALayer_CSWebImage)

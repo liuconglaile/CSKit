@@ -10,16 +10,26 @@
 #import <objc/runtime.h>
 
 
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <CSkit/_CSWebImageSetter.h>
-#import <CSkit/CSWebImageOperation.h>
-#else
-#import "CSMacrosHeader.h"
+
 #import "_CSWebImageSetter.h"
 #import "CSWebImageOperation.h"
+
+#import <pthread.h>
+
+#ifndef CSSYNTH_DUMMY_CLASS
+#define CSSYNTH_DUMMY_CLASS(_name_) \
+@interface CSSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation CSSYNTH_DUMMY_CLASS_ ## _name_ @end
 #endif
 
+/** 在主队列上提交用于异步执行的块,并立即返回 */
+static inline void dispatch_async_on_main_queue(void (^block)(void)) {
+    if (pthread_main_np()) {
+        block();
+    } else {
+        dispatch_async(dispatch_get_main_queue(), block);
+    }
+}
 
 CSSYNTH_DUMMY_CLASS(UIImageView_CSWebImage)
 

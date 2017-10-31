@@ -8,19 +8,103 @@
 
 #import "MKAnnotationView+CSWebImage.h"
 #import <objc/runtime.h>
+#import <pthread.h>
 
-
-
-
-#if __has_include(<CSkit/CSkit.h>)
-#import <CSkit/CSMacrosHeader.h>
-#import <CSkit/_CSWebImageSetter.h>
-#import <CSkit/CSWebImageOperation.h>
-#else
-#import "CSMacrosHeader.h"
+//#import "CSMacrosHeader.h"
 #import "_CSWebImageSetter.h"
 #import "CSWebImageOperation.h"
+
+/**
+ 在每个类别实现之前添加这个宏,所以我们不必使用  -all_load 或 -force_load 仅从静态库加载对象文件包含类别,没有类.
+ 更多信息: http://developer.apple.com/library/mac/#qa/qa2006/qa1490.html .
+ *******************************************************************************
+ 
+ 示例:
+ CSSYNTH_DUMMY_CLASS(NSString_CSAdd)
+ 
+ @param _name_ 类别名
+ @return 添加的类别
+ */
+#ifndef CSSYNTH_DUMMY_CLASS
+#define CSSYNTH_DUMMY_CLASS(_name_) \
+@interface CSSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation CSSYNTH_DUMMY_CLASS_ ## _name_ @end
 #endif
+
+
+
+/**
+ 调度_时间_延迟
+ 
+ @param second 延迟秒数
+ @return <#return value description#>
+ */
+//static inline dispatch_time_t dispatch_time_delay(NSTimeInterval second) {
+//    return dispatch_time(DISPATCH_TIME_NOW, (int64_t)(second * NSEC_PER_SEC));
+//}
+
+///** 从现在返回dispatch_wall_time延迟. */
+//static inline dispatch_time_t dispatch_walltime_delay(NSTimeInterval second) {
+//    return dispatch_walltime(DISPATCH_TIME_NOW, (int64_t)(second * NSEC_PER_SEC));
+//}
+
+///** 从NSDate返回dispatch_wall_time */
+//static inline dispatch_time_t dispatch_walltime_date(NSDate *date) {
+//    NSTimeInterval interval;
+//    double second, subsecond;
+//    struct timespec time;
+//    dispatch_time_t milestone;
+//
+//    interval = [date timeIntervalSince1970];
+//    subsecond = modf(interval, &second);
+//    time.tv_sec = second;
+//    time.tv_nsec = subsecond * NSEC_PER_SEC;
+//    milestone = dispatch_walltime(&time, 0);
+//    return milestone;
+//}
+
+///** 是否在主队列/线程中 */
+//static inline bool dispatch_is_main_queue() {
+//    return pthread_main_np() != 0;
+//}
+
+/** 在主队列上提交用于异步执行的块,并立即返回 */
+static inline void dispatch_async_on_main_queue(void (^block)(void)) {
+    if (pthread_main_np()) {
+        block();
+    } else {
+        dispatch_async(dispatch_get_main_queue(), block);
+    }
+}
+
+///** 在主队列上提交执行块,并等待直到块完成 */
+//static inline void dispatch_sync_on_main_queue(void (^block)(void)) {
+//    if (pthread_main_np()) {
+//        block();
+//    } else {
+//        dispatch_sync(dispatch_get_main_queue(), block);
+//    }
+//}
+
+///** 初始化一个pthread互斥体 */
+//static inline void pthread_mutex_init_recursive(pthread_mutex_t *mutex, bool recursive) {
+//#define CSMUTEX_ASSERT_ON_ERROR(x_) do { \
+//__unused volatile int res = (x_); \
+//assert(res == 0); \
+//} while (0)
+//    assert(mutex != NULL);
+//    if (!recursive) {
+//        CSMUTEX_ASSERT_ON_ERROR(pthread_mutex_init(mutex, NULL));
+//    } else {
+//        pthread_mutexattr_t attr;
+//        CSMUTEX_ASSERT_ON_ERROR(pthread_mutexattr_init (&attr));
+//        CSMUTEX_ASSERT_ON_ERROR(pthread_mutexattr_settype (&attr, PTHREAD_MUTEX_RECURSIVE));
+//        CSMUTEX_ASSERT_ON_ERROR(pthread_mutex_init (mutex, &attr));
+//        CSMUTEX_ASSERT_ON_ERROR(pthread_mutexattr_destroy (&attr));
+//    }
+//#undef CSMUTEX_ASSERT_ON_ERROR
+//}
+
 
 
 CSSYNTH_DUMMY_CLASS(MKAnnotationView_CSWebImage)

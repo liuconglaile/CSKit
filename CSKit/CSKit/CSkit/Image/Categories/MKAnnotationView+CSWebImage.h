@@ -7,12 +7,8 @@
 //
 
 #import <MapKit/MapKit.h>
-
-#if __has_include(<CSKit/CSKit.h>)
-#import <CSKit/CSWebImageManager.h>
-#else
 #import "CSWebImageManager.h"
-#endif
+
 
 NS_ASSUME_NONNULL_BEGIN
 

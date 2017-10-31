@@ -14,6 +14,9 @@
 #import "CSRootLayout.h"
 #import "CSKitHeader.h"
 
+#import "CSNetwork.h"
+#import "CSURLSession.h"
+
 @interface ViewController ()
 
 @property (nonatomic, strong) UITableView* tableView;
@@ -28,11 +31,41 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    //创建请求
+    NSURL * url = [NSURL URLWithString:@"http://ykp.api.newedge.cc/App/Bar/getBarList"];
+    CSURLSession * request = [[CSURLSession alloc] initWithURL:url];
+    //忽略Cookies
+    [request setUseCookies:NO];
+    //添加表单数据
+    [request addFormData:@"20" forKey:@"num"];
+    [request addFormData:@"1" forKey:@"page"];
+    [request addFormData:@"23.013876" forKey:@"lat"];
+    [request addFormData:@"113.356125" forKey:@"lng"];
+    [request addFormData:@"广州市" forKey:@"city"];
+    // 开始表单请求
+    //[request startRequest];
+    [request startFormRequest];
+    if([request getStatusCode] == 200){
+        NSLog(@"%@",[request getResponseDataString]);
+    }
+    else {
+        NSLog(@"Error:%@",[request getError].domain);
+    }
+    
     
     [self initTableView];
     [self initData];
     
     
+    
+    NSDictionary *params = @{ @"key":@"201cd6c770038",
+                              @"card":@"6228480402564890018" };
+    
+    
+    NSString* api = @"http://apicloud.mob.com/appstore/bank/card/query";
+    CSNetwork.defaultManager.GET(api,params,^(id response, BOOL isSuccess, NSInteger errorCode) {
+        NSLog(@"\nresponse:%@\nerrorCode:%ld",[response dataUTF8],errorCode);
+    });
 }
 
 

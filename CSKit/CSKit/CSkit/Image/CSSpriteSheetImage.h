@@ -7,12 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#if __has_include(<CSKit/CSKit.h>)
-#import <CSKit/CSAnimatedImageView.h>
-#else
 #import "CSAnimatedImageView.h"
-#endif
+
 
 NS_ASSUME_NONNULL_BEGIN
 
