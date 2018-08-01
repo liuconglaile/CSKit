@@ -101,10 +101,18 @@
     
     self.line.colors = @[(id)lineColor.CGColor,(id)lineColor.CGColor];
 }
-//- (void)addActionBlock:(CSCellAction)block{
-//    _cellAction = block;
-//    
-//}
+
+
+- (void)setActionBlock:(void (^)(UITableView *, id, NSIndexPath *, id))actionBlock{
+    if (actionBlock != nil) {
+        _actionBlock = actionBlock;
+    }
+}
+- (void)addActionBlock:(CSCellAction)block{
+    //_cellAction = block;
+    //_actionBlock = block;
+    
+}
 - (void)setFrame:(CGRect)frame{
     
     self.containerView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);

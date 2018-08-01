@@ -143,9 +143,7 @@ static  NSString *CellName=@"CSTestTableCell";
     [self.tableView registerClass:CellName identifier:CellName];
     
     
-    [self.tableView addCellClickAction:^(UITableView *tableView, id data, NSIndexPath *indexPath, id action) {
-        CSNSLog(@"点击了哦........");
-    }];
+   
 }
 
 - (void)initData{
@@ -176,6 +174,13 @@ static  NSString *CellName=@"CSTestTableCell";
     [self.tableView setData:nil];
     [self.tableView setData:self.dataSource];
     [self.tableView reloadData];
+    
+    [self.tableView addSelectRowAction:^(UITableView *tableView, id data, NSIndexPath *indexPath, id action) {
+        CSNSLog(@"点击事件");
+    }];
+    [self.tableView addCellClickAction:^(UITableView *tableView, id data, NSIndexPath *indexPath, id action) {
+        CSNSLog(@"点击了哦........");
+    }];
     
 }
 

@@ -57,7 +57,7 @@
 //    id dataSource;
 //
 //}
--(id)initWithTableView:(UITableView *)tableView{
+- (id)initWithTableView:(UITableView *)tableView{
     
     self = [super init];
     
@@ -214,11 +214,11 @@
     }
     
     
-    //    [cell addActionBlock:^(id action) {
+    //        [cell addActionBlock:^(id action) {
     //
     //
-    //        if (_cellClickAction) _cellClickAction(tableView,_dataSource,indexPath,action);
-    //    }];
+    //            if (_cellClickAction) _cellClickAction(tableView,_dataSource,indexPath,action);
+    //        }];
     return cell;
     
     

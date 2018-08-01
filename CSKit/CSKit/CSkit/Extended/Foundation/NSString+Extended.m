@@ -766,6 +766,13 @@ CSSYNTH_DUMMY_CLASS(NSString_Extended)
             return YES;
         }
     }
+    /// 用于判断是否空的json
+//    if ([self isEqualToString:@"{}"]) {
+//        return YES;
+//    } else {
+//        return NO;
+//    }
+    
     return NO;
 }
 

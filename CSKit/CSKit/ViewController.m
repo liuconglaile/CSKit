@@ -81,11 +81,11 @@
     self.tableView = tableView;
     
     
-    [tableView registerClass:kCellIdentifier identifier:kCellIdentifier];
+    [self.tableView registerClass:kCellIdentifier identifier:kCellIdentifier];
     
-    //@weakify(self)
-    [tableView addSelectRowAction:^(UITableView *tableView, id data, NSIndexPath *indexPath, id action) {
-        //@strongify(self)
+    @weakify(self)
+    [self.tableView addSelectRowAction:^(UITableView *tableView, id data, NSIndexPath *indexPath, id action) {
+        @strongify(self)
         if (tableView.tag == 9111) {
             if (indexPath.section == 0 && indexPath.row == 0) {
                 CSTestTableController* vc = [[CSTestTableController alloc] init];
@@ -95,7 +95,7 @@
     }];
     
     
-    [tableView addCellClickAction:^(UITableView *tableView, id data, NSIndexPath *indexPath, id action) {
+    [self.tableView addCellClickAction:^(UITableView *tableView, id data, NSIndexPath *indexPath, id action) {
         CSNSLog(@"点击了哦........");
     }];
 }
